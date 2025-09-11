@@ -1,0 +1,19 @@
+{
+  "programs": [
+    {
+      "id": "reach-out-seattle-mayor",
+      "organizationName": "Mayor's Office, Seattle",
+      "programDescription": "A youth mental health initiative focused on creating a healthier future for Seattle kids.",
+      "activityName": "Reach Out Seattle",
+      "activityDescription": "This initiative seeks to bridge the gap between youth and the limited professional mental health resources available to them, focusing on prevention and early identification of mental health challenges.",
+      "location": "Seattle, WA",
+      "ageRange": "Varies",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://www.seattle.gov/mayor/one-seattle-initiatives/youth-mental-health",
+      "lastUpdated": "2023-10-05"
+    }
+  ]
+}

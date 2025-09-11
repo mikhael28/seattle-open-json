@@ -1,0 +1,19 @@
+{
+  "programs": [
+    {
+      "id": "youth-transportation-ambassadors",
+      "organizationName": "Seattle Department of Transportation",
+      "programDescription": "The Youth Transportation Ambassadors program is a paid learning opportunity for youth to learn about transportation planning and engage in community-centered education.",
+      "activityName": "Youth Ambassadors",
+      "activityDescription": "Participants will go on weekly field trips, gain valuable skills in transportation project planning, job shadow experts, and work on real projects in their community.",
+      "location": "Seattle Municipal Tower – 700 5th Ave, Seattle, WA 98104",
+      "ageRange": "15-18",
+      "dates": "August 5 – August 28, 2025",
+      "day": "Every Tuesday and Thursday",
+      "times": "10am-3pm",
+      "cost": "$600 stipend at the end of the program",
+      "url": "https://www.seattle.gov/transportation/projects-and-programs/programs/transportation-access-programs/youth-ambassadors",
+      "lastUpdated": "2023-10-05"
+    }
+  ]
+}

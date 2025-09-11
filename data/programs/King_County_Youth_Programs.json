@@ -1,0 +1,64 @@
+{
+  "programs": [
+    {
+      "id": "king-county-youth-programs",
+      "organizationName": "King County",
+      "programDescription": "The Children, Youth and Young Adult Division supports an array of programs to help youth and young adults thrive. Programs are focused on education, employment, housing and rental support, as well as legal system assistance.",
+      "activityName": "Youth and young adult programs",
+      "activityDescription": "Programs that help young people get beyond barriers and achieve their education and employment goals.",
+      "location": "Seattle, WA",
+      "ageRange": "Varies",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://kingcounty.gov/depts/community-human-services/children-youth-young-adults.aspx",
+      "lastUpdated": "2023-10-05"
+    },
+    {
+      "id": "king-county-education-employment-programs",
+      "organizationName": "King County",
+      "programDescription": "Community and Human service programs that help young people get beyond barriers and achieve their education and employment goals.",
+      "activityName": "Youth education and employment programs",
+      "activityDescription": "Programs focused on education and employment for youth, providing resources and support to help them succeed.",
+      "location": "Seattle, WA",
+      "ageRange": "Varies",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://kingcounty.gov/en/dept/dchs/human-social-services/youth-young-adult-programs/education-employment-programs",
+      "lastUpdated": "2023-10-05"
+    },
+    {
+      "id": "king-county-youth-housing-resources",
+      "organizationName": "King County",
+      "programDescription": "Find featured services and learn how to search for providers. King County’s Youth and Family Homelessness Prevention Initiative (YFHPI) steps in quickly with landlords and housing providers.",
+      "activityName": "Youth housing and rent resources",
+      "activityDescription": "Resources aimed at preventing homelessness and helping youth find stable housing.",
+      "location": "Seattle, WA",
+      "ageRange": "Varies",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://kingcounty.gov/en/dept/dchs/human-social-services/youth-young-adult-programs/youth-housing-rent-resources",
+      "lastUpdated": "2023-10-05"
+    },
+    {
+      "id": "king-county-youth-legal-resources",
+      "organizationName": "King County",
+      "programDescription": "Support for youth in the legal system available from Community and Human Services.",
+      "activityName": "Youth legal system resources",
+      "activityDescription": "Services available through community partners to assist youth involved in the legal system.",
+      "location": "Seattle, WA",
+      "ageRange": "Varies",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://kingcounty.gov/en/dept/dchs/human-social-services/youth-young-adult-programs/youth-legal-system-resources",
+      "lastUpdated": "2023-10-05"
+    }
+  ]
+}

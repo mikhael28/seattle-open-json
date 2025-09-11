@@ -1,0 +1,23 @@
+{
+    "name": "seattle-open-json",
+    "version": "1.0.2",
+    "description": "Scraper for Seattle youth organization data using Jina",
+    "main": "scrape-organizations.js",
+    "scripts": {
+        "scrape": "node scrape-organizations.js",
+        "convert": "node scripts/markdown-to-json.js",
+        "convert:single": "node scripts/markdown-to-json.js --single",
+        "consolidate": "node scripts/consolidate-programs.js",
+        "consolidate:pretty": "node scripts/consolidate-programs.js --pretty",
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "type": "module",
+    "keywords": [
+        "scraper",
+        "seattle",
+        "youth"
+    ],
+    "author": "Michael Nightingale",
+    "license": "MIT",
+    "dependencies": {}
+}

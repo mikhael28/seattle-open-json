@@ -1,0 +1,17 @@
+[
+  {
+    "id": "museum-pass-seattle-public-library",
+    "organizationName": "The Seattle Public Library",
+    "programDescription": "Free passes to local museums for Library card holders.",
+    "activityName": "Museum Pass",
+    "activityDescription": "Use your Library card to get free admission to participating Seattle museums. Enjoy exhibits on aviation, nature, science, and industry—all for free! You may reserve one pass per calendar month.",
+    "location": "Seattle, WA",
+    "ageRange": "All ages",
+    "dates": "Varies",
+    "day": "Varies",
+    "times": "Varies",
+    "cost": "Free with Library card",
+    "url": "https://www.spl.org/programs-and-services/arts-and-culture/museum-pass",
+    "lastUpdated": "2023-10-04"
+  }
+]

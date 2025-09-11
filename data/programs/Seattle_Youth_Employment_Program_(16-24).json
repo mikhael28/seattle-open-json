@@ -1,0 +1,19 @@
+{
+  "programs": [
+    {
+      "id": "seattle-youth-employment-program",
+      "organizationName": "Human Services",
+      "programDescription": "The Seattle Youth Employment Program (SYEP) supports young people (ages 16 to 24) from qualifying-income households and communities that experience racial, social, and economic disparities. The goal is to increase youth and young adults' ability to pursue careers that pay well and are meaningful to them.",
+      "activityName": "Seattle Youth Employment Program",
+      "activityDescription": "SYEP features two programs to help you develop skills for life and work: the Learn & Earn Program and the Internship Program. Participants identify professional interests, gain marketable skills, and are placed in professional work settings to apply their knowledge and gain hands-on experience.",
+      "location": "Seattle, WA",
+      "ageRange": "16-24",
+      "dates": "July 9 – August 26, 2025",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "$20.76 per hour for internships; stipends of $325 for Learn & Earn participants",
+      "url": "https://www.seattle.gov/human-services/services-and-programs/youth-and-young-adults/seattle-youth-employment-program",
+      "lastUpdated": "2023-10-05"
+    }
+  ]
+}

@@ -1,0 +1,32 @@
+[
+  {
+    "id": "local-teen-counseling-resources",
+    "organizationName": "Public Health - Seattle & King County",
+    "programDescription": "Local Teen Counseling Resources for youth aged 12-21.",
+    "activityName": "Local Teen Counseling Resources",
+    "activityDescription": "Provides mental health services including assessments, counseling for mental health and substance abuse issues, and referrals to mental health and substance abuse services.",
+    "location": "Seattle, WA",
+    "ageRange": "12-21",
+    "dates": "Varies",
+    "day": "Varies",
+    "times": "Varies",
+    "cost": "Provides services regardless of ability to pay. Accepts WA Apple Health (Medicaid) for some services. Some private insurance is accepted.",
+    "url": "https://search.wa211.org/search/1cdc337e-1faa-5cb3-bd87-4567127c9215",
+    "lastUpdated": "2023-10-04"
+  },
+  {
+    "id": "school-based-health-services-group-health",
+    "organizationName": "Group Health",
+    "programDescription": "School-Based Health Services offered at Washington Middle School Wellness Center.",
+    "activityName": "School-Based Health Services",
+    "activityDescription": "Offers a comprehensive scope of health services to youth and adolescents including asthma care, immunizations, treatment of simple illnesses and injuries, family planning, physical exams, health education, and mental health services.",
+    "location": "2101 South Jackson Street, Washington Middle School, Seattle, WA 98144",
+    "ageRange": "Varies",
+    "dates": "Open during school hours",
+    "day": "Varies",
+    "times": "Varies",
+    "cost": "Provides services regardless of ability to pay. Accepts WA Apple Health (Medicaid) for some services. Some private insurance is accepted.",
+    "url": "https://search.wa211.org/search/1cdc337e-1faa-5cb3-bd87-4567127c9215",
+    "lastUpdated": "2023-10-04"
+  }
+]

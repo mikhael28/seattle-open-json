@@ -1,0 +1,19 @@
+{
+  "programs": [
+    {
+      "id": "learning-buddies-seattle-public-library",
+      "organizationName": "The Seattle Public Library",
+      "programDescription": "Learning Buddies is a program where elementary age students read with a high school mentor and play math and reading games.",
+      "activityName": "Learning Buddies",
+      "activityDescription": "Elementary age students read with a high school mentor and play math and reading games. Drop-in, first come, first served, one hour sessions to build math and reading skills.",
+      "location": "Seattle, WA",
+      "ageRange": "18-24",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://www.spl.org/programs-and-services/learning/student-success/learning-buddies",
+      "lastUpdated": "2023-10-04"
+    }
+  ]
+}

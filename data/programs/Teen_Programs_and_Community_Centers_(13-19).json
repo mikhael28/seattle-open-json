@@ -1,0 +1,79 @@
+{
+  "programs": [
+    {
+      "id": "seattle-mentors",
+      "organizationName": "Seattle Parks and Recreation",
+      "programDescription": "Seattle Mentors provides safe, supportive environments for youth to learn, grow, and reach adulthood.",
+      "activityName": "Seattle Mentors",
+      "activityDescription": "A program that connects youth with mentors to help them navigate their personal and professional development.",
+      "location": "Seattle, WA",
+      "ageRange": "13-19",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://www.seattle.gov/parks/learning-and-childcare/teen-programs/seattle-mentors",
+      "lastUpdated": "2023-10-05"
+    },
+    {
+      "id": "youth-employment-service-learning",
+      "organizationName": "Seattle Parks and Recreation",
+      "programDescription": "Youth Employment and Service Learning (YESL) offers a wide range of service-learning and community service opportunities.",
+      "activityName": "Youth Employment and Service Learning (YESL)",
+      "activityDescription": "Provides youth with opportunities for community service and employment, requiring documentation of service hours.",
+      "location": "Seattle, WA",
+      "ageRange": "13-19",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://www.seattle.gov/parks/learning-and-childcare/teen-programs",
+      "lastUpdated": "2023-10-05"
+    },
+    {
+      "id": "teen-life-centers",
+      "organizationName": "Seattle Parks and Recreation",
+      "programDescription": "Teen Life Centers offer a variety of programming including special events, computer labs, and social recreation.",
+      "activityName": "Teen Life Centers",
+      "activityDescription": "Provides a safe environment for teens with various activities including Late Night Programs on weekends.",
+      "location": "Seattle, WA",
+      "ageRange": "13-19",
+      "dates": "Varies",
+      "day": "Fridays and Saturdays",
+      "times": "7 PM - 12 AM",
+      "cost": "Contact organization",
+      "url": "https://www.seattle.gov/parks/learning-and-childcare/teen-programs",
+      "lastUpdated": "2023-10-05"
+    },
+    {
+      "id": "teen-summer-musical",
+      "organizationName": "Seattle Parks and Recreation",
+      "programDescription": "A 9-week program focusing on youth of color to introduce them to theater through workshops.",
+      "activityName": "Teen Summer Musical",
+      "activityDescription": "Participants engage in performing arts workshops to develop self-discipline, confidence, and teamwork.",
+      "location": "Seattle, WA",
+      "ageRange": "Varies",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://www.seattle.gov/parks/learning-and-childcare/teen-programs",
+      "lastUpdated": "2023-10-05"
+    },
+    {
+      "id": "community-learning-centers",
+      "organizationName": "Seattle Parks and Recreation",
+      "programDescription": "Community Learning Centers (CLC) provide out-of-school time programs at Seattle Public School sites.",
+      "activityName": "Community Learning Centers",
+      "activityDescription": "Offers academic and enrichment programs during and after school, serving approximately 3,300 students each year.",
+      "location": "Seattle, WA",
+      "ageRange": "Varies",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://www.seattle.gov/parks/learning-and-childcare/teen-programs",
+      "lastUpdated": "2023-10-05"
+    }
+  ]
+}

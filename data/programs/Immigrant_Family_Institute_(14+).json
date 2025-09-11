@@ -1,0 +1,19 @@
+{
+  "programs": [
+    {
+      "id": "immigrant-family-institute-iandraffairs",
+      "organizationName": "Office of Immigrant and Refugee Affairs",
+      "programDescription": "The Immigrant Family Institute was a program that brought together youth from immigrant families, their parents/guardians/caregivers, and Seattle police officers to learn from each other.",
+      "activityName": "Immigrant Family Institute",
+      "activityDescription": "Participants met regularly for two to four hours, engaging in discussions led by community facilitators. The program included resources to ensure full participation, such as meals, transportation support, and interpretation services.",
+      "location": "Seattle, WA",
+      "ageRange": "10-14",
+      "dates": "No longer in operation",
+      "day": "Varies",
+      "times": "Varies",
+      "cost": "Contact organization",
+      "url": "https://www.seattle.gov/iandraffairs/RWI",
+      "lastUpdated": "2023-10-05"
+    }
+  ]
+}

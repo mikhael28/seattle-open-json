@@ -1,0 +1,47 @@
+[
+  {
+    "id": "lifeguard-jobs-training-seattle-parks",
+    "organizationName": "Seattle Parks and Recreation",
+    "programDescription": "Temporary Lifeguards for eight indoor pools in Seattle. Current Red Cross Lifeguard certification is required, and candidates must be at least 16 years old to apply.",
+    "activityName": "Lifeguard Jobs and Training",
+    "activityDescription": "Participants will receive training and certification in lifeguarding, First Aid, and CPR/AED. The program includes practical methods and theory for teaching lifeguarding skills.",
+    "location": "Seattle, WA",
+    "ageRange": "15+",
+    "dates": "Varies",
+    "day": "Varies",
+    "times": "Varies",
+    "cost": "$25.98/hr",
+    "url": "https://www.seattle.gov/parks/about-us/jobs/aquatics-employment-and-training",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "id": "lifeguard-training-team-seattle-parks",
+    "organizationName": "Seattle Parks and Recreation",
+    "programDescription": "The Lifeguard Training Team is a FREE summer program designed to train and certify Seattle's youth in lifesaving skills.",
+    "activityName": "Lifeguard Training Team",
+    "activityDescription": "An eight-week program for youth ages 15-18 that trains participants to be lifeguards and build job skills. Includes a full American Red Cross lifeguard training course.",
+    "location": "Seattle, WA",
+    "ageRange": "15-18",
+    "dates": "June 23 - August 14",
+    "day": "Monday - Thursday",
+    "times": "1pm - 5pm",
+    "cost": "Free",
+    "url": "https://www.seattle.gov/parks/about-us/jobs/aquatics-employment-and-training#LifeguardTrainingTeam",
+    "lastUpdated": "2023-10-05"
+  },
+  {
+    "id": "lifeguard-training-certification-seattle-parks",
+    "organizationName": "Seattle Parks and Recreation",
+    "programDescription": "This American Red Cross course is your first step in becoming a lifeguard for the City of Seattle.",
+    "activityName": "Lifeguard Training Certification",
+    "activityDescription": "The course is approximately 30 hours in length and provides certification in Lifeguarding, First Aid, and CPR/AED. Certifications are valid for two years.",
+    "location": "Seattle, WA",
+    "ageRange": "15+",
+    "dates": "Varies",
+    "day": "Varies",
+    "times": "Varies",
+    "cost": "Varies",
+    "url": "https://www.seattle.gov/parks/about-us/jobs/aquatics-employment-and-training#LifeguardTraining",
+    "lastUpdated": "2023-10-05"
+  }
+]

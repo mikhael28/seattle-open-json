@@ -1,0 +1,19 @@
+{
+  "programs": [
+    {
+      "id": "online-tutoring-seattle-public-library",
+      "organizationName": "The Seattle Public Library",
+      "programDescription": "Free virtual tutoring for K – 12 students in Seattle.",
+      "activityName": "Virtual Tutoring",
+      "activityDescription": "K – 12 students can get free virtual tutoring from Tutor.com with a Library card or Library Link number. Tutors are available in English, Spanish, and Vietnamese, helping with subjects like Math, Writing, Science, History, AP Classes, and more.",
+      "location": "Seattle, WA",
+      "ageRange": "5-18",
+      "dates": "Varies",
+      "day": "Varies",
+      "times": "2 PM - 10 PM (English and Spanish), 4 PM - 7 PM (Vietnamese)",
+      "cost": "Free with Library card or Library Link number",
+      "url": "https://www.spl.org/programs-and-services/learning/student-success/virtual-tutoring",
+      "lastUpdated": "2023-10-04"
+    }
+  ]
+}
