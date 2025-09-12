@@ -9,7 +9,7 @@ const Dashboard = () => {
     <div className="space-y-6 p-6">
       <div className="flex items-center justify-between">
         <h1 className="text-3xl font-bold text-foreground">Dashboard</h1>
-        <Button>Generate Report</Button>
+        <Button><a href="https://github.com/mikhael28/seattle-open-json" target="_blank">GitHub Page</a></Button>
       </div>
 
 

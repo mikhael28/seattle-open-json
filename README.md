@@ -6,11 +6,15 @@
 
 Seattle Open JSON provides structured, machine-readable information about youth initiatives, community resources, and recreational opportunities in the Seattle area. This package includes both raw data collections and comprehensive TypeScript interfaces for type-safe development.
 
-## 🚀 Installation
+## 🚀 NPM Package Installation
 
 ```bash
 npm install seattle-open-json
 ```
+
+## React Playground Installation
+
+If you fork this repository, you will notice a 'react-playground' directory; by running `npm install` and `npm run dev`, you can open visual playground to help explore the data we have collected thus far. It is incomplete, and not formatted incredibly well, but it is a starting point.
 
 ## 📊 Data Collections
 

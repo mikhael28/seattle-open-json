@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from "react";
+import React, { useState, useMemo, useEffect, useRef } from "react";
 import { Button } from "../components/ui/button";
 import { 
   User, 
@@ -17,6 +17,7 @@ import {
   MapPinIcon,
   Activity,
   ChevronRight,
+  ChevronDown,
   ExternalLink,
   Clock,
   DollarSign,
@@ -46,6 +47,7 @@ import {
   Award,
   Users2
 } from "lucide-react";
+import SeattleMap from '../components/SeattleMap';
 
 // Import all data from seattle-open-json
 import {
@@ -140,6 +142,37 @@ const Profile = () => {
   const [viewMode, setViewMode] = useState<'cards' | 'table' | 'map'>('cards');
   const [searchTerm, setSearchTerm] = useState('');
   const [selectedFilters, setSelectedFilters] = useState<string[]>([]);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [mapWidth, setMapWidth] = useState(800);
+  const dropdownRef = useRef<HTMLDivElement>(null);
+
+  // Close dropdown when clicking outside and handle map width
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(event.target as Node)) {
+        setIsDropdownOpen(false);
+      }
+    };
+
+    const handleResize = () => {
+      setMapWidth(Math.min(800, window.innerWidth - 150));
+    };
+
+    handleResize(); // Set initial width
+    window.addEventListener('resize', handleResize);
+    document.addEventListener('mousedown', handleClickOutside);
+    
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      window.removeEventListener('resize', handleResize);
+    };
+  }, []);
+
+  // Debug dropdown state changes
+  useEffect(() => {
+    console.log('Dropdown state changed:', isDropdownOpen);
+    console.log('Tabs array:', tabs);
+  }, [isDropdownOpen]);
 
   // Analytics and insights
   const analytics = useMemo(() => {
@@ -457,10 +490,14 @@ const Profile = () => {
           </div>
         ) : viewMode === 'map' ? (
           <div className="bg-white rounded-xl border border-gray-200 p-6">
-            <div className="text-center py-12">
-              <MapPinned className="h-12 w-12 text-gray-400 mx-auto mb-4" />
+            <div className="text-center mb-4">
               <h3 className="text-lg font-semibold text-gray-900 mb-2">Map View</h3>
-              <p className="text-gray-600">Geographic visualization coming soon</p>
+              <p className="text-gray-600">Geographic visualization of {type.toLowerCase()}</p>
+            </div>
+            <div className="rounded-lg overflow-hidden bg-gray-50 p-4">
+              <div className="w-full overflow-x-auto flex justify-center">
+                <SeattleMap width={Math.min(800, window.innerWidth - 150)} height={500} />
+              </div>
             </div>
           </div>
         ) : (
@@ -713,28 +750,13 @@ const Profile = () => {
   return (
     <div className="min-h-screen bg-gray-50">
       {/* Header */}
-      <div className="bg-white border-b border-gray-200 sticky top-0 z-40">
-        <div className="mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-between h-16">
-            <div className="flex items-center space-x-4">
-              <div className="flex items-center space-x-2">
-                <div className="rounded-lg bg-blue-100 p-2">
-                  <Database className="h-6 w-6 text-blue-600" />
-                </div>
-                <div>
-                  <h1 className="text-xl font-bold text-gray-900">Seattle Open Data</h1>
-                  <p className="text-sm text-gray-500">Community Resource Explorer</p>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+  
 
       <div className="mx-auto px-4 sm:px-6 lg:px-8 py-8">
-        {/* Enhanced Tab Navigation */}
-        <div className="bg-white rounded-xl shadow-sm border border-gray-200 mb-8 overflow-hidden">
-          <div className="flex overflow-x-auto scrollbar-hide">
+        {/* Enhanced Tab Navigation - Responsive */}
+        <div className="bg-white rounded-xl shadow-sm border border-gray-200 mb-8 overflow-visible relative">
+          {/* Desktop Tab Navigation */}
+          <div className="hidden md:flex overflow-x-auto scrollbar-hide">
             {tabs.map((tab) => {
               const IconComponent = tab.icon;
               return (
@@ -750,7 +772,6 @@ const Profile = () => {
                       : 'border-transparent text-gray-600 hover:text-gray-900 hover:bg-gray-50'
                   }`}
                 >
-                 
                   <div className="flex-1 min-w-0">
                     <span className="font-small truncate">{tab.name}</span>
                     <div className="flex items-center space-x-2 mt-1">
@@ -767,12 +788,139 @@ const Profile = () => {
               );
             })}
           </div>
+
+          {/* Mobile Dropdown Navigation */}
+          <div className="md:hidden relative" ref={dropdownRef}>
+            <button
+              onClick={() => {
+                console.log('Dropdown clicked, current state:', isDropdownOpen);
+                setIsDropdownOpen(!isDropdownOpen);
+              }}
+              className="w-full flex items-center justify-between px-6 py-4 text-left border-b-2 border-blue-500 bg-blue-50"
+            >
+              <div className="flex items-center space-x-3">
+                <div className="flex-1 min-w-0">
+                  <span className="font-medium text-blue-600">
+                    {tabs.find(tab => tab.id === activeTab)?.name}
+                  </span>
+                  <div className="flex items-center space-x-2 mt-1">
+                    <span className="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
+                      {tabs.find(tab => tab.id === activeTab)?.count.toLocaleString()}
+                    </span>
+                  </div>
+                </div>
+              </div>
+              <ChevronDown 
+                className={`h-5 w-5 text-blue-600 transition-transform duration-200 ${
+                  isDropdownOpen ? 'rotate-180' : ''
+                }`} 
+              />
+            </button>
+
+            {/* Dropdown Menu */}
+            {isDropdownOpen && (
+              <div 
+                className="absolute top-full left-0 right-0 bg-red-100 border-2 border-red-500 rounded-b-xl shadow-lg z-[100] min-h-[200px] overflow-y-auto"
+                style={{ 
+                  marginTop: '1px'
+                }}
+              >
+                {tabs.map((tab) => {
+                  const IconComponent = tab.icon;
+                  return (
+                    <button
+                      key={tab.id}
+                      onClick={() => {
+                        setActiveTab(tab.id);
+                        setSearchTerm(''); // Reset search when switching tabs
+                        setIsDropdownOpen(false); // Close dropdown
+                      }}
+                      className={`w-full flex items-center space-x-3 px-6 py-4 text-left transition-all duration-200 hover:bg-gray-50 border-b border-gray-100 last:border-b-0 ${
+                        activeTab === tab.id
+                          ? 'bg-blue-50 text-blue-600'
+                          : 'text-gray-600'
+                      }`}
+                    >
+                      <IconComponent className="h-5 w-5 flex-shrink-0" />
+                      <div className="flex-1 min-w-0 flex items-center justify-between">
+                        <span className="font-medium truncate">{tab.name}</span>
+                        <span className={`inline-flex items-center px-2 py-1 rounded-full text-xs font-medium ml-2 ${
+                          activeTab === tab.id
+                            ? 'bg-blue-100 text-blue-800'
+                            : 'bg-gray-100 text-gray-700'
+                        }`}>
+                          {tab.count.toLocaleString()}
+                        </span>
+                      </div>
+                    </button>
+                  );
+                })}
+              </div>
+            )}
+          </div>
         </div>
 
         {/* Enhanced Tab Content */}
         <div className="space-y-6">
           {activeTab === 'overview' ? (
-            renderEnhancedOverview()
+            <div>
+              {/* Seattle Youth Resources Map */}
+              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
+                <div className="flex items-center justify-between mb-6">
+                  <div>
+                    <h2 className="text-xl font-semibold text-gray-900 flex items-center">
+                      <MapPin className="mr-2 text-blue-600" size={24} />
+                      Seattle Youth Resources Map
+                    </h2>
+                    <p className="text-gray-600 mt-2">
+                      Explore community centers, mobile recreation programs, and public spaces across Seattle neighborhoods. 
+                      Hover over areas to see available resources.
+                    </p>
+                  </div>
+                </div>
+                
+                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-100">
+                  <div className="w-full overflow-x-auto flex justify-center">
+                    <div className="relative">
+                      <SeattleMap width={mapWidth} height={500} />
+                      <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+                        <div className="text-xs text-gray-600 mb-2">Interactive Features:</div>
+                        <div className="space-y-1 text-xs">
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                            <span>Hover neighborhoods for resources</span>
+                          </div>
+                          <div className="flex items-center">
+                            <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
+                            <span>Click markers for details</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
+                  <div className="text-center p-3 bg-red-50 rounded-lg border border-red-100">
+                    <div className="w-4 h-4 bg-red-500 rounded-full mx-auto mb-2"></div>
+                    <div className="text-xs font-medium text-gray-700">Community Centers</div>
+                    <div className="text-xs text-gray-500">Youth programs & activities</div>
+                  </div>
+                  <div className="text-center p-3 bg-blue-50 rounded-lg border border-blue-100">
+                    <div className="w-4 h-4 bg-blue-500 rounded-full mx-auto mb-2"></div>
+                    <div className="text-xs font-medium text-gray-700">Mobile Recreation</div>
+                    <div className="text-xs text-gray-500">Pop-up activities</div>
+                  </div>
+                  <div className="text-center p-3 bg-green-50 rounded-lg border border-green-100">
+                    <div className="w-4 h-4 bg-green-500 rounded-full mx-auto mb-2"></div>
+                    <div className="text-xs font-medium text-gray-700">Public Spaces</div>
+                    <div className="text-xs text-gray-500">Open access areas</div>
+                  </div>
+                </div>
+              </div>
+
+              {renderEnhancedOverview()}
+            </div>
           ) : (
             renderEnhancedDataView(filteredData, activeTabData?.name || '')
           )}
