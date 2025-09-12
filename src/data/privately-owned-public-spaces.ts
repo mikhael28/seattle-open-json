@@ -1,6 +1,6 @@
 export interface PrivatelyOwnedPublicSpace {
   "City Feature": string;
-  "Common Name": string;
+  name: string;
   "Previous Names": string;
   Address: string;
   Location: string;
@@ -15,7 +15,7 @@ export interface PrivatelyOwnedPublicSpace {
 export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Children's Hospital ER Addition",
+    name: "Children's Hospital ER Addition",
     "Previous Names": "",
     Address: "4800 Sand Point Way NE",
     Location: "(47.6614704, -122.2844)",
@@ -29,7 +29,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Epiphany School",
+    name: "Epiphany School",
     "Previous Names": "",
     Address: "3601 E Denny Way",
     Location: "(47.6182563, -122.28724)",
@@ -43,7 +43,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Ruby (Amazon)",
+    name: "Ruby (Amazon)",
     "Previous Names": "Block 101 / Amazon Phase IV",
     Address: "333 Boren Ave N & 350 Terry Ave N",
     Location: "(47.6214019, -122.33676)",
@@ -57,7 +57,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Expo Apts",
+    name: "Expo Apts",
     "Previous Names": "",
     Address: "100 Republican St",
     Location: "(47.6234256, -122.35458)",
@@ -71,7 +71,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Rufus (Amazon)",
+    name: "Rufus (Amazon)",
     "Previous Names": "Block 32",
     Address: "1001 Mercer & 510 Terry Ave N",
     Location: "(47.6239012, -122.33645)",
@@ -85,7 +85,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Skyline First Hill",
+    name: "Skyline First Hill",
     "Previous Names": "",
     Address: "715 9th Ave",
     Location: "(47.6060183, -122.32639)",
@@ -99,7 +99,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Doppler Tower (Amazon)",
+    name: "Doppler Tower (Amazon)",
     "Previous Names": "Block 14 / Amazon Towers Phase I",
     Address: "2021 7th Ave",
     Location: "(47.6151253, -122.33851)",
@@ -113,7 +113,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Enso Condominiums",
+    name: "Enso Condominiums",
     "Previous Names": "",
     Address: "2201 9th Ave",
     Location: "(47.6181048, -122.33922)",
@@ -127,7 +127,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "1111 3rd Ave",
+    name: "1111 3rd Ave",
     "Previous Names": "",
     Address: "1111 3rd Ave",
     Location: "(47.6066096, -122.3354)",
@@ -141,7 +141,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Safeco Plaza",
+    name: "Safeco Plaza",
     "Previous Names": "Seafirst 4th Ave",
     Address: "1001 4th Ave",
     Location: "(47.6063709, -122.33353)",
@@ -155,7 +155,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "1000 2nd Avenue",
+    name: "1000 2nd Avenue",
     "Previous Names": "Key Tower, ATT Gateway Tower",
     Address: "1000 2nd Ave",
     Location: "(47.6054034, -122.33489)",
@@ -169,7 +169,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Wells Fargo Center",
+    name: "Wells Fargo Center",
     "Previous Names": "First Interstate",
     Address: "999 3rd Ave",
     Location: "(47.6050898, -122.33466)",
@@ -183,7 +183,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Fourth & Madison Building",
+    name: "Fourth & Madison Building",
     "Previous Names": "IDX Tower",
     Address: "925 4th Ave",
     Location: "(47.6056501, -122.33308)",
@@ -197,7 +197,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "The Post",
+    name: "The Post",
     "Previous Names": "",
     Address: "810 Western Ave",
     Location: "(47.6033063, -122.33609)",
@@ -211,7 +211,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Columbia Center",
+    name: "Columbia Center",
     "Previous Names": "",
     Address: "701 5th Ave",
     Location: "(47.6045379, -122.33078)",
@@ -225,7 +225,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "800 Fifth Avenue",
+    name: "800 Fifth Avenue",
     "Previous Names": "Bank of America Plaza, Seafirst Fifth Ave Plaza",
     Address: "800 5th Ave",
     Location: "(47.605773, -122.33025)",
@@ -239,7 +239,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Seattle Municipal Tower",
+    name: "Seattle Municipal Tower",
     "Previous Names": "Key Bank Tower",
     Address: "700 5th Ave",
     Location: "(47.6050437, -122.32996)",
@@ -253,7 +253,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Passport Agency",
+    name: "Passport Agency",
     "Previous Names": "",
     Address: "300 5th Ave",
     Location: "(47.6018316, -122.32723)",
@@ -267,7 +267,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Union Station Development",
+    name: "Union Station Development",
     "Previous Names": "",
     Address: "625 5th Ave",
     Location: "(47.5975244, -122.32809)",
@@ -281,7 +281,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "2020 E Madison St",
+    name: "2020 E Madison St",
     "Previous Names": "2026 E Madison St",
     Address: "2020 E Madison St",
     Location: "(47.6181037, -122.30504)",
@@ -295,7 +295,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "The Whittaker",
+    name: "The Whittaker",
     "Previous Names": "",
     Address: "4755 Fauntleroy Way SW",
     Location: "(47.5601124, -122.38191)",
@@ -309,7 +309,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Nessie (Amazon)",
+    name: "Nessie (Amazon)",
     "Previous Names": "Block 93",
     Address: "500 9th Ave N & 515 Westlake Ave N",
     Location: "(47.6238654, -122.33902)",
@@ -323,7 +323,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Alder Hall UW",
+    name: "Alder Hall UW",
     "Previous Names": "Site 35W",
     Address: "1315 NE Campus Pkwy",
     Location: "(47.6556098, -122.31395)",
@@ -337,7 +337,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Elm Hall UW",
+    name: "Elm Hall UW",
     "Previous Names": "Site 32W",
     Address: "1218 NE Campus Pkwy",
     Location: "(47.6565191, -122.31493)",
@@ -351,7 +351,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Admiral Safeway",
+    name: "Admiral Safeway",
     "Previous Names": "",
     Address: "2622 California Ave SW",
     Location: "(47.579426, -122.38638)",
@@ -365,7 +365,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Horizon House",
+    name: "Horizon House",
     "Previous Names": "",
     Address: "900 University St",
     Location: "(47.6108681, -122.32907)",
@@ -379,7 +379,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Cielo Apartments",
+    name: "Cielo Apartments",
     "Previous Names": "Seneca Towers",
     Address: "802 Seneca St",
     Location: "(47.6095649, -122.3297)",
@@ -393,7 +393,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "One/Two Union Square",
+    name: "One/Two Union Square",
     "Previous Names": "",
     Address: "600 University St / 621 Union St",
     Location: "(47.6100881, -122.33281)",
@@ -407,7 +407,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "WA State Convention Center",
+    name: "WA State Convention Center",
     "Previous Names": "",
     Address: "701 Pike St",
     Location: "(47.6115035, -122.33219)",
@@ -421,7 +421,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Westin Building",
+    name: "Westin Building",
     "Previous Names": "",
     Address: "2001 6th Ave",
     Location: "(47.6143481, -122.33884)",
@@ -435,7 +435,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Van Vorst Building (Amazon)",
+    name: "Van Vorst Building (Amazon)",
     "Previous Names": "Block 102, Amazon Phase 1A",
     Address: "410 Terry Ave N",
     Location: "(47.6226246, -122.33676)",
@@ -449,7 +449,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Park Place",
+    name: "Park Place",
     "Previous Names": "",
     Address: "1200 6th Ave",
     Location: "(47.6090297, -122.33206)",
@@ -463,7 +463,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Crowne Plaza Hotel",
+    name: "Crowne Plaza Hotel",
     "Previous Names": "Park Hilton",
     Address: "1113 6th Ave",
     Location: "(47.6080525, -122.33189)",
@@ -477,7 +477,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "1600 Seventh",
+    name: "1600 Seventh",
     "Previous Names": "CenturyLink Plaza, Quest Plaza, Bell Plaza",
     Address: "1600 7th Ave",
     Location: "(47.6135625, -122.33472)",
@@ -491,7 +491,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "8th + Olive",
+    name: "8th + Olive",
     "Previous Names": "Marsh & McLennan Building",
     Address: "720 Olive Way",
     Location: "(47.6142306, -122.33476)",
@@ -505,7 +505,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Plaza 600",
+    name: "Plaza 600",
     "Previous Names": "",
     Address: "600 Stewart St",
     Location: "(47.614032, -122.33719)",
@@ -519,7 +519,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "US Bank Centre",
+    name: "US Bank Centre",
     "Previous Names": "Pacific First Center, City Centre",
     Address: "1420 5th Ave",
     Location: "(47.6105424, -122.33468)",
@@ -533,7 +533,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Century Square",
+    name: "Century Square",
     "Previous Names": "",
     Address: "1501 4th Ave",
     Location: "(47.6104009, -122.3381)",
@@ -547,7 +547,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Benaroya Hall",
+    name: "Benaroya Hall",
     "Previous Names": "",
     Address: "1301 3rd Ave",
     Location: "(47.6075664, -122.33698)",
@@ -561,7 +561,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Seattle Art Museum",
+    name: "Seattle Art Museum",
     "Previous Names": "",
     Address: "1301 1st Ave / 1301 2nd Ave",
     Location: "(47.6072142, -122.33767)",
@@ -575,7 +575,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Four Seasons Hotel",
+    name: "Four Seasons Hotel",
     "Previous Names": "",
     Address: "99 Union St",
     Location: "(47.6073756, -122.33917)",
@@ -589,7 +589,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "1201 3rd Ave",
+    name: "1201 3rd Ave",
     "Previous Names": "WAMU Tower, Block Five",
     Address: "1201 3rd Ave",
     Location: "(47.6071864, -122.33619)",
@@ -604,7 +604,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Fourth & Blanchard Building",
+    name: "Fourth & Blanchard Building",
     "Previous Names": 'Sedgwick James Building, "Darth Vader" Building',
     Address: "2101 4th Ave",
     Location: "(47.6137881, -122.34185)",
@@ -618,7 +618,7 @@ export let privatelyOwnedPublicSpaces: PrivatelyOwnedPublicSpace[] = [
   },
   {
     "City Feature": "Public Spaces",
-    "Common Name": "Sixth & Lenora Building",
+    name: "Sixth & Lenora Building",
     "Previous Names": "United Airlines Bldg",
     Address: "2033 6th Ave",
     Location: "(47.6147682, -122.33935)",

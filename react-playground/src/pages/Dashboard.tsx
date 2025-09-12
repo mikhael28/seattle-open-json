@@ -1,25 +1,8 @@
 import React from "react";
 import { Button } from "../components/ui/button";
-import { BarChart3, Users, DollarSign, TrendingUp, Map } from "lucide-react";
+import { Map } from "lucide-react";
 import SeattleMap from "../components/SeattleMap";
 import ErrorBoundary from "../components/ErrorBoundary";
-import YouthProgramsVisualization from "../components/YouthProgramsVisualization";
-
-interface ProgramActivity {
-  id: string;
-  organizationName: string;
-  programDescription: string;
-  activityName: string;
-  activityDescription: string;
-  location: string;
-  ageRange: string;
-  dates: string;
-  day: string;
-  times: string;
-  cost: string;
-  url: string;
-  lastUpdated: string;
-}
 
 const Dashboard = () => {
   return (
@@ -41,12 +24,6 @@ const Dashboard = () => {
         </ErrorBoundary>
       </div>
 
-      {/* Youth Programs Visualization */}
-      <div className="rounded-lg border bg-card p-6">
-        <ErrorBoundary>
-          <YouthProgramsVisualization />
-        </ErrorBoundary>
-      </div>
 
     </div>
   );

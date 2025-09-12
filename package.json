@@ -1,6 +1,6 @@
 {
     "name": "seattle-open-json",
-    "version": "1.0.5",
+    "version": "1.0.6",
     "description": "Scraper for Seattle youth organization data using Jina",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",

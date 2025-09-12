@@ -1,6 +1,6 @@
 export interface CommunityCenter {
   OBJECTID: number;
-  "Offical Name": string;
+  name: string;
   Address: string;
   "Short Name": string;
   "CC Phone Number": string;
@@ -72,14 +72,12 @@ export interface CommunityCenter {
   SE_ANNO_CAD_DATA: string;
   x: number;
   y: number;
-
 }
-
 
 export const communityCenters: CommunityCenter[] = [
   {
     OBJECTID: 755,
-    "Offical Name": "Hutchinson Community Center",
+    name: "Hutchinson Community Center",
     Address: "3801 S Pilgrim St",
     "Short Name": "",
     "CC Phone Number": "",
@@ -154,7 +152,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 756,
-    "Offical Name": "Langston Hughes Cultural Arts Center",
+    name: "Langston Hughes Cultural Arts Center",
     Address: "104  17th Ave S",
     "Short Name": "Langston Hughes \\Cultural Arts Center",
     "CC Phone Number": "684-4757",
@@ -229,7 +227,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 757,
-    "Offical Name": "Bitter Lake Community Center",
+    name: "Bitter Lake Community Center",
     Address: "13035 Linden Ave N",
     "Short Name": "Bitter Lake C.C.",
     "CC Phone Number": "684-7524",
@@ -307,7 +305,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 758,
-    "Offical Name": "Lake City Community Center",
+    name: "Lake City Community Center",
     Address: "12531 28th Ave NE",
     "Short Name": "Lake City C.C.",
     "CC Phone Number": "(206) 256-5645",
@@ -384,7 +382,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 759,
-    "Offical Name": "Meadowbrook Community Center",
+    name: "Meadowbrook Community Center",
     Address: "10517 35th Ave NE",
     "Short Name": "Meadowbrook C.C.",
     "CC Phone Number": "684-7522",
@@ -462,7 +460,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 760,
-    "Offical Name": "Magnuson Community Center",
+    name: "Magnuson Community Center",
     Address: "7110 62nd Ave NE",
     "Short Name": "Magnuson C.C.",
     "CC Phone Number": "684-7026",
@@ -540,7 +538,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 761,
-    "Offical Name": "Ravenna-Eckstein Community Center",
+    name: "Ravenna-Eckstein Community Center",
     Address: "6535 Ravenna Ave NE",
     "Short Name": "Ravenna-Eckstein C.C.",
     "CC Phone Number": "684-7534",
@@ -618,7 +616,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 762,
-    "Offical Name": "Laurelhurst Community Center",
+    name: "Laurelhurst Community Center",
     Address: "4554 NE 41st St",
     "Short Name": "Laurelhurst C.C.",
     "CC Phone Number": "684-7529",
@@ -696,7 +694,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 763,
-    "Offical Name": "Green Lake Community Center",
+    name: "Green Lake Community Center",
     Address: "7201 E Green Lake Dr N",
     "Short Name": "Green Lake C.C.",
     "CC Phone Number": "684-0780",
@@ -774,7 +772,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 764,
-    "Offical Name": "Loyal Heights Community Center",
+    name: "Loyal Heights Community Center",
     Address: "2101 NW 77th St",
     "Short Name": "Loyal Heights C.C.",
     "CC Phone Number": "684-4052",
@@ -852,7 +850,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 765,
-    "Offical Name": "Ballard Community Center",
+    name: "Ballard Community Center",
     Address: "6020 - 28th Ave NW",
     "Short Name": "Ballard C.C.",
     "CC Phone Number": "684-4093",
@@ -930,7 +928,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 766,
-    "Offical Name": "Alki Community Center",
+    name: "Alki Community Center",
     Address: "5817 SW Stevens St",
     "Short Name": "Alki Community Center",
     "CC Phone Number": "206-684-4730",
@@ -1008,7 +1006,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 767,
-    "Offical Name": "South Park Community Center",
+    name: "South Park Community Center",
     Address: "8319  8th Ave S",
     "Short Name": "South Park Community Center",
     "CC Phone Number": "206-684-7451",
@@ -1086,7 +1084,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 768,
-    "Offical Name": "Hiawatha Community Center",
+    name: "Hiawatha Community Center",
     Address: "2700 California Ave SW",
     "Short Name": "Hiawatha Community Center",
     "CC Phone Number": "206-684-7441",
@@ -1164,7 +1162,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 769,
-    "Offical Name": "Delridge Community Center",
+    name: "Delridge Community Center",
     Address: "4501 Delridge Way SW",
     "Short Name": "Delridge Community Center",
     "CC Phone Number": "206-684-7423",
@@ -1242,7 +1240,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 770,
-    "Offical Name": "High Point Community Center",
+    name: "High Point Community Center",
     Address: "6920  34th Ave SW",
     "Short Name": "High Point Community Center",
     "CC Phone Number": "206-684-7422",
@@ -1320,7 +1318,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 771,
-    "Offical Name": "Rainier Beach Community Center",
+    name: "Rainier Beach Community Center",
     Address: "8825 Rainier Ave S",
     "Short Name": "Rainier Beach Community Center",
     "CC Phone Number": "206-386-1925",
@@ -1398,7 +1396,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 772,
-    "Offical Name": "Van Asselt Community Center",
+    name: "Van Asselt Community Center",
     Address: "2820 S Myrtle St",
     "Short Name": "Van Asselt Community Center",
     "CC Phone Number": "206-386-1921",
@@ -1476,7 +1474,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 773,
-    "Offical Name": "Rainier Community Center",
+    name: "Rainier Community Center",
     Address: "4600 38th Ave S",
     "Short Name": "Rainier Community Center",
     "CC Phone Number": "206-386-1919",
@@ -1554,7 +1552,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 774,
-    "Offical Name": "Jefferson Park Community Center",
+    name: "Jefferson Park Community Center",
     Address: "3801 Beacon Ave S",
     "Short Name": "Jefferson Community Center",
     "CC Phone Number": "206-684-7481",
@@ -1632,7 +1630,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 775,
-    "Offical Name": "Queen Anne Community Center",
+    name: "Queen Anne Community Center",
     Address: "1901 1st Ave W",
     "Short Name": "Queen Anne C.C.",
     "CC Phone Number": "386-4240",
@@ -1710,7 +1708,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 776,
-    "Offical Name": "Miller Community Center",
+    name: "Miller Community Center",
     Address: "330 19th Ave E",
     "Short Name": "Miller C.C.",
     "CC Phone Number": "684-4753",
@@ -1788,7 +1786,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 777,
-    "Offical Name": "Yesler Community Center",
+    name: "Yesler Community Center",
     Address: "917  E Yesler Way",
     "Short Name": "Yesler C.C.",
     "CC Phone Number": "386-1245",
@@ -1866,7 +1864,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 778,
-    "Offical Name": "Garfield Community Center",
+    name: "Garfield Community Center",
     Address: "2323 E Cherry St",
     "Short Name": "Garfield C.C.",
     "CC Phone Number": "684-4788",
@@ -1944,7 +1942,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 779,
-    "Offical Name": "Southwest Community Center",
+    name: "Southwest Community Center",
     Address: "2801 SW Thistle St",
     "Short Name": "",
     "CC Phone Number": "",
@@ -2019,7 +2017,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 780,
-    "Offical Name": "International District Community Center",
+    name: "International District Community Center",
     Address: "718 8th Ave S",
     "Short Name": "International District Chinatown C.C.",
     "CC Phone Number": "206-233-0042",
@@ -2097,7 +2095,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 781,
-    "Offical Name": "Montlake Community Center",
+    name: "Montlake Community Center",
     Address: "1618 E Calhoun St",
     "Short Name": "Montlake C.C.",
     "CC Phone Number": "684-4736",
@@ -2174,7 +2172,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 782,
-    "Offical Name": "Northgate Community Center",
+    name: "Northgate Community Center",
     Address: "10510 5th Ave NE",
     "Short Name": "Northgate C.C.",
     "CC Phone Number": "684-7068",
@@ -2252,7 +2250,7 @@ export const communityCenters: CommunityCenter[] = [
   },
   {
     OBJECTID: 783,
-    "Offical Name": "Magnolia Community Center",
+    name: "Magnolia Community Center",
     Address: "2550  34th Ave W",
     "Short Name": "Magnolia C.C.",
     "CC Phone Number": "386-4235",

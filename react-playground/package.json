@@ -17,7 +17,7 @@
     "react-router-dom": "^7.7.0",
     "react-simple-maps": "^3.0.0",
     "seattle-boundaries-data": "^5.0.3",
-    "seattle-open-json": "1.0.5",
+    "seattle-open-json": "1.0.6",
     "tailwind-merge": "^3.3.1",
     "tailwindcss-animate": "^1.0.7",
     "vitawind": "^2.0.0"

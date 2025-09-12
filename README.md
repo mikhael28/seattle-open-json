@@ -105,7 +105,7 @@ interface YouthProgram {
 // Community Centers
 interface CommunityCenter {
   OBJECTID: number;
-  "Offical Name": string;
+  name: string;
   Address: string;
   "Short Name": string;
   "CC Phone Number": string;

@@ -23,11 +23,6 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       href: "/profile",
       icon: User,
     },
-    {
-      name: "Settings",
-      href: "/settings",
-      icon: Settings,
-    },
   ];
 
   return (
@@ -50,7 +45,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
         <div className="flex h-full flex-col">
           {/* Header */}
           <div className="flex h-16 items-center justify-between border-b px-6">
-            <h1 className="text-xl font-bold">My App</h1>
+            <h1 className="text-xl font-bold">Seattle Open JSON</h1>
             <Button
               variant="ghost"
               size="icon"
