@@ -3,7 +3,7 @@ import { Search, Filter, Users, MapPin, Calendar, DollarSign, ExternalLink, Chev
 import { Button } from "./ui/button";
 
 // Import the youth programs data - using relative path since it's in the same project
-import { youth_programs, YouthProgram } from "../../../src/youth-programs";
+import { youth_programs, YouthProgram } from "seattle-open-json";
 
 interface YouthProgramsVisualizationProps {
   className?: string;

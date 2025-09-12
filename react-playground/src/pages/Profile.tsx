@@ -29,7 +29,6 @@ import {
   parksCatalog,
   mobileRecreationProgramming,
   pPatch,
-  organizationData,
   picnicSites,
   privatelyOwnedPublicSpaces,
   youth_programs,
@@ -42,7 +41,7 @@ import {
   type PicnicSite,
   type PrivatelyOwnedPublicSpace,
   type YouthProgram
-} from "../../../src/index";
+} from "seattle-open-json";
 
 // Define missing types for organizationData
 interface OrganizationData {
@@ -101,13 +100,6 @@ const tabs = [
     icon: Flower,
     data: pPatch,
     count: pPatch.length
-  },
-  {
-    id: 'organization-data',
-    name: 'Organization Data',
-    icon: Building,
-    data: organizationData,
-    count: organizationData.length
   },
   {
     id: 'picnic-sites',
