@@ -28,7 +28,7 @@ import type {
   Metadata,
   MetaTableDescription,
   Taxonomy,
-} from "./hsds";
+} from "../hsds/hsds";
 
 // Main Organization
 export const seattleYouthOrganization: Organization = {

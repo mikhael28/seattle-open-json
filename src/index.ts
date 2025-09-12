@@ -6,26 +6,26 @@
  */
 
 // Export data-specific interfaces
-export type { CommunityCenter } from "./community-centers";
-export type { FarmersMarket } from "./farmers-markets";
-export type { MobileRecreationProgramming } from "./mobile-recreation-programming";
-export type { PPatch } from "./p-patch";
-export type { PicnicSite } from "./picnic-sites";
-export type { PrivatelyOwnedPublicSpace } from "./privately-owned-public-spaces";
-export type { YouthProgram } from "./youth-programs";
+export type { CommunityCenter } from "./data/community-centers";
+export type { FarmersMarket } from "./data/farmers-markets";
+export type { MobileRecreationProgramming } from "./data/mobile-recreation-programming";
+export type { PPatch } from "./data/p-patch";
+export type { PicnicSite } from "./data/picnic-sites";
+export type { PrivatelyOwnedPublicSpace } from "./data/privately-owned-public-spaces";
+export type { YouthProgram } from "./data/youth-programs";
 export type { EmeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
-export type { ParksCatalog } from "./parks-catalog";
+export type { ParksCatalog } from "./data/parks-catalog";
 
 // Export data loading utilities
 
 // Import all data objects from various src files
-import { communityCenters } from "./community-centers";
-import { farmersMarkets } from "./farmers-markets";
-import { parksCatalog } from "./parks-catalog";
-import { mobileRecreationProgramming } from "./mobile-recreation-programming";
-import { pPatch } from "./p-patch";
-import { picnicSites } from "./picnic-sites";
-import { privatelyOwnedPublicSpaces } from "./privately-owned-public-spaces";
+import { communityCenters } from "./data/community-centers";
+import { farmersMarkets } from "./data/farmers-markets";
+import { parksCatalog } from "./data/parks-catalog";
+import { mobileRecreationProgramming } from "./data/mobile-recreation-programming";
+import { pPatch } from "./data/p-patch";
+import { picnicSites } from "./data/picnic-sites";
+import { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces";
 import {
   seattleYouthOrganization,
   programs,
@@ -51,18 +51,18 @@ import {
   additionalUrls,
   fundingSources,
   seattleYouthHSDSExample,
-} from "./hsds-example";
-import { youth_programs } from "./youth-programs";
+} from "./hsds/hsds-example";
+import { youth_programs } from "./data/youth-programs";
 import { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
 
 // Export individual data collections
-export { communityCenters } from "./community-centers";
-export { farmersMarkets } from "./farmers-markets";
-export { parksCatalog } from "./parks-catalog";
-export { mobileRecreationProgramming } from "./mobile-recreation-programming";
-export { pPatch } from "./p-patch";
-export { picnicSites } from "./picnic-sites";
-export { privatelyOwnedPublicSpaces } from "./privately-owned-public-spaces";
+export { communityCenters } from "./data/community-centers";
+export { farmersMarkets } from "./data/farmers-markets";
+export { parksCatalog } from "./data/parks-catalog";
+export { mobileRecreationProgramming } from "./data/mobile-recreation-programming";
+export { pPatch } from "./data/p-patch";
+export { picnicSites } from "./data/picnic-sites";
+export { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces";
 // Export HSDS example data collections
 export {
   seattleYouthOrganization,
@@ -89,8 +89,8 @@ export {
   additionalUrls,
   fundingSources,
   seattleYouthHSDSExample,
-} from "./hsds-example";
-export { youth_programs } from "./youth-programs";
+} from "./hsds/hsds-example";
+export { youth_programs } from "./data/youth-programs";
 export { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
 
 // Export HSDS (Human Services Data Specification) types and interfaces
@@ -119,7 +119,7 @@ export type {
   OrganizationIdentifier,
   Unit,
   ServiceCapacity,
-} from "./hsds";
+} from "./hsds/hsds";
 
 // Combined dataset with all opportunities
 export const allSeattleData = {
