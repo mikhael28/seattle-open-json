@@ -81,7 +81,7 @@ interface OrganizationData {
 const tabs = [
   {
     id: 'overview',
-    name: 'Overview',
+    name: 'Map',
     icon: Database,
     data: null,
     count: Object.values(packageMetadata.totalRecords).reduce((sum, count) => sum + (typeof count === 'number' ? count : 0), 0)

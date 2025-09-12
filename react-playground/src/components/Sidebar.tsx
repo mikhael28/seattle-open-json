@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/button";
-import { LayoutDashboard, User, Settings, LogOut, Menu, X } from "lucide-react";
+import { LayoutDashboard, User, Settings, LogOut, Menu, X, BookOpen } from "lucide-react";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -19,9 +19,9 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       icon: LayoutDashboard,
     },
     {
-      name: "Profile",
-      href: "/profile",
-      icon: User,
+      name: "Resource Guide",
+      href: "/resource-guide",
+      icon: BookOpen,
     },
   ];
 
@@ -86,10 +86,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
 
           {/* Footer */}
           <div className="border-t p-4">
-            <Button variant="ghost" className="w-full justify-start">
-              <LogOut className="mr-3 h-5 w-5" />
-              Logout
+            <Button variant="ghost" className="w-full justify-start" asChild>
+              <a href="https://github.com/mikhael28/seattle-open-json" target="_blank">
+                
+                Find us on GitHub
+              </a>
             </Button>
+           
           </div>
         </div>
       </div>

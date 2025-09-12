@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import { select } from 'd3-selection';
 import { geoAlbers, geoPath, geoContains } from 'd3-geo';
 
@@ -48,6 +48,25 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
   const [markers, setMarkers] = useState<MarkerData[]>([]);
   const [neighborhoods, setNeighborhoods] = useState<any>(null);
 
+  // Filter out East King County cities to focus on Seattle
+  const seattleOnlyNeighborhoods = useMemo(() => {
+    if (!neighborhoods) return null;
+    
+    const eastKingCountyCities = [
+      'Bellevue', 'Redmond', 'Kirkland', 'Issaquah', 'Mercer Island', 
+      'Renton', 'Kent', 'Tukwila', 'Burien', 'Sammamish', 'Newcastle',
+      'Woodinville', 'Bothell', 'Shoreline', 'Lake Forest Park'
+    ];
+    
+    return {
+      ...neighborhoods,
+      features: neighborhoods.features.filter((feature: any) => {
+        const city = feature.properties?.city;
+        return city === 'Seattle' || !eastKingCountyCities.includes(city);
+      })
+    };
+  }, [neighborhoods]);
+
   // Fetch neighborhoods GeoJSON data
   useEffect(() => {
     const fetchNeighborhoods = async () => {
@@ -63,27 +82,14 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
     fetchNeighborhoods();
   }, []);
 
-  useEffect(() => {
-    if (!svgRef.current || !neighborhoods) return;
-
-    const svg = select(svgRef.current);
-    svg.selectAll("*").remove(); // Clear previous content
-
-    const projection = geoAlbers()
-      .rotate([122.3, 0]) // Seattle's longitude
-      .center([0, 47.6]) // Seattle's latitude
-      .scale(100000)
-      .translate([width / 2, height / 2]);
-
-    const path = geoPath().projection(projection);
-
-    // Prepare markers from data sources
-    const preparedMarkers: MarkerData[] = [];
+  // Prepare markers from data sources - memoized to prevent recalculation
+  const preparedMarkers = useMemo(() => {
+    const markers: MarkerData[] = [];
     
     // Community Centers - use Latitude/Longitude if available
     communityCenters.forEach((center: any) => {
       if (center.Latitude && center.Longitude) {
-        preparedMarkers.push({
+        markers.push({
           type: 'community-center',
           name: center.name || 'Community Center',
           coordinates: [center.Longitude, center.Latitude] as [number, number],
@@ -98,7 +104,7 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
         // Convert state plane coordinates to lat/lng (approximate conversion for Washington State Plane)
         const lng = (program.x - 1271000) / 100000 * 0.1 - 122.3;
         const lat = (program.y - 200000) / 100000 * 0.1 + 47.6;
-        preparedMarkers.push({
+        markers.push({
           type: 'mobile-rec',
           name: program['Program Title'] || program.location || 'Mobile Recreation',
           coordinates: [lng, lat] as [number, number],
@@ -115,7 +121,7 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
           const lat = parseFloat(match[1]);
           const lng = parseFloat(match[2]);
           if (!isNaN(lat) && !isNaN(lng)) {
-            preparedMarkers.push({
+            markers.push({
               type: 'public-space',
               name: space.name || 'Public Space',
               coordinates: [lng, lat] as [number, number],
@@ -126,13 +132,77 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
       }
     });
 
-    // Note: Picnic sites don't seem to have coordinate data, so we'll skip them for now
+    return markers;
+  }, []); // Empty dependency array since the data sources are static
 
+  useEffect(() => {
     setMarkers(preparedMarkers);
+  }, [preparedMarkers]);
+
+  // Optimize tooltip updates with callbacks
+  const handleTooltipMove = useCallback((event: any) => {
+    setTooltip(prev => prev ? { ...prev, x: event.pageX, y: event.pageY } : null);
+  }, []);
+
+  const handleNeighborhoodHover = useCallback((event: any, d: any) => {
+    // Find relevant data for this neighborhood
+    const neighborhoodName = d.properties.name;
+    const relevantData: MarkerData[] = [];
+    
+    // Filter markers that are within this neighborhood bounds
+    preparedMarkers.forEach(marker => {
+      try {
+        if (geoContains(d, marker.coordinates)) {
+          relevantData.push(marker);
+        }
+      } catch (e) {
+        // Skip markers that cause geoContains errors
+      }
+    });
+
+    setTooltip({
+      name: neighborhoodName,
+      data: relevantData,
+      x: event.pageX,
+      y: event.pageY
+    });
+  }, [preparedMarkers]);
+
+  const handleMarkerHover = useCallback((event: any, d: MarkerData) => {
+    // Create enhanced marker data for tooltip
+    const enhancedData = {
+      ...d,
+      name: d.data.name || d.data['Program Title'] || d.data.location || d.name,
+      description: d.data.description || 
+                  d.data.Benefit || 
+                  getTypeDescription(d.type)
+    };
+    
+    setTooltip({
+      name: enhancedData.name,
+      data: [enhancedData],
+      x: event.pageX,
+      y: event.pageY
+    });
+  }, []);
+
+  useEffect(() => {
+    if (!svgRef.current || !seattleOnlyNeighborhoods) return;
+
+    const svg = select(svgRef.current);
+    svg.selectAll("*").remove(); // Clear previous content
+
+    const projection = geoAlbers()
+      .rotate([122.3, 0]) // Seattle's longitude
+      .center([0, 47.6]) // Seattle's latitude
+      .scale(150000) // Increased scale to zoom in closer
+      .translate([width / 2, height / 2]);
+
+    const path = geoPath().projection(projection);
 
     // Draw neighborhoods
     svg.selectAll(".neighborhood")
-      .data(neighborhoods.features)
+      .data(seattleOnlyNeighborhoods.features)
       .enter()
       .append("path")
       .attr("class", "neighborhood")
@@ -143,33 +213,10 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
       .style("cursor", "pointer")
       .on("mouseover", function(this: any, event: any, d: any) {
         select(this).attr("fill", "#b8d4e3");
-        
-        // Find relevant data for this neighborhood
-        const neighborhoodName = d.properties.name;
-        const relevantData: MarkerData[] = [];
-        
-        // Filter markers that are within this neighborhood bounds
-        preparedMarkers.forEach(marker => {
-          try {
-            if (geoContains(d, marker.coordinates)) {
-              relevantData.push(marker);
-            }
-          } catch (e) {
-            // Skip markers that cause geoContains errors
-          }
-        });
-
-        setTooltip({
-          name: neighborhoodName,
-          data: relevantData,
-          x: event.pageX,
-          y: event.pageY
-        });
+        handleNeighborhoodHover(event, d);
       })
       .on("mousemove", function(this: any, event: any) {
-        if (tooltip) {
-          setTooltip(prev => prev ? { ...prev, x: event.pageX, y: event.pageY } : null);
-        }
+        handleTooltipMove(event);
       })
       .on("mouseout", function(this: any) {
         select(this).attr("fill", "#e8f4f8");
@@ -204,27 +251,10 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
       .style("cursor", "pointer")
       .on("mouseover", function(this: any, event: any, d: MarkerData) {
         select(this).attr("r", 6);
-        
-        // Create enhanced marker data for tooltip
-        const enhancedData = {
-          ...d,
-          name: d.data.name || d.data['Program Title'] || d.data.location || d.name,
-          description: d.data.description || 
-                      d.data.Benefit || 
-                      getTypeDescription(d.type)
-        };
-        
-        setTooltip({
-          name: enhancedData.name,
-          data: [enhancedData],
-          x: event.pageX,
-          y: event.pageY
-        });
+        handleMarkerHover(event, d);
       })
       .on("mousemove", function(this: any, event: any) {
-        if (tooltip) {
-          setTooltip(prev => prev ? { ...prev, x: event.pageX, y: event.pageY } : null);
-        }
+        handleTooltipMove(event);
       })
       .on("mouseout", function(this: any) {
         select(this).attr("r", 4);
@@ -233,7 +263,7 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
 
     // Add neighborhood labels
     svg.selectAll(".neighborhood-label")
-      .data(neighborhoods.features)
+      .data(seattleOnlyNeighborhoods.features)
       .enter()
       .append("text")
       .attr("class", "neighborhood-label")
@@ -245,7 +275,7 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
       .style("pointer-events", "none")
       .text((d: any) => d.properties.name);
 
-  }, [width, height, tooltip, neighborhoods]);
+  }, [width, height, seattleOnlyNeighborhoods, preparedMarkers, handleNeighborhoodHover, handleMarkerHover, handleTooltipMove]);
 
   return (
     <div className="seattle-map-container" style={{ position: 'relative' }}>
