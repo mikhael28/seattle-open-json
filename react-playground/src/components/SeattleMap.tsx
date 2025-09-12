@@ -200,35 +200,49 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
 
     const path = geoPath().projection(projection);
 
-    // Draw neighborhoods
+    // Draw neighborhoods with modern gradient colors
     svg.selectAll(".neighborhood")
       .data(seattleOnlyNeighborhoods.features)
       .enter()
       .append("path")
       .attr("class", "neighborhood")
       .attr("d", path as any)
-      .attr("fill", "#e8f4f8")
-      .attr("stroke", "#2c5aa0")
-      .attr("stroke-width", 1)
+      .attr("fill", "#f8fafc")
+      .attr("stroke", "#e2e8f0")
+      .attr("stroke-width", 1.5)
       .style("cursor", "pointer")
+      .style("transition", "all 0.3s ease")
       .on("mouseover", function(this: any, event: any, d: any) {
-        select(this).attr("fill", "#b8d4e3");
+        select(this)
+          .attr("fill", "#e0f2fe")
+          .attr("stroke", "#0ea5e9")
+          .attr("stroke-width", 2);
         handleNeighborhoodHover(event, d);
       })
       .on("mousemove", function(this: any, event: any) {
         handleTooltipMove(event);
       })
       .on("mouseout", function(this: any) {
-        select(this).attr("fill", "#e8f4f8");
+        select(this)
+          .attr("fill", "#f8fafc")
+          .attr("stroke", "#e2e8f0")
+          .attr("stroke-width", 1.5);
         setTooltip(null);
       });
 
-    // Add markers
+    // Add markers with modern colors
     const markerColors = {
-      'community-center': '#ff6b6b',
-      'picnic-site': '#4ecdc4',
-      'mobile-rec': '#45b7d1',
-      'public-space': '#96ceb4'
+      'community-center': '#ef4444', // Modern red
+      'picnic-site': '#14b8a6',      // Modern teal
+      'mobile-rec': '#3b82f6',       // Modern blue
+      'public-space': '#10b981'      // Modern emerald
+    };
+    
+    const markerHoverColors = {
+      'community-center': '#dc2626',
+      'picnic-site': '#0f766e',
+      'mobile-rec': '#1d4ed8',
+      'public-space': '#059669'
     };
 
     svg.selectAll(".marker")
@@ -244,20 +258,28 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
         const point = projection(d.coordinates);
         return point ? point[1] : 0;
       })
-      .attr("r", 4)
+      .attr("r", 5)
       .attr("fill", (d: MarkerData) => markerColors[d.type])
       .attr("stroke", "white")
-      .attr("stroke-width", 1)
+      .attr("stroke-width", 2)
       .style("cursor", "pointer")
+      .style("filter", "drop-shadow(0 2px 4px rgba(0,0,0,0.1))")
+      .style("transition", "all 0.3s ease")
       .on("mouseover", function(this: any, event: any, d: MarkerData) {
-        select(this).attr("r", 6);
+        select(this)
+          .attr("r", 8)
+          .attr("fill", markerHoverColors[d.type])
+          .style("filter", "drop-shadow(0 4px 8px rgba(0,0,0,0.2))");
         handleMarkerHover(event, d);
       })
       .on("mousemove", function(this: any, event: any) {
         handleTooltipMove(event);
       })
-      .on("mouseout", function(this: any) {
-        select(this).attr("r", 4);
+      .on("mouseout", function(this: any, d: MarkerData) {
+        select(this)
+          .attr("r", 5)
+          .attr("fill", markerColors[d.type])
+          .style("filter", "drop-shadow(0 2px 4px rgba(0,0,0,0.1))");
         setTooltip(null);
       });
 
@@ -270,9 +292,11 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
       .attr("x", (d: any) => (path.centroid as any)(d)[0])
       .attr("y", (d: any) => (path.centroid as any)(d)[1])
       .attr("text-anchor", "middle")
-      .attr("font-size", "10px")
-      .attr("fill", "#2c5aa0")
+      .attr("font-size", "11px")
+      .attr("font-weight", "500")
+      .attr("fill", "#475569")
       .style("pointer-events", "none")
+      .style("text-shadow", "0 1px 2px rgba(255,255,255,0.8)")
       .text((d: any) => d.properties.name);
 
   }, [width, height, seattleOnlyNeighborhoods, preparedMarkers, handleNeighborhoodHover, handleMarkerHover, handleTooltipMove]);
@@ -283,7 +307,7 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
         ref={svgRef}
         width={width}
         height={height}
-        style={{ border: '1px solid #ccc', borderRadius: '8px' }}
+        style={{ border: '2px solid #e2e8f0', borderRadius: '12px', background: 'linear-gradient(135deg, #f8fafc 0%, #f1f5f9 100%)' }}
       />
       
       {tooltip && (
@@ -293,15 +317,17 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
             position: 'fixed',
             left: tooltip.x + 10,
             top: tooltip.y - 10,
-            backgroundColor: 'rgba(0, 0, 0, 0.9)',
+            backgroundColor: 'rgba(15, 23, 42, 0.95)',
             color: 'white',
-            padding: '12px',
-            borderRadius: '8px',
+            padding: '16px',
+            borderRadius: '12px',
             fontSize: '14px',
-            maxWidth: '300px',
+            maxWidth: '320px',
             zIndex: 1000,
             pointerEvents: 'none',
-            boxShadow: '0 4px 12px rgba(0, 0, 0, 0.3)'
+            boxShadow: '0 10px 25px rgba(0, 0, 0, 0.3)',
+            border: '1px solid rgba(255, 255, 255, 0.1)',
+            backdropFilter: 'blur(8px)'
           }}
         >
           <div style={{ fontWeight: 'bold', marginBottom: '8px', fontSize: '16px' }}>
@@ -325,9 +351,9 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
                     height: '8px',
                     borderRadius: '50%',
                     backgroundColor: 
-                      item.type === 'community-center' ? '#ff6b6b' :
-                      item.type === 'picnic-site' ? '#4ecdc4' :
-                      item.type === 'mobile-rec' ? '#45b7d1' : '#96ceb4',
+                      item.type === 'community-center' ? '#ef4444' :
+                      item.type === 'picnic-site' ? '#14b8a6' :
+                      item.type === 'mobile-rec' ? '#3b82f6' : '#10b981',
                     marginRight: '8px',
                     marginTop: '2px',
                     flexShrink: 0
@@ -366,24 +392,58 @@ const SeattleMap: React.FC<SeattleMapProps> = ({ width = 800, height = 600 }) =>
         position: 'absolute',
         top: '20px',
         right: '20px',
-        backgroundColor: 'rgba(255, 255, 255, 0.95)',
-        padding: '12px',
-        borderRadius: '8px',
+        backgroundColor: 'rgba(255, 255, 255, 0.98)',
+        padding: '16px',
+        borderRadius: '12px',
         fontSize: '12px',
-        boxShadow: '0 2px 8px rgba(0, 0, 0, 0.1)'
+        boxShadow: '0 4px 20px rgba(0, 0, 0, 0.15)',
+        border: '1px solid rgba(255, 255, 255, 0.8)',
+        backdropFilter: 'blur(8px)'
       }}>
         <div style={{ fontWeight: 'bold', marginBottom: '8px' }}>Legend</div>
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '4px' }}>
-          <span style={{ width: '12px', height: '12px', backgroundColor: '#ff6b6b', borderRadius: '50%', marginRight: '8px' }} />
-          Community Centers ({markers.filter(m => m.type === 'community-center').length})
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '6px' }}>
+          <span style={{ 
+            width: '14px', 
+            height: '14px', 
+            backgroundColor: '#ef4444', 
+            borderRadius: '50%', 
+            marginRight: '10px',
+            boxShadow: '0 2px 4px rgba(239, 68, 68, 0.3)'
+          }} />
+          <span style={{ fontWeight: '500', color: '#1f2937' }}>Community Centers ({markers.filter(m => m.type === 'community-center').length})</span>
         </div>
-        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '4px' }}>
-          <span style={{ width: '12px', height: '12px', backgroundColor: '#45b7d1', borderRadius: '50%', marginRight: '8px' }} />
-          Mobile Recreation ({markers.filter(m => m.type === 'mobile-rec').length})
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '6px' }}>
+          <span style={{ 
+            width: '14px', 
+            height: '14px', 
+            backgroundColor: '#3b82f6', 
+            borderRadius: '50%', 
+            marginRight: '10px',
+            boxShadow: '0 2px 4px rgba(59, 130, 246, 0.3)'
+          }} />
+          <span style={{ fontWeight: '500', color: '#1f2937' }}>Mobile Recreation ({markers.filter(m => m.type === 'mobile-rec').length})</span>
+        </div>
+        <div style={{ display: 'flex', alignItems: 'center', marginBottom: '6px' }}>
+          <span style={{ 
+            width: '14px', 
+            height: '14px', 
+            backgroundColor: '#10b981', 
+            borderRadius: '50%', 
+            marginRight: '10px',
+            boxShadow: '0 2px 4px rgba(16, 185, 129, 0.3)'
+          }} />
+          <span style={{ fontWeight: '500', color: '#1f2937' }}>Public Spaces ({markers.filter(m => m.type === 'public-space').length})</span>
         </div>
         <div style={{ display: 'flex', alignItems: 'center' }}>
-          <span style={{ width: '12px', height: '12px', backgroundColor: '#96ceb4', borderRadius: '50%', marginRight: '8px' }} />
-          Public Spaces ({markers.filter(m => m.type === 'public-space').length})
+          <span style={{ 
+            width: '14px', 
+            height: '14px', 
+            backgroundColor: '#14b8a6', 
+            borderRadius: '50%', 
+            marginRight: '10px',
+            boxShadow: '0 2px 4px rgba(20, 184, 166, 0.3)'
+          }} />
+          <span style={{ fontWeight: '500', color: '#1f2937' }}>Picnic Sites ({markers.filter(m => m.type === 'picnic-site').length})</span>
         </div>
       </div>
     </div>

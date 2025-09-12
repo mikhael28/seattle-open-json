@@ -34,18 +34,18 @@ const ResourceGuide = () => {
   }, [searchTerm, selectedCategory]);
 
   return (
-    <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-6xl mx-auto">
+    <div className="h-full bg-gray-50 flex flex-col">
+      <div className="flex-shrink-0 p-6 border-b border-gray-200 bg-white">
         {/* Header */}
-        <div className="mb-8">
-          <h1 className="text-3xl font-bold text-gray-900 mb-2">Emerald City Resource Guide</h1>
+        <div className="mb-6">
+          <h1 className="text-2xl font-bold text-gray-900 mb-2">Emerald City Resource Guide</h1>
           <p className="text-gray-600">
             Explore {emeraldCityResourceGuide.length} organizations and resources in Seattle
           </p>
         </div>
 
         {/* Search and Filter Controls */}
-        <div className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
+        <div className="bg-gray-50 rounded-lg border border-gray-200 p-4">
           <div className="flex flex-col md:flex-row gap-4">
             {/* Search Bar */}
             <div className="flex-1 relative">
@@ -81,8 +81,10 @@ const ResourceGuide = () => {
             Showing {filteredOrganizations.length} of {emeraldCityResourceGuide.length} organizations
           </div>
         </div>
+      </div>
 
-        {/* Organizations List */}
+      {/* Organizations List - Scrollable */}
+      <div className="flex-1 overflow-auto p-6">
         <div className="space-y-4">
           {filteredOrganizations.map((org, index) => (
             <div key={`${org.name}-${index}`} className="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow">
@@ -154,20 +156,20 @@ const ResourceGuide = () => {
               </div>
             </div>
           ))}
-        </div>
 
-        {/* No Results */}
-        {filteredOrganizations.length === 0 && (
-          <div className="text-center py-12">
-            <div className="text-gray-400 mb-4">
-              <Search className="h-12 w-12 mx-auto" />
+          {/* No Results */}
+          {filteredOrganizations.length === 0 && (
+            <div className="text-center py-12">
+              <div className="text-gray-400 mb-4">
+                <Search className="h-12 w-12 mx-auto" />
+              </div>
+              <h3 className="text-lg font-medium text-gray-900 mb-2">No organizations found</h3>
+              <p className="text-gray-600">
+                Try adjusting your search terms or category filter
+              </p>
             </div>
-            <h3 className="text-lg font-medium text-gray-900 mb-2">No organizations found</h3>
-            <p className="text-gray-600">
-              Try adjusting your search terms or category filter
-            </p>
-          </div>
-        )}
+          )}
+        </div>
       </div>
     </div>
   );

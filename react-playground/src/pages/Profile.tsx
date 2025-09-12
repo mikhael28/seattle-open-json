@@ -48,6 +48,7 @@ import {
   Users2
 } from "lucide-react";
 import SeattleMap from '../components/SeattleMap';
+import ResourceGuide from './ResourceGuide';
 
 // Import all data from seattle-open-json
 import {
@@ -864,57 +865,69 @@ const Profile = () => {
         <div className="space-y-6">
           {activeTab === 'overview' ? (
             <div>
-              {/* Seattle Youth Resources Map */}
-              <div className="bg-white rounded-xl shadow-sm p-6 border border-gray-100 mb-8">
-                <div className="flex items-center justify-between mb-6">
-                  <div>
-                    <h2 className="text-xl font-semibold text-gray-900 flex items-center">
-                      <MapPin className="mr-2 text-blue-600" size={24} />
-                      Seattle Youth Resources Map
-                    </h2>
-                    <p className="text-gray-600 mt-2">
-                      Explore community centers, mobile recreation programs, and public spaces across Seattle neighborhoods. 
-                      Hover over areas to see available resources.
-                    </p>
-                  </div>
-                </div>
+              {/* Seattle Youth Resources Map - Split Layout on Large Screens */}
+              <div className="bg-white rounded-xl shadow-sm border border-gray-100 mb-8 overflow-hidden">
                 
-                <div className="bg-gradient-to-br from-blue-50 to-indigo-50 rounded-lg p-4 border border-blue-100">
-                  <div className="w-full overflow-x-auto flex justify-center">
-                    <div className="relative">
-                      <SeattleMap width={mapWidth} height={500} />
-                      <div className="absolute bottom-4 left-4 bg-white/90 backdrop-blur-sm rounded-lg p-3 shadow-lg">
-                        <div className="text-xs text-gray-600 mb-2">Interactive Features:</div>
-                        <div className="space-y-1 text-xs">
-                          <div className="flex items-center">
-                            <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
-                            <span>Hover neighborhoods for resources</span>
-                          </div>
-                          <div className="flex items-center">
-                            <div className="w-2 h-2 bg-green-500 rounded-full mr-2"></div>
-                            <span>Click markers for details</span>
+                
+                {/* Split Layout Container */}
+                <div className="flex flex-col lg:flex-row h-[600px]">
+                  {/* Left Side - Map */}
+                  <div className="lg:w-1/2 w-full h-full">
+                    <div className="h-full bg-gradient-to-br from-slate-50 to-slate-100 p-6">
+                      <div className="h-full rounded-lg overflow-hidden bg-white shadow-inner">
+                        <div className="w-full h-full flex items-center justify-center">
+                          <div className="relative">
+                            <SeattleMap width={Math.min(500, window.innerWidth * 0.4)} height={500} />
+                            <div className="absolute bottom-4 left-4 bg-white/95 backdrop-blur-sm rounded-lg p-3 shadow-lg">
+                              <div className="text-xs text-gray-600 mb-2 font-medium">Interactive Features:</div>
+                              <div className="space-y-1 text-xs">
+                                <div className="flex items-center">
+                                  <div className="w-2 h-2 bg-emerald-500 rounded-full mr-2"></div>
+                                  <span>Hover neighborhoods for resources</span>
+                                </div>
+                                <div className="flex items-center">
+                                  <div className="w-2 h-2 bg-blue-500 rounded-full mr-2"></div>
+                                  <span>Click markers for details</span>
+                                </div>
+                              </div>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
                   </div>
+                  
+                  {/* Right Side - Resource Guide on Large Screens */}
+                  <div className="lg:w-1/2 w-full h-full lg:border-l border-gray-200">
+                    <div className="h-full overflow-hidden">
+                      <ResourceGuide />
+                    </div>
+                  </div>
                 </div>
                 
-                <div className="mt-4 grid grid-cols-2 md:grid-cols-3 gap-4">
-                  <div className="text-center p-3 bg-red-50 rounded-lg border border-red-100">
-                    <div className="w-4 h-4 bg-red-500 rounded-full mx-auto mb-2"></div>
-                    <div className="text-xs font-medium text-gray-700">Community Centers</div>
-                    <div className="text-xs text-gray-500">Youth programs & activities</div>
-                  </div>
-                  <div className="text-center p-3 bg-blue-50 rounded-lg border border-blue-100">
-                    <div className="w-4 h-4 bg-blue-500 rounded-full mx-auto mb-2"></div>
-                    <div className="text-xs font-medium text-gray-700">Mobile Recreation</div>
-                    <div className="text-xs text-gray-500">Pop-up activities</div>
-                  </div>
-                  <div className="text-center p-3 bg-green-50 rounded-lg border border-green-100">
-                    <div className="w-4 h-4 bg-green-500 rounded-full mx-auto mb-2"></div>
-                    <div className="text-xs font-medium text-gray-700">Public Spaces</div>
-                    <div className="text-xs text-gray-500">Open access areas</div>
+                {/* Legend - Moved to bottom for split layout */}
+                <div className="p-6 bg-gray-50 border-t border-gray-100">
+                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
+                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+                      <div className="w-4 h-4 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto mb-2"></div>
+                      <div className="text-xs font-medium text-gray-700">Community Centers</div>
+                      <div className="text-xs text-gray-500">Youth programs & activities</div>
+                    </div>
+                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+                      <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mx-auto mb-2"></div>
+                      <div className="text-xs font-medium text-gray-700">Mobile Recreation</div>
+                      <div className="text-xs text-gray-500">Pop-up activities</div>
+                    </div>
+                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+                      <div className="w-4 h-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full mx-auto mb-2"></div>
+                      <div className="text-xs font-medium text-gray-700">Public Spaces</div>
+                      <div className="text-xs text-gray-500">Open access areas</div>
+                    </div>
+                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
+                      <div className="w-4 h-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full mx-auto mb-2"></div>
+                      <div className="text-xs font-medium text-gray-700">Picnic Sites</div>
+                      <div className="text-xs text-gray-500">Outdoor gathering spaces</div>
+                    </div>
                   </div>
                 </div>
               </div>
