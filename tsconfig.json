@@ -19,7 +19,7 @@
   },
   "include": [
     "src/**/*"
-  ],
+, "scraped-content/organization-data.js"  ],
   "exclude": [
     "node_modules",
     "dist",

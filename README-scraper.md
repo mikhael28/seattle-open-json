@@ -57,3 +57,4 @@ scraped-content/
 - The script includes a 1-second delay between requests to be respectful to the Jina API
 - Failed requests are logged but don't stop the entire process
 - Output directory is created automatically if it doesn't exist
+

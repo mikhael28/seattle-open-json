@@ -20,6 +20,14 @@ import type {
   Attribute,
   ServiceArea,
   Url,
+  CostOption,
+  RequiredDocument,
+  OrganizationIdentifier,
+  Unit,
+  ServiceCapacity,
+  Metadata,
+  MetaTableDescription,
+  Taxonomy,
 } from "./hsds";
 
 // Main Organization
@@ -66,6 +74,22 @@ export const seattleYouthOrganization: Organization = {
       id: "fund-003",
       organization_id: "org-001",
       source: "United Way of King County",
+    },
+  ],
+  organization_identifiers: [
+    {
+      id: "orgid-001",
+      organization_id: "org-001",
+      identifier_scheme: "US-EIN",
+      identifier_type: "Employer Identification Number",
+      identifier: "91-1234567",
+    },
+    {
+      id: "orgid-002",
+      organization_id: "org-001",
+      identifier_scheme: "WA-UBI",
+      identifier_type: "Washington State UBI Number",
+      identifier: "604-123-456",
     },
   ],
 };
@@ -122,6 +146,54 @@ export const services: Service[] = [
           "Service available to all residents of King County, Washington",
       },
     ],
+    cost_options: [
+      {
+        id: "cost-001",
+        service_id: "svc-001",
+        valid_from: "2024-01-01",
+        valid_to: "2024-12-31",
+        option: "Free for eligible participants",
+        currency: "USD",
+        amount: 0,
+        amount_description:
+          "No cost for youth who meet income eligibility requirements. Sliding scale fee of $25-$100 for others.",
+      },
+    ],
+    required_documents: [
+      {
+        id: "doc-001",
+        service_id: "svc-001",
+        document: "Government-issued photo ID",
+        uri: "https://www.seattleyouthcenter.org/job-training/requirements",
+      },
+      {
+        id: "doc-002",
+        service_id: "svc-001",
+        document: "Proof of residency in King County",
+        uri: "https://www.seattleyouthcenter.org/job-training/requirements",
+      },
+      {
+        id: "doc-003",
+        service_id: "svc-001",
+        document: "Work authorization documentation",
+        uri: "https://www.seattleyouthcenter.org/job-training/requirements",
+      },
+    ],
+    capacities: [
+      {
+        id: "cap-001",
+        service_id: "svc-001",
+        available_capacity: 20,
+        updated_at: "2024-01-15T10:00:00Z",
+        unit: {
+          id: "unit-001",
+          service_capacity_id: "cap-001",
+          unit_amount: 1,
+          unit_type: "participants per session",
+          details: "Maximum 20 participants per 8-week training cohort",
+        },
+      },
+    ],
   },
   {
     id: "svc-002",
@@ -156,6 +228,38 @@ export const services: Service[] = [
         note: "Mandarin-speaking tutors available Tuesday and Thursday",
       },
     ],
+    cost_options: [
+      {
+        id: "cost-002",
+        service_id: "svc-002",
+        option: "Always free",
+        currency: "USD",
+        amount: 0,
+        amount_description: "Tutoring services are always provided at no cost.",
+      },
+    ],
+    capacities: [
+      {
+        id: "cap-002",
+        service_id: "svc-002",
+        available_capacity: 50,
+        updated_at: "2024-01-15T10:00:00Z",
+        unit: {
+          id: "unit-002",
+          service_capacity_id: "cap-002",
+          unit_amount: 1,
+          unit_type: "students per day",
+          details: "Drop-in tutoring can accommodate up to 50 students daily",
+        },
+      },
+    ],
+    funding: [
+      {
+        id: "fund-005",
+        service_id: "svc-002",
+        source: "Seattle Public Schools Partnership Grant",
+      },
+    ],
   },
   {
     id: "svc-003",
@@ -175,6 +279,38 @@ export const services: Service[] = [
     fees: "Free",
     service_wait_time:
       "Applications reviewed within 2 weeks of quarterly deadline",
+    funding: [
+      {
+        id: "fund-006",
+        service_id: "svc-003",
+        source: "Youth Development Initiative Grant",
+      },
+    ],
+    additional_urls: [
+      {
+        id: "url-005",
+        entity_id: "svc-003",
+        entity_type: "service",
+        label: "Youth Leadership Council Blog",
+        url: "https://www.seattleyouthcenter.org/leadership/blog",
+      },
+    ],
+    schedules: [
+      {
+        id: "sched-004",
+        service_id: "svc-003",
+        valid_from: "2024-01-01",
+        valid_to: "2024-12-31",
+        freq: "MONTHLY",
+        interval: 1,
+        byday: "SA",
+        bysetpos: "2",
+        opens_at: "10:00:00",
+        closes_at: "15:00:00",
+        description:
+          "Youth Leadership Council meets second Saturday of each month",
+      },
+    ],
   },
 ];
 
@@ -252,6 +388,50 @@ export const locations: Location[] = [
         details:
           "FM assistive listening devices available at reception desk for use in classrooms and meeting rooms.",
       },
+      {
+        id: "acc-003",
+        location_id: "loc-001",
+        description: "Braille signage",
+        details:
+          "All floor directories and room signs include Braille translations",
+        url: "https://www.seattleyouthcenter.org/accessibility",
+      },
+      {
+        id: "acc-004",
+        location_id: "loc-001",
+        description: "Service animal accommodations",
+        details:
+          "Service animals welcome throughout facility with designated relief areas available",
+      },
+      {
+        id: "acc-007",
+        location_id: "loc-001",
+        description: "Quiet sensory space",
+        details:
+          "Dedicated quiet room available for individuals who need sensory breaks or accommodations",
+      },
+    ],
+    schedules: [
+      {
+        id: "sched-005",
+        location_id: "loc-001",
+        valid_from: "2024-01-01",
+        valid_to: "2024-12-31",
+        freq: "WEEKLY",
+        byday: "MO,TU,WE,TH,FR",
+        opens_at: "08:00:00",
+        closes_at: "20:00:00",
+        description: "Main campus operating hours",
+      },
+      {
+        id: "sched-006",
+        location_id: "loc-001",
+        freq: "WEEKLY",
+        byday: "SA",
+        opens_at: "09:00:00",
+        closes_at: "17:00:00",
+        description: "Saturday hours for special programs and events",
+      },
     ],
   },
   {
@@ -275,6 +455,51 @@ export const locations: Location[] = [
         postal_code: "98118",
         country: "USA",
         region: "King County",
+      },
+    ],
+    phones: [
+      {
+        id: "phone-007",
+        location_id: "loc-002",
+        number: "206-555-0106",
+        type: "voice",
+        description: "South Seattle satellite location main line",
+      },
+    ],
+    languages: [
+      {
+        id: "lang-009",
+        location_id: "loc-002",
+        name: "Spanish",
+        code: "spa",
+        note: "Spanish-speaking staff available daily",
+      },
+    ],
+    accessibilities: [
+      {
+        id: "acc-005",
+        location_id: "loc-002",
+        description: "Wheelchair accessible",
+        details:
+          "Ground floor location with wide doorways and accessible parking spaces",
+      },
+      {
+        id: "acc-006",
+        location_id: "loc-002",
+        description: "Large print materials",
+        details:
+          "All program materials available in large print format upon request",
+      },
+    ],
+    schedules: [
+      {
+        id: "sched-007",
+        location_id: "loc-002",
+        freq: "WEEKLY",
+        byday: "MO,TU,WE,TH,FR",
+        opens_at: "14:00:00",
+        closes_at: "19:00:00",
+        description: "South Seattle satellite operating hours",
       },
     ],
   },
@@ -430,6 +655,427 @@ export const attributes: Attribute[] = [
   },
 ];
 
+// Cost Options
+export const costOptions: CostOption[] = [
+  {
+    id: "cost-001",
+    service_id: "svc-001",
+    valid_from: "2024-01-01",
+    valid_to: "2024-12-31",
+    option: "Free for eligible participants",
+    currency: "USD",
+    amount: 0,
+    amount_description:
+      "No cost for youth who meet income eligibility requirements. Sliding scale fee of $25-$100 for others.",
+  },
+  {
+    id: "cost-002",
+    service_id: "svc-002",
+    option: "Always free",
+    currency: "USD",
+    amount: 0,
+    amount_description: "Tutoring services are always provided at no cost.",
+  },
+];
+
+// Required Documents
+export const requiredDocuments: RequiredDocument[] = [
+  {
+    id: "doc-001",
+    service_id: "svc-001",
+    document: "Government-issued photo ID",
+    uri: "https://www.seattleyouthcenter.org/job-training/requirements",
+  },
+  {
+    id: "doc-002",
+    service_id: "svc-001",
+    document: "Proof of residency in King County",
+    uri: "https://www.seattleyouthcenter.org/job-training/requirements",
+  },
+  {
+    id: "doc-003",
+    service_id: "svc-001",
+    document: "Work authorization documentation",
+    uri: "https://www.seattleyouthcenter.org/job-training/requirements",
+  },
+];
+
+// Organization Identifiers
+export const organizationIdentifiers: OrganizationIdentifier[] = [
+  {
+    id: "orgid-001",
+    organization_id: "org-001",
+    identifier_scheme: "US-EIN",
+    identifier_type: "Employer Identification Number",
+    identifier: "91-1234567",
+  },
+  {
+    id: "orgid-002",
+    organization_id: "org-001",
+    identifier_scheme: "WA-UBI",
+    identifier_type: "Washington State UBI Number",
+    identifier: "604-123-456",
+  },
+];
+
+// Service Capacities with Units
+export const serviceCapacities: ServiceCapacity[] = [
+  {
+    id: "cap-001",
+    service_id: "svc-001",
+    available_capacity: 20,
+    updated_at: "2024-01-15T10:00:00Z",
+    unit: {
+      id: "unit-001",
+      service_capacity_id: "cap-001",
+      unit_amount: 1,
+      unit_type: "participants per session",
+      details: "Maximum 20 participants per 8-week training cohort",
+    },
+  },
+  {
+    id: "cap-002",
+    service_id: "svc-002",
+    available_capacity: 50,
+    updated_at: "2024-01-15T10:00:00Z",
+    unit: {
+      id: "unit-002",
+      service_capacity_id: "cap-002",
+      unit_amount: 1,
+      unit_type: "students per day",
+      details: "Drop-in tutoring can accommodate up to 50 students daily",
+    },
+  },
+];
+
+// Metadata Records
+export const metadataRecords: Metadata[] = [
+  {
+    id: "meta-001",
+    resource_id: "org-001",
+    resource_type: "organization",
+    updated: "2024-01-15T10:00:00Z",
+    updated_by: "data-admin",
+    field_name: "description",
+    previous_value: "Seattle Youth Opportunities Center is a nonprofit...",
+    replacement_value:
+      "Seattle Youth Opportunities Center is a nonprofit organization dedicated to empowering youth ages 12-24...",
+    update_note:
+      "Expanded description to include specific age range and mission details",
+  },
+  {
+    id: "meta-002",
+    resource_id: "svc-001",
+    resource_type: "service",
+    updated: "2024-01-10T14:30:00Z",
+    updated_by: "program-coordinator",
+    field_name: "eligibility",
+    previous_value: "Youth ages 16-24",
+    replacement_value: "Youth ages 16-24 who are residents of King County",
+    update_note: "Added geographic eligibility requirement",
+  },
+];
+
+// Taxonomy
+export const taxonomies: Taxonomy[] = [
+  {
+    id: "tax-sys-001",
+    name: "Youth Services Taxonomy",
+    description:
+      "A comprehensive taxonomy for categorizing youth development services and programs",
+    uri: "https://www.seattleyouthcenter.org/taxonomy",
+    version: "2.1",
+  },
+];
+
+// Meta Table Descriptions
+export const metaTableDescriptions: MetaTableDescription[] = [
+  {
+    id: "table-desc-001",
+    name: "Seattle Youth HSDS Dataset",
+    language: "en-US",
+    character_set: "UTF-8",
+  },
+];
+
+// Standalone Phone Numbers Collection
+export const phoneNumbers: Phone[] = [
+  {
+    id: "phone-005",
+    organization_id: "org-001",
+    number: "206-555-0104",
+    type: "fax",
+    description: "Organization fax line",
+  },
+  {
+    id: "phone-006",
+    service_id: "svc-003",
+    number: "206-555-0105",
+    type: "text",
+    description: "Text line for Youth Leadership Council inquiries",
+  },
+  {
+    id: "phone-007",
+    location_id: "loc-002",
+    number: "206-555-0106",
+    type: "voice",
+    description: "South Seattle satellite location main line",
+  },
+];
+
+// Standalone Addresses Collection
+export const addresses: Address[] = [
+  {
+    id: "addr-003",
+    location_id: "loc-001",
+    address_type: "postal",
+    address_1: "P.O. Box 12345",
+    city: "Seattle",
+    state_province: "WA",
+    postal_code: "98102",
+    country: "USA",
+    region: "King County",
+  },
+  {
+    id: "addr-004",
+    location_id: "loc-002",
+    address_type: "postal",
+    address_1: "P.O. Box 67890",
+    city: "Seattle",
+    state_province: "WA",
+    postal_code: "98118",
+    country: "USA",
+    region: "King County",
+  },
+];
+
+// Comprehensive Schedules Collection
+export const schedules: Schedule[] = [
+  {
+    id: "sched-004",
+    service_id: "svc-003",
+    valid_from: "2024-01-01",
+    valid_to: "2024-12-31",
+    freq: "MONTHLY",
+    interval: 1,
+    byday: "SA",
+    bysetpos: "2",
+    opens_at: "10:00:00",
+    closes_at: "15:00:00",
+    description: "Youth Leadership Council meets second Saturday of each month",
+  },
+  {
+    id: "sched-005",
+    location_id: "loc-001",
+    valid_from: "2024-01-01",
+    valid_to: "2024-12-31",
+    freq: "WEEKLY",
+    byday: "MO,TU,WE,TH,FR",
+    opens_at: "08:00:00",
+    closes_at: "20:00:00",
+    description: "Main campus operating hours",
+  },
+  {
+    id: "sched-006",
+    location_id: "loc-001",
+    freq: "WEEKLY",
+    byday: "SA",
+    opens_at: "09:00:00",
+    closes_at: "17:00:00",
+    description: "Saturday hours for special programs and events",
+  },
+  {
+    id: "sched-007",
+    location_id: "loc-002",
+    freq: "WEEKLY",
+    byday: "MO,TU,WE,TH,FR",
+    opens_at: "14:00:00",
+    closes_at: "19:00:00",
+    description: "South Seattle satellite operating hours",
+  },
+];
+
+// Comprehensive Languages Collection
+export const languages: Language[] = [
+  {
+    id: "lang-005",
+    location_id: "loc-001",
+    name: "Vietnamese",
+    code: "vie",
+    note: "Vietnamese interpretation available with 48-hour advance notice",
+  },
+  {
+    id: "lang-006",
+    location_id: "loc-001",
+    name: "Somali",
+    code: "som",
+    note: "Somali interpretation available Tuesday-Thursday",
+  },
+  {
+    id: "lang-007",
+    service_id: "svc-001",
+    name: "English",
+    code: "eng",
+    note: "Primary language of instruction",
+  },
+  {
+    id: "lang-008",
+    service_id: "svc-003",
+    name: "American Sign Language",
+    code: "ase",
+    note: "ASL interpretation available for all leadership meetings",
+  },
+  {
+    id: "lang-009",
+    location_id: "loc-002",
+    name: "Spanish",
+    code: "spa",
+    note: "Spanish-speaking staff available daily",
+  },
+  {
+    id: "lang-010",
+    location_id: "loc-001",
+    name: "Tagalog",
+    code: "tgl",
+    note: "Tagalog interpretation services available upon request",
+  },
+];
+
+// Comprehensive Accessibility Collection
+export const accessibilityFeatures: Accessibility[] = [
+  {
+    id: "acc-003",
+    location_id: "loc-001",
+    description: "Braille signage",
+    details:
+      "All floor directories and room signs include Braille translations",
+    url: "https://www.seattleyouthcenter.org/accessibility",
+  },
+  {
+    id: "acc-004",
+    location_id: "loc-001",
+    description: "Service animal accommodations",
+    details:
+      "Service animals welcome throughout facility with designated relief areas available",
+  },
+  {
+    id: "acc-005",
+    location_id: "loc-002",
+    description: "Wheelchair accessible",
+    details:
+      "Ground floor location with wide doorways and accessible parking spaces",
+  },
+  {
+    id: "acc-006",
+    location_id: "loc-002",
+    description: "Large print materials",
+    details:
+      "All program materials available in large print format upon request",
+  },
+  {
+    id: "acc-007",
+    location_id: "loc-001",
+    description: "Quiet sensory space",
+    details:
+      "Dedicated quiet room available for individuals who need sensory breaks or accommodations",
+  },
+];
+
+// Service Areas Collection
+export const serviceAreas: ServiceArea[] = [
+  {
+    id: "sa-002",
+    service_id: "svc-002",
+    service_area: "King County",
+    description: "Tutoring services available to all King County residents",
+    uri: "https://gis.kingcounty.gov/",
+  },
+  {
+    id: "sa-003",
+    service_id: "svc-003",
+    service_area: "Seattle Metro Area",
+    minimum_area: "Seattle City Limits",
+    description:
+      "Leadership Council open to youth from Seattle and surrounding communities",
+  },
+  {
+    id: "sa-004",
+    service_id: "svc-001",
+    service_area: "Washington State",
+    minimum_area: "King County",
+    description:
+      "Job training available to King County residents, with some programs open statewide",
+  },
+];
+
+// Additional URLs Collection
+export const additionalUrls: Url[] = [
+  {
+    id: "url-003",
+    entity_id: "svc-001",
+    entity_type: "service",
+    label: "Job Training Application Portal",
+    url: "https://www.seattleyouthcenter.org/apply/job-training",
+  },
+  {
+    id: "url-004",
+    entity_id: "svc-002",
+    entity_type: "service",
+    label: "Tutoring Schedule and Resources",
+    url: "https://www.seattleyouthcenter.org/tutoring/schedule",
+  },
+  {
+    id: "url-005",
+    entity_id: "svc-003",
+    entity_type: "service",
+    label: "Youth Leadership Council Blog",
+    url: "https://www.seattleyouthcenter.org/leadership/blog",
+  },
+  {
+    id: "url-006",
+    entity_id: "org-001",
+    entity_type: "organization",
+    label: "Annual Report",
+    url: "https://www.seattleyouthcenter.org/reports/annual-2023",
+  },
+  {
+    id: "url-007",
+    entity_id: "org-001",
+    entity_type: "organization",
+    label: "YouTube Channel",
+    url: "https://www.youtube.com/c/SeattleYouthCenter",
+  },
+];
+
+// Funding Sources Collection
+export const fundingSources: Funding[] = [
+  {
+    id: "fund-004",
+    service_id: "svc-001",
+    source: "Washington State Department of Commerce",
+  },
+  {
+    id: "fund-005",
+    service_id: "svc-002",
+    source: "Seattle Public Schools Partnership Grant",
+  },
+  {
+    id: "fund-006",
+    service_id: "svc-003",
+    source: "Youth Development Initiative Grant",
+  },
+  {
+    id: "fund-007",
+    organization_id: "org-001",
+    source: "Individual Donations",
+  },
+  {
+    id: "fund-008",
+    organization_id: "org-001",
+    source: "Corporate Sponsorships",
+  },
+];
+
 // Complete HSDS Dataset Example
 export const seattleYouthHSDSExample = {
   organizations: [seattleYouthOrganization],
@@ -440,6 +1086,23 @@ export const seattleYouthHSDSExample = {
   contacts,
   taxonomy_terms: taxonomyTerms,
   attributes,
+  cost_options: costOptions,
+  required_documents: requiredDocuments,
+  organization_identifiers: organizationIdentifiers,
+  service_capacities: serviceCapacities,
+  metadata_records: metadataRecords,
+  taxonomies,
+  meta_table_descriptions: metaTableDescriptions,
+
+  // Additional comprehensive collections
+  phone_numbers: phoneNumbers,
+  addresses,
+  schedules,
+  languages,
+  accessibility_features: accessibilityFeatures,
+  service_areas: serviceAreas,
+  additional_urls: additionalUrls,
+  funding_sources: fundingSources,
 
   // Additional metadata
   metadata: {
@@ -493,5 +1156,3 @@ export function validateHSDSData(
 
   return errors;
 }
-
-
