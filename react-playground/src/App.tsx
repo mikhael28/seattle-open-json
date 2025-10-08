@@ -8,6 +8,7 @@ import SiteMapDesignerPage from "./pages/SiteMapDesignerPage";
 import SCSDataExplorer from "./pages/SCSDataExplorer";
 import AboutSCS from "./pages/AboutSCS";
 import SCSDashboard from "./pages/SCSDashboard";
+import PermitDataExplorerPage from "./pages/PermitDataExplorerPage";
 
 function App() {
   return (
@@ -20,6 +21,7 @@ function App() {
           <Route path="about-scs" element={<AboutSCS />} />
           <Route path="scs-explorer" element={<SCSDataExplorer />} />
           <Route path="permitting" element={<Permitting />} />
+          <Route path="permit-data-explorer" element={<PermitDataExplorerPage />} />
           <Route path="site-map-designer" element={<SiteMapDesignerPage />} />
         </Route>
       </Routes>

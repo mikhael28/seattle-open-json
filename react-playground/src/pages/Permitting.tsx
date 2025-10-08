@@ -157,7 +157,7 @@ const sdciResources: Resource[] = [
   }
 ];
 
-type TabType = 'planner' | 'questionnaire' | 'property' | 'resources';
+type TabType = 'planner' | 'questionnaire' | 'property' | 'resources' | 'data-explorer';
 
 const Permitting = () => {
   const [markdownContent, setMarkdownContent] = useState("");
