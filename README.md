@@ -6,7 +6,8 @@
 
 Seattle Open JSON provides structured, machine-readable information about youth initiatives, community resources, and recreational opportunities in the Seattle area. This package includes both raw data and TypeScript interfaces for type-safe development. If you fork this repository, you will notice a 'react-playground' directory; by running `npm install` and `npm run dev`, you can open visual playground to help explore the data we have collected thus far. It is incomplete, and not adequately cleaned up yet, but it is a starting point. I hope that the City of Seattle can take some inspiration towards forking this, or simply looking at it, and putting together their own npm module to enable developers to build on top of their data. In particular, creating a tree view of the structure of government, and it's available resources and programs, would allow developers to adequately present those resources to make them more discoverable to the general public.
 
-![Seattle Open JSON](seattle-open-json.png)
+![Seattle Open JSON Dashboard](open-data-1.png)
+![Seattle Open JSON Permit Explorer](open-data-2.png)
 
 ## 🚀 NPM Package Installation
 

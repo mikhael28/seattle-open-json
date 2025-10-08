@@ -5,9 +5,123 @@
     <link rel="icon" type="image/svg+xml" href="/src/favicon.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Seattle JSON Playground</title>
+    <style>
+      #loading-screen {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto",
+          "Oxygen", "Ubuntu", sans-serif;
+        color: white;
+        z-index: 9999;
+      }
+
+      .loading-content {
+        text-align: center;
+        max-width: 500px;
+        padding: 20px;
+      }
+
+      .loading-title {
+        font-size: 28px;
+        font-weight: 700;
+        margin-bottom: 10px;
+        letter-spacing: -0.5px;
+      }
+
+      .loading-subtitle {
+        font-size: 16px;
+        opacity: 0.9;
+        margin-bottom: 40px;
+      }
+
+      .progress-container {
+        width: 100%;
+        height: 8px;
+        background: rgba(255, 255, 255, 0.2);
+        border-radius: 10px;
+        overflow: hidden;
+        margin-bottom: 20px;
+      }
+
+      .progress-bar {
+        height: 100%;
+        background: white;
+        border-radius: 10px;
+        animation: progress 2s ease-in-out infinite;
+        box-shadow: 0 0 20px rgba(255, 255, 255, 0.5);
+      }
+
+      @keyframes progress {
+        0% {
+          width: 0%;
+          margin-left: 0%;
+        }
+        50% {
+          width: 60%;
+          margin-left: 20%;
+        }
+        100% {
+          width: 0%;
+          margin-left: 100%;
+        }
+      }
+
+      .loading-info {
+        font-size: 14px;
+        opacity: 0.8;
+        animation: pulse 2s ease-in-out infinite;
+      }
+
+      @keyframes pulse {
+        0%,
+        100% {
+          opacity: 0.6;
+        }
+        50% {
+          opacity: 1;
+        }
+      }
+
+      .data-size {
+        font-weight: 600;
+        color: #ffd700;
+      }
+    </style>
   </head>
   <body>
-    <div id="root"></div>
+    <div id="root">
+      <div id="loading-screen">
+        <div class="loading-content">
+          <div class="loading-title">Seattle Open Data</div>
+          <div class="loading-subtitle">
+            Loading comprehensive Seattle data, this may take a minute. Find us
+            on
+            <a
+              href="https://github.com/mikhael28/seattle-open-json"
+              target="_blank"
+              rel="noopener noreferrer"
+              >GitHub</a
+            >
+            to contribute to the project.
+          </div>
+          <div class="loading-subtitle">Coming soon: Tree Shaking</div>
+          <div class="progress-container">
+            <div class="progress-bar"></div>
+          </div>
+          <div class="loading-info">
+            Downloading <span class="data-size">~45 MB</span> of open data
+          </div>
+        </div>
+      </div>
+    </div>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
