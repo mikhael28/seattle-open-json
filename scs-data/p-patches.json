@@ -1,0 +1,2423 @@
+[
+  {
+    "id": "p-patch-beacon-bluff-46",
+    "name": "Beacon Bluff",
+    "type": "P-Patch Community Garden",
+    "description": "Beacon Bluff is a P-Patch community garden in Seattle, established in 2002. Features 14 garden plots spanning 1500 square feet.",
+    "location": {
+      "address": "1701 15th Ave S",
+      "coordinates": {
+        "lat": 47.618176,
+        "lng": -122.295983
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/beacon-bluff"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "1500 sq ft",
+    "notes": "14 plots available. Established: 2002. Managed by: SDOT",
+    "neighborhood": "S Massachusetts St / 15th Ave S"
+  },
+  {
+    "id": "p-patch-haller-lake-37",
+    "name": "Haller Lake",
+    "type": "P-Patch Community Garden",
+    "description": "Haller Lake is a P-Patch community garden in Seattle, established in 1998. Features 52 garden plots spanning 12500 square feet.",
+    "location": {
+      "address": "13045 1st Ave NE",
+      "coordinates": {
+        "lat": 47.667695,
+        "lng": -122.298752
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/haller-lake"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "12500 sq ft",
+    "notes": "52 plots available. Established: 1998. Managed by: Church",
+    "neighborhood": "N 130th St / 1st Ave NE"
+  },
+  {
+    "id": "p-patch-unpaving-paradise-75",
+    "name": "Unpaving Paradise",
+    "type": "P-Patch Community Garden",
+    "description": "Unpaving Paradise is a P-Patch community garden in Seattle, established in 2010. Features 31 garden plots spanning 4600 square feet.",
+    "location": {
+      "address": "200 Summit Ave E",
+      "coordinates": {
+        "lat": 47.629654,
+        "lng": -122.29844
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/unpaving-paradise"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "4600 sq ft",
+    "notes": "31 plots available. Established: 2010. Managed by: Parks",
+    "neighborhood": "E John St / Summit Ave E"
+  },
+  {
+    "id": "p-patch-queen-anne-28",
+    "name": "Queen Anne",
+    "type": "P-Patch Community Garden",
+    "description": "Queen Anne is a P-Patch community garden in Seattle, established in 1994. Features 73 garden plots spanning 15000 square feet.",
+    "location": {
+      "address": "217 Lynn St",
+      "coordinates": {
+        "lat": 47.636723,
+        "lng": -122.305031
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/queen-anne"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "15000 sq ft",
+    "notes": "73 plots available. Established: 1994. Managed by: Parks",
+    "neighborhood": "3rd Ave N / Lynn St"
+  },
+  {
+    "id": "p-patch-greenwood-station-83",
+    "name": "Greenwood Station",
+    "type": "P-Patch Community Garden",
+    "description": "Greenwood Station is a P-Patch community garden in Seattle, established in 2012. Features 34 garden plots spanning 5500 square feet.",
+    "location": {
+      "address": "8815 Fremont Ave N",
+      "coordinates": {
+        "lat": 47.656585,
+        "lng": -122.304118
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/greenwood-station"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5500 sq ft",
+    "notes": "34 plots available. Established: 2012. Managed by: Parks",
+    "neighborhood": "Fremont Ave N / N 89th St"
+  },
+  {
+    "id": "p-patch-thomas-street-gardens-34",
+    "name": "Thomas Street Gardens",
+    "type": "P-Patch Community Garden",
+    "description": "Thomas Street Gardens is a P-Patch community garden in Seattle, established in 1997. Features 28 garden plots spanning 3200 square feet.",
+    "location": {
+      "address": "1010 E Thomas St",
+      "coordinates": {
+        "lat": 47.630152,
+        "lng": -122.297037
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/thomas-street-gardens"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "3200 sq ft",
+    "notes": "28 plots available. Established: 1997. Managed by: Parks",
+    "neighborhood": "E Thomas St / 10th Ave E"
+  },
+  {
+    "id": "p-patch-fremont-32",
+    "name": "Fremont",
+    "type": "P-Patch Community Garden",
+    "description": "Fremont is a P-Patch community garden in Seattle, established in 1995. Features 28 garden plots spanning 4270 square feet.",
+    "location": {
+      "address": "3935 Woodland Park Ave N",
+      "coordinates": {
+        "lat": 47.642637,
+        "lng": -122.303124
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/fremont"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "4270 sq ft",
+    "notes": "28 plots available. Established: 1995. Managed by: GROW",
+    "neighborhood": "N 40th St / Woodland Park Ave N"
+  },
+  {
+    "id": "p-patch-snoqualmie-14",
+    "name": "Snoqualmie",
+    "type": "P-Patch Community Garden",
+    "description": "Snoqualmie is a P-Patch community garden in Seattle, established in 1974. Features 25 garden plots spanning 18000 square feet.",
+    "location": {
+      "address": "4549 13th Ave S",
+      "coordinates": {
+        "lat": 47.608547,
+        "lng": -122.296736
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/snoqualmie"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "18000 sq ft",
+    "notes": "25 plots available. Established: 1974. Managed by: City Light",
+    "neighborhood": "13th Ave S / S Snoqualmie St"
+  },
+  {
+    "id": "p-patch-magnolia-manor-park-80",
+    "name": "Magnolia Manor Park",
+    "type": "P-Patch Community Garden",
+    "description": "Magnolia Manor Park is a P-Patch community garden in Seattle, established in 2013. Features 46 garden plots spanning 15600 square feet.",
+    "location": {
+      "address": "3500 28th Ave W",
+      "coordinates": {
+        "lat": 47.641301,
+        "lng": -122.314441
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/magnolia-manor-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "15600 sq ft",
+    "notes": "46 plots available. Established: 2013. Managed by: Parks",
+    "neighborhood": "W Bertona St / 26th Ave W"
+  },
+  {
+    "id": "p-patch-colman-park-13",
+    "name": "Colman Park",
+    "type": "P-Patch Community Garden",
+    "description": "Colman Park is a P-Patch community garden in Seattle, established in 1974. Features 40 garden plots spanning 14000 square feet.",
+    "location": {
+      "address": "1720 32nd Ave S",
+      "coordinates": {
+        "lat": 47.617473,
+        "lng": -122.290418
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/colman-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "14000 sq ft",
+    "notes": "40 plots available. Established: 1974. Managed by: Parks",
+    "neighborhood": "32nd Ave S / S Massachusetts St"
+  },
+  {
+    "id": "p-patch-madison-valley-mad-p-43",
+    "name": "Madison Valley Mad P",
+    "type": "P-Patch Community Garden",
+    "description": "Madison Valley Mad P is a P-Patch community garden in Seattle, established in 2001. Features 17 garden plots spanning 2500 square feet.",
+    "location": {
+      "address": "3000 E Mercer St",
+      "coordinates": {
+        "lat": 47.631401,
+        "lng": -122.290488
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/madison-valley"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "2500 sq ft",
+    "notes": "17 plots available. Established: 2001. Managed by: SDOT",
+    "neighborhood": "E Mercer St / 30th Ave E"
+  },
+  {
+    "id": "p-patch-bitter-lake-73",
+    "name": "Bitter Lake",
+    "type": "P-Patch Community Garden",
+    "description": "Bitter Lake is a P-Patch community garden in Seattle, established in 2013. Features 29 garden plots spanning 15000 square feet.",
+    "location": {
+      "address": "N 143rd St & Linden Ave N",
+      "coordinates": {
+        "lat": 47.670732,
+        "lng": -122.303665
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/bitter-lake"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "15000 sq ft",
+    "notes": "29 plots available. Established: 2013. Managed by: SPU"
+  },
+  {
+    "id": "p-patch-cascade-33",
+    "name": "Cascade",
+    "type": "P-Patch Community Garden",
+    "description": "Cascade is a P-Patch community garden in Seattle, established in 1996. Features 57 garden plots spanning 7000 square feet.",
+    "location": {
+      "address": "310 Minor Ave N",
+      "coordinates": {
+        "lat": 47.630113,
+        "lng": -122.300306
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/cascade"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "7000 sq ft",
+    "notes": "57 plots available. Established: 1996. Managed by: Parks",
+    "neighborhood": "Minor Ave N / Thomas St"
+  },
+  {
+    "id": "p-patch-evanston-3",
+    "name": "Evanston",
+    "type": "P-Patch Community Garden",
+    "description": "Evanston is a P-Patch community garden in Seattle, established in 1974. Features 42 garden plots spanning 11600 square feet.",
+    "location": {
+      "address": "604 N 101st St",
+      "coordinates": {
+        "lat": 47.659955,
+        "lng": -122.304186
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/evanston"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "11600 sq ft",
+    "notes": "42 plots available. Established: 1974. Managed by: City Light",
+    "neighborhood": "Evanston Ave N / N 102nd St"
+  },
+  {
+    "id": "p-patch-pinehurst-2",
+    "name": "Pinehurst",
+    "type": "P-Patch Community Garden",
+    "description": "Pinehurst is a P-Patch community garden in Seattle, established in 1976. Features 17 garden plots spanning 5000 square feet.",
+    "location": {
+      "address": "11525 12th Ave NE",
+      "coordinates": {
+        "lat": 47.663537,
+        "lng": -122.295468
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/pinehurst"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5000 sq ft",
+    "notes": "17 plots available. Established: 1976. Managed by: GROW",
+    "neighborhood": "12th Ave NE / NE 115th St"
+  },
+  {
+    "id": "p-patch-upgarden-86",
+    "name": "UpGarden",
+    "type": "P-Patch Community Garden",
+    "description": "UpGarden is a P-Patch community garden in Seattle, established in 2012. Features 98 garden plots spanning 25000 square feet.",
+    "location": {
+      "address": "300 Mercer St",
+      "coordinates": {
+        "lat": 47.631663,
+        "lng": -122.304617
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/upgarden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "25000 sq ft",
+    "notes": "98 plots available. Established: 2012. Managed by: Center",
+    "neighborhood": "4th Ave N / Mercer St"
+  },
+  {
+    "id": "p-patch-climbing-water-30",
+    "name": "Climbing Water",
+    "type": "P-Patch Community Garden",
+    "description": "Climbing Water is a P-Patch community garden in Seattle, established in 2006. Features 13 garden plots spanning 1800 square feet.",
+    "location": {
+      "address": "800 Hiawatha Pl S",
+      "coordinates": {
+        "lat": 47.620533,
+        "lng": -122.294651
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/climbing-water"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "1800 sq ft",
+    "notes": "13 plots available. Established: 2006. Managed by: Homesight",
+    "neighborhood": "S Dearborn St / Hiawatha Pl S"
+  },
+  {
+    "id": "p-patch-troll-s-knoll-91",
+    "name": "Troll's Knoll",
+    "type": "P-Patch Community Garden",
+    "description": "Troll's Knoll is a P-Patch community garden in Seattle, established in 2016. Features 29 garden plots spanning 2000 square feet.",
+    "location": {
+      "address": "N 36th St / Aurora Ave N",
+      "coordinates": {
+        "lat": 47.641263,
+        "lng": -122.303714
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/trolls-knoll"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2000 sq ft",
+    "notes": "29 plots available. Established: 2016. Managed by: SDOT"
+  },
+  {
+    "id": "p-patch-pelican-tea-garden-41",
+    "name": "Pelican Tea Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Pelican Tea Garden is a P-Patch community garden in Seattle, established in 2001. spanning 1000 square feet.",
+    "location": {
+      "address": "1909 E Roy St",
+      "coordinates": {
+        "lat": 47.631393,
+        "lng": -122.293875
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/pelican-tea-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "1000 sq ft",
+    "notes": "Established: 2001. Managed by: SDOT",
+    "neighborhood": "E Mercer St / 19th Ave E"
+  },
+  {
+    "id": "p-patch-solstice-50",
+    "name": "Solstice",
+    "type": "P-Patch Community Garden",
+    "description": "Solstice is a P-Patch community garden in Seattle, established in 2003. Features 34 garden plots spanning 13000 square feet.",
+    "location": {
+      "address": "7400 Fauntleroy Way SW",
+      "coordinates": {
+        "lat": 47.599479,
+        "lng": -122.31533
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/solstice"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "13000 sq ft",
+    "notes": "34 plots available. Established: 2003. Managed by: Parks",
+    "neighborhood": "SW Webster St / 45th Ave SW"
+  },
+  {
+    "id": "p-patch-delridge-16",
+    "name": "Delridge",
+    "type": "P-Patch Community Garden",
+    "description": "Delridge is a P-Patch community garden in Seattle, established in 1974. Features 30 garden plots spanning 9400 square feet.",
+    "location": {
+      "address": "5200 25th Ave SW",
+      "coordinates": {
+        "lat": 47.606223,
+        "lng": -122.308439
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/delridge"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "9400 sq ft",
+    "notes": "30 plots available. Established: 1974. Managed by: Parks",
+    "neighborhood": "Delridge Way SW / Puget Blvd SW"
+  },
+  {
+    "id": "p-patch-oxbow-park-52",
+    "name": "Oxbow Park",
+    "type": "P-Patch Community Garden",
+    "description": "Oxbow Park is a P-Patch community garden in Seattle, established in 2004. Features 23 garden plots spanning 5000 square feet.",
+    "location": {
+      "address": "6400 Corson Ave S",
+      "coordinates": {
+        "lat": 47.60235,
+        "lng": -122.298047
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/oxbow-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5000 sq ft",
+    "notes": "23 plots available. Established: 2004. Managed by: Parks",
+    "neighborhood": "Corson Ave S / S Eddy St"
+  },
+  {
+    "id": "p-patch-burke-gilman-gardens-6",
+    "name": "Burke-Gilman Gardens",
+    "type": "P-Patch Community Garden",
+    "description": "Burke-Gilman Gardens is a P-Patch community garden in Seattle, established in 1989. Features 23 garden plots spanning 3500 square feet.",
+    "location": {
+      "address": "5200 Mithun Pl NE",
+      "coordinates": {
+        "lat": 47.64704,
+        "lng": -122.287186
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/burke-gilman-gardens"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "3500 sq ft",
+    "notes": "23 plots available. Established: 1989. Managed by: BEP/PDA",
+    "neighborhood": "Mithun Pl NE / NE 52nd St"
+  },
+  {
+    "id": "p-patch-hawkins-54",
+    "name": "Hawkins",
+    "type": "P-Patch Community Garden",
+    "description": "Hawkins is a P-Patch community garden in Seattle, established in 2005. Features 18 garden plots spanning 2100 square feet.",
+    "location": {
+      "address": "504 M L King Jr Way",
+      "coordinates": {
+        "lat": 47.624722,
+        "lng": -122.291475
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/hawkins"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2100 sq ft",
+    "notes": "18 plots available. Established: 2005. Managed by: DON",
+    "neighborhood": "M L King Jr Way / E Jefferson St"
+  },
+  {
+    "id": "p-patch-queen-pea-44",
+    "name": "Queen Pea",
+    "type": "P-Patch Community Garden",
+    "description": "Queen Pea is a P-Patch community garden in Seattle, established in 2002. Features 32 garden plots spanning 4000 square feet.",
+    "location": {
+      "address": "1800 5th Ave N",
+      "coordinates": {
+        "lat": 47.635395,
+        "lng": -122.303738
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/queen-pea"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "4000 sq ft",
+    "notes": "32 plots available. Established: 2002. Managed by: Parks",
+    "neighborhood": "5th Ave N / Howe St"
+  },
+  {
+    "id": "p-patch-republican-20",
+    "name": "Republican",
+    "type": "P-Patch Community Garden",
+    "description": "Republican is a P-Patch community garden in Seattle, established in 1986. Features 23 garden plots spanning 2600 square feet.",
+    "location": {
+      "address": "503 20th Ave E",
+      "coordinates": {
+        "lat": 47.63086,
+        "lng": -122.293807
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/republican"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2600 sq ft",
+    "notes": "23 plots available. Established: 1986. Managed by: Private",
+    "neighborhood": "20th Ave E / E Republican St"
+  },
+  {
+    "id": "p-patch-squire-park-31",
+    "name": "Squire Park",
+    "type": "P-Patch Community Garden",
+    "description": "Squire Park is a P-Patch community garden in Seattle, established in 1995. Features 35 garden plots spanning 5000 square feet.",
+    "location": {
+      "address": "152 14th Ave",
+      "coordinates": {
+        "lat": 47.623422,
+        "lng": -122.295837
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/squire-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5000 sq ft",
+    "notes": "35 plots available. Established: 1995. Managed by: DON",
+    "neighborhood": "14th Ave / E Fir St"
+  },
+  {
+    "id": "p-patch-jackson-park-1",
+    "name": "Jackson Park",
+    "type": "P-Patch Community Garden",
+    "description": "Jackson Park is a P-Patch community garden in Seattle, established in 1974. Features 51 garden plots spanning 14100 square feet.",
+    "location": {
+      "address": "13049 10th Ave NE",
+      "coordinates": {
+        "lat": 47.667823,
+        "lng": -122.296068
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/jackson-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "14100 sq ft",
+    "notes": "51 plots available. Established: 1974. Managed by: Parks",
+    "neighborhood": "NE 133rd St / 10th Ave NE"
+  },
+  {
+    "id": "p-patch-greg-s-garden-38",
+    "name": "Greg's Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Greg's Garden is a P-Patch community garden in Seattle, established in 1999. Features 21 garden plots spanning 2500 square feet.",
+    "location": {
+      "address": "1401 NW 54th St",
+      "coordinates": {
+        "lat": 47.647348,
+        "lng": -122.310144
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/gregs-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2500 sq ft",
+    "notes": "21 plots available. Established: 1999. Managed by: Metro",
+    "neighborhood": "14th Ave NW / NW 54th St"
+  },
+  {
+    "id": "p-patch-maa-nyei-lai-ndeic-15",
+    "name": "Maa Nyei Lai Ndeic",
+    "type": "P-Patch Community Garden",
+    "description": "Maa Nyei Lai Ndeic is a P-Patch community garden in Seattle, established in 1982. Features 110 garden plots spanning 44000 square feet.",
+    "location": {
+      "address": "4913 Columbia Dr S",
+      "coordinates": {
+        "lat": 47.606769,
+        "lng": -122.294091
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/maa-nyei-lai-ndeic-(my-mothers-garden)"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "44000 sq ft",
+    "notes": "110 plots available. Established: 1982. Managed by: City Light",
+    "neighborhood": "Columbia Dr S / S Ferdinand St"
+  },
+  {
+    "id": "p-patch-spring-street-55",
+    "name": "Spring Street",
+    "type": "P-Patch Community Garden",
+    "description": "Spring Street is a P-Patch community garden in Seattle, established in 2009. Features 13 garden plots spanning 1900 square feet.",
+    "location": {
+      "address": "1101 25th Ave",
+      "coordinates": {
+        "lat": 47.626581,
+        "lng": -122.292417
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/spring-street"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "1900 sq ft",
+    "notes": "13 plots available. Established: 2009. Managed by: DON",
+    "neighborhood": "E Spring St / 25th Ave"
+  },
+  {
+    "id": "p-patch-brandon-street-orchard-49",
+    "name": "Brandon Street Orchard",
+    "type": "P-Patch Community Garden",
+    "description": "Brandon Street Orchard is a P-Patch community garden in Seattle, established in 2003. spanning 2500 square feet.",
+    "location": {
+      "address": "4625 S Brandon St",
+      "coordinates": {
+        "lat": 47.60509,
+        "lng": -122.286375
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/brandon-street-orchard"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2500 sq ft",
+    "notes": "Established: 2003. Managed by: DON",
+    "neighborhood": "47th Ave S / S Brandon St"
+  },
+  {
+    "id": "p-patch-picardo-farm-5",
+    "name": "Picardo Farm",
+    "type": "P-Patch Community Garden",
+    "description": "Picardo Farm is a P-Patch community garden in Seattle, established in 1973. Features 259 garden plots spanning 98000 square feet.",
+    "location": {
+      "address": "8040 25th Ave NE",
+      "coordinates": {
+        "lat": 47.654274,
+        "lng": -122.291962
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/picardo-farm"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "98000 sq ft",
+    "notes": "259 plots available. Established: 1973. Managed by: Parks",
+    "neighborhood": "25th Ave NE / NE 80th St"
+  },
+  {
+    "id": "p-patch-howell-collective-76",
+    "name": "Howell Collective",
+    "type": "P-Patch Community Garden",
+    "description": "Howell Collective is a P-Patch community garden in Seattle, established in 2011. spanning 4200 square feet.",
+    "location": {
+      "address": "1514 E Howell Street",
+      "coordinates": {
+        "lat": 47.628952,
+        "lng": -122.295198
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/howell-collective"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "4200 sq ft",
+    "notes": "Established: 2011. Managed by: Parks",
+    "neighborhood": "E Denny Way / 16th Ave"
+  },
+  {
+    "id": "p-patch-courtland-place-40",
+    "name": "Courtland Place",
+    "type": "P-Patch Community Garden",
+    "description": "Courtland Place is a P-Patch community garden in Seattle, established in 1999. Features 23 garden plots spanning 2500 square feet.",
+    "location": {
+      "address": "3600 36th Ave S",
+      "coordinates": {
+        "lat": 47.611889,
+        "lng": -122.289778
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/courtland-place"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "2500 sq ft",
+    "notes": "23 plots available. Established: 1999. Managed by: SDOT",
+    "neighborhood": "S Spokane St / 36th Ave S"
+  },
+  {
+    "id": "p-patch-licton-springs-87",
+    "name": "Licton Springs",
+    "type": "P-Patch Community Garden",
+    "description": "Licton Springs is a P-Patch community garden in Seattle, established in 2014. Features 67 garden plots spanning 15000 square feet.",
+    "location": {
+      "address": "2318 N 92nd St",
+      "coordinates": {
+        "lat": 47.657537,
+        "lng": -122.29928
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/licton-springs"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "15000 sq ft",
+    "notes": "67 plots available. Established: 2014. Managed by: North Seattle College",
+    "neighborhood": "College Way N / N 92nd St"
+  },
+  {
+    "id": "p-patch-hazel-heights-26",
+    "name": "Hazel Heights",
+    "type": "P-Patch Community Garden",
+    "description": "Hazel Heights is a P-Patch community garden in Seattle, established in 2010. Features 19 garden plots spanning 2000 square feet.",
+    "location": {
+      "address": "4200 Baker Ave NW",
+      "coordinates": {
+        "lat": 47.643684,
+        "lng": -122.306644
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/hazel-heights"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2000 sq ft",
+    "notes": "19 plots available. Established: 2010. Managed by: GROW",
+    "neighborhood": "Baker Ave NW / NW 42nd St"
+  },
+  {
+    "id": "p-patch-greenwood-35",
+    "name": "Greenwood",
+    "type": "P-Patch Community Garden",
+    "description": "Greenwood is a P-Patch community garden in Seattle, established in 1997. Features 32 garden plots spanning 3200 square feet.",
+    "location": {
+      "address": "343 NW 88th St",
+      "coordinates": {
+        "lat": 47.65636,
+        "lng": -122.307059
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/greenwood"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "3200 sq ft",
+    "notes": "32 plots available. Established: 1997. Managed by: GROW",
+    "neighborhood": "3rd Ave NW / NW 88th St"
+  },
+  {
+    "id": "p-patch-ida-mia-garden-25",
+    "name": "Ida Mia Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Ida Mia Garden is a P-Patch community garden in Seattle, established in 1994. Features 7 garden plots spanning 1600 square feet.",
+    "location": {
+      "address": "E Madison St & Lake Washington Blvd E",
+      "coordinates": {
+        "lat": 47.631644,
+        "lng": -122.290176
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/ida-mia-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "1600 sq ft",
+    "notes": "7 plots available. Established: 1994. Managed by: Private"
+  },
+  {
+    "id": "p-patch-barton-street-85",
+    "name": "Barton Street",
+    "type": "P-Patch Community Garden",
+    "description": "Barton Street is a P-Patch community garden in Seattle, established in 2012. Features 45 garden plots spanning 12000 square feet.",
+    "location": {
+      "address": "3405 SW Barton St",
+      "coordinates": {
+        "lat": 47.593817,
+        "lng": -122.311685
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/barton-street"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "12000 sq ft",
+    "notes": "45 plots available. Established: 2012. Managed by: SPU",
+    "neighborhood": "SW Barton St / 34th Ave SW"
+  },
+  {
+    "id": "p-patch-angel-morgan-51",
+    "name": "Angel Morgan",
+    "type": "P-Patch Community Garden",
+    "description": "Angel Morgan is a P-Patch community garden in Seattle, established in 2004. Features 30 garden plots spanning 22650 square feet.",
+    "location": {
+      "address": "3956 S Morgan St",
+      "coordinates": {
+        "lat": 47.601875,
+        "lng": -122.28811
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/angel-morgan"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "22650 sq ft",
+    "notes": "30 plots available. Established: 2004. Managed by: SDOT",
+    "neighborhood": "42nd Ave S / S Morgan St"
+  },
+  {
+    "id": "p-patch-eastlake-12",
+    "name": "Eastlake",
+    "type": "P-Patch Community Garden",
+    "description": "Eastlake is a P-Patch community garden in Seattle, established in 1981. Features 47 garden plots spanning 75000 square feet.",
+    "location": {
+      "address": "2892 Fairview Ave E",
+      "coordinates": {
+        "lat": 47.639746,
+        "lng": -122.298334
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/eastlake"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "75000 sq ft",
+    "notes": "47 plots available. Established: 1981. Managed by: Parks",
+    "neighborhood": "Eastlake Ave E / E Shelby St"
+  },
+  {
+    "id": "p-patch-linden-orchard-48",
+    "name": "Linden Orchard",
+    "type": "P-Patch Community Garden",
+    "description": "Linden Orchard is a P-Patch community garden in Seattle, established in 2003. Features 25 garden plots spanning 2500 square feet.",
+    "location": {
+      "address": "744 N 67th St",
+      "coordinates": {
+        "lat": 47.651008,
+        "lng": -122.303663
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/linden-orchard"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2500 sq ft",
+    "notes": "25 plots available. Established: 2003. Managed by: Parks",
+    "neighborhood": "Linden Ave N / N 67th St"
+  },
+  {
+    "id": "p-patch-shiga-s-garden-77",
+    "name": "Shiga's Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Shiga's Garden is a P-Patch community garden in Seattle, established in 2010. Features 18 garden plots spanning 2000 square feet.",
+    "location": {
+      "address": "5522 University Way NE",
+      "coordinates": {
+        "lat": 47.647586,
+        "lng": -122.29505
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/shigas-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2000 sq ft",
+    "notes": "18 plots available. Established: 2010. Managed by: Private",
+    "neighborhood": "University Way NE / NE 56th St"
+  },
+  {
+    "id": "p-patch-westcrest-garden-87",
+    "name": "Westcrest Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Westcrest Garden is a P-Patch community garden in Seattle, established in 2013. Features 52 garden plots spanning 55000 square feet.",
+    "location": {
+      "address": "9000 8th Ave SW",
+      "coordinates": {
+        "lat": 47.594204,
+        "lng": -122.303689
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/p-patch-community-gardening/p-patch-list/westcrest-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "55000 sq ft",
+    "notes": "52 plots available. Established: 2013. Managed by: Parks",
+    "neighborhood": "SW Barton St / 8th Ave SW"
+  },
+  {
+    "id": "p-patch-maple-leaf-53",
+    "name": "Maple Leaf",
+    "type": "P-Patch Community Garden",
+    "description": "Maple Leaf is a P-Patch community garden in Seattle, established in 2007. Features 22 garden plots spanning 16000 square feet.",
+    "location": {
+      "address": "525 NE 103rd St",
+      "coordinates": {
+        "lat": 47.659941,
+        "lng": -122.297102
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/maple-leaf"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "16000 sq ft",
+    "notes": "22 plots available. Established: 2007. Managed by: Parks",
+    "neighborhood": "5th Ave NE / NE 103rd St"
+  },
+  {
+    "id": "p-patch-bradner-gardens-park-22",
+    "name": "Bradner Gardens Park",
+    "type": "P-Patch Community Garden",
+    "description": "Bradner Gardens Park is a P-Patch community garden in Seattle, established in 1987. Features 60 garden plots spanning 14330 square feet.",
+    "location": {
+      "address": "1750 S Bradner Pl S",
+      "coordinates": {
+        "lat": 47.617619,
+        "lng": -122.29137
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/bradner-gardens-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "14330 sq ft",
+    "notes": "60 plots available. Established: 1987. Managed by: Parks",
+    "neighborhood": "29th Ave S / S Grand St"
+  },
+  {
+    "id": "p-patch-estelle-street-23",
+    "name": "Estelle Street",
+    "type": "P-Patch Community Garden",
+    "description": "Estelle Street is a P-Patch community garden in Seattle, established in 1990. Features 19 garden plots spanning 6000 square feet.",
+    "location": {
+      "address": "3400 Rainier Ave S",
+      "coordinates": {
+        "lat": 47.612234,
+        "lng": -122.290509
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/estelle-street"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "6000 sq ft",
+    "notes": "19 plots available. Established: 1990. Managed by: SDOT",
+    "neighborhood": "33rd Ave S / S Hinds St"
+  },
+  {
+    "id": "p-patch-interbay-11",
+    "name": "Interbay",
+    "type": "P-Patch Community Garden",
+    "description": "Interbay is a P-Patch community garden in Seattle, established in 1974. Features 132 garden plots spanning 43000 square feet.",
+    "location": {
+      "address": "2451 15th Ave W",
+      "coordinates": {
+        "lat": 47.637707,
+        "lng": -122.311119
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/interbay"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "43000 sq ft",
+    "notes": "132 plots available. Established: 1974. Managed by: Parks",
+    "neighborhood": "W Wheeler St / 15th Ave W"
+  },
+  {
+    "id": "p-patch-ravenna-8",
+    "name": "Ravenna",
+    "type": "P-Patch Community Garden",
+    "description": "Ravenna is a P-Patch community garden in Seattle, established in 1981. Features 18 garden plots spanning 2200 square feet.",
+    "location": {
+      "address": "5200 Ravenna Ave NE",
+      "coordinates": {
+        "lat": 47.646557,
+        "lng": -122.292874
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/ravenna"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "2200 sq ft",
+    "notes": "18 plots available. Established: 1981. Managed by: SDOT",
+    "neighborhood": "Ravenna Ave NE / NE 52nd St"
+  },
+  {
+    "id": "p-patch-judkins-19",
+    "name": "Judkins",
+    "type": "P-Patch Community Garden",
+    "description": "Judkins is a P-Patch community garden in Seattle, established in 1986. Features 24 garden plots spanning 5600 square feet.",
+    "location": {
+      "address": "1107 24th Ave S",
+      "coordinates": {
+        "lat": 47.619663,
+        "lng": -122.292847
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/judkins"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5600 sq ft",
+    "notes": "24 plots available. Established: 1986. Managed by: DON/GROW",
+    "neighborhood": "24th Ave S / S Norman St"
+  },
+  {
+    "id": "p-patch-phinney-ridge-24",
+    "name": "Phinney Ridge",
+    "type": "P-Patch Community Garden",
+    "description": "Phinney Ridge is a P-Patch community garden in Seattle, established in 1991. Features 21 garden plots spanning 2600 square feet.",
+    "location": {
+      "address": "5926 3rd Ave NW",
+      "coordinates": {
+        "lat": 47.649003,
+        "lng": -122.306794
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/phinney-ridge"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "2600 sq ft",
+    "notes": "21 plots available. Established: 1991. Managed by: SDOT",
+    "neighborhood": "3rd Ave NW / NW 60th St"
+  },
+  {
+    "id": "p-patch-good-shepherd-9",
+    "name": "Good Shepherd",
+    "type": "P-Patch Community Garden",
+    "description": "Good Shepherd is a P-Patch community garden in Seattle, established in 1981. Features 42 garden plots spanning 8400 square feet.",
+    "location": {
+      "address": "4618 Bagley Ave N",
+      "coordinates": {
+        "lat": 47.645563,
+        "lng": -122.299886
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/good-shepherd"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "8400 sq ft",
+    "notes": "42 plots available. Established: 1981. Managed by: Parks",
+    "neighborhood": "N 46th St / Bagley Ave N"
+  },
+  {
+    "id": "p-patch-university-heights-17",
+    "name": "University Heights",
+    "type": "P-Patch Community Garden",
+    "description": "University Heights is a P-Patch community garden in Seattle, established in 1991. Features 31 garden plots spanning 5000 square feet.",
+    "location": {
+      "address": "5031 University Way NE",
+      "coordinates": {
+        "lat": 47.646314,
+        "lng": -122.295233
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/university-heights"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5000 sq ft",
+    "notes": "31 plots available. Established: 1991. Managed by: SSD",
+    "neighborhood": "University Way NE / NE 50th St"
+  },
+  {
+    "id": "p-patch-john-c-little-garden-82",
+    "name": "John C. Little Garden",
+    "type": "P-Patch Community Garden",
+    "description": "John C. Little Garden is a P-Patch community garden in Seattle, established in 2013. Features 26 garden plots spanning 7200 square feet.",
+    "location": {
+      "address": "37th Ave S & S Willow St",
+      "coordinates": {
+        "lat": 47.600362,
+        "lng": -122.289524
+      }
+    },
+    "contact": {
+      "website": "https://www.seattle.gov/neighborhoods/p-patch-gardening/garden-list/john-c-little-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "7200 sq ft",
+    "notes": "26 plots available. Established: 2013. Managed by: Parks"
+  },
+  {
+    "id": "p-patch-thistle-18",
+    "name": "Thistle",
+    "type": "P-Patch Community Garden",
+    "description": "Thistle is a P-Patch community garden in Seattle, established in 1974. Features 77 garden plots spanning 130680 square feet.",
+    "location": {
+      "address": "8420 42nd Ave S",
+      "coordinates": {
+        "lat": 47.5957,
+        "lng": -122.288154
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/thistle"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "130680 sq ft",
+    "notes": "77 plots available. Established: 1974. Managed by: City Light",
+    "neighborhood": "M L King Jr Way S / S Cloverdale St"
+  },
+  {
+    "id": "p-patch-horuichi-park-0",
+    "name": "Horuichi Park",
+    "type": "P-Patch Community Garden",
+    "description": "Horuichi Park is a P-Patch community garden in Seattle, established in 2015. Features 28 garden plots spanning 4000 square feet.",
+    "location": {
+      "address": "156 Boren Ave",
+      "coordinates": {
+        "lat": 47.623503,
+        "lng": -122.297055
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/horiuchi-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "4000 sq ft",
+    "notes": "28 plots available. Established: 2015. Managed by: Parks",
+    "neighborhood": "Boren Ave / E Fir St"
+  },
+  {
+    "id": "p-patch-belltown-27",
+    "name": "Belltown",
+    "type": "P-Patch Community Garden",
+    "description": "Belltown is a P-Patch community garden in Seattle, established in 1995. Features 35 garden plots spanning 4400 square feet.",
+    "location": {
+      "address": "2520 Elliott Ave",
+      "coordinates": {
+        "lat": 47.627661,
+        "lng": -122.304881
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/belltown"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "4400 sq ft",
+    "notes": "35 plots available. Established: 1995. Managed by: Parks",
+    "neighborhood": "Elliott Ave / Vine St"
+  },
+  {
+    "id": "p-patch-kirke-park-81",
+    "name": "Kirke Park",
+    "type": "P-Patch Community Garden",
+    "description": "Kirke Park is a P-Patch community garden in Seattle, established in 2012. Features 28 garden plots spanning 7400 square feet.",
+    "location": {
+      "address": "7028 9th Ave NW",
+      "coordinates": {
+        "lat": 47.652161,
+        "lng": -122.308596
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/kirke-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "7400 sq ft",
+    "notes": "28 plots available. Established: 2012. Managed by: Parks",
+    "neighborhood": "9th Ave NW / NW 73rd St"
+  },
+  {
+    "id": "p-patch-longfellow-creek-47",
+    "name": "Longfellow Creek",
+    "type": "P-Patch Community Garden",
+    "description": "Longfellow Creek is a P-Patch community garden in Seattle, established in 2003. Features 22 garden plots spanning 4000 square feet.",
+    "location": {
+      "address": "2450 SW Thistle St",
+      "coordinates": {
+        "lat": 47.59656,
+        "lng": -122.30875
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/longfellow-creek"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "4000 sq ft",
+    "notes": "22 plots available. Established: 2003. Managed by: Parks",
+    "neighborhood": "SW Thistle St / 25th Ave SW"
+  },
+  {
+    "id": "p-patch-university-district-10",
+    "name": "University District",
+    "type": "P-Patch Community Garden",
+    "description": "University District is a P-Patch community garden in Seattle, established in 1976. Features 46 garden plots spanning 14400 square feet.",
+    "location": {
+      "address": "4009 8th Ave NE",
+      "coordinates": {
+        "lat": 47.642933,
+        "lng": -122.296962
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/university-district"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "14400 sq ft",
+    "notes": "46 plots available. Established: 1976. Managed by: Metro",
+    "neighborhood": "8th Ave NE / NE 40th St"
+  },
+  {
+    "id": "p-patch-ballard-4",
+    "name": "Ballard",
+    "type": "P-Patch Community Garden",
+    "description": "Ballard is a P-Patch community garden in Seattle, established in 1976. Features 94 garden plots spanning 18000 square feet.",
+    "location": {
+      "address": "8527 25th Ave NW",
+      "coordinates": {
+        "lat": 47.656111,
+        "lng": -122.313775
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/ballard"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "18000 sq ft",
+    "notes": "94 plots available. Established: 1976. Managed by: Church",
+    "neighborhood": "25th Ave NW / NW 85th St"
+  },
+  {
+    "id": "p-patch-broadway-hill-88",
+    "name": "Broadway Hill",
+    "type": "P-Patch Community Garden",
+    "description": "Broadway Hill is a P-Patch community garden in Seattle, established in 2015. Features 16 garden plots.",
+    "location": {
+      "address": "510 Federal Ave E",
+      "coordinates": {
+        "lat": 47.630957,
+        "lng": -122.296835
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/broadway-hill-"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "notes": "16 plots available. Established: 2015. Managed by: Parks",
+    "neighborhood": "Federal Ave E / E Republican St"
+  },
+  {
+    "id": "p-patch-marra-farm-36",
+    "name": "Marra Farm",
+    "type": "P-Patch Community Garden",
+    "description": "Marra Farm is a P-Patch community garden in Seattle, established in 1997. Features 39 garden plots spanning 5600 square feet.",
+    "location": {
+      "address": "9026 4th Ave S",
+      "coordinates": {
+        "lat": 47.593871,
+        "lng": -122.300006
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/marra-farm"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5600 sq ft",
+    "notes": "39 plots available. Established: 1997. Managed by: Parks",
+    "neighborhood": "S Director St / 5th Ave S"
+  },
+  {
+    "id": "p-patch-thyme-patch-park-45",
+    "name": "Thyme Patch Park",
+    "type": "P-Patch Community Garden",
+    "description": "Thyme Patch Park is a P-Patch community garden in Seattle, established in 2003. Features 14 garden plots spanning 4800 square feet.",
+    "location": {
+      "address": "2853 NW 58th St",
+      "coordinates": {
+        "lat": 47.648544,
+        "lng": -122.315374
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/thyme-patch-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "4800 sq ft",
+    "notes": "14 plots available. Established: 2003. Managed by: Parks",
+    "neighborhood": "NW 58th St / 30th Ave NW"
+  },
+  {
+    "id": "p-patch-hillman-city-29",
+    "name": "Hillman City",
+    "type": "P-Patch Community Garden",
+    "description": "Hillman City is a P-Patch community garden in Seattle, established in 1994. Features 43 garden plots spanning 18500 square feet.",
+    "location": {
+      "address": "4613 S Lucile St",
+      "coordinates": {
+        "lat": 47.604871,
+        "lng": -122.286497
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/hillman-city"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "features": [
+      "Right-of-way garden"
+    ],
+    "size": "18500 sq ft",
+    "notes": "43 plots available. Established: 1994. Managed by: GROW/Parks",
+    "neighborhood": "S Lucile St / 46th Ave S"
+  },
+  {
+    "id": "p-patch-magnuson-park-7",
+    "name": "Magnuson Park",
+    "type": "P-Patch Community Garden",
+    "description": "Magnuson Park is a P-Patch community garden in Seattle, established in 1977. Features 128 garden plots spanning 174240 square feet.",
+    "location": {
+      "address": "7400 Sand Point Way NE",
+      "coordinates": {
+        "lat": 47.652349,
+        "lng": -122.281549
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/magnuson-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "174240 sq ft",
+    "notes": "128 plots available. Established: 1977. Managed by: Parks",
+    "neighborhood": "NE 74th St / Sportsfield Dr NE"
+  },
+  {
+    "id": "p-patch-beacon-food-forest-21",
+    "name": "Beacon Food Forest",
+    "type": "P-Patch Community Garden",
+    "description": "Beacon Food Forest is a P-Patch community garden in Seattle, established in 2014. Features 27 garden plots spanning 27000 square feet.",
+    "location": {
+      "address": "3950 15th Ave S",
+      "coordinates": {
+        "lat": 47.61061,
+        "lng": -122.295826
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/beacon-food-forest"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "27000 sq ft",
+    "notes": "27 plots available. Established: 2014. Managed by: SPU",
+    "neighborhood": "15th Ave S / S Dakota St"
+  },
+  {
+    "id": "p-patch-roosevelt-42",
+    "name": "Roosevelt",
+    "type": "P-Patch Community Garden",
+    "description": "Roosevelt is a P-Patch community garden in Seattle, established in 2003. Features 29 garden plots spanning 3500 square feet.",
+    "location": {
+      "address": "7012 12th Ave NE",
+      "coordinates": {
+        "lat": 47.651526,
+        "lng": -122.295628
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/roosevelt"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "3500 sq ft",
+    "notes": "29 plots available. Established: 2003. Managed by: DON",
+    "neighborhood": "NE 71st St / 12th Ave NE"
+  },
+  {
+    "id": "p-patch-high-point-juneau-garden-and-market-garden-68",
+    "name": "High Point Juneau Garden and Market Garden",
+    "type": "P-Patch Community Garden",
+    "description": "High Point Juneau Garden and Market Garden is a P-Patch community garden in Seattle, established in 1999. Features 18 garden plots spanning 5000 square feet.",
+    "location": {
+      "address": "5900 32nd Ave SW",
+      "coordinates": {
+        "lat": 47.604399,
+        "lng": -122.310839
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/high-point-juneau"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "5000 sq ft",
+    "notes": "18 plots available. Established: 1999. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/high-point",
+    "neighborhood": "32nd Ave SW / SW Juneau St"
+  },
+  {
+    "id": "p-patch-high-point-macarthur-lane-park-garden-69",
+    "name": "High Point MacArthur Lane Park Garden",
+    "type": "P-Patch Community Garden",
+    "description": "High Point MacArthur Lane Park Garden is a P-Patch community garden in Seattle, established in 2009. Features 11 garden plots spanning 2531 square feet.",
+    "location": {
+      "address": "2726 SW MacArthur Ln",
+      "coordinates": {
+        "lat": 47.604612,
+        "lng": -122.309992
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/high-point-macarthur-lane-park"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "2531 sq ft",
+    "notes": "11 plots available. Established: 2009. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/high-point",
+    "neighborhood": "SW MacArthur Ln / High Point Dr SW"
+  },
+  {
+    "id": "p-patch-rainier-vista-sunrise-garden-57",
+    "name": "Rainier Vista Sunrise Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Rainier Vista Sunrise Garden is a P-Patch community garden in Seattle, established in 2013. Features 24 garden plots spanning 7100 square feet.",
+    "location": {
+      "address": "4450 Renton Ave S",
+      "coordinates": {
+        "lat": 47.608831,
+        "lng": -122.29058
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/rainer-vista-sunrise-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "7100 sq ft",
+    "notes": "24 plots available. Established: 2013. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/rainier-vista",
+    "neighborhood": "S Oregon St / 33rd Ave S"
+  },
+  {
+    "id": "p-patch-newholly-29th-ave-garden-65",
+    "name": "NewHolly 29th Ave Garden",
+    "type": "P-Patch Community Garden",
+    "description": "NewHolly 29th Ave Garden is a P-Patch community garden in Seattle, established in 2001. Features 9 garden plots spanning 2000 square feet.",
+    "location": {
+      "address": "29th Ave S / S Brighton St",
+      "coordinates": {
+        "lat": 47.600915,
+        "lng": -122.291833
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/new-holly-29-ave-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "2000 sq ft",
+    "notes": "9 plots available. Established: 2001. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/newholly"
+  },
+  {
+    "id": "p-patch-newholly-power-garden-66",
+    "name": "NewHolly Power Garden",
+    "type": "P-Patch Community Garden",
+    "description": "NewHolly Power Garden is a P-Patch community garden in Seattle, established in 2003. Features 23 garden plots spanning 2400 square feet.",
+    "location": {
+      "address": "7123 Holly Park Dr S",
+      "coordinates": {
+        "lat": 47.599749,
+        "lng": -122.289905
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/new-holly-power-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "2400 sq ft",
+    "notes": "23 plots available. Established: 2003. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/newholly",
+    "neighborhood": "Holly Park Dr S / S Myrtle Pl"
+  },
+  {
+    "id": "p-patch-lake-city-court-garden-84",
+    "name": "Lake City Court Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Lake City Court Garden is a P-Patch community garden in Seattle, established in 2012. Features 22 garden plots spanning 3000 square feet.",
+    "location": {
+      "address": "12536 33rd Ave NE",
+      "coordinates": {
+        "lat": 47.666016,
+        "lng": -122.289575
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/lake-city-court"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "3000 sq ft",
+    "notes": "22 plots available. Established: 2012. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/lake-city-court",
+    "neighborhood": "33rd Ave NE / NE 125th St"
+  },
+  {
+    "id": "p-patch-newholly-youth-and-family-67",
+    "name": "NewHolly Youth and Family",
+    "type": "P-Patch Community Garden",
+    "description": "NewHolly Youth and Family is a P-Patch community garden in Seattle, established in 1999. Features 46 garden plots spanning 10500 square feet.",
+    "location": {
+      "address": "32nd Ave S / S Brighton St",
+      "coordinates": {
+        "lat": 47.601021,
+        "lng": -122.290483
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/new-holly-youth-and-family"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "10500 sq ft",
+    "notes": "46 plots available. Established: 1999. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/newholly"
+  },
+  {
+    "id": "p-patch-rainier-vista-dakota-west-59",
+    "name": "Rainier Vista Dakota West",
+    "type": "P-Patch Community Garden",
+    "description": "Rainier Vista Dakota West is a P-Patch community garden in Seattle, established in 2008. Features 36 garden plots spanning 8461 square feet.",
+    "location": {
+      "address": "2902 S Dakota St",
+      "coordinates": {
+        "lat": 47.610201,
+        "lng": -122.292122
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/rainier-vista-dakota-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "8461 sq ft",
+    "notes": "36 plots available. Established: 2008. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/rainier-vista",
+    "neighborhood": "S Lilac St / M L King Jr Way S"
+  },
+  {
+    "id": "p-patch-hillside-garden-71",
+    "name": "Hillside Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Hillside Garden is a P-Patch community garden in Seattle, established in 2001. spanning 8000 square feet.",
+    "location": {
+      "address": "2570 M L King Jr Way S",
+      "coordinates": {
+        "lat": 47.614643,
+        "lng": -122.291555
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/hillside-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Affordable Housing Resident Priority Given",
+    "features": [
+      "Affiliated with Affordable Housing Resident Priority Given"
+    ],
+    "size": "8000 sq ft",
+    "notes": "Established: 2001. Managed by: SHA. Affiliation website: http://www.mtbakerhousing.org/MtBakerVillage/",
+    "neighborhood": "M L King Jr Way S / S McClellan St"
+  },
+  {
+    "id": "p-patch-hoa-mai-92",
+    "name": "Hoa Mai",
+    "type": "P-Patch Community Garden",
+    "description": "Hoa Mai is a P-Patch community garden in Seattle, established in 2017. Features 20 garden plots spanning 3045 square feet.",
+    "location": {
+      "address": "221 10th Ave S",
+      "coordinates": {
+        "lat": 47.622594,
+        "lng": -122.297242
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/hoa-mai"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "3045 sq ft",
+    "notes": "20 plots available. Established: 2017. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/yesler",
+    "neighborhood": "S Washington St / 10th Ave S"
+  },
+  {
+    "id": "p-patch-newholly-lucky-garden-64",
+    "name": "NewHolly Lucky Garden",
+    "type": "P-Patch Community Garden",
+    "description": "NewHolly Lucky Garden is a P-Patch community garden in Seattle, established in 2001. Features 9 garden plots spanning 2000 square feet.",
+    "location": {
+      "address": "2930 S Holly St",
+      "coordinates": {
+        "lat": 47.601463,
+        "lng": -122.291464
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/new-holly-lucky-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "2000 sq ft",
+    "notes": "9 plots available. Established: 2001. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/newholly",
+    "neighborhood": "Shaffer Ave S / S Holly St"
+  },
+  {
+    "id": "p-patch-high-point-commons-garden-70",
+    "name": "High Point Commons Garden",
+    "type": "P-Patch Community Garden",
+    "description": "High Point Commons Garden is a P-Patch community garden in Seattle, established in 2009. Features 46 garden plots spanning 5269 square feet.",
+    "location": {
+      "address": "31st Ave SW & SW Raymond St",
+      "coordinates": {
+        "lat": 47.60376,
+        "lng": -122.310843
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/high-point-commons-garden"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "5269 sq ft",
+    "notes": "46 plots available. Established: 2009. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/high-point"
+  },
+  {
+    "id": "p-patch-newholly-rockery-community-market-garden-63",
+    "name": "NewHolly Rockery Community/Market Garden",
+    "type": "P-Patch Community Garden",
+    "description": "NewHolly Rockery Community/Market Garden is a P-Patch community garden in Seattle, established in 2005. Features 19 garden plots spanning 23000 square feet.",
+    "location": {
+      "address": "7409 40th Ave S",
+      "coordinates": {
+        "lat": 47.598678,
+        "lng": -122.288437
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/new-holly-rockery"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "23000 sq ft",
+    "notes": "19 plots available. Established: 2005. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/newholly",
+    "neighborhood": "S Holly Park Dr  / S 40th St"
+  },
+  {
+    "id": "p-patch-rainier-vista-snoqualmie-garden-58",
+    "name": "Rainier Vista Snoqualmie Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Rainier Vista Snoqualmie Garden is a P-Patch community garden in Seattle, established in 2006. Features 18 garden plots spanning 1569 square feet.",
+    "location": {
+      "address": "2917 S Snoqualmie St",
+      "coordinates": {
+        "lat": 47.608174,
+        "lng": -122.291404
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/rainier-vista-snoqualmie"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "size": "1569 sq ft",
+    "notes": "18 plots available. Established: 2006. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/properties/rainier-vista",
+    "neighborhood": "29th Ave S / S Snoqualmie St"
+  },
+  {
+    "id": "p-patch-leo-street-79",
+    "name": "Leo Street",
+    "type": "P-Patch Community Garden",
+    "description": "Leo Street is a P-Patch community garden in Seattle, established in 2012. Features 43 garden plots spanning 2400 square feet.",
+    "location": {
+      "address": "5100 S Leo St",
+      "coordinates": {
+        "lat": 47.58671,
+        "lng": -122.285486
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/neighborhoods/programs-and-services/p-patch-community-gardening/p-patch-list/leo-street"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "2400 sq ft",
+    "notes": "43 plots available. Established: 2012. Managed by: Private",
+    "neighborhood": "51st Ave S / S Leo St"
+  },
+  {
+    "id": "p-patch-hinoki-93",
+    "name": "Hinoki",
+    "type": "P-Patch Community Garden",
+    "description": "Hinoki is a P-Patch community garden in Seattle, established in 2023. Features 12 garden plots.",
+    "location": {
+      "address": "110 10th Ave S",
+      "coordinates": {
+        "lat": 47.622774,
+        "lng": -122.297048
+      }
+    },
+    "contact": {
+      "website": "https://www.seattle.gov/neighborhoods/p-patch-gardening/garden-list/hinoki"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "accessibility": "Affiliated with Seattle Housing Authority Resident Priority Given",
+    "features": [
+      "Affiliated with Seattle Housing Authority Resident Priority Given"
+    ],
+    "notes": "12 plots available. Established: 2023. Managed by: SHA. Affiliation website: https://www.seattlehousing.org/housing/sha-housing/property/hinoki",
+    "neighborhood": "10th Ave S / S Washington St"
+  },
+  {
+    "id": "p-patch-beyers-bulldog-garden-94",
+    "name": "Beyers' Bulldog Garden",
+    "type": "P-Patch Community Garden",
+    "description": "Beyers' Bulldog Garden is a P-Patch community garden in Seattle, established in 2025. spanning 5700 square feet.",
+    "location": {
+      "address": "4807 54th Ave SW",
+      "coordinates": {
+        "lat": 47.607975,
+        "lng": -122.317744
+      }
+    },
+    "contact": {
+      "website": "https://www.seattle.gov/neighborhoods/p-patch-gardening/garden-list/beyers-bulldog"
+    },
+    "organization": "Seattle P-Patch Program",
+    "tags": [
+      "community garden",
+      "p-patch",
+      "urban farming",
+      "gardening"
+    ],
+    "cost": "Plot rental fees apply",
+    "size": "5700 sq ft",
+    "notes": "Established: 2025. Managed by: DON",
+    "neighborhood": "SW Edmunds St / 54th Ave SW"
+  }
+]

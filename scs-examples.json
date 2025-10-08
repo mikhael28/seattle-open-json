@@ -1,0 +1,152 @@
+{
+  "name": "Seattle Civic Data - Example Entities",
+  "description": "Examples showing how different civic entities use the same simple CivicEntity model",
+  "metadata": {
+    "total": 5,
+    "lastUpdated": "2025-01-15",
+    "source": "City of Seattle - Parks and Recreation",
+    "version": "1.0.0"
+  },
+  "entities": [
+    {
+      "id": "ballard-community-center",
+      "name": "Ballard Community Center",
+      "type": "Community Center",
+      "description": "Full-service community center offering fitness facilities, pools, classes, and programs for all ages.",
+      "location": {
+        "address": "6020 28th Ave NW, Seattle, WA 98107",
+        "coordinates": {
+          "lat": 47.6698,
+          "lng": -122.3997
+        }
+      },
+      "contact": {
+        "phone": "(206) 684-4093",
+        "website": "https://www.seattle.gov/parks/find/centers/ballard-community-center"
+      },
+      "schedule": [
+        {
+          "day": "Monday-Friday",
+          "hours": "6:00 AM - 9:00 PM"
+        },
+        {
+          "day": "Saturday",
+          "hours": "9:00 AM - 5:00 PM"
+        }
+      ],
+      "features": ["gymnasium", "indoor pool", "fitness room", "multipurpose rooms"],
+      "accessibility": "Wheelchair accessible, ASL interpretation available upon request",
+      "tags": ["community center", "recreation", "fitness", "pool"],
+      "neighborhood": "Ballard",
+      "lastUpdated": "2025-01-15"
+    },
+    {
+      "id": "summer-basketball-youth-2025",
+      "name": "Summer Youth Basketball League",
+      "type": "Youth Program",
+      "description": "Free basketball program for middle school students. Focuses on skill development, teamwork, and sportsmanship. No experience required.",
+      "location": "Green Lake Community Center",
+      "contact": {
+        "phone": "(206) 684-0780",
+        "email": "greenlake@seattle.gov"
+      },
+      "dates": {
+        "start": "2025-06-15",
+        "end": "2025-08-20"
+      },
+      "schedule": [
+        {
+          "day": "Monday, Wednesday",
+          "hours": "4:00 PM - 6:00 PM"
+        }
+      ],
+      "ageRange": "11-14 years",
+      "cost": "Free",
+      "registration": "Online registration opens May 1st. Limited to 30 participants.",
+      "tags": ["youth", "sports", "basketball", "free", "summer"],
+      "organization": "Seattle Parks and Recreation",
+      "neighborhood": "Green Lake",
+      "sessionCount": 20,
+      "hoursPerWeek": 4,
+      "lastUpdated": "2025-02-01"
+    },
+    {
+      "id": "wallingford-farmers-market",
+      "name": "Wallingford Farmers Market",
+      "type": "Farmers Market",
+      "description": "Weekly farmers market featuring local produce, flowers, baked goods, and artisan products. EBT/SNAP accepted.",
+      "location": {
+        "address": "Meridian Ave N & N 50th St, Seattle, WA 98103",
+        "coordinates": {
+          "lat": 47.6643,
+          "lng": -122.3318
+        }
+      },
+      "contact": {
+        "website": "http://www.sfmamarkets.com/visit-wallingford-farmers-market"
+      },
+      "dates": {
+        "start": "May 29",
+        "end": "September 25"
+      },
+      "schedule": [
+        {
+          "day": "Wednesday",
+          "hours": "3:00 PM - 7:00 PM"
+        }
+      ],
+      "cost": "Free admission",
+      "accessibility": "Wheelchair accessible, service animals welcome",
+      "tags": ["farmers market", "local food", "community"],
+      "organization": "Seattle Farmers Market Association",
+      "neighborhood": "Wallingford",
+      "lastUpdated": "2025-01-10"
+    },
+    {
+      "id": "volunteer-park-conservatory",
+      "name": "Volunteer Park Conservatory",
+      "type": "Park",
+      "description": "Historic greenhouse featuring tropical and desert plants. Built in 1912, the conservatory displays seasonal flowers and exotic plant collections.",
+      "location": {
+        "address": "1247 15th Ave E, Seattle, WA 98112",
+        "coordinates": {
+          "lat": 47.6299,
+          "lng": -122.3143
+        }
+      },
+      "contact": {
+        "phone": "(206) 684-4743",
+        "website": "https://www.seattle.gov/parks/find/parks/volunteer-park"
+      },
+      "schedule": [
+        {
+          "day": "Tuesday-Sunday",
+          "hours": "10:00 AM - 4:00 PM"
+        }
+      ],
+      "cost": "$4 suggested donation",
+      "features": ["greenhouse", "tropical plants", "desert plants", "seasonal displays"],
+      "accessibility": "Wheelchair accessible main floor, upper floor accessible via elevator",
+      "tags": ["park", "conservatory", "historic", "gardens"],
+      "neighborhood": "Capitol Hill",
+      "lastUpdated": "2025-01-12"
+    },
+    {
+      "id": "talkspace-youth-therapy",
+      "name": "Free Online Therapy for Seattle Youth",
+      "type": "Service",
+      "description": "Free online mental health support and therapy for Seattle youth through Talkspace. Provides unlimited messaging with a licensed therapist and one live video session per month.",
+      "location": "Online (Seattle residents only)",
+      "contact": {
+        "website": "https://www.talkspace.com/seattle"
+      },
+      "ageRange": "13-24 years",
+      "cost": "Free for eligible Seattle residents",
+      "eligibility": "Must be Seattle resident aged 13-24",
+      "howToAccess": "Sign up online with Seattle address verification",
+      "tags": ["mental health", "therapy", "youth", "free", "online"],
+      "organization": "Mayor's Office - Youth Mental Health Initiative",
+      "lastUpdated": "2025-01-08"
+    }
+  ]
+}

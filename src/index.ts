@@ -5,6 +5,18 @@
  * events, and opportunities in the Seattle area.
  */
 
+// Export Seattle Civic Standard Model interfaces
+export type {
+  CivicEntity,
+  Coordinates,
+  LocationInfo,
+  ContactInfo,
+  ScheduleInfo,
+  DateRange,
+  CivicEntityCollection,
+  CivicEntityQuery,
+} from "./scs-model";
+
 // Export data-specific interfaces
 export type { CommunityCenter } from "./data/community-centers";
 export type { FarmersMarket } from "./data/farmers-markets";
@@ -16,6 +28,21 @@ export type { YouthProgram } from "./data/youth-programs";
 export type { EmeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
 export type { ParksCatalog } from "./data/parks-catalog";
 
+// Export Seattle Civic Standard migration functions
+export {
+  migrateAllSeattleData,
+  getAllMigratedEntities,
+  migrateAllFarmersMarkets,
+  migrateAllPPatches,
+  migrateAllCommunityCenters,
+  migrateAllParksCatalog,
+  migrateAllPicnicSites,
+  migrateAllPrivatelyOwnedPublicSpaces,
+  migrateAllMobileRecreationPrograms,
+  migrateAllYouthPrograms,
+  migrateAllResourceGuides,
+} from "./migrations/index";
+
 // Export data loading utilities
 
 // Import all data objects from various src files
@@ -26,32 +53,6 @@ import { mobileRecreationProgramming } from "./data/mobile-recreation-programmin
 import { pPatch } from "./data/p-patch";
 import { picnicSites } from "./data/picnic-sites";
 import { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces";
-import {
-  seattleYouthOrganization,
-  programs,
-  services,
-  locations,
-  serviceAtLocations,
-  contacts,
-  taxonomyTerms,
-  attributes,
-  costOptions,
-  requiredDocuments,
-  organizationIdentifiers,
-  serviceCapacities,
-  metadataRecords,
-  taxonomies,
-  metaTableDescriptions,
-  phoneNumbers,
-  addresses,
-  schedules,
-  languages,
-  accessibilityFeatures,
-  serviceAreas,
-  additionalUrls,
-  fundingSources,
-  seattleYouthHSDSExample,
-} from "./hsds/hsds-example";
 import { youth_programs } from "./data/youth-programs";
 import { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
 
@@ -63,63 +64,8 @@ export { mobileRecreationProgramming } from "./data/mobile-recreation-programmin
 export { pPatch } from "./data/p-patch";
 export { picnicSites } from "./data/picnic-sites";
 export { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces";
-// Export HSDS example data collections
-export {
-  seattleYouthOrganization,
-  programs,
-  services,
-  locations,
-  serviceAtLocations,
-  contacts,
-  taxonomyTerms,
-  attributes,
-  costOptions,
-  requiredDocuments,
-  organizationIdentifiers,
-  serviceCapacities,
-  metadataRecords,
-  taxonomies,
-  metaTableDescriptions,
-  phoneNumbers,
-  addresses,
-  schedules,
-  languages,
-  accessibilityFeatures,
-  serviceAreas,
-  additionalUrls,
-  fundingSources,
-  seattleYouthHSDSExample,
-} from "./hsds/hsds-example";
 export { youth_programs } from "./data/youth-programs";
 export { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
-
-// Export HSDS (Human Services Data Specification) types and interfaces
-export type {
-  Organization,
-  Service,
-  ServiceAtLocation,
-  Address,
-  Phone,
-  Contact,
-  Schedule,
-  Language,
-  Accessibility,
-  Program,
-  Funding,
-  TaxonomyTerm,
-  Attribute,
-  ServiceArea,
-  Url,
-  CostOption,
-  RequiredDocument,
-  Metadata,
-  MetaTableDescription,
-  Location,
-  Taxonomy,
-  OrganizationIdentifier,
-  Unit,
-  ServiceCapacity,
-} from "./hsds/hsds";
 
 // Combined dataset with all opportunities
 export const allSeattleData = {
@@ -130,11 +76,8 @@ export const allSeattleData = {
   pPatch,
   picnicSites,
   privatelyOwnedPublicSpaces,
-  seattleYouthOrganization,
   youth_programs,
   emeraldCityResourceGuide,
-  // HSDS example data
-  hsdsExample: seattleYouthHSDSExample,
 };
 
 // Quick access arrays for different categories
@@ -162,7 +105,7 @@ export const packageMetadata = {
   name: "seattle-open-json",
   description:
     "Community-driven collection of youth opportunities and resources in Seattle",
-  version: "1.0.3",
+  version: "1.2.0",
   totalRecords: {
     communityCenters: communityCenters.length,
     farmersMarkets: farmersMarkets.length,
@@ -188,6 +131,48 @@ export const packageMetadata = {
     "Community Resources",
   ],
   lastUpdated: new Date().toISOString(),
+};
+
+// Seattle Civic Standard (SCS) pre-migrated data - NEW in v1.2.0
+import { migrateAllSeattleData, getAllMigratedEntities } from "./migrations/index";
+
+const _scsDataCache = migrateAllSeattleData();
+const _allEntitiesCache = getAllMigratedEntities();
+
+/**
+ * Pre-migrated Seattle Civic Standard (SCS) data
+ * All datasets converted to the unified CivicEntity format
+ */
+export const scsData = {
+  /** All SCS entities as a flat array (3,176+ entities) */
+  getAllEntities: () => _allEntitiesCache,
+
+  /** Farmers Markets in SCS format (17 entities) */
+  farmersMarkets: _scsDataCache.farmersMarkets,
+
+  /** P-Patch Community Gardens in SCS format (86 entities) */
+  pPatches: _scsDataCache.pPatches,
+
+  /** Community Centers in SCS format (29 entities) */
+  communityCenters: _scsDataCache.communityCenters,
+
+  /** Parks & Recreation Activities in SCS format (2,228 entities) */
+  parksCatalog: _scsDataCache.parksCatalog,
+
+  /** Picnic Sites in SCS format (52 entities) */
+  picnicSites: _scsDataCache.picnicSites,
+
+  /** Privately-Owned Public Spaces in SCS format (44 entities) */
+  privatelyOwnedPublicSpaces: _scsDataCache.privatelyOwnedPublicSpaces,
+
+  /** Mobile Recreation Programs in SCS format (168 entities) */
+  mobileRecreationPrograms: _scsDataCache.mobileRecreationPrograms,
+
+  /** Youth Programs in SCS format (68 entities) */
+  youthPrograms: _scsDataCache.youthPrograms,
+
+  /** Community Resource Guides in SCS format (484 entities) */
+  resourceGuides: _scsDataCache.resourceGuides,
 };
 
 // Default export

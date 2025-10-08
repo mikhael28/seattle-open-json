@@ -1,0 +1,27 @@
+{
+  "generatedAt": "2025-10-08T03:22:21.558Z",
+  "totalEntities": 3176,
+  "datasets": {
+    "farmersMarkets": 17,
+    "pPatches": 86,
+    "communityCenters": 29,
+    "parksCatalog": 2228,
+    "picnicSites": 52,
+    "privatelyOwnedPublicSpaces": 44,
+    "mobileRecreationPrograms": 168,
+    "youthPrograms": 68,
+    "resourceGuides": 484
+  },
+  "scsVersion": "1.0.0",
+  "compliance": {
+    "requiredFields": [
+      "id",
+      "name",
+      "type",
+      "description",
+      "location",
+      "contact"
+    ],
+    "allEntitiesCompliant": true
+  }
+}

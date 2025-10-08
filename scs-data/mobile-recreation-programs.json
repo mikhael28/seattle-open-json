@@ -1,0 +1,4508 @@
+[
+  {
+    "id": "mobile-rec-field-daze-15867",
+    "name": "Field daze",
+    "type": "Mobile Recreation Program",
+    "description": "Lawn and field sports, all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Georgetown Playfield",
+      "coordinates": {
+        "lat": 47.604767,
+        "lng": -122.29803
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "3/26/2025 12:00:00 AM",
+      "end": "6/3/2025 4:00:51 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday static 5:00-6:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. South West team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15868",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Jefferson Park",
+      "coordinates": {
+        "lat": 47.610996,
+        "lng": -122.295239
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-stroll-roll-15869",
+    "name": "Stroll & Roll",
+    "type": "Mobile Recreation Program",
+    "description": "Light fitness and social hour, geared towards adults using fitness as a medium for socializing. This is a rec'n the streets program.",
+    "location": {
+      "address": "Judkins Park/South Park Playfield",
+      "coordinates": {
+        "lat": 47.620733,
+        "lng": -122.293373
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:45:38 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 11am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15870",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Little Brook Park",
+      "coordinates": {
+        "lat": 47.670201,
+        "lng": -122.290161
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active"
+  },
+  {
+    "id": "mobile-rec-hoopin-15871",
+    "name": "Hoopin'",
+    "type": "Mobile Recreation Program",
+    "description": "Sports, Basketball open play and drills, all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Powell Barnett Park",
+      "coordinates": {
+        "lat": 47.624186,
+        "lng": -122.291388
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 3:44:05 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 5:30 - 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central Team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15872",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Rainier Playfield",
+      "coordinates": {
+        "lat": 47.60832,
+        "lng": -122.28927
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15873",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Magnuson Park Beach/Playfield",
+      "coordinates": {
+        "lat": 47.651363,
+        "lng": -122.278917
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15874",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "University Village",
+      "coordinates": {
+        "lat": 47.64529,
+        "lng": -122.291745
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15875",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "NEST (NE 125th to 128th)",
+      "coordinates": {
+        "lat": 47.665972,
+        "lng": -122.291493
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15876",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Ballard Commons Park",
+      "coordinates": {
+        "lat": 47.648452,
+        "lng": -122.312979
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15877",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Bell Street Park Boulevard",
+      "coordinates": {
+        "lat": 47.627528,
+        "lng": -122.303681
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15878",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Cal Anderson Park",
+      "coordinates": {
+        "lat": 47.628301,
+        "lng": -122.297019
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15879",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Cascade Playground",
+      "coordinates": {
+        "lat": 47.630334,
+        "lng": -122.300239
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15880",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Denny Park",
+      "coordinates": {
+        "lat": 47.629482,
+        "lng": -122.3024
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15881",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Jim Ellis Freeway Park",
+      "coordinates": {
+        "lat": 47.626173,
+        "lng": -122.299743
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15882",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Occidental Square",
+      "coordinates": {
+        "lat": 47.622637,
+        "lng": -122.300615
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15883",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Pioneer Square",
+      "coordinates": {
+        "lat": 47.623228,
+        "lng": -122.300755
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15884",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Victor Steinbrueck Park",
+      "coordinates": {
+        "lat": 47.626222,
+        "lng": -122.30316
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-15885",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Westlake Park",
+      "coordinates": {
+        "lat": 47.626504,
+        "lng": -122.301468
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15886",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Alki Beach Park",
+      "coordinates": {
+        "lat": 47.615453,
+        "lng": -122.319571
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15887",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Discovery Park",
+      "coordinates": {
+        "lat": 47.643823,
+        "lng": -122.320844
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15888",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Gas Works Park",
+      "coordinates": {
+        "lat": 47.639139,
+        "lng": -122.300716
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15889",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Genesee Park and Playfield",
+      "coordinates": {
+        "lat": 47.610213,
+        "lng": -122.287234
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15890",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Golden Gardens Park",
+      "coordinates": {
+        "lat": 47.655483,
+        "lng": -122.316588
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15891",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Green Lake Park",
+      "coordinates": {
+        "lat": 47.648424,
+        "lng": -122.302107
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15892",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Lincoln Park",
+      "coordinates": {
+        "lat": 47.597677,
+        "lng": -122.316604
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15893",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Myrtle Edwards Park",
+      "coordinates": {
+        "lat": 47.629696,
+        "lng": -122.307516
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15894",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Seward Park",
+      "coordinates": {
+        "lat": 47.605423,
+        "lng": -122.280989
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15895",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Warren G. Magnuson Park",
+      "coordinates": {
+        "lat": 47.651077,
+        "lng": -122.280491
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15896",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Westcrest Park",
+      "coordinates": {
+        "lat": 47.595067,
+        "lng": -122.302912
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-15897",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Woodland Park",
+      "coordinates": {
+        "lat": 47.647622,
+        "lng": -122.302807
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-parks-commons-program-15898",
+    "name": "Parks Commons Program",
+    "type": "Mobile Recreation Program",
+    "description": "Parks Commons Program This is a parks commons program program.",
+    "location": {
+      "address": "Cal Anderson Park",
+      "coordinates": {
+        "lat": 47.628882,
+        "lng": -122.297005
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "parks commons program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-parks-commons-program-15899",
+    "name": "Parks Commons Program",
+    "type": "Mobile Recreation Program",
+    "description": "Parks Commons Program This is a parks commons program program.",
+    "location": {
+      "address": "Roxhill Park",
+      "coordinates": {
+        "lat": 47.593495,
+        "lng": -122.309945
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "parks commons program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-lunch-playground-program-15900",
+    "name": "Summer Lunch & Playground Program",
+    "type": "Mobile Recreation Program",
+    "description": "Summer Lunch & Playground Program This is a summer meals program.",
+    "location": {
+      "address": "Beacon Hill Playground",
+      "coordinates": {
+        "lat": 47.617359,
+        "lng": -122.296288
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15901",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Georgetown Playfield",
+      "coordinates": {
+        "lat": 47.604899,
+        "lng": -122.298027
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:56:43 AM",
+      "end": "8/22/2025 9:56:51 AM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 9am - 12:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15902",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Highland Park Playground",
+      "coordinates": {
+        "lat": 47.59606,
+        "lng": -122.305028
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:51:13 AM",
+      "end": "8/22/2025 9:51:21 AM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 9:00 am - 5:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15903",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Little Brook Park",
+      "coordinates": {
+        "lat": 47.670201,
+        "lng": -122.290161
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 10:06:08 AM",
+      "end": "8/22/2025 10:06:16 AM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 9:00 am - 12:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15904",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Maplewood Playfield",
+      "coordinates": {
+        "lat": 47.607827,
+        "lng": -122.297342
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:58:35 AM",
+      "end": "8/22/2025 9:58:43 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15905",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Northacres Park",
+      "coordinates": {
+        "lat": 47.66677,
+        "lng": -122.298209
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 4:09:21 PM",
+      "end": "8/22/2025 4:09:25 PM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 9:00 am - 5:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15906",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Othello Playground",
+      "coordinates": {
+        "lat": 47.598945,
+        "lng": -122.287447
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:49:31 AM",
+      "end": "8/22/2025 9:49:43 AM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 12:00 - 5:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15907",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Powell Barnett Park",
+      "coordinates": {
+        "lat": 47.624083,
+        "lng": -122.291387
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 10:02:47 AM",
+      "end": "8/22/2025 10:02:56 AM"
+    },
+    "schedule": [
+      {
+        "day": "M-F 9:00 am - 5:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Eligible"
+  },
+  {
+    "id": "mobile-rec-summer-lunch-playground-program-15908",
+    "name": "Summer Lunch & Playground Program",
+    "type": "Mobile Recreation Program",
+    "description": "Summer Lunch & Playground Program This is a summer meals program.",
+    "location": {
+      "address": "Roxhill Park",
+      "coordinates": {
+        "lat": 47.593495,
+        "lng": -122.309945
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15909",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Eddie Vine Boat Ramp",
+      "coordinates": {
+        "lat": 47.654488,
+        "lng": -122.317284
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15910",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Atlantic City Boat Ramp",
+      "coordinates": {
+        "lat": 47.593996,
+        "lng": -122.283826
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15911",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Don Armeni Boat Ramp",
+      "coordinates": {
+        "lat": 47.62006,
+        "lng": -122.312764
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15912",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Madison Park Beach",
+      "coordinates": {
+        "lat": 47.63526,
+        "lng": -122.286292
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15913",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Madrona Park",
+      "coordinates": {
+        "lat": 47.625199,
+        "lng": -122.288061
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15914",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Matthews Beach Park",
+      "coordinates": {
+        "lat": 47.657431,
+        "lng": -122.285205
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15915",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Mount Baker Park",
+      "coordinates": {
+        "lat": 47.616054,
+        "lng": -122.28937
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15916",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Pritchard Island Beach",
+      "coordinates": {
+        "lat": 47.596565,
+        "lng": -122.283653
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15917",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Seward Park",
+      "coordinates": {
+        "lat": 47.604239,
+        "lng": -122.282274
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15918",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Warren G. Magnuson Park",
+      "coordinates": {
+        "lat": 47.651253,
+        "lng": -122.278928
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15919",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Green Lake Park East Boat Launch",
+      "coordinates": {
+        "lat": 47.650009,
+        "lng": -122.300289
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-15920",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Green Lake Park West Boat Launch",
+      "coordinates": {
+        "lat": 47.651992,
+        "lng": -122.302319
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-sk8-school-15921",
+    "name": "Sk8 School",
+    "type": "Mobile Recreation Program",
+    "description": "Free guided skate lessons, all equipment provided, all ages. This is a rec'n the streets program.",
+    "location": {
+      "address": "South Park Skate Park",
+      "coordinates": {
+        "lat": 47.595694,
+        "lng": -122.298808
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 11 am - 12:30 pm 7/10, 7/24, 8/7, 8/21, 9/4, 9/18, 10/2",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Temporarily Closed. South west"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15922",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Bitter Lake Playfield Tennis Court",
+      "coordinates": {
+        "lat": 47.667639,
+        "lng": -122.303629
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15923",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Cedarvale House & Village (SHA)",
+      "coordinates": {
+        "lat": 47.662675,
+        "lng": -122.296595
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15924",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Lower Woodland Skate Park",
+      "coordinates": {
+        "lat": 47.647071,
+        "lng": -122.302124
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15925",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Manguson Hangar",
+      "coordinates": {
+        "lat": 47.652288,
+        "lng": -122.282184
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15926",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Magnuson Solid Ground Housing",
+      "coordinates": {
+        "lat": 47.650702,
+        "lng": -122.282393
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15927",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Magnuson Walking Trails",
+      "coordinates": {
+        "lat": 47.650514,
+        "lng": -122.281028
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15928",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Northacres Park",
+      "coordinates": {
+        "lat": 47.666617,
+        "lng": -122.297872
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-toddler-motorskills-15929",
+    "name": "Toddler Motorskills",
+    "type": "Mobile Recreation Program",
+    "description": "Toddler/ sports, focus on building early coordination skills with simple sports games This is a rec'n the streets program.",
+    "location": {
+      "address": "Greenwood Park",
+      "coordinates": {
+        "lat": 47.656621,
+        "lng": -122.304222
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 1:30:44 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday 3 pm - 4:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North Team"
+  },
+  {
+    "id": "mobile-rec-jammin-15930",
+    "name": "Jammin'",
+    "type": "Mobile Recreation Program",
+    "description": "Music program, all ages, structured and free play This is a rec'n the streets program.",
+    "location": {
+      "address": "Beacon Hil Playground",
+      "coordinates": {
+        "lat": 47.617452,
+        "lng": -122.296274
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/4/2025 12:00:00 AM",
+      "end": "10/4/2025 12:18:32 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday, static, 5:30 - 7:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South West team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15931",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Firehouse Mini Park",
+      "coordinates": {
+        "lat": 47.625441,
+        "lng": -122.294461
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-meet-a-tree-15932",
+    "name": "Meet a tree",
+    "type": "Mobile Recreation Program",
+    "description": "Nature/ environmental, guided ecology tour, social and educational, all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Frink Park",
+      "coordinates": {
+        "lat": 47.622087,
+        "lng": -122.290313
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Fridays 11 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. central team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15933",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Garfield Tennis Courts",
+      "coordinates": {
+        "lat": 47.625156,
+        "lng": -122.292427
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-jammin-15934",
+    "name": "Jammin'",
+    "type": "Mobile Recreation Program",
+    "description": "Music program/ all ages, open play instruments provided This is a rec'n the streets program.",
+    "location": {
+      "address": "Jimi Hendrix Park",
+      "coordinates": {
+        "lat": 47.618315,
+        "lng": -122.292683
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 3:00 - 4:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central Team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15935",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Dr. Blanche Lavizzo Park",
+      "coordinates": {
+        "lat": 47.622644,
+        "lng": -122.293436
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15936",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Dr. Jose Rizal Park",
+      "coordinates": {
+        "lat": 47.619672,
+        "lng": -122.296795
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15937",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Genesee Park and Playfield",
+      "coordinates": {
+        "lat": 47.608918,
+        "lng": -122.287266
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active"
+  },
+  {
+    "id": "mobile-rec-open-mic-15938",
+    "name": "Open Mic",
+    "type": "Mobile Recreation Program",
+    "description": "Open mic/ Music program, all ages, structured and free play This is a rec'n the streets program.",
+    "location": {
+      "address": "Brighton Playfield",
+      "coordinates": {
+        "lat": 47.603367,
+        "lng": -122.288402
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 1:49:11 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday 3 - 4:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South East Team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15939",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Rainier Vista (SHA)",
+      "coordinates": {
+        "lat": 47.608352,
+        "lng": -122.291445
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15940",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Maple Wood Playfield",
+      "coordinates": {
+        "lat": 47.607775,
+        "lng": -122.297333
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15941",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Rainier Beach Urban Farm",
+      "coordinates": {
+        "lat": 47.595296,
+        "lng": -122.283722
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15942",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Beacon Hill Food Forest",
+      "coordinates": {
+        "lat": 47.610626,
+        "lng": -122.29582
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15943",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Lakeridge Playground",
+      "coordinates": {
+        "lat": 47.58945,
+        "lng": -122.279865
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15944",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Cheasty Greenspace",
+      "coordinates": {
+        "lat": 47.611916,
+        "lng": -122.292401
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-bird-walk-15945",
+    "name": "Bird walk",
+    "type": "Mobile Recreation Program",
+    "description": "Wednesday all ages nature and ecology programming, surveying and socializing avian inhabitants This is a rec'n the streets program.",
+    "location": {
+      "address": "Dragonfly Garden",
+      "coordinates": {
+        "lat": 47.610457,
+        "lng": -122.309337
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/4/2025 12:00:00 AM",
+      "end": "10/4/2025 3:38:57 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 11am - 12:30 pm   and Static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South West team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15946",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Herrings House Park (Tulaltx)",
+      "coordinates": {
+        "lat": 47.60861,
+        "lng": -122.305299
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15947",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Marra Farm",
+      "coordinates": {
+        "lat": 47.593907,
+        "lng": -122.299597
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15948",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Oxbow Park",
+      "coordinates": {
+        "lat": 47.602364,
+        "lng": -122.298129
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-kickball-and-mobile-playground-15949",
+    "name": "Kickball and mobile playground",
+    "type": "Mobile Recreation Program",
+    "description": "Fitness, toddler focused, lawn games (kick ball) and simple entertainment via bubbles This is a rec'n the streets program.",
+    "location": {
+      "address": "Highland Park Playground",
+      "coordinates": {
+        "lat": 47.596077,
+        "lng": -122.305041
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 3:42:09 PM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday Static 5:30 - 7:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South West team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-15950",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Walt Hundley Playfield",
+      "coordinates": {
+        "lat": 47.600873,
+        "lng": -122.311065
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15951",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Duwamish Waterway",
+      "coordinates": {
+        "lat": 47.597378,
+        "lng": -122.297727
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:57:46 AM",
+      "end": "8/22/2025 9:57:53 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15952",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Be'er Sheva",
+      "coordinates": {
+        "lat": 47.594496,
+        "lng": -122.283811
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 6:18:17 PM",
+      "end": "8/22/2025 6:18:24 PM"
+    },
+    "schedule": [
+      {
+        "day": "M-F 9:00 am - 5:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Eligible"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15953",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Judkins",
+      "coordinates": {
+        "lat": 47.619822,
+        "lng": -122.293352
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 10:00:44 AM",
+      "end": "8/22/2025 10:00:51 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-15954",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Food and Fitness This is a food and fitness program.",
+    "location": {
+      "address": "Lake City Farmers Market",
+      "coordinates": {
+        "lat": 47.666177,
+        "lng": -122.290998
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-15955",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Food and Fitness This is a food and fitness program.",
+    "location": {
+      "address": "Madrona Farmers Market",
+      "coordinates": {
+        "lat": 47.626951,
+        "lng": -122.291298
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-15956",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Food and Fitness This is a food and fitness program. In partnership with African Community Housing Development.",
+    "location": {
+      "address": "Delridge Farmers Market",
+      "coordinates": {
+        "lat": 47.592968,
+        "lng": -122.307296
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive. Partners: African Community Housing Development"
+  },
+  {
+    "id": "mobile-rec-wellness-classes-15957",
+    "name": "Wellness Classes",
+    "type": "Mobile Recreation Program",
+    "description": "Wellness Classes This is a wellness classes program. In partnership with Cultivate South Park.",
+    "location": {
+      "address": "South Park Hall",
+      "coordinates": {
+        "lat": 47.595466,
+        "lng": -122.296641
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "wellness classes"
+    ],
+    "notes": "Status: Active. Partners: Cultivate South Park"
+  },
+  {
+    "id": "mobile-rec-wellness-classes-15958",
+    "name": "Wellness Classes",
+    "type": "Mobile Recreation Program",
+    "description": "Wellness Classes This is a wellness classes program. In partnership with Cham Refugees Community.",
+    "location": {
+      "address": "South Seattle Womens Fitness",
+      "coordinates": {
+        "lat": 47.602731,
+        "lng": -122.292817
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "1/4/2025 2:41:21 PM",
+      "end": "2/26/2025 2:42:51 PM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "wellness classes"
+    ],
+    "notes": "Status: Inactive. Partners: Cham Refugees Community"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-15959",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Food and Fitness This is a food and fitness program. In partnership with AKIN.",
+    "location": {
+      "address": "AKIN",
+      "coordinates": {
+        "lat": 47.665731,
+        "lng": -122.290318
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive. Partners: AKIN"
+  },
+  {
+    "id": "mobile-rec-wellness-classes-15960",
+    "name": "Wellness Classes",
+    "type": "Mobile Recreation Program",
+    "description": "Wellness Classes This is a wellness classes program. In partnership with AKIN.",
+    "location": {
+      "address": "AKIN",
+      "coordinates": {
+        "lat": 47.665718,
+        "lng": -122.290325
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "wellness classes"
+    ],
+    "notes": "Status: Inactive. Partners: AKIN"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-15961",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Food and Fitness This is a food and fitness program. In partnership with Neighborhood Activations.",
+    "location": {
+      "address": "Lake City Mini Park",
+      "coordinates": {
+        "lat": 47.665743,
+        "lng": -122.290626
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "12/8/2024 2:49:44 PM",
+      "end": "12/8/2024 2:49:53 PM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive. Partners: Neighborhood Activations"
+  },
+  {
+    "id": "mobile-rec-family-fitness-15962",
+    "name": "Family Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Fitness, geared towards family units teaching routines and general health habits This is a rec'n the streets program. In partnership with AKIN.",
+    "location": {
+      "address": "AKIN",
+      "coordinates": {
+        "lat": 47.66572,
+        "lng": -122.290301
+      }
+    },
+    "contact": {
+      "phone": "Laura Wilburn, Joy house"
+    },
+    "dates": {
+      "start": "3/26/2025 3:29:04 PM",
+      "end": "6/3/2025 3:29:13 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 11:00 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. Partners: AKIN. North team"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-15963",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Food and Fitness This is a food and fitness program. In partnership with Seattle Neighborhood Farmers Market.",
+    "location": {
+      "address": "University Heights",
+      "coordinates": {
+        "lat": 47.646234,
+        "lng": -122.295227
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Active. Partners: Seattle Neighborhood Farmers Market"
+  },
+  {
+    "id": "mobile-rec-parks-commons-program-15964",
+    "name": "Parks Commons Program",
+    "type": "Mobile Recreation Program",
+    "description": "Parks Commons Program This is a parks commons program program.",
+    "location": {
+      "address": "Mineral Spring Park",
+      "coordinates": {
+        "lat": 47.66106,
+        "lng": -122.300655
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "parks commons program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-beginning-strength-pilates-15965",
+    "name": "Beginning Strength Pilates",
+    "type": "Mobile Recreation Program",
+    "description": "Wednesdays youth oriented pilates with cham refugee community, Saturday is focused on strength training/ pilates for seniors This is a food and fitness program. In partnership with Cham Refugee Community, S. Seattle Women's Fitness.",
+    "location": {
+      "address": "South Seattle Women's Fitness",
+      "coordinates": {
+        "lat": 47.602703,
+        "lng": -122.292813
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "1/4/2025 3:10:44 PM",
+      "end": "6/7/2025 3:10:55 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 3:30-4:15PM, Saturday 9:30 am - 10:30 am",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive. Partners: Cham Refugee Community, S. Seattle Women's Fitness"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-15966",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Strength Balance, Core & Posture Classes This is a food and fitness program. In partnership with Cultivate South Park.",
+    "location": {
+      "address": "South Park Hall",
+      "coordinates": {
+        "lat": 47.595443,
+        "lng": -122.296679
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "10/3/2024 3:18:06 PM",
+      "end": "6/7/2025 3:38:21 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 6:30-7:30PM",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive. Partners: Cultivate South Park"
+  },
+  {
+    "id": "mobile-rec-blender-bikes-15967",
+    "name": "Blender Bikes",
+    "type": "Mobile Recreation Program",
+    "description": "Blender Bikes This is a food and fitness program. In partnership with AFCD, Delridge Farmers Market.",
+    "location": {
+      "address": "Youngstown Cultural Arts Center",
+      "coordinates": {
+        "lat": 47.609218,
+        "lng": -122.308196
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "12/14/2024 3:34:15 PM",
+      "end": "12/14/2024 3:34:24 PM"
+    },
+    "schedule": [
+      {
+        "day": "12/14/2024",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive. Partners: AFCD, Delridge Farmers Market"
+  },
+  {
+    "id": "mobile-rec-blender-bikes-15968",
+    "name": "Blender Bikes",
+    "type": "Mobile Recreation Program",
+    "description": "Blender Bikes This is a food and fitness program. In partnership with Black Farmers Collective.",
+    "location": {
+      "address": "Yes Farms",
+      "coordinates": {
+        "lat": 47.622986,
+        "lng": -122.298227
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Eligible. Partners: Black Farmers Collective"
+  },
+  {
+    "id": "mobile-rec-blender-bikes-15969",
+    "name": "Blender Bikes",
+    "type": "Mobile Recreation Program",
+    "description": "Blender Bikes This is a food and fitness program. In partnership with Rainier Beach Action Coalition.",
+    "location": {
+      "address": "Rainier Beach Food Innovation Center",
+      "coordinates": {
+        "lat": 47.594128,
+        "lng": -122.287872
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Eligible. Partners: Rainier Beach Action Coalition"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15970",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program. In partnership with UWKC, HSD.",
+    "location": {
+      "address": "University Playground",
+      "coordinates": {
+        "lat": 47.645859,
+        "lng": -122.296839
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 4:06:55 PM",
+      "end": "8/22/2025 4:07:01 PM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 9:00 am - 5:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed. Partners: UWKC, HSD"
+  },
+  {
+    "id": "mobile-rec-valentines-program-15971",
+    "name": "Valentines Program",
+    "type": "Mobile Recreation Program",
+    "description": "Special Event This is a rec'n the streets program.",
+    "location": {
+      "address": "Park Shelter",
+      "coordinates": {
+        "lat": 47.655418,
+        "lng": -122.295646
+      }
+    },
+    "contact": {
+      "phone": "Kathryn"
+    },
+    "schedule": [
+      {
+        "day": "Saturday",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. 12pm to 4pm"
+  },
+  {
+    "id": "mobile-rec-kickball-15972",
+    "name": "Kickball",
+    "type": "Mobile Recreation Program",
+    "description": "Sports, all ages, kickball This is a rec'n the streets program.",
+    "location": {
+      "address": "Westcrest Park",
+      "coordinates": {
+        "lat": 47.59385,
+        "lng": -122.303821
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "3/29/2025 12:00:00 AM",
+      "end": "6/5/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday, static, 5:00-6:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. South West team"
+  },
+  {
+    "id": "mobile-rec-drill-chill-15973",
+    "name": "Drill & Chill",
+    "type": "Mobile Recreation Program",
+    "description": "Basketball open  play and drills, all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Riverview Playfield",
+      "coordinates": {
+        "lat": 47.600303,
+        "lng": -122.304966
+      }
+    },
+    "contact": {
+      "phone": "Joy house, Lakema Bell"
+    },
+    "dates": {
+      "start": "3/26/2025 3:46:43 PM",
+      "end": "6/3/2025 3:46:53 PM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday static 11:00 am - 12:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. South West team"
+  },
+  {
+    "id": "mobile-rec-culture-club-15974",
+    "name": "Culture club",
+    "type": "Mobile Recreation Program",
+    "description": "Structured cultural games built for appreciation and traditional education for all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Bradner Gardens Park",
+      "coordinates": {
+        "lat": 47.617724,
+        "lng": -122.291355
+      }
+    },
+    "contact": {},
+    "dates": {
+      "start": "7/3/2025 3:52:01 PM",
+      "end": "10/3/2025 3:52:11 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday Static 11:00 am - 12:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central Team"
+  },
+  {
+    "id": "mobile-rec-rnts-sk8-shool-15975",
+    "name": "RNTS Sk8 Shool",
+    "type": "Mobile Recreation Program",
+    "description": "Free guided skate lessons, all equipment provided, all ages. This is a rec'n the streets program.",
+    "location": {
+      "address": "Delridge Skate Park",
+      "coordinates": {
+        "lat": 47.609658,
+        "lng": -122.308496
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 3:58:28 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 5:30 - 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South west team"
+  },
+  {
+    "id": "mobile-rec-stem-in-the-wild-15976",
+    "name": "STEM in the wild",
+    "type": "Mobile Recreation Program",
+    "description": "Nature/ environmental, guided ecology tour, social and educational, all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Seward Park",
+      "coordinates": {
+        "lat": 47.603626,
+        "lng": -122.282081
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "3/26/2025 12:00:00 AM",
+      "end": "6/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday 5:00 - 6:30 PM",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. South East team"
+  },
+  {
+    "id": "mobile-rec-things-that-fly-15977",
+    "name": "Things That Fly!",
+    "type": "Mobile Recreation Program",
+    "description": "Fitness, toddler focused, lawn games and simple entertainment via bubbles This is a rec'n the streets program.",
+    "location": {
+      "address": "Mount Baker Park",
+      "coordinates": {
+        "lat": 47.61461,
+        "lng": -122.289704
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:22:23 PM",
+      "end": "10/3/2025 12:22:30 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday static 11:00 am - 12:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South East team"
+  },
+  {
+    "id": "mobile-rec-growth-in-motion-15978",
+    "name": "Growth in Motion",
+    "type": "Mobile Recreation Program",
+    "description": "Toddler/ sports, focus on building early coordination skills with simple sports games This is a rec'n the streets program.",
+    "location": {
+      "address": "Benefit Playground",
+      "coordinates": {
+        "lat": 47.592791,
+        "lng": -122.289088
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 7:13:53 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday 11:00 am -12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South West team"
+  },
+  {
+    "id": "mobile-rec-play-street-15979",
+    "name": "Play street",
+    "type": "Mobile Recreation Program",
+    "description": "Family oriented/ nature/ art. Appreciation for nature and community through arts and crafts, use local ecology and community to inspire projects. This is a rec'n the streets program.",
+    "location": {
+      "address": "Licton Springs",
+      "coordinates": {
+        "lat": 47.657904,
+        "lng": -122.300706
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 7:34:21 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 5:30 - 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North Team"
+  },
+  {
+    "id": "mobile-rec-el-cuento-15980",
+    "name": "El Cuento",
+    "type": "Mobile Recreation Program",
+    "description": "Story time geared towards youth/ toddlers, guided literary session This is a rec'n the streets program.",
+    "location": {
+      "address": "Sam Smith Park",
+      "coordinates": {
+        "lat": 47.618624,
+        "lng": -122.292386
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/4/2025 7:37:09 PM",
+      "end": "10/4/2025 7:37:22 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 11:00 am - 12:30 pm Static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central team"
+  },
+  {
+    "id": "mobile-rec-garden-club-15981",
+    "name": "Garden club",
+    "type": "Mobile Recreation Program",
+    "description": "Environmental/ nature program, gardening demos and social function geared towards adults/ seniors This is a rec'n the streets program.",
+    "location": {
+      "address": "Bitter Lake Open Space",
+      "coordinates": {
+        "lat": 47.670729,
+        "lng": -122.303358
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday 11:00 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North Team"
+  },
+  {
+    "id": "mobile-rec-faster-feet-15982",
+    "name": "Faster Feet",
+    "type": "Mobile Recreation Program",
+    "description": "Fitness, geared towards all ages, teaching structured fitness and salubrious health routines This is a rec'n the streets program.",
+    "location": {
+      "address": "TT Minor Playground",
+      "coordinates": {
+        "lat": 47.627307,
+        "lng": -122.294921
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "3/26/2025 12:42:53 PM",
+      "end": "6/3/2025 12:43:01 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 2:30 - 4:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. Central Team"
+  },
+  {
+    "id": "mobile-rec-hoopin-15983",
+    "name": "Hoopin'",
+    "type": "Mobile Recreation Program",
+    "description": "Sports, Basketball open play and drills, all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Pratt Park",
+      "coordinates": {
+        "lat": 47.622597,
+        "lng": -122.294162
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 3:00 - 4:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central team"
+  },
+  {
+    "id": "mobile-rec-boxing-15984",
+    "name": "Boxing",
+    "type": "Mobile Recreation Program",
+    "description": "Boxing/ fitness, self defense and structured fitness course, all ages, all skill levels This is a rec'n the streets program.",
+    "location": {
+      "address": "Daejeon Park",
+      "coordinates": {
+        "lat": 47.619468,
+        "lng": -122.295507
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "3/26/2025 12:50:19 PM",
+      "end": "6/3/2025 12:50:25 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 5:00 -6:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. Central Team"
+  },
+  {
+    "id": "mobile-rec-sk8ing-15985",
+    "name": "Sk8ing",
+    "type": "Mobile Recreation Program",
+    "description": "Skate/ sports, all ages guided skate lessons, equipment provided This is a rec'n the streets program.",
+    "location": {
+      "address": "Hubbard homestead",
+      "coordinates": {
+        "lat": 47.662588,
+        "lng": -122.297558
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "7/3/2025 12:58:20 PM",
+      "end": "10/3/2025 12:58:28 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday 5:30 - 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North team"
+  },
+  {
+    "id": "mobile-rec-family-nature-walk-15986",
+    "name": "Family Nature Walk",
+    "type": "Mobile Recreation Program",
+    "description": "Nature/ environmental, geared towards youth and families, built to teach environmental processes via interactive activities and socialization This is a rec'n the streets program.",
+    "location": {
+      "address": "Cowen Park",
+      "coordinates": {
+        "lat": 47.648775,
+        "lng": -122.295128
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "7/3/2025 1:05:49 PM",
+      "end": "10/4/2025 1:05:59 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 11 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North Team"
+  },
+  {
+    "id": "mobile-rec-get-in-the-flow-15987",
+    "name": "Get in the flow",
+    "type": "Mobile Recreation Program",
+    "description": "Fitness, rotating activities that challenge participants to think critically about there’s wellness through exercise and meditation. This is a rec'n the streets program.",
+    "location": {
+      "address": "Sandel Playground",
+      "coordinates": {
+        "lat": 47.657249,
+        "lng": -122.306194
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday 5:00 - 6:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Eligible. North Team"
+  },
+  {
+    "id": "mobile-rec-tea-party-15988",
+    "name": "Tea party",
+    "type": "Mobile Recreation Program",
+    "description": "Culture, geared towards seniors, provides a social space uses various group activities such as games, music, gardening, etc. This is a rec'n the streets program.",
+    "location": {
+      "address": "Pritchard Beach",
+      "coordinates": {
+        "lat": 47.596189,
+        "lng": -122.283867
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "3/26/2025 1:13:03 PM",
+      "end": "6/3/2025 1:13:11 PM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday 11:00 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. South east team"
+  },
+  {
+    "id": "mobile-rec-art-n-the-library-15989",
+    "name": "Art n' the library",
+    "type": "Mobile Recreation Program",
+    "description": "Art/ toddler focused, simple arts and crafts with a novel project every session This is a rec'n the streets program. In partnership with Seattle public library - South park.",
+    "location": {
+      "address": "South Park Library",
+      "coordinates": {
+        "lat": 47.595537,
+        "lng": -122.29851
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "7/3/2025 1:26:25 PM",
+      "end": "10/3/2025 1:26:31 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 3:00-4:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Partners: Seattle public library - South park. South west team"
+  },
+  {
+    "id": "mobile-rec-art-n-the-library-15990",
+    "name": "Art n' the library",
+    "type": "Mobile Recreation Program",
+    "description": "Art/ toddler focused, simple arts and crafts with a novel project every session This is a rec'n the streets program. In partnership with Seattle Public Library - Delridge.",
+    "location": {
+      "address": "Delridge Public Library",
+      "coordinates": {
+        "lat": 47.605523,
+        "lng": -122.308362
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "7/3/2025 1:33:41 PM",
+      "end": "10/3/2025 1:33:57 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 3:00 - 4:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Partners: Seattle Public Library - Delridge. South East team"
+  },
+  {
+    "id": "mobile-rec-street-workout-15991",
+    "name": "Street workout",
+    "type": "Mobile Recreation Program",
+    "description": "Fitness/ adult oriented, An all-levels calisthenics program for growing strength, power and endurance This is a rec'n the streets program.",
+    "location": {
+      "address": "Univesity Playground",
+      "coordinates": {
+        "lat": 47.645909,
+        "lng": -122.296754
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "3/26/2025 1:40:31 PM",
+      "end": "6/3/2025 1:41:22 PM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday 3:00-4:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. Central Team"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15992",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Brighton Playground",
+      "coordinates": {
+        "lat": 47.603471,
+        "lng": -122.288205
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 6:15:52 PM",
+      "end": "8/22/2025 6:16:01 PM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 9:00 am - 12:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15993",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "South Park Plaza",
+      "coordinates": {
+        "lat": 47.596097,
+        "lng": -122.296719
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:54:20 AM",
+      "end": "8/22/2025 9:54:41 AM"
+    },
+    "schedule": [
+      {
+        "day": "M - F 12:00 pm - 4:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15994",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "EC Hughes",
+      "coordinates": {
+        "lat": 47.59824,
+        "lng": -122.310019
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:57:15 AM",
+      "end": "8/22/2025 9:57:23 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15995",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Lakewood Playground",
+      "coordinates": {
+        "lat": 47.60717,
+        "lng": -122.285306
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 9:59:52 AM",
+      "end": "8/22/2025 9:59:58 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15996",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Madrona Playground",
+      "coordinates": {
+        "lat": 47.626282,
+        "lng": -122.28984
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 10:01:47 AM",
+      "end": "8/22/2025 10:01:54 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Temporarily Closed"
+  },
+  {
+    "id": "mobile-rec-summer-meals-15997",
+    "name": "Summer Meals",
+    "type": "Mobile Recreation Program",
+    "description": "Feeding seattle youth, simple recreation programming on site This is a summer meals program.",
+    "location": {
+      "address": "Pratt Park",
+      "coordinates": {
+        "lat": 47.622602,
+        "lng": -122.294247
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "dates": {
+      "start": "6/30/2025 10:03:44 AM",
+      "end": "8/22/2025 10:03:51 AM"
+    },
+    "schedule": [
+      {
+        "day": "M- F 9:00 am - 5:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "summer meals"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-faster-feet-15998",
+    "name": "Faster Feet",
+    "type": "Mobile Recreation Program",
+    "description": "Fitness, geared towards all ages, teaching structured fitness and salubrious health routines This is a rec'n the streets program.",
+    "location": {
+      "address": "Miller Playfield",
+      "coordinates": {
+        "lat": 47.629929,
+        "lng": -122.293981
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "3/26/2025 12:00:00 AM",
+      "end": "6/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 2:30 - 4:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive. Central Team"
+  },
+  {
+    "id": "mobile-rec-street-hockey-15999",
+    "name": "Street Hockey",
+    "type": "Mobile Recreation Program",
+    "description": "Sports, Street hockey open play and drills, all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Judkins Basketball court",
+      "coordinates": {
+        "lat": 47.62043,
+        "lng": -122.293231
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "7/3/2025 3:17:56 PM",
+      "end": "10/3/2025 3:18:04 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 5:30- 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central Team"
+  },
+  {
+    "id": "mobile-rec-poetry-in-the-park-16000",
+    "name": "Poetry in the park",
+    "type": "Mobile Recreation Program",
+    "description": "Poetry is adult oriented, meant to be open mic style and a poetry social. This is a rec'n the streets program. In partnership with Friends of meadowbrook pond.",
+    "location": {
+      "address": "Meadowbrook Pond",
+      "coordinates": {
+        "lat": 47.660854,
+        "lng": -122.288898
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 3:24:35 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 11:00 am - 12:30 pm static  7/3, 7/17, 7/31, 8/14, 8/28, 9/11, 9/25",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Temporarily Closed. Partners: Friends of meadowbrook pond. North team"
+  },
+  {
+    "id": "mobile-rec-sports-crafts-16001",
+    "name": "Sports & Crafts",
+    "type": "Mobile Recreation Program",
+    "description": "Open sports and crafts based off a rotating schedule, geared towards youth/ teens This is a rec'n the streets program.",
+    "location": {
+      "address": "Yesler Terrace Park",
+      "coordinates": {
+        "lat": 47.622924,
+        "lng": -122.297517
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:00:00 AM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday 5:30 - 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central team"
+  },
+  {
+    "id": "mobile-rec-things-that-fly-16002",
+    "name": "Things that fly",
+    "type": "Mobile Recreation Program",
+    "description": "STEM focused, family oriented/ youth, build your own airplanes and build aptitude in aerodynamics This is a rec'n the streets program.",
+    "location": {
+      "address": "Cheryl Chow Park",
+      "coordinates": {
+        "lat": 47.611379,
+        "lng": -122.290044
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 1:00:26 PM",
+      "end": "10/3/2025 1:00:33 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday 11 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South East team"
+  },
+  {
+    "id": "mobile-rec-rnts-sk8-school-16003",
+    "name": "RNTS Sk8 School",
+    "type": "Mobile Recreation Program",
+    "description": "Skate/ sports program, all level all ages free skate lessons This is a rec'n the streets program.",
+    "location": {
+      "address": "Roxhill Skate Park",
+      "coordinates": {
+        "lat": 47.593714,
+        "lng": -122.310087
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 3:37:07 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday Static 11:00 am- 12:30pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South west team"
+  },
+  {
+    "id": "mobile-rec-pilates-16004",
+    "name": "Pilates",
+    "type": "Mobile Recreation Program",
+    "description": "Licensed and guided Pilates lessons geared towards all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "South Park Plaza",
+      "coordinates": {
+        "lat": 47.596089,
+        "lng": -122.296677
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 1:20:04 PM",
+      "end": "10/3/2025 1:20:11 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 5:30 - 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South West team"
+  },
+  {
+    "id": "mobile-rec-soccer-social-16005",
+    "name": "Soccer Social",
+    "type": "Mobile Recreation Program",
+    "description": "Using light soccer programs to induce socialization, geared towards all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "Dearborn",
+      "coordinates": {
+        "lat": 47.605162,
+        "lng": -122.291678
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 1:41:47 PM",
+      "end": "10/3/2025 1:41:52 PM"
+    },
+    "schedule": [
+      {
+        "day": "Friday 3 pm - 4:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Eligible. South West team"
+  },
+  {
+    "id": "mobile-rec-toddler-power-sports-16006",
+    "name": "Toddler Power Sports",
+    "type": "Mobile Recreation Program",
+    "description": "Free play and supervised sports to help with early development of coordination skills, geared towards toddlers This is a rec'n the streets program.",
+    "location": {
+      "address": "Beer Sheva Park",
+      "coordinates": {
+        "lat": 47.594596,
+        "lng": -122.284
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 2:04:13 PM"
+    },
+    "schedule": [
+      {
+        "day": "Saturdays 5:30 - 7:00 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South East Team"
+  },
+  {
+    "id": "mobile-rec-beyond-the-game-16007",
+    "name": "Beyond The Game",
+    "type": "Mobile Recreation Program",
+    "description": "Geared towards adults and youth, programmed and organized soccer and field programs in an effort to mend community. This is a rec'n the streets program.",
+    "location": {
+      "address": "Othello Park",
+      "coordinates": {
+        "lat": 47.59894,
+        "lng": -122.287267
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 2:05:23 PM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. South East Team"
+  },
+  {
+    "id": "mobile-rec-disc-golf-16008",
+    "name": "Disc Golf",
+    "type": "Mobile Recreation Program",
+    "description": "Program geared towards adults teaching the fundamental and displaying the riveting game of disc golf This is a rec'n the streets program.",
+    "location": {
+      "address": "Mineral Springs",
+      "coordinates": {
+        "lat": 47.660902,
+        "lng": -122.300591
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:36:31 PM",
+      "end": "10/3/2025 12:36:40 PM"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday Static 3:00 - 4:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North Team"
+  },
+  {
+    "id": "mobile-rec-chi-gong-tai-chi-16009",
+    "name": "Chi Gong/ Tai Chi",
+    "type": "Mobile Recreation Program",
+    "description": "Guided tai chi and Chi gong courses geared towards adults/ seniors to help with mental and physical wellbeing This is a rec'n the streets program.",
+    "location": {
+      "address": "Dragonfly Garden",
+      "coordinates": {
+        "lat": 47.610662,
+        "lng": -122.309215
+      }
+    },
+    "contact": {
+      "phone": "Joy house"
+    },
+    "dates": {
+      "start": "7/3/2025 12:41:38 PM",
+      "end": "10/3/2025 12:41:47 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 11:00 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Southwest team"
+  },
+  {
+    "id": "mobile-rec-sk8-school-16010",
+    "name": "Sk8 School",
+    "type": "Mobile Recreation Program",
+    "description": "Skate/ sports, all ages guided skate lessons, equipment provided This is a rec'n the streets program.",
+    "location": {
+      "address": "Virgil Flaim Park",
+      "coordinates": {
+        "lat": 47.665325,
+        "lng": -122.291437
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:00:00 AM",
+      "end": "10/3/2025 12:49:26 PM"
+    },
+    "schedule": [
+      {
+        "day": "Saturday 11:00 am - 12:30 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North Team"
+  },
+  {
+    "id": "mobile-rec-dance-16011",
+    "name": "Dance",
+    "type": "Mobile Recreation Program",
+    "description": "Guided dance program to build community fitness habits and cultural ties geared towards youth/ adults This is a rec'n the streets program.",
+    "location": {
+      "address": "Pratt Park",
+      "coordinates": {
+        "lat": 47.622539,
+        "lng": -122.294163
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 12:52:02 PM",
+      "end": "10/3/2025 12:52:08 PM"
+    },
+    "schedule": [
+      {
+        "day": "Fridays 5:30 - 7:00 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. Central Team"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-16012",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Lakeview Park",
+      "coordinates": {
+        "lat": 47.60711,
+        "lng": -122.285307
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-urban-parks-partnership-parks-concierge-program-16013",
+    "name": "Urban Parks Partnership & Parks Concierge Program",
+    "type": "Mobile Recreation Program",
+    "description": "Urban Parks Partnership & Parks Concierge Program This is a urban parks partnership & parks concierge program program.",
+    "location": {
+      "address": "Hing Hay Park",
+      "coordinates": {
+        "lat": 47.621923,
+        "lng": -122.298695
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "urban parks partnership & parks concierge program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-park-ambassador-16014",
+    "name": "Park Ambassador",
+    "type": "Mobile Recreation Program",
+    "description": "Park Ambassador This is a park ambassador program.",
+    "location": {
+      "address": "Judkins Park and Playfield",
+      "coordinates": {
+        "lat": 47.620308,
+        "lng": -122.293393
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "park ambassador"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-parks-commons-program-16015",
+    "name": "Parks Commons Program",
+    "type": "Mobile Recreation Program",
+    "description": "Parks Commons Program This is a parks commons program program.",
+    "location": {
+      "address": "Salmon Bay Park",
+      "coordinates": {
+        "lat": 47.651706,
+        "lng": -122.31209
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "parks commons program"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-staffed-beaches-boat-ramps-16016",
+    "name": "Staffed Beaches & Boat Ramps",
+    "type": "Mobile Recreation Program",
+    "description": "Staffed Beaches & Boat Ramps This is a staffed beaches & boat ramps program.",
+    "location": {
+      "address": "Stanley Sayres Memorial Park",
+      "coordinates": {
+        "lat": 47.611646,
+        "lng": -122.286583
+      }
+    },
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "staffed beaches & boat ramps"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-16017",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Colman Playground",
+      "coordinates": {
+        "lat": 47.617687,
+        "lng": -122.29298
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-rec-n-the-streets-16018",
+    "name": "Rec'N the Streets",
+    "type": "Mobile Recreation Program",
+    "description": "Rec'N the Streets This is a rec'n the streets program.",
+    "location": {
+      "address": "Rainier Beach Playfield",
+      "coordinates": {
+        "lat": 47.595162,
+        "lng": -122.286088
+      }
+    },
+    "contact": {
+      "phone": "Lakema Bell, Joy House"
+    },
+    "dates": {
+      "start": "6/1/2020 12:00:00 AM",
+      "end": "7/1/2021 12:00:00 AM"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-food-and-fitness-16019",
+    "name": "Food and Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "Food and Fitness This is a food and fitness program.",
+    "location": {
+      "address": "Columbia City Farmers Market",
+      "coordinates": {
+        "lat": 47.607947,
+        "lng": -122.289541
+      }
+    },
+    "contact": {
+      "phone": "Samuel Chesneau"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "food and fitness"
+    ],
+    "notes": "Status: Inactive"
+  },
+  {
+    "id": "mobile-rec-crochet-club-16020",
+    "name": "Crochet Club",
+    "type": "Mobile Recreation Program",
+    "description": "A guided crafts social hour for all ages This is a rec'n the streets program.",
+    "location": {
+      "address": "12501 28th ave NE",
+      "coordinates": {
+        "lat": 47.665989,
+        "lng": -122.291117
+      }
+    },
+    "contact": {
+      "phone": "Joy House"
+    },
+    "dates": {
+      "start": "7/3/2025 6:13:24 PM",
+      "end": "10/3/2025 6:13:30 PM"
+    },
+    "schedule": [
+      {
+        "day": "Thursday 11:00 am - 12:30 pm static",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "rec'n the streets"
+    ],
+    "notes": "Status: Active. North Team"
+  },
+  {
+    "id": "mobile-rec-healthy-aging-plus-16021",
+    "name": "Healthy Aging Plus",
+    "type": "Mobile Recreation Program",
+    "description": "Holistic health and wellness program focused on Lao women funded by 2025 Get Moving grant funds This is a grants program.",
+    "location": {
+      "address": "Wat Mixay (11815 59th Ave S, Seattle, WA 98178)",
+      "coordinates": {
+        "lat": 47.584572,
+        "lng": -122.283215
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/10/2025 4:11:06 PM",
+      "end": "9/7/2025 4:11:14 PM"
+    },
+    "schedule": [
+      {
+        "day": "8/10 & 9/7 1-3 pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Inactive. Funding: Get Moving. Grant contact: Alina Amkhavong"
+  },
+  {
+    "id": "mobile-rec-capoeira-life-free-weekly-capoeira-for-women-trans-non-binary-teens-adults-16022",
+    "name": "Capoeira Life: Free Weekly Capoeira for Women, Trans, & Non-Binary Teens & Adults",
+    "type": "Mobile Recreation Program",
+    "description": "Capoeira immersion program focused on women and LGBTQ+ communities funded by 2025 Get Moving grant funds This is a grants program.",
+    "location": {
+      "address": "Seattle Capoeira Center (2909 Rainier Ave S, Seattle, WA 98144)",
+      "coordinates": {
+        "lat": 47.613862,
+        "lng": -122.291932
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "6/3/2025 4:15:42 PM",
+      "end": "9/30/2025 4:15:55 PM"
+    },
+    "schedule": [
+      {
+        "day": "Every Tuesday from 6-7:30pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Active. Funding: Get Moving. Grant contact: Emily Chao"
+  },
+  {
+    "id": "mobile-rec-marvin-thomas-memorial-fund-unity-in-the-community-16023",
+    "name": "Marvin Thomas Memorial Fund: Unity in the Community",
+    "type": "Mobile Recreation Program",
+    "description": "Youth basketball camp and skills clinics funded by 2025 Get Moving grant funds This is a grants program.",
+    "location": {
+      "address": "Van Asselt Community Center",
+      "coordinates": {
+        "lat": 47.600182,
+        "lng": -122.291681
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/2/2025 4:20:12 PM",
+      "end": "8/9/2025 4:20:15 PM"
+    },
+    "schedule": [
+      {
+        "day": "8/2, 8/9 from 10am-1pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Inactive. Funding: Get Moving. Grant contact: Marvena Thomas"
+  },
+  {
+    "id": "mobile-rec-extraordinary-futures-fresh-air-open-dance-sessions-16024",
+    "name": "Extraordinary Futures: Fresh Air Open Dance Sessions",
+    "type": "Mobile Recreation Program",
+    "description": "Extraordinary Futures will facilitate \"\"Fresh Air: Open Dance Sessions\"\" at Jefferson once a week throughout the summer. All dance styles and especially Breakdancing promotes physical fitness as it keeps your body active all while having fun in an environme This is a grants program.",
+    "location": {
+      "address": "Jefferson Park, Picnic Shelter #3",
+      "coordinates": {
+        "lat": 47.61102,
+        "lng": -122.29491
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/5/2025 4:23:58 PM",
+      "end": "8/26/2025 4:24:01 PM"
+    },
+    "schedule": [
+      {
+        "day": "Every Tuesday from 5-8pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Inactive. Funding: Get Moving. Grant contact: Florentino (Flow) Francisco"
+  },
+  {
+    "id": "mobile-rec-seattle-tennis-education-foundation-tennis-summer-camp-16025",
+    "name": "Seattle Tennis & Education Foundation: Tennis Summer Camp",
+    "type": "Mobile Recreation Program",
+    "description": "A summer tennis program funded by 2025 Get Moving grant funds. This summer program creates fun age-appropriate skill building activities and games. This is a grants program.",
+    "location": {
+      "address": "Magnuson Park Outdoor Tennis Courts",
+      "coordinates": {
+        "lat": 47.651766,
+        "lng": -122.280144
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/4/2025 5:07:22 PM",
+      "end": "8/27/2025 5:07:26 PM"
+    },
+    "schedule": [
+      {
+        "day": "Every Monday and Wednesday from 1-4pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Inactive. Funding: Get Moving. Grant contact: Kyrsten Bruce"
+  },
+  {
+    "id": "mobile-rec-rahel-behailu-wellness-without-borders-16026",
+    "name": "Rahel Behailu: Wellness Without Borders",
+    "type": "Mobile Recreation Program",
+    "description": "A cultural fitness program funded by 2025 Get Moving grant funds. A culturally tailored Dance Fitness class designed to promote physical activity, foster community connections, and improve overall well-being among Ethiopian, Somali, and other BIPOC commun This is a grants program.",
+    "location": {
+      "address": "Ethiopian Community Center (8323 Rainier Ave S Suite A, Seattle, WA 98118)",
+      "coordinates": {
+        "lat": 47.596033,
+        "lng": -122.285596
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/5/2025 5:09:26 PM",
+      "end": "11/4/2025 5:09:33 PM"
+    },
+    "schedule": [
+      {
+        "day": "Every Tuesday from 6-7pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Active. Funding: Get Moving. Grant contact: Rahel Behailu"
+  },
+  {
+    "id": "mobile-rec-clementine-patterson-afrobeats-fitness-16027",
+    "name": "Clementine Patterson: Afrobeats Fitness",
+    "type": "Mobile Recreation Program",
+    "description": "An Afrobeat Fitness program funded by 2025 Recreation for All grant funds This is a grants program.",
+    "location": {
+      "address": "Garfield Community Center",
+      "coordinates": {
+        "lat": 47.625139,
+        "lng": -122.292907
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/2/2025 5:11:21 PM",
+      "end": "9/27/2025 5:11:26 PM"
+    },
+    "schedule": [
+      {
+        "day": "Every Saturday from 3:30-4:30pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "recreation for all"
+    ],
+    "notes": "Status: Active. Funding: Recreation for All. Grant contact: Clementine Patterson"
+  },
+  {
+    "id": "mobile-rec-inspired-child-dance-splash-16028",
+    "name": "Inspired Child: Dance & Splash!",
+    "type": "Mobile Recreation Program",
+    "description": "Events for families and communities to share food, get moving together dancing to live music from Africa and the African Diaspora and enjoy FREE swimming funded by 2025 Recreation for All grant funds This is a grants program.",
+    "location": {
+      "address": "Rainier Beach Community Center",
+      "coordinates": {
+        "lat": 47.594703,
+        "lng": -122.285725
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/2/2025 3:06:40 PM",
+      "end": "8/9/2025 3:06:50 PM"
+    },
+    "schedule": [
+      {
+        "day": "8/2, 8/9 from 5-7pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "recreation for all"
+    ],
+    "notes": "Status: Inactive. Funding: Recreation for All. Grant contact: Monique Franklin"
+  },
+  {
+    "id": "mobile-rec-immigrant-guide-african-dance-and-movement-therapy-16029",
+    "name": "Immigrant Guide: African Dance and Movement Therapy",
+    "type": "Mobile Recreation Program",
+    "description": "African dance and movement therapy program funded by 2025 Recreation for All grant funds This is a grants program.",
+    "location": {
+      "address": "Garfield Community Center",
+      "coordinates": {
+        "lat": 47.625103,
+        "lng": -122.292886
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/23/2025 5:18:15 PM",
+      "end": "8/23/2025 5:18:17 PM"
+    },
+    "schedule": [
+      {
+        "day": "8/23 from 12:30-2:30pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "recreation for all"
+    ],
+    "notes": "Status: Inactive. Funding: Recreation for All. Grant contact: Sibongile Larissa"
+  },
+  {
+    "id": "mobile-rec-sarah-childs-sunday-funday-roll-in-the-park-community-fun-day-16030",
+    "name": "Sarah Childs: Sunday Funday: Roll in the Park & Community Fun Day",
+    "type": "Mobile Recreation Program",
+    "description": "A roller-skating community event funded by 2025 Recreation for All grant funds This is a grants program.",
+    "location": {
+      "address": "Highland Park",
+      "coordinates": {
+        "lat": 47.595911,
+        "lng": -122.305118
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "8/31/2025 5:21:27 PM",
+      "end": "8/31/2025 5:21:30 PM"
+    },
+    "schedule": [
+      {
+        "day": "8/31 from 12-5pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "recreation for all"
+    ],
+    "notes": "Status: Inactive. Funding: Recreation for All. Grant contact: Sarah Childs"
+  },
+  {
+    "id": "mobile-rec-plus-one-foundation-yoga-with-plus-one-16031",
+    "name": "Plus One Foundation: Yoga with Plus One",
+    "type": "Mobile Recreation Program",
+    "description": "A yoga program for all ages with neurological conditions and for their caregivers funded by 2025 Recreation for all grant funds This is a grants program.",
+    "location": {
+      "address": "Garfield Community Center",
+      "coordinates": {
+        "lat": 47.625086,
+        "lng": -122.292977
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "9/5/2025 5:24:02 PM",
+      "end": "10/24/2025 5:24:07 PM"
+    },
+    "schedule": [
+      {
+        "day": "Every Friday from 2-3pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "recreation for all"
+    ],
+    "notes": "Status: Active. Funding: Recreation for All. Grant contact: Chhy Chhy Yeak"
+  },
+  {
+    "id": "mobile-rec-healthy-aging-plus-16032",
+    "name": "Healthy Aging Plus",
+    "type": "Mobile Recreation Program",
+    "description": "Holistic health and wellness program focused on Lao women funded by 2025 Get Moving grant funds This is a grants program.",
+    "location": {
+      "address": "Seward Park",
+      "coordinates": {
+        "lat": 47.603794,
+        "lng": -122.281898
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "9/21/2025 5:26:19 PM",
+      "end": "9/21/2025 5:26:22 PM"
+    },
+    "schedule": [
+      {
+        "day": "9/21 from 1-3pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Inactive. Funding: Get Moving. Grant contact: Alina Amkhavong"
+  },
+  {
+    "id": "mobile-rec-2025-native-youth-olympics-16033",
+    "name": "2025 Native Youth Olympics",
+    "type": "Mobile Recreation Program",
+    "description": "A traditional arctic games program that helps support the Native Youth Olympics of Seattle funded by 2025 Get Moving grant funds This is a grants program.",
+    "location": {
+      "address": "Greenwood Senior Center (525 N 85th St, Seattle, WA 98103)",
+      "coordinates": {
+        "lat": 47.65552,
+        "lng": -122.30432
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "9/20/2025 5:34:35 PM",
+      "end": "11/15/2025 5:34:43 PM"
+    },
+    "schedule": [
+      {
+        "day": "9/20, 10/18, & 11/15 from 2-3:30pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Inactive. Funding: Get Moving. Grant contact: Heather Puri"
+  },
+  {
+    "id": "mobile-rec-malawi-seattle-association-mu-umodzi-muli-mphamvu-unity-and-healthy-living-16034",
+    "name": "Malawi Seattle Association: Mu Umodzi Muli Mphamvu (Unity and Healthy Living)",
+    "type": "Mobile Recreation Program",
+    "description": "A program that empowers Malawian and African immigrant community members to adopt a healthy lifestyle through culturally appropriate Afro Dance exercise, balanced nutrition, and education funded by 2025 Get Moving grant funds This is a grants program.",
+    "location": {
+      "address": "Bitter Lake Community Center",
+      "coordinates": {
+        "lat": 47.667789,
+        "lng": -122.303505
+      }
+    },
+    "contact": {
+      "phone": "Temesgen Habte"
+    },
+    "dates": {
+      "start": "10/4/2025 5:43:16 PM",
+      "end": "10/4/2025 5:43:20 PM"
+    },
+    "schedule": [
+      {
+        "day": "10/4 from 3-5:30pm",
+        "hours": "See program details"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "mobile recreation",
+      "grants",
+      "get moving"
+    ],
+    "notes": "Status: Inactive. Funding: Get Moving. Grant contact: Wezi Longwe"
+  }
+]

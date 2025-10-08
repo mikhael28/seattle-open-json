@@ -16,20 +16,64 @@ npm install seattle-open-json
 
 ## 📊 Data Collections
 
-This package contains **11 datasets** with detailed information about Seattle's community resources, originally taken from the city of Seattle, the Emerald City Resource Guide, and some scraped data from City of Seattle websites.:
+This package contains **9 datasets** with detailed information about Seattle's community resources, originally taken from the City of Seattle, the Emerald City Resource Guide, and scraped data from City of Seattle websites:
 
 | Dataset                | Records | Description                                                                              |
 | ---------------------- | ------- | ---------------------------------------------------------------------------------------- |
 | **Community Centers**  | 27+     | Seattle Parks & Recreation community centers with schedules, amenities, and contact info |
 | **Farmers Markets**    | 20+     | Local farmers markets with locations, schedules, and vendor information                  |
-| **Parks Catalog**      | 400+    | Complete catalog of Seattle parks with facilities and amenities                          |
+| **Parks Catalog**      | 2,200+  | Complete catalog of Seattle parks with facilities and amenities                          |
 | **Mobile Recreation**  | 150+    | Mobile recreation programming across Seattle neighborhoods                               |
 | **P-Patch Gardens**    | 90+     | Community gardens with plot information and contact details                              |
-| **Picnic Sites**       | 200+    | Reservable picnic areas with capacity and amenities                                      |
+| **Picnic Sites**       | 50+     | Reservable picnic areas with capacity and amenities                                      |
 | **Public Spaces**      | 40+     | Privately-owned public spaces available for community use                                |
-| **Youth Programs**     | 1000+   | Comprehensive youth programs, activities, and opportunities                              |
-| **Emerald City Guide** | 1400+   | Community resources and services directory                                               |
-| **HSDS Example**       | 1       | Human Services Data Specification compliant organization data                            |
+| **Youth Programs**     | 60+     | Comprehensive youth programs, activities, and opportunities                              |
+| **Emerald City Guide** | 480+    | Community resources and services directory                                               |
+
+## 🌟 Seattle Civic Standard (SCS) - NEW in v1.2.0
+
+This package now includes **all datasets migrated to the Seattle Civic Standard (SCS)** - a unified, simple format designed for civic data interoperability.
+
+### What is SCS?
+
+The Seattle Civic Standard provides a consistent interface for all civic entities with just **6 core fields**:
+
+1. **id** - Unique identifier
+2. **name** - What it's called
+3. **type** - What kind of thing it is
+4. **description** - What it is in plain English
+5. **location** - Where it is (address and/or coordinates)
+6. **contact** - How to get more information
+
+Plus optional fields like `schedule`, `dates`, `cost`, `ageRange`, `accessibility`, and more.
+
+### Why SCS?
+
+- ✅ **Single interface** works across all Seattle civic data sources
+- ✅ **Easy to use** - consistent structure, easy to filter and search
+- ✅ **Map-ready** - coordinates included where available
+- ✅ **Calendar-ready** - schedules standardized
+- ✅ **TypeScript-first** - full type safety included
+
+### Quick Start with SCS
+
+```typescript
+import { scsData } from "seattle-open-json";
+
+// Access all 3,176 civic entities in a unified format
+const allEntities = scsData.getAllEntities();
+
+// Easy filtering - works the same way for ALL entity types
+const freePrograms = allEntities.filter(entity =>
+  entity.cost?.toLowerCase().includes("free")
+);
+
+const teenActivities = allEntities.filter(entity =>
+  entity.ageRange?.includes("13") || entity.ageRange?.includes("teen")
+);
+```
+
+**All 3,176 entities** across 9 datasets are now available in SCS format, making it easy to search, filter, and use civic data consistently.
 
 ## 🔧 Usage
 
@@ -82,123 +126,9 @@ const recreationData = recreationOpportunities;
 const communityData = communityResources;
 ```
 
-## 📝 TypeScript Interfaces
+## 📝 TypeScript Support
 
-### Core Data Types
-
-```typescript
-// Youth Programs
-interface YouthProgram {
-  id: string;
-  organizationName: string;
-  programDescription: string;
-  activityName: string;
-  activityDescription: string;
-  location: string;
-  ageRange: string;
-  dates: string;
-  day: string;
-  times: string;
-  cost: string;
-  url: string;
-  lastUpdated: string;
-}
-
-// Community Centers
-interface CommunityCenter {
-  OBJECTID: number;
-  name: string;
-  Address: string;
-  "Short Name": string;
-  "CC Phone Number": string;
-  "Open Status": string;
-  "Scheduling Season": string;
-  // ... additional schedule and amenity fields
-}
-
-// Farmers Markets
-interface FarmersMarket {
-  OBJECTID: number;
-  NAME: string;
-  LOCATION: string;
-  ORGANIZATI: string;
-  ACTIVEDAY: string;
-  MONTHS: string;
-  HOURS: string;
-  WEBSITE: string;
-  PHONE: string;
-  x: number;
-  y: number;
-}
-
-// Community Resources
-interface EmeraldCityResourceGuide {
-  name: string;
-  website?: string;
-  phone?: string;
-  address?: string;
-  hours?: string;
-  description: string;
-  categories: string[];
-}
-```
-
-### HSDS (Human Services Data Specification) Types
-
-For organizations following the HSDS standard:
-
-```typescript
-import {
-  Organization,
-  Service,
-  Location,
-  Contact,
-  Program,
-  Schedule
-} from "seattle-open-json";
-
-// Fully compliant HSDS organization structure
-const organization: Organization = {
-  id: string;
-  name: string;
-  description: string;
-  email?: string;
-  website?: string;
-  // ... additional HSDS fields
-};
-```
-
-### Using HSDS Mock Data
-
-```typescript
-import {
-  seattleYouthHSDSExample,
-  programs,
-  services,
-  locations,
-  contacts,
-} from "seattle-open-json";
-
-// Access complete HSDS dataset
-console.log(seattleYouthHSDSExample.organization);
-console.log(seattleYouthHSDSExample.services);
-
-// Access individual HSDS collections
-const youthPrograms = programs.filter((program) =>
-  program.name.toLowerCase().includes("youth")
-);
-
-const contactInfo = contacts.find(
-  (contact) => contact.name === "Program Director"
-);
-
-// Find services by location
-const seattleServices = services.filter((service) =>
-  locations.some(
-    (location) => location.id === service.id && location.city === "Seattle"
-  )
-);
-```
+All data includes full TypeScript type definitions for type-safe development. Import the `CivicEntity` interface for SCS data, or use the original type definitions for raw data.
 
 ## 🎯 Common Use Cases
 
@@ -271,64 +201,53 @@ const foodResources = emeraldCityResourceGuide.filter((resource) =>
 
 ## 🗂️ Available Exports
 
-### Data Collections
+### Seattle Civic Standard (SCS) Data ⭐
 
-- `communityCenters` - Seattle community centers
-- `farmersMarkets` - Local farmers markets
-- `parksCatalog` - Complete parks catalog
+```typescript
+import { scsData } from "seattle-open-json";
+
+// Get all 3,176 entities in unified format
+const allEntities = scsData.getAllEntities();
+
+// Or access individual collections
+const markets = scsData.farmersMarkets;
+const centers = scsData.communityCenters;
+const programs = scsData.youthPrograms;
+```
+
+### Original Data Collections
+
+Access the raw data in its original format:
+
+- `communityCenters` - Community centers with schedules and amenities
+- `farmersMarkets` - Farmers markets with locations and schedules
+- `parksCatalog` - Parks and recreation activities
 - `mobileRecreationProgramming` - Mobile recreation programs
-- `pPatch` - Community gardens
-- `picnicSites` - Reservable picnic areas
-- `privatelyOwnedPublicSpaces` - POPS locations
+- `pPatch` - P-Patch community gardens
+- `picnicSites` - Reservable picnic sites
+- `privatelyOwnedPublicSpaces` - Public spaces (POPS)
 - `youth_programs` - Youth programs and activities
 - `emeraldCityResourceGuide` - Community resources directory
-- `seattleYouthOrganization` - HSDS example organization
-
-### HSDS Mock Data Collections
-
-Complete HSDS-compliant example data for testing and development:
-
-- `programs` - Example youth programs
-- `services` - Detailed service offerings
-- `locations` - Physical locations and addresses
-- `serviceAtLocations` - Service-location relationships
-- `contacts` - Contact information
-- `taxonomyTerms` - Service categorization
-- `attributes` - Additional service attributes
-- `costOptions` - Pricing information
-- `requiredDocuments` - Required documentation
-- `organizationIdentifiers` - Organization IDs
-- `serviceCapacities` - Capacity information
-- `metadataRecords` - Data provenance
-- `taxonomies` - Taxonomy definitions
-- `metaTableDescriptions` - Schema descriptions
-- `phoneNumbers` - Phone contact details
-- `addresses` - Physical addresses
-- `schedules` - Operating schedules
-- `languages` - Supported languages
-- `accessibilityFeatures` - Accessibility information
-- `serviceAreas` - Geographic coverage
-- `additionalUrls` - Additional web resources
-- `fundingSources` - Funding information
-- `seattleYouthHSDSExample` - Complete HSDS dataset
 
 ### Aggregated Collections
 
 - `allSeattleData` - All datasets combined
 - `recreationOpportunities` - Recreation-focused data
 - `communityResources` - Community service data
-- `allOpportunities` - All opportunities combined
 
 ### TypeScript Types
 
 All interfaces are exported for type-safe development:
 
-- Core data types: `YouthProgram`, `CommunityCenter`, `FarmersMarket`, etc.
-- HSDS types: `Organization`, `Service`, `Location`, `Contact`, etc.
-
-### Metadata
-
-- `packageMetadata` - Package information and statistics
+```typescript
+import type {
+  CivicEntity,           // SCS standard interface
+  YouthProgram,
+  CommunityCenter,
+  FarmersMarket,
+  // ... all other types
+} from "seattle-open-json";
+```
 
 ## 📈 Package Statistics
 
@@ -336,19 +255,81 @@ All interfaces are exported for type-safe development:
 import { packageMetadata } from "seattle-open-json";
 
 console.log(packageMetadata.totalRecords);
-// {
-//   communityCenters: 27,
-//   farmersMarkets: 23,
-//   parksCatalog: 485,
-//   mobileRecreationProgramming: 156,
-//   pPatch: 91,
-//   picnicSites: 201,
-//   privatelyOwnedPublicSpaces: 40,
-//   youth_programs: 1105,
-//   emeraldCityResourceGuide: 1421,
-//   total: 2018
-// }
+// Total entities across all datasets
 ```
+
+---
+
+## 📚 Original Data Model Reference
+
+For developers working with the raw data formats, here are the original TypeScript interfaces:
+
+### Youth Programs
+```typescript
+interface YouthProgram {
+  id: string;
+  organizationName: string;
+  programDescription: string;
+  activityName: string;
+  activityDescription: string;
+  location: string;
+  ageRange: string;
+  dates: string;
+  day: string;
+  times: string;
+  cost: string;
+  url: string;
+  lastUpdated: string;
+}
+```
+
+### Community Centers
+```typescript
+interface CommunityCenter {
+  OBJECTID: number;
+  name: string;
+  Address: string;
+  "Short Name": string;
+  "CC Phone Number": string;
+  "Open Status": string;
+  "Scheduling Season": string;
+  // ... additional schedule and amenity fields
+}
+```
+
+### Farmers Markets
+```typescript
+interface FarmersMarket {
+  OBJECTID: number;
+  NAME: string;
+  LOCATION: string;
+  ORGANIZATI: string;
+  ACTIVEDAY: string;
+  MONTHS: string;
+  HOURS: string;
+  WEBSITE: string;
+  PHONE: string;
+  x: number;  // State Plane coordinates
+  y: number;  // State Plane coordinates
+}
+```
+
+### Emerald City Resource Guide
+```typescript
+interface EmeraldCityResourceGuide {
+  name: string;
+  website?: string;
+  phone?: string;
+  address?: string;
+  hours?: string;
+  description: string;
+  categories: string[];
+}
+```
+
+> **Note:** For new applications, we recommend using the **Seattle Civic Standard (SCS)** format which provides a unified interface across all datasets.
+
+---
 
 ## 🤝 Contributing
 

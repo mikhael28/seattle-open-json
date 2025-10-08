@@ -204,10 +204,7 @@ const Profile = () => {
       <div>
         <div className="flex items-center justify-between mb-6">
           <h3 className="text-2xl font-bold text-gray-900">Explore Data Categories</h3>
-          <Button variant="outline" className="flex items-center space-x-2">
-            <BarChart3 className="h-4 w-4" />
-            <span>View Analytics</span>
-          </Button>
+
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
           {tabs.slice(1).map((tab, index) => {
@@ -905,31 +902,7 @@ const Profile = () => {
                   </div>
                 </div>
                 
-                {/* Legend - Moved to bottom for split layout */}
-                <div className="p-6 bg-gray-50 border-t border-gray-100">
-                  <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
-                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-                      <div className="w-4 h-4 bg-gradient-to-r from-red-500 to-red-600 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-medium text-gray-700">Community Centers</div>
-                      <div className="text-xs text-gray-500">Youth programs & activities</div>
-                    </div>
-                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-                      <div className="w-4 h-4 bg-gradient-to-r from-blue-500 to-blue-600 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-medium text-gray-700">Mobile Recreation</div>
-                      <div className="text-xs text-gray-500">Pop-up activities</div>
-                    </div>
-                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-                      <div className="w-4 h-4 bg-gradient-to-r from-emerald-500 to-emerald-600 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-medium text-gray-700">Public Spaces</div>
-                      <div className="text-xs text-gray-500">Open access areas</div>
-                    </div>
-                    <div className="text-center p-3 bg-white rounded-lg border border-gray-200 shadow-sm">
-                      <div className="w-4 h-4 bg-gradient-to-r from-teal-500 to-teal-600 rounded-full mx-auto mb-2"></div>
-                      <div className="text-xs font-medium text-gray-700">Picnic Sites</div>
-                      <div className="text-xs text-gray-500">Outdoor gathering spaces</div>
-                    </div>
-                  </div>
-                </div>
+             
               </div>
 
               {renderEnhancedOverview()}

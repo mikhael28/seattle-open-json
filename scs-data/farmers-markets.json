@@ -1,0 +1,521 @@
+[
+  {
+    "id": "farmers-market-1",
+    "name": "Magnolia Farmers Market",
+    "type": "Farmers Market",
+    "description": "Magnolia Farmers Market farmers market operated by Neighborhood Farmers Market. Open Saturday from 10 am - 2 pm. June 1 - October 12.",
+    "location": {
+      "address": "33rd Ave W / W McGraw St",
+      "coordinates": {
+        "lat": 47.63722,
+        "lng": -122.31669
+      }
+    },
+    "contact": {
+      "phone": "206-547-2278 (general info), 206-632-5234 (office)",
+      "website": "https://seattlefarmersmarkets.org/mfm"
+    },
+    "schedule": [
+      {
+        "day": "Saturday",
+        "hours": "10 am - 2 pm"
+      }
+    ],
+    "organization": "Neighborhood Farmers Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: June 1 - October 12"
+  },
+  {
+    "id": "farmers-market-2",
+    "name": "South Lake Union Saturday Market",
+    "type": "Farmers Market",
+    "description": "South Lake Union Saturday Market farmers market. Open Saturday from 11 am - 4 pm. May 4 - September 21.",
+    "location": {
+      "address": "Denny Way / 9th Ave",
+      "coordinates": {
+        "lat": 47.629267,
+        "lng": -122.302322
+      }
+    },
+    "contact": {
+      "website": "http://slumarket.com/"
+    },
+    "schedule": [
+      {
+        "day": "Saturday",
+        "hours": "11 am - 4 pm"
+      }
+    ],
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: May 4 - September 21"
+  },
+  {
+    "id": "farmers-market-3",
+    "name": "Fremont Sunday Market",
+    "type": "Farmers Market",
+    "description": "Fremont Sunday Market farmers market. Open Sunday from 10 am - 4 pm. Year Round.",
+    "location": {
+      "address": "34th Ave N / N Evanston St",
+      "coordinates": {
+        "lat": 47.640726,
+        "lng": -122.304708
+      }
+    },
+    "contact": {
+      "website": "http://www.fremontmarket.com/"
+    },
+    "schedule": [
+      {
+        "day": "Sunday",
+        "hours": "10 am - 4 pm"
+      }
+    ],
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: Year Round"
+  },
+  {
+    "id": "farmers-market-4",
+    "name": "Columbia City Farmers Market",
+    "type": "Farmers Market",
+    "description": "Columbia City Farmers Market farmers market operated by Neighborhood Farmers Market. Open Wednesday from 3 - 7 pm. May 1 - October 9.",
+    "location": {
+      "address": "37th Ave S / S Edmunds St",
+      "coordinates": {
+        "lat": 47.607139,
+        "lng": -122.289312
+      }
+    },
+    "contact": {
+      "phone": "206-547-2278 (general info), 206-632-5234 (office)",
+      "website": "https://seattlefarmersmarkets.org/ccfm"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday",
+        "hours": "3 - 7 pm"
+      }
+    ],
+    "organization": "Neighborhood Farmers Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: May 1 - October 9"
+  },
+  {
+    "id": "farmers-market-5",
+    "name": "Queen Anne Farmers Market",
+    "type": "Farmers Market",
+    "description": "Queen Anne Farmers Market farmers market. Open Thursday from 3 - 7:30 pm. May 30 - October 10.",
+    "location": {
+      "address": "W Crockett St / Queen Anne Ave N",
+      "coordinates": {
+        "lat": 47.636138,
+        "lng": -122.306188
+      }
+    },
+    "contact": {
+      "phone": "206-428-1983",
+      "website": "https://qafm.org/"
+    },
+    "schedule": [
+      {
+        "day": "Thursday",
+        "hours": "3 - 7:30 pm"
+      }
+    ],
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: May 30 - October 10"
+  },
+  {
+    "id": "farmers-market-6",
+    "name": "Lake City Farmers Market",
+    "type": "Farmers Market",
+    "description": "Lake City Farmers Market farmers market operated by Neighborhood Farmers Market. Open Thursday from 3 - 7 pm. June 13 - October 3.",
+    "location": {
+      "address": "NE 125th St / 28th Ave NE",
+      "coordinates": {
+        "lat": 47.665805,
+        "lng": -122.291041
+      }
+    },
+    "contact": {
+      "phone": "206-547-2278 (general info), 206-632-5234 (office)",
+      "website": "https://seattlefarmersmarkets.org/lcfm"
+    },
+    "schedule": [
+      {
+        "day": "Thursday",
+        "hours": "3 - 7 pm"
+      }
+    ],
+    "organization": "Neighborhood Farmers Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: June 13 - October 3"
+  },
+  {
+    "id": "farmers-market-7",
+    "name": "Phinney Farmers Market",
+    "type": "Farmers Market",
+    "description": "Phinney Farmers Market farmers market operated by Neighborhood Farmers Market. Open Friday from 3 - 7 pm. June 7 - September 27.",
+    "location": {
+      "address": "6532 Phinney Ave N, upper lot",
+      "coordinates": {
+        "lat": 47.650883,
+        "lng": -122.305182
+      }
+    },
+    "contact": {
+      "phone": "206-547-2278 (general info), 206-632-5234 (office)",
+      "website": "https://seattlefarmersmarkets.org/pfm"
+    },
+    "schedule": [
+      {
+        "day": "Friday",
+        "hours": "3 - 7 pm"
+      }
+    ],
+    "organization": "Neighborhood Farmers Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: June 7 - September 27"
+  },
+  {
+    "id": "farmers-market-8",
+    "name": "Delridge Farmers Market",
+    "type": "Farmers Market",
+    "description": "Delridge Farmers Market farmers market operated by African Community Housing and Development. Open Saturday from 10 am - 2 pm. May 18 - October 26.",
+    "location": {
+      "address": "9421 18th Ave SW",
+      "coordinates": {
+        "lat": 47.592855,
+        "lng": -122.307365
+      }
+    },
+    "contact": {
+      "phone": "206-257-1166",
+      "website": "https://www.achdo.org/delridgefarmersmarket"
+    },
+    "schedule": [
+      {
+        "day": "Saturday",
+        "hours": "10 am - 2 pm"
+      }
+    ],
+    "organization": "African Community Housing and Development",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: May 18 - October 26"
+  },
+  {
+    "id": "farmers-market-9",
+    "name": "Wallingford Farmers Market",
+    "type": "Farmers Market",
+    "description": "Wallingford Farmers Market farmers market operated by Seattle Farmers Market Association. Open Wednesday from 3 - 7 pm. May 29 - September 25.",
+    "location": {
+      "address": "Meridian Ave N / N 50th St",
+      "coordinates": {
+        "lat": 47.646188,
+        "lng": -122.300266
+      }
+    },
+    "contact": {
+      "website": "http://www.sfmamarkets.com/visit-wallingford-farmers-market"
+    },
+    "schedule": [
+      {
+        "day": "Wednesday",
+        "hours": "3 - 7 pm"
+      }
+    ],
+    "organization": "Seattle Farmers Market Association",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: May 29 - September 25"
+  },
+  {
+    "id": "farmers-market-10",
+    "name": "University District Farmers Market",
+    "type": "Farmers Market",
+    "description": "University District Farmers Market farmers market operated by Neighborhood Farmers Market. Open Saturday from 9 am - 2 pm. Year Round.",
+    "location": {
+      "address": "NE 52nd St / University Way NE",
+      "coordinates": {
+        "lat": 47.6466,
+        "lng": -122.295164
+      }
+    },
+    "contact": {
+      "phone": "206-547-2278 (general info), 206-632-5234 (office)",
+      "website": "https://seattlefarmersmarkets.org/udfm"
+    },
+    "schedule": [
+      {
+        "day": "Saturday",
+        "hours": "9 am - 2 pm"
+      }
+    ],
+    "organization": "Neighborhood Farmers Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: Year Round"
+  },
+  {
+    "id": "farmers-market-11",
+    "name": "First Hill Express Farmers Market",
+    "type": "Farmers Market",
+    "description": "First Hill Express Farmers Market farmers market operated by Pike Place Market. Open Friday from 10 am - 2 pm. TBD.",
+    "location": {
+      "address": "9th Ave / Seneca St",
+      "coordinates": {
+        "lat": 47.626285,
+        "lng": -122.299517
+      }
+    },
+    "contact": {
+      "phone": "206-682-7453",
+      "website": "http://pikeplacemarket.org/farmers-market"
+    },
+    "schedule": [
+      {
+        "day": "Friday",
+        "hours": "10 am - 2 pm"
+      }
+    ],
+    "organization": "Pike Place Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: TBD"
+  },
+  {
+    "id": "farmers-market-12",
+    "name": "South Lake Union Express Farmers Market",
+    "type": "Farmers Market",
+    "description": "South Lake Union Express Farmers Market farmers market operated by Pike Place Market. Open Thursday from 10 am - 2 pm. TBD.",
+    "location": {
+      "address": "426 Terry Ave N",
+      "coordinates": {
+        "lat": 47.630729,
+        "lng": -122.301181
+      }
+    },
+    "contact": {
+      "phone": "206-682-7453",
+      "website": "http://pikeplacemarket.org/farmers-market"
+    },
+    "schedule": [
+      {
+        "day": "Thursday",
+        "hours": "10 am - 2 pm"
+      }
+    ],
+    "organization": "Pike Place Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: TBD"
+  },
+  {
+    "id": "farmers-market-13",
+    "name": "West Seattle Farmers Market",
+    "type": "Farmers Market",
+    "description": "West Seattle Farmers Market farmers market operated by Neighborhood Farmers Market. Open Sunday from 10 am - 2 pm. Year Round.",
+    "location": {
+      "address": "California Ave SW / SW Alaska St",
+      "coordinates": {
+        "lat": 47.608546,
+        "lng": -122.314103
+      }
+    },
+    "contact": {
+      "phone": "206-547-2278 (general info), 206-632-5234 (office)",
+      "website": "https://seattlefarmersmarkets.org/wsfm"
+    },
+    "schedule": [
+      {
+        "day": "Sunday",
+        "hours": "10 am - 2 pm"
+      }
+    ],
+    "organization": "Neighborhood Farmers Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: Year Round"
+  },
+  {
+    "id": "farmers-market-14",
+    "name": "Pike Place Market",
+    "type": "Farmers Market",
+    "description": "Pike Place Market farmers market operated by Pike Place Market. Open Daily from 9 am - 6 pm. Year Round.",
+    "location": {
+      "address": "Pike Pl / Pine St",
+      "coordinates": {
+        "lat": 47.625949,
+        "lng": -122.302662
+      }
+    },
+    "contact": {
+      "phone": "206-682-7453",
+      "website": "http://pikeplacemarket.org"
+    },
+    "schedule": [
+      {
+        "day": "Daily",
+        "hours": "9 am - 6 pm"
+      }
+    ],
+    "organization": "Pike Place Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: Year Round"
+  },
+  {
+    "id": "farmers-market-15",
+    "name": "Ballard Farmers Market",
+    "type": "Farmers Market",
+    "description": "Ballard Farmers Market farmers market operated by Seattle Farmers Market Association. Open Sunday from 9 am - 2 pm. Year Round.",
+    "location": {
+      "address": "22nd Ave NW / NW Market St",
+      "coordinates": {
+        "lat": 47.647766,
+        "lng": -122.31281
+      }
+    },
+    "contact": {
+      "website": "http://www.sfmamarkets.com/visit-ballard-farmers-market"
+    },
+    "schedule": [
+      {
+        "day": "Sunday",
+        "hours": "9 am - 2 pm"
+      }
+    ],
+    "organization": "Seattle Farmers Market Association",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: Year Round"
+  },
+  {
+    "id": "farmers-market-16",
+    "name": "Madrona Farmers Market",
+    "type": "Farmers Market",
+    "description": "Madrona Farmers Market farmers market operated by Seattle Farmers Market Association. Open Friday from 3 - 7 pm. May 17 - October 25.",
+    "location": {
+      "address": "Martin Luther King Jr Way / E Union St",
+      "coordinates": {
+        "lat": 47.627011,
+        "lng": -122.291384
+      }
+    },
+    "contact": {
+      "website": "http://www.sfmamarkets.com/madrona-farmers-market"
+    },
+    "schedule": [
+      {
+        "day": "Friday",
+        "hours": "3 - 7 pm"
+      }
+    ],
+    "organization": "Seattle Farmers Market Association",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: May 17 - October 25"
+  },
+  {
+    "id": "farmers-market-17",
+    "name": "Capitol Hill Farmers Market",
+    "type": "Farmers Market",
+    "description": "Capitol Hill Farmers Market farmers market operated by Neighborhood Farmers Market. Open Sunday, Tuesday from 11 am - 3 pm, 3 pm - 7 pm. Year Round, June 4 - September 24.",
+    "location": {
+      "address": "E Denny Way / Broadway E",
+      "coordinates": {
+        "lat": 47.629243,
+        "lng": -122.297423
+      }
+    },
+    "contact": {
+      "phone": "206-547-2278 (general info), 206-632-5234 (office)",
+      "website": "https://seattlefarmersmarkets.org/chfm"
+    },
+    "schedule": [
+      {
+        "day": "Sunday, Tuesday",
+        "hours": "11 am - 3 pm, 3 pm - 7 pm"
+      }
+    ],
+    "organization": "Neighborhood Farmers Market",
+    "tags": [
+      "farmers market",
+      "local food",
+      "community"
+    ],
+    "cost": "Free to attend",
+    "notes": "Season: Year Round, June 4 - September 24"
+  }
+]

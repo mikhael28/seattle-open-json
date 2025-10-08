@@ -1,0 +1,1634 @@
+[
+  {
+    "id": "picnic-site-seward-park-shelter-4-64084",
+    "name": "Seward Park Shelter #4",
+    "type": "Picnic Shelter",
+    "description": "Seward Park Shelter #4 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$210.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 sheltered tables"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Seward_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward4-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward4-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-seward-park-shelter-5-64084",
+    "name": "Seward Park Shelter #5",
+    "type": "Picnic Shelter",
+    "description": "Seward Park Shelter #5 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$210.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 sheltered tables"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Seward_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward5-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward5-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-view-ridge-playfield-shelter-1-64042",
+    "name": "View Ridge Playfield Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "View Ridge Playfield Shelter #1 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$185.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "3 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/View_Ridge_Map_Directions_Update.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/ViewRidgePlayfieldShelter.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/ViewRidgePlayfieldShelter-B.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-warren-g-magnuson-park-shelter-1-63826",
+    "name": "Warren G. Magnuson Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Warren G. Magnuson Park Shelter #1 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$320.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "8 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Magnuson2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/mag-s1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnusonShelter1withLake.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-warren-g-magnuson-park-shelter-2-63826",
+    "name": "Warren G. Magnuson Park Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "Warren G. Magnuson Park Shelter #2 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$195.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "9 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Magnuson2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnusonBeachTable3.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnusonParkShelter2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnusonParkTable2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-warren-g-magnuson-park-shelter-3-63826",
+    "name": "Warren G. Magnuson Park Shelter #3",
+    "type": "Picnic Shelter",
+    "description": "Warren G. Magnuson Park Shelter #3 is a reservable picnic shelter with a capacity of 60 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$220.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "60 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Magnuson2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/mag-s3.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnusonParkShelter3.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnusonShelter3withPlayground.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-westcrest-park-picnic-area-tables-only-64018",
+    "name": "Westcrest Park Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Westcrest Park Picnic Area Tables Only is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "6 unsheltered tables"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Westcrest_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/WestcrestTables1-3.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/WestcrestTable4-6.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-woodland-park-shelter-3-64025",
+    "name": "Woodland Park Shelter #3",
+    "type": "Picnic Shelter",
+    "description": "Woodland Park Shelter #3 is a reservable picnic shelter with a capacity of 140 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$135.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "1 sheltered tables",
+      "48 unsheltered tables"
+    ],
+    "size": "140 person capacity",
+    "links": [
+      "https://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Woodland3.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/woodland3-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/woodland3-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-woodland-park-shelter-4-64025",
+    "name": "Woodland Park Shelter #4",
+    "type": "Picnic Shelter",
+    "description": "Woodland Park Shelter #4 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$135.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "1 sheltered tables",
+      "5 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "https://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Woodland467.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/woodland4-1.jpg",
+      "(http://www.seaettle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/WoodandShelter4.jpg)"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-woodland-park-shelter-6-64025",
+    "name": "Woodland Park Shelter #6",
+    "type": "Picnic Shelter",
+    "description": "Woodland Park Shelter #6 is a reservable picnic shelter with a capacity of 200 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$310.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "9 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "200 person capacity",
+    "links": [
+      "https://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Woodland467.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/WoodlandShelter6.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/WoodandShelter6UncoveredTables1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/WoodandShelter6_UncoveredTables2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-woodland-park-shelter-7-64025",
+    "name": "Woodland Park Shelter #7",
+    "type": "Picnic Shelter",
+    "description": "Woodland Park Shelter #7 is a reservable picnic shelter with a capacity of 30 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$185.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables"
+    ],
+    "size": "30 person capacity",
+    "links": [
+      "https://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Woodland467.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/woodland7-1.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-view-ridge-playfield-picnic-area-tables-only-64042",
+    "name": "View Ridge Playfield Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "View Ridge Playfield Picnic Area Tables Only is a reservable picnic shelter with a capacity of 30 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$25.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "30 person capacity",
+    "links": [
+      "https://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/View_Ridge_Map_Directions_Update.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/ViewRidgePlayfieldShelter.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/ViewRidgePlayfieldShelter-B.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-carkeek-park-shelter-2-63773",
+    "name": "Carkeek Park Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "Carkeek Park Shelter #2 is a reservable picnic shelter with a capacity of 150 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$195.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "14 unsheltered tables"
+    ],
+    "size": "150 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Carkeek.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkPlaygroundGrassyAreaShelter2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkShelter2withGrill.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekTables810TwoFirstCome.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkShelter2ViewTable11.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-don-armeni-boat-ramp-picnic-area-tables-only-63685",
+    "name": "Don Armeni Boat Ramp Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Don Armeni Boat Ramp Picnic Area Tables Only is a reservable picnic shelter with a capacity of 30 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 unsheltered tables"
+    ],
+    "size": "30 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/DonArmeni.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/DonArmeniPicnicArea.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/DonArmeniTable1and2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/DonArmeniTable1.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-jose-rizal-park-shelter-1-63692",
+    "name": "Jose Rizal Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Jose Rizal Park Shelter #1 is a reservable picnic shelter with a capacity of 75 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$210.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "75 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Jose_Rizal_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JoseRizalShelter.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-genesee-park-and-playfield-shelter-1-63936",
+    "name": "Genesee Park and Playfield Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Genesee Park and Playfield Shelter #1 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$285.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "7 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Genesee.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GeneseeParkShelter.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GeneseeParkShelterInside.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GeneseeParkBBQandShelter.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-georgetown-playfield-shelter-1-63935",
+    "name": "Georgetown Playfield Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Georgetown Playfield Shelter #1 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$185.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov/Documents/Departments/ParksAndRecreation/Reserve/Picnic/Georgetown_Playfield_Park_Map_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/georgetownShelter1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GeorgetownPlayArea.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-alki-beach-park-shelter-1-63856",
+    "name": "Alki Beach Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Alki Beach Park Shelter #1 is a reservable picnic shelter with a capacity of 130 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$120.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "14 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "130 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/AlkiBeach.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/AlkiShelterwithgrill.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/AlkiTable12.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/AlkiTable8.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/AlkiwithTables510.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-beer-sheva-park-picnic-area-tables-only-63744",
+    "name": "Beer Sheva Park Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Beer Sheva Park Picnic Area Tables Only is a reservable picnic shelter with a capacity of 30 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 unsheltered tables"
+    ],
+    "size": "30 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Beer_Sheva_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/BeerShevaTables1-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-benefit-playground-shelter-1-63751",
+    "name": "Benefit Playground Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Benefit Playground Shelter #1 is a reservable picnic shelter with a capacity of 35 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$160.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 sheltered tables",
+      "2 unsheltered tables"
+    ],
+    "size": "35 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Benefit_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/BenefitShelter.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/BenefitPicnicShelter.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-gas-works-park-shelter-2-63937",
+    "name": "Gas Works Park Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "Gas Works Park Shelter #2 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$210.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 sheltered tables",
+      "4 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//documents/Departments/ParksAndRecreation/Reserve/Picnic/GasWorks2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/gasworks2-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/gasworks2-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-ferdinand-street-boat-launch-picnic-area-tables-only-63720",
+    "name": "Ferdinand Street Boat Launch Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Ferdinand Street Boat Launch Picnic Area Tables Only is a reservable picnic shelter with a capacity of 40 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 unsheltered tables"
+    ],
+    "size": "40 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Ferdinand.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/picnic/FerdinandTable1_2.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/picnic/FerdinandParkTable_2.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/picnic/FerdinandTables.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-gas-works-park-shelter-1-63937",
+    "name": "Gas Works Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Gas Works Park Shelter #1 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$160.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 sheltered tables",
+      "5 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//documents/Departments/ParksAndRecreation/Reserve/Picnic/GasWorks2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/gasworks1-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/gasworks1-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-carkeek-park-piper-s-creek-picnic-area-tables-only-63773",
+    "name": "Carkeek Park Piper's Creek Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Carkeek Park Piper's Creek Picnic Area Tables Only is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$25.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "12 unsheltered tables"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Carkeek.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkTable37_38_39.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkPipersCreekTable34.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkPipersCreek373839.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-carkeek-park-shelter-1-63773",
+    "name": "Carkeek Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Carkeek Park Shelter #1 is a reservable picnic shelter with a capacity of 190 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$120.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "19 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "190 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Carkeek.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkTable23.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkViewfromShelter1withSwings.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkShelter1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/CarkeekParkPicnicTablesByShelter1.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-golden-gardens-park-shelter-1-63903",
+    "name": "Golden Gardens Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Golden Gardens Park Shelter #1 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$120.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "9 unsheltered tables"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardens.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensShelter1Playground.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensShelter1Tables56.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensShelter1withTables12.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensBeachNorthMeadow.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-golden-gardens-park-shelter-2-63903",
+    "name": "Golden Gardens Park Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "Golden Gardens Park Shelter #2 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$120.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "8 unsheltered tables"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardens.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensShelter2View.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensTable14151617.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensShelter2South.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/GoldenGardensTable11.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-jefferson-shelter-1-63801",
+    "name": "Jefferson Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Jefferson Shelter #1 is a reservable picnic shelter with a capacity of 50 people. Features include: Skate Park.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$185.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "ADA accessible",
+      "Skate Park"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Jefferson.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Jefferson_shelter_1.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-jefferson-shelter-2-63801",
+    "name": "Jefferson Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "Jefferson Shelter #2 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$185.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Jefferson.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Jefferson_shelter_2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-jefferson-shelter-3-63801",
+    "name": "Jefferson Shelter #3",
+    "type": "Picnic Shelter",
+    "description": "Jefferson Shelter #3 is a reservable picnic shelter with a capacity of 80 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$235.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "5 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "80 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Jefferson.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JeffersonShelter3SprayPark.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JeffersonShelter3Playground.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/ViewJeffersonShelter3.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JeffersonParkShelterGrassyArea.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-john-c-little-sr-park-shelter-1-63870",
+    "name": "John C. Little, Sr. Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "John C. Little, Sr. Park Shelter #1 is a reservable picnic shelter with a capacity of 40 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$160.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "40 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/JohnCLittle.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JohnCLittleShelter1and2.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JohnCLittleShelter1withPlayground.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-john-c-little-sr-park-shelter-2-63870",
+    "name": "John C. Little, Sr. Park Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "John C. Little, Sr. Park Shelter #2 is a reservable picnic shelter with a capacity of 40 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$160.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "40 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/JohnCLittle.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JohnCLittleShelter2.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JohnCLittleShelter12.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-judkins-park-and-playfield-shelter-1-63873",
+    "name": "Judkins Park and Playfield Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Judkins Park and Playfield Shelter #1 is a reservable picnic shelter with a capacity of 150 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$185.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "11 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "150 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Judkins.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JudkinsShelter.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JudkinsTables1-7.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/JudkinsTables8-11.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-lincoln-park-shelter-1-63806",
+    "name": "Lincoln Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Lincoln Park Shelter #1 is a reservable picnic shelter with a capacity of 250 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$145.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "1 sheltered tables",
+      "22 unsheltered tables"
+    ],
+    "size": "250 person capacity",
+    "links": [
+      "http://www.seattle.gov/Documents/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln1-4.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln_Shelter_1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln_Shelt_1.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-lincoln-park-shelter-2-63806",
+    "name": "Lincoln Park Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "Lincoln Park Shelter #2 is a reservable picnic shelter with a capacity of 250 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$145.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "1 sheltered tables",
+      "21 unsheltered tables"
+    ],
+    "size": "250 person capacity",
+    "links": [
+      "http://www.seattle.gov/Documents/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln1-4.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln2-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln2-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-lincoln-park-shelter-3-63806",
+    "name": "Lincoln Park Shelter #3",
+    "type": "Picnic Shelter",
+    "description": "Lincoln Park Shelter #3 is a reservable picnic shelter with a capacity of 90 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$195.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "3 sheltered tables",
+      "6 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "90 person capacity",
+    "links": [
+      "http://www.seattle.gov/Documents/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln1-4.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln3-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln3-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-lincoln-park-shelter-4-63806",
+    "name": "Lincoln Park Shelter #4",
+    "type": "Picnic Shelter",
+    "description": "Lincoln Park Shelter #4 is a reservable picnic shelter with a capacity of 90 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$170.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 sheltered tables",
+      "3 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "90 person capacity",
+    "links": [
+      "http://www.seattle.gov/Documents/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln1-4.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln4-2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln4-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-lincoln-park-shelter-5-63806",
+    "name": "Lincoln Park Shelter #5",
+    "type": "Picnic Shelter",
+    "description": "Lincoln Park Shelter #5 is a reservable picnic shelter with a capacity of 300 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$220.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 sheltered tables",
+      "25 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "300 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln5-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Lincoln5-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-madrona-park-shelter-1-63818",
+    "name": "Madrona Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Madrona Park Shelter #1 is a reservable picnic shelter with a capacity of 80 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$110.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "7 unsheltered tables"
+    ],
+    "size": "80 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Madrona.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MadronaBeachShelter.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MadronaBeachTable3.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MadronaTables1_2_3.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MadronaTables4_7.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-magnolia-park-shelter-1-63823",
+    "name": "Magnolia Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Magnolia Park Shelter #1 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$110.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "10 unsheltered tables"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Magnolia.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnoliaShelter1.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/magnolia1-2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MagnoliaTables.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-maple-leaf-reservoir-park-shelter-1-63828",
+    "name": "Maple Leaf Reservoir Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Maple Leaf Reservoir Park Shelter #1 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$210.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/MapleLeafResevoir.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MapleLeafShelter.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MapleLeafParkShelter.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MapleLeafPickleBallCourt.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MapleLeafPlayground.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-matthews-beach-park-picnic-area-tables-only-63836",
+    "name": "Matthews Beach Park Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Matthews Beach Park Picnic Area Tables Only is a reservable picnic shelter with a capacity of 120 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "12 unsheltered tables"
+    ],
+    "size": "120 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/MatthewsBeach.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MatthewsBeachPicnicArea.jpg",
+      "Matthews Beach Table 1 with 2 Grills (http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MatthewsTables21.jpg)",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MatthewsBeachTable8.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MatthewsBeachParkTable5withFirstComeFirstServeTable.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-me-kwa-mooks-park-picnic-area-tables-only-63777",
+    "name": "Me-Kwa-Mooks Park Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Me-Kwa-Mooks Park Picnic Area Tables Only is a reservable picnic shelter with a capacity of 30 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 unsheltered tables"
+    ],
+    "size": "30 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Me-Kwa-Mooks.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MeKwaMooksTables.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MeKwaMooksTables1-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-meridian-playground-shelter-1-63778",
+    "name": "Meridian Playground Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Meridian Playground Shelter #1 is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$310.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "8 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Meridian.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MeridianShelterinWinter.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/MeridianSideView.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-northacres-park-picnic-area-tables-only-63712",
+    "name": "Northacres Park Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Northacres Park Picnic Area Tables Only is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "4 unsheltered tables"
+    ],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Northacres.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/NorthacresTable2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/NorthacresParkTable2withPlayground.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/NorthacresParkTables1and2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-othello-playground-picnic-area-tables-only-63962",
+    "name": "Othello Playground Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Othello Playground Picnic Area Tables Only is a reservable picnic shelter with a capacity of 100 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "6 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "100 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Othello_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/OthelloAmphitheaterLawnwithPlayground.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Othello_2023_Tables1-2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/OthelloParkTables56.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/Othello_Tables3-4.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-pratt-park-picnic-area-tables-only-63957",
+    "name": "Pratt Park Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Pratt Park Picnic Area Tables Only is a reservable picnic shelter with a capacity of 60 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "5 unsheltered tables"
+    ],
+    "size": "60 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Pratt_MapDirections_2023_newconfig.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/PrattParkTables1-5.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/PrattSprayPark.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/PrattTables3-4.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/PrattTables4-5.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-ravenna-park-shelter-1-63942",
+    "name": "Ravenna Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Ravenna Park Shelter #1 is a reservable picnic shelter with a capacity of 150 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$110.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "10 unsheltered tables"
+    ],
+    "size": "150 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Ravenna_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/RavennaShelter_and_Tables1-7.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-roxhill-park-picnic-area-tables-only-64005",
+    "name": "Roxhill Park Picnic Area Tables Only",
+    "type": "Picnic Shelter",
+    "description": "Roxhill Park Picnic Area Tables Only is a reservable picnic shelter with a capacity of 75 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$0.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "10 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "75 person capacity",
+    "links": [
+      "http://www.seattle.gov//Documents/Departments/ParksAndRecreation/Reserve/Picnic/Roxhill.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/RoxhillParkTable10.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/RoxhillParkTable6.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/RoxhillTable7.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-seward-park-shelter-1-64084",
+    "name": "Seward Park Shelter #1",
+    "type": "Picnic Shelter",
+    "description": "Seward Park Shelter #1 is a reservable picnic shelter with a capacity of 40 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$160.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 sheltered tables",
+      "ADA accessible"
+    ],
+    "size": "40 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Seward_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward1-2.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward1-3.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-seward-park-shelter-2-64084",
+    "name": "Seward Park Shelter #2",
+    "type": "Picnic Shelter",
+    "description": "Seward Park Shelter #2 is a reservable picnic shelter with a capacity of 50 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$210.00",
+    "accessibility": "Contact for accessibility information",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [],
+    "size": "50 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Seward_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/picnic/SewardShelter2Front.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/picnic/SewardShelter2.JPG",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/picnic/SewardParkShelter_2.JPG"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  },
+  {
+    "id": "picnic-site-seward-park-shelter-3-64084",
+    "name": "Seward Park Shelter #3",
+    "type": "Picnic Shelter",
+    "description": "Seward Park Shelter #3 is a reservable picnic shelter with a capacity of 300 people.",
+    "location": "Seattle Parks and Recreation - See map for location",
+    "contact": {
+      "website": "https://www.seattle.gov/parks/reserve/picnic-shelters"
+    },
+    "cost": "$310.00",
+    "accessibility": "ADA accessible",
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "picnic shelter",
+      "parks",
+      "reservable",
+      "outdoor"
+    ],
+    "features": [
+      "2 sheltered tables",
+      "18 unsheltered tables",
+      "ADA accessible"
+    ],
+    "size": "300 person capacity",
+    "links": [
+      "http://www.seattle.gov/documents/Departments/ParksAndRecreation/Reserve/Picnic/Seward_Map_Directions_2023.pdf",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward3-1.jpg",
+      "http://www.seattle.gov/images/Departments/ParksAndRecreation/Reserve/Picnic/seward3-2.jpg"
+    ],
+    "howToAccess": "Reservation required",
+    "registration": "Reserve online at seattle.gov/parks"
+  }
+]

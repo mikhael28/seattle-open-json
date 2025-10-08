@@ -125,6 +125,7 @@ export function QuestionnaireSummary({
           </CardHeader>
           <CardContent>
             <p className="text-xl font-semibold text-gray-900">
+              {/* @ts-ignore */}
               {answers["application-name"]}
             </p>
           </CardContent>

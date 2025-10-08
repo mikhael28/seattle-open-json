@@ -1,0 +1,1410 @@
+[
+  {
+    "id": "pops-children-s-hospital-er-addition",
+    "name": "Children's Hospital ER Addition",
+    "type": "Privately Owned Public Space",
+    "description": "Children's Hospital ER Addition is a privately-owned public space in Seattle's Laurelhurst neighborhood, providing pocket park amenities. Built in 2010.",
+    "location": {
+      "address": "(47.6614704, -122.2844)",
+      "coordinates": {
+        "lat": 47.6614704,
+        "lng": -122.2844
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "pocket park",
+      "laurelhurst"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Laurelhurst",
+    "features": [
+      "Pocket Park"
+    ],
+    "notes": "Built: 2010. Near: 45th St & 40th Ave",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/c831b440-36e9-411e-9930-e1b5d04ca278"
+    ]
+  },
+  {
+    "id": "pops-epiphany-school",
+    "name": "Epiphany School",
+    "type": "Privately Owned Public Space",
+    "description": "Epiphany School is a privately-owned public space in Seattle's Madrona neighborhood, providing pocket park amenities. Built in 2008.",
+    "location": {
+      "address": "(47.6182563, -122.28724)",
+      "coordinates": {
+        "lat": 47.6182563,
+        "lng": -122.28724
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "pocket park",
+      "madrona"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Madrona",
+    "features": [
+      "Pocket Park"
+    ],
+    "notes": "Built: 2008. Near: 36th & Howell",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/c19b27bf-76dc-4e4c-be91-d45f9f46b76a"
+    ]
+  },
+  {
+    "id": "pops-ruby-amazon",
+    "name": "Ruby (Amazon)",
+    "type": "Privately Owned Public Space",
+    "description": "Ruby (Amazon) is a privately-owned public space in Seattle's SLU neighborhood, providing plaza, mid-block connection amenities. Built in 2012. Previously known as Block 101 / Amazon Phase IV.",
+    "location": {
+      "address": "(47.6214019, -122.33676)",
+      "coordinates": {
+        "lat": 47.6214019,
+        "lng": -122.33676
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, mid-block connection",
+      "slu"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "SLU",
+    "features": [
+      "Plaza, Mid-Block Connection"
+    ],
+    "notes": "Built: 2012. Near: Boren & Thomas. Previous names: Block 101 / Amazon Phase IV",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/573783f4-2420-44c0-8fe5-f6730654eb30"
+    ]
+  },
+  {
+    "id": "pops-expo-apts",
+    "name": "Expo Apts",
+    "type": "Privately Owned Public Space",
+    "description": "Expo Apts is a privately-owned public space in Seattle's Uptown neighborhood, providing plaza amenities. Built in 2010.",
+    "location": {
+      "address": "(47.6234256, -122.35458)",
+      "coordinates": {
+        "lat": 47.6234256,
+        "lng": -122.35458
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza",
+      "uptown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Uptown",
+    "features": [
+      "Plaza"
+    ],
+    "notes": "Built: 2010. Near: 1st & Mercer",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/1b13dd92-bbae-450e-bc0b-69f1fb8c6502"
+    ]
+  },
+  {
+    "id": "pops-rufus-amazon",
+    "name": "Rufus (Amazon)",
+    "type": "Privately Owned Public Space",
+    "description": "Rufus (Amazon) is a privately-owned public space in Seattle's SLU neighborhood, providing plaza amenities. Built in 2008. Previously known as Block 32.",
+    "location": {
+      "address": "(47.6239012, -122.33645)",
+      "coordinates": {
+        "lat": 47.6239012,
+        "lng": -122.33645
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza",
+      "slu"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "SLU",
+    "features": [
+      "Plaza"
+    ],
+    "notes": "Built: 2008. Near: Mercer & Terry. Previous names: Block 32",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/460a6610-91c9-4861-b6c1-74f2ba51f362"
+    ]
+  },
+  {
+    "id": "pops-skyline-first-hill",
+    "name": "Skyline First Hill",
+    "type": "Privately Owned Public Space",
+    "description": "Skyline First Hill is a privately-owned public space in Seattle's First Hill neighborhood, providing plaza, hillside terrace amenities. Built in 2006.",
+    "location": {
+      "address": "(47.6060183, -122.32639)",
+      "coordinates": {
+        "lat": 47.6060183,
+        "lng": -122.32639
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, hillside terrace",
+      "first hill"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "First Hill",
+    "features": [
+      "Plaza, Hillside Terrace"
+    ],
+    "notes": "Built: 2006. Near: 8th & Cherry",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/92a0b8fd-83a6-4c3d-9092-89f6b410b720"
+    ]
+  },
+  {
+    "id": "pops-doppler-tower-amazon",
+    "name": "Doppler Tower (Amazon)",
+    "type": "Privately Owned Public Space",
+    "description": "Doppler Tower (Amazon) is a privately-owned public space in Seattle's Denny Tri neighborhood, providing plaza amenities. Built in 2012. Previously known as Block 14 / Amazon Towers Phase I.",
+    "location": {
+      "address": "(47.6151253, -122.33851)",
+      "coordinates": {
+        "lat": 47.6151253,
+        "lng": -122.33851
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza",
+      "denny tri"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Denny Tri",
+    "features": [
+      "Plaza"
+    ],
+    "notes": "Built: 2012. Near: 7th & Lenora. Previous names: Block 14 / Amazon Towers Phase I",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/ea80d25d-dec5-4f91-b666-dab06f4b56f0"
+    ]
+  },
+  {
+    "id": "pops-enso-condominiums",
+    "name": "Enso Condominiums",
+    "type": "Privately Owned Public Space",
+    "description": "Enso Condominiums is a privately-owned public space in Seattle's Denny Tri neighborhood, providing green st improvements, retail amenities. Built in 2007.",
+    "location": {
+      "address": "(47.6181048, -122.33922)",
+      "coordinates": {
+        "lat": 47.6181048,
+        "lng": -122.33922
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "green st improvements, retail",
+      "denny tri"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Denny Tri",
+    "features": [
+      "Green St Improvements, Retail"
+    ],
+    "notes": "Built: 2007. Near: 9th & Blanchard",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/3c77d772-70ac-4c53-b9f7-c75dbbd34e02"
+    ]
+  },
+  {
+    "id": "pops-1111-3rd-ave",
+    "name": "1111 3rd Ave",
+    "type": "Privately Owned Public Space",
+    "description": "1111 3rd Ave is a privately-owned public space in Seattle's Downtown neighborhood, providing shopping plaza, shopping arcade, arcade amenities. Built in 1977.",
+    "location": {
+      "address": "(47.6066096, -122.3354)",
+      "coordinates": {
+        "lat": 47.6066096,
+        "lng": -122.3354
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "shopping plaza, shopping arcade, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Shopping Plaza, Shopping Arcade, Arcade"
+    ],
+    "notes": "Built: 1977. Near: 3rd & Spring",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/3d823a83-b037-49c8-8601-33a6c143ddf7"
+    ]
+  },
+  {
+    "id": "pops-safeco-plaza",
+    "name": "Safeco Plaza",
+    "type": "Privately Owned Public Space",
+    "description": "Safeco Plaza is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, arcade amenities. Built in 1969. Previously known as Seafirst 4th Ave.",
+    "location": {
+      "address": "(47.6063709, -122.33353)",
+      "coordinates": {
+        "lat": 47.6063709,
+        "lng": -122.33353
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Arcade"
+    ],
+    "notes": "Built: 1969. Near: 4th & Madison. Previous names: Seafirst 4th Ave",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/3e95587d-732f-48c6-a3e8-847a75ea0df2"
+    ]
+  },
+  {
+    "id": "pops-1000-2nd-avenue",
+    "name": "1000 2nd Avenue",
+    "type": "Privately Owned Public Space",
+    "description": "1000 2nd Avenue is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, shopping arcade amenities. Built in 1987. Previously known as Key Tower, ATT Gateway Tower.",
+    "location": {
+      "address": "(47.6054034, -122.33489)",
+      "coordinates": {
+        "lat": 47.6054034,
+        "lng": -122.33489
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, shopping arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Shopping Arcade"
+    ],
+    "notes": "Built: 1987. Near: 2nd & Spring. Previous names: Key Tower, ATT Gateway Tower",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/994dacd2-b421-4b25-a8e6-687ebb1f4a30"
+    ]
+  },
+  {
+    "id": "pops-wells-fargo-center",
+    "name": "Wells Fargo Center",
+    "type": "Privately Owned Public Space",
+    "description": "Wells Fargo Center is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, public atrium, hillclimb assist amenities. Built in 1983. Previously known as First Interstate.",
+    "location": {
+      "address": "(47.6050898, -122.33466)",
+      "coordinates": {
+        "lat": 47.6050898,
+        "lng": -122.33466
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, public atrium, hillclimb assist",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Public Atrium, Hillclimb Assist"
+    ],
+    "notes": "Built: 1983. Near: 2nd & Marion. Previous names: First Interstate",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/091a01ee-e71e-4600-9a5c-b82d3ba9a97e"
+    ]
+  },
+  {
+    "id": "pops-fourth-madison-building",
+    "name": "Fourth & Madison Building",
+    "type": "Privately Owned Public Space",
+    "description": "Fourth & Madison Building is a privately-owned public space in Seattle's Downtown neighborhood, providing public atrium, hillclimb assist amenities. Built in 2002. Previously known as IDX Tower.",
+    "location": {
+      "address": "(47.6056501, -122.33308)",
+      "coordinates": {
+        "lat": 47.6056501,
+        "lng": -122.33308
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "public atrium, hillclimb assist",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Public Atrium, Hillclimb Assist"
+    ],
+    "notes": "Built: 2002. Near: 4th & Madison. Previous names: IDX Tower",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/4f415559-fcc8-4207-8e4e-5c85e41b6600"
+    ]
+  },
+  {
+    "id": "pops-the-post",
+    "name": "The Post",
+    "type": "Privately Owned Public Space",
+    "description": "The Post is a privately-owned public space in Seattle's Downtown neighborhood, providing green st improvements, green st setbacks amenities. Built in 2011.",
+    "location": {
+      "address": "(47.6033063, -122.33609)",
+      "coordinates": {
+        "lat": 47.6033063,
+        "lng": -122.33609
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "green st improvements, green st setbacks",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Green St Improvements, Green St Setbacks"
+    ],
+    "notes": "Built: 2011. Near: Western & Marion",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/2599e3ee-56a9-4e10-a5b6-d5083e583365"
+    ]
+  },
+  {
+    "id": "pops-columbia-center",
+    "name": "Columbia Center",
+    "type": "Privately Owned Public Space",
+    "description": "Columbia Center is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, shopping arcade, arcade amenities. Built in 1981.",
+    "location": {
+      "address": "(47.6045379, -122.33078)",
+      "coordinates": {
+        "lat": 47.6045379,
+        "lng": -122.33078
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, shopping arcade, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Shopping Arcade, Arcade"
+    ],
+    "notes": "Built: 1981. Near: 5th & Columbia",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/cc2a1162-b737-44e2-89d0-ae2f7e654e3e"
+    ]
+  },
+  {
+    "id": "pops-800-fifth-avenue",
+    "name": "800 Fifth Avenue",
+    "type": "Privately Owned Public Space",
+    "description": "800 Fifth Avenue is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, shopping arcade, arcade amenities. Built in 1981. Previously known as Bank of America Plaza, Seafirst Fifth Ave Plaza.",
+    "location": {
+      "address": "(47.605773, -122.33025)",
+      "coordinates": {
+        "lat": 47.605773,
+        "lng": -122.33025
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, shopping arcade, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Shopping Arcade, Arcade"
+    ],
+    "notes": "Built: 1981. Near: 5th & Marion. Previous names: Bank of America Plaza, Seafirst Fifth Ave Plaza",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/e916bc95-1f31-4701-951a-f14b43291fd0"
+    ]
+  },
+  {
+    "id": "pops-seattle-municipal-tower",
+    "name": "Seattle Municipal Tower",
+    "type": "Privately Owned Public Space",
+    "description": "Seattle Municipal Tower is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, shopping plaza, arcade amenities. Built in 1980. Previously known as Key Bank Tower.",
+    "location": {
+      "address": "(47.6050437, -122.32996)",
+      "coordinates": {
+        "lat": 47.6050437,
+        "lng": -122.32996
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, shopping plaza, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Shopping Plaza, Arcade"
+    ],
+    "notes": "Built: 1980. Near: 5th & Columbia. Previous names: Key Bank Tower",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/9a2fee7e-47ee-4736-9ef2-0a91765ef607"
+    ]
+  },
+  {
+    "id": "pops-passport-agency",
+    "name": "Passport Agency",
+    "type": "Privately Owned Public Space",
+    "description": "Passport Agency is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, hillside terrace amenities. Built in 2003.",
+    "location": {
+      "address": "(47.6018316, -122.32723)",
+      "coordinates": {
+        "lat": 47.6018316,
+        "lng": -122.32723
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, hillside terrace",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Hillside Terrace"
+    ],
+    "notes": "Built: 2003. Near: 5th & Yesler",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/a1fddcec-13e5-4d30-bdfc-0bb9340c0c10"
+    ]
+  },
+  {
+    "id": "pops-union-station-development",
+    "name": "Union Station Development",
+    "type": "Privately Owned Public Space",
+    "description": "Union Station Development is a privately-owned public space in Seattle's Int'l District neighborhood, providing plaza, mid-block connection amenities. Built in 2000.",
+    "location": {
+      "address": "(47.5975244, -122.32809)",
+      "coordinates": {
+        "lat": 47.5975244,
+        "lng": -122.32809
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, mid-block connection",
+      "int'l district"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Int'l District",
+    "features": [
+      "Plaza, Mid-Block Connection"
+    ],
+    "notes": "Built: 2000. Near: 5th & Weller",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/b9334464-648d-4b8f-9446-c2a5506d7481"
+    ]
+  },
+  {
+    "id": "pops-2020-e-madison-st",
+    "name": "2020 E Madison St",
+    "type": "Privately Owned Public Space",
+    "description": "2020 E Madison St is a privately-owned public space in Seattle's Madison-Miller neighborhood, providing plaza / courtyard amenities. Built in 2016. Previously known as 2026 E Madison St.",
+    "location": {
+      "address": "(47.6181037, -122.30504)",
+      "coordinates": {
+        "lat": 47.6181037,
+        "lng": -122.30504
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza / courtyard",
+      "madison-miller"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Madison-Miller",
+    "features": [
+      "Plaza / Courtyard"
+    ],
+    "notes": "Built: 2016. Near: 20th & Madison. Previous names: 2026 E Madison St",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/773d61cc-d5c1-447b-8fa9-f12a6615a9e2"
+    ]
+  },
+  {
+    "id": "pops-the-whittaker",
+    "name": "The Whittaker",
+    "type": "Privately Owned Public Space",
+    "description": "The Whittaker is a privately-owned public space in Seattle's Admiral neighborhood, providing plaza, green st setbacks, mid-block connection amenities. Built in 2014.",
+    "location": {
+      "address": "(47.5601124, -122.38191)",
+      "coordinates": {
+        "lat": 47.5601124,
+        "lng": -122.38191
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, green st setbacks, mid-block connection",
+      "admiral"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Admiral",
+    "features": [
+      "Plaza, Green St Setbacks, Mid-Block Connection"
+    ],
+    "notes": "Built: 2014. Near: Fauntleroy & Alaska",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/5745df08-658e-49d8-838d-570401500644"
+    ]
+  },
+  {
+    "id": "pops-nessie-amazon",
+    "name": "Nessie (Amazon)",
+    "type": "Privately Owned Public Space",
+    "description": "Nessie (Amazon) is a privately-owned public space in Seattle's SLU neighborhood, providing plaza, mid-block connection amenities. Built in 2012. Previously known as Block 93.",
+    "location": {
+      "address": "(47.6238654, -122.33902)",
+      "coordinates": {
+        "lat": 47.6238654,
+        "lng": -122.33902
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, mid-block connection",
+      "slu"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "SLU",
+    "features": [
+      "Plaza, Mid-Block Connection"
+    ],
+    "notes": "Built: 2012. Near: 9th & Mercer. Previous names: Block 93",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/c6c2668f-367e-4669-a993-9c4627f2ff52"
+    ]
+  },
+  {
+    "id": "pops-alder-hall-uw",
+    "name": "Alder Hall UW",
+    "type": "Privately Owned Public Space",
+    "description": "Alder Hall UW is a privately-owned public space in Seattle's U District neighborhood, providing plaza, green st setbacks, mid-block connection amenities. Built in 2009. Previously known as Site 35W.",
+    "location": {
+      "address": "(47.6556098, -122.31395)",
+      "coordinates": {
+        "lat": 47.6556098,
+        "lng": -122.31395
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, green st setbacks, mid-block connection",
+      "u district"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "U District",
+    "features": [
+      "Plaza, Green St Setbacks, Mid-Block Connection"
+    ],
+    "notes": "Built: 2009. Near: Campus Pkwy & Brooklyn. Previous names: Site 35W",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/c736f098-148d-461e-9921-b756f1224883"
+    ]
+  },
+  {
+    "id": "pops-elm-hall-uw",
+    "name": "Elm Hall UW",
+    "type": "Privately Owned Public Space",
+    "description": "Elm Hall UW is a privately-owned public space in Seattle's U District neighborhood, providing plaza, green st setbacks, mid-block connection amenities. Built in 2010. Previously known as Site 32W.",
+    "location": {
+      "address": "(47.6565191, -122.31493)",
+      "coordinates": {
+        "lat": 47.6565191,
+        "lng": -122.31493
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, green st setbacks, mid-block connection",
+      "u district"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "U District",
+    "features": [
+      "Plaza, Green St Setbacks, Mid-Block Connection"
+    ],
+    "notes": "Built: 2010. Near: Campus Pkwy & Brooklyn. Previous names: Site 32W",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/fd081dd8-b050-4c55-8c5a-b0224fbdebd3"
+    ]
+  },
+  {
+    "id": "pops-admiral-safeway",
+    "name": "Admiral Safeway",
+    "type": "Privately Owned Public Space",
+    "description": "Admiral Safeway is a privately-owned public space in Seattle's Admiral neighborhood, providing plaza amenities. Built in 2010.",
+    "location": {
+      "address": "(47.579426, -122.38638)",
+      "coordinates": {
+        "lat": 47.579426,
+        "lng": -122.38638
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza",
+      "admiral"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Admiral",
+    "features": [
+      "Plaza"
+    ],
+    "notes": "Built: 2010. Near: California & Lander",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/a4439a1b-d12c-401b-90d3-323f59f3ed23"
+    ]
+  },
+  {
+    "id": "pops-horizon-house",
+    "name": "Horizon House",
+    "type": "Privately Owned Public Space",
+    "description": "Horizon House is a privately-owned public space in Seattle's First Hill neighborhood, providing green st setbacks amenities. Built in 1954.",
+    "location": {
+      "address": "(47.6108681, -122.32907)",
+      "coordinates": {
+        "lat": 47.6108681,
+        "lng": -122.32907
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "green st setbacks",
+      "first hill"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "First Hill",
+    "features": [
+      "Green St Setbacks"
+    ],
+    "notes": "Built: 1954. Near: 9th & University",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/764b41e1-89c3-4785-a023-6d5d7a6cd4f3"
+    ]
+  },
+  {
+    "id": "pops-cielo-apartments",
+    "name": "Cielo Apartments",
+    "type": "Privately Owned Public Space",
+    "description": "Cielo Apartments is a privately-owned public space in Seattle's First Hill neighborhood, providing neighborhood open space amenities. Built in 2012. Previously known as Seneca Towers.",
+    "location": {
+      "address": "(47.6095649, -122.3297)",
+      "coordinates": {
+        "lat": 47.6095649,
+        "lng": -122.3297
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "neighborhood open space",
+      "first hill"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "First Hill",
+    "features": [
+      "Neighborhood Open Space"
+    ],
+    "notes": "Built: 2012. Near: 8th & Seneca. Previous names: Seneca Towers",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/d46f4ca5-6750-45dd-867d-2f816635f11e"
+    ]
+  },
+  {
+    "id": "pops-one-two-union-square",
+    "name": "One/Two Union Square",
+    "type": "Privately Owned Public Space",
+    "description": "One/Two Union Square is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, setbacks, shopping arcade, shopping atrium amenities. Built in 1979.",
+    "location": {
+      "address": "(47.6100881, -122.33281)",
+      "coordinates": {
+        "lat": 47.6100881,
+        "lng": -122.33281
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, setbacks, shopping arcade, shopping atrium",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Setbacks, Shopping Arcade, Shopping Atrium"
+    ],
+    "notes": "Built: 1979. Near: 6th & Union",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/7d5c2acc-4605-45f1-ab6c-6b6663d8831d"
+    ]
+  },
+  {
+    "id": "pops-wa-state-convention-center",
+    "name": "WA State Convention Center",
+    "type": "Privately Owned Public Space",
+    "description": "WA State Convention Center is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, shopping arcade (galleria) amenities. Built in 1990.",
+    "location": {
+      "address": "(47.6115035, -122.33219)",
+      "coordinates": {
+        "lat": 47.6115035,
+        "lng": -122.33219
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, shopping arcade (galleria)",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Shopping Arcade (Galleria)"
+    ],
+    "notes": "Built: 1990. Near: 7th & Pike",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/f5eb5aea-dbd7-4b81-bb7b-c042e0cfedf6"
+    ]
+  },
+  {
+    "id": "pops-westin-building",
+    "name": "Westin Building",
+    "type": "Privately Owned Public Space",
+    "description": "Westin Building is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza amenities. Built in 1982.",
+    "location": {
+      "address": "(47.6143481, -122.33884)",
+      "coordinates": {
+        "lat": 47.6143481,
+        "lng": -122.33884
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza"
+    ],
+    "notes": "Built: 1982. Near: 6th & Virginia",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/26259111-b51c-4284-bb77-58e8d814f24d"
+    ]
+  },
+  {
+    "id": "pops-van-vorst-building-amazon",
+    "name": "Van Vorst Building (Amazon)",
+    "type": "Privately Owned Public Space",
+    "description": "Van Vorst Building (Amazon) is a privately-owned public space in Seattle's SLU neighborhood, providing plaza amenities. Built in 2005. Previously known as Block 102, Amazon Phase 1A.",
+    "location": {
+      "address": "(47.6226246, -122.33676)",
+      "coordinates": {
+        "lat": 47.6226246,
+        "lng": -122.33676
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza",
+      "slu"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "SLU",
+    "features": [
+      "Plaza"
+    ],
+    "notes": "Built: 2005. Near: Terry & Republican. Previous names: Block 102, Amazon Phase 1A",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/bf7a8273-557a-4150-bd18-90bfc6145ec5"
+    ]
+  },
+  {
+    "id": "pops-park-place",
+    "name": "Park Place",
+    "type": "Privately Owned Public Space",
+    "description": "Park Place is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, arcade amenities. Built in 1971.",
+    "location": {
+      "address": "(47.6090297, -122.33206)",
+      "coordinates": {
+        "lat": 47.6090297,
+        "lng": -122.33206
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Arcade"
+    ],
+    "notes": "Built: 1971. Near: 6th & Seneca",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/6e5350e4-7063-4fde-880b-313e742f46f9"
+    ]
+  },
+  {
+    "id": "pops-crowne-plaza-hotel",
+    "name": "Crowne Plaza Hotel",
+    "type": "Privately Owned Public Space",
+    "description": "Crowne Plaza Hotel is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, arcade amenities. Built in 1973. Previously known as Park Hilton.",
+    "location": {
+      "address": "(47.6080525, -122.33189)",
+      "coordinates": {
+        "lat": 47.6080525,
+        "lng": -122.33189
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Arcade"
+    ],
+    "notes": "Built: 1973. Near: 6th & Seneca. Previous names: Park Hilton",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/630acd73-29db-4ae7-8922-b700127c86f4"
+    ]
+  },
+  {
+    "id": "pops-1600-seventh",
+    "name": "1600 Seventh",
+    "type": "Privately Owned Public Space",
+    "description": "1600 Seventh is a privately-owned public space in Seattle's Downtown neighborhood, providing green st setbacks, arcade amenities. Built in 1973. Previously known as CenturyLink Plaza, Quest Plaza, Bell Plaza.",
+    "location": {
+      "address": "(47.6135625, -122.33472)",
+      "coordinates": {
+        "lat": 47.6135625,
+        "lng": -122.33472
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "green st setbacks, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Green St Setbacks, Arcade"
+    ],
+    "notes": "Built: 1973. Near: 7th & Pine. Previous names: CenturyLink Plaza, Quest Plaza, Bell Plaza",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/a1152dea-2f35-4b79-8e86-3b3c8bcd006a"
+    ]
+  },
+  {
+    "id": "pops-8th-olive",
+    "name": "8th + Olive",
+    "type": "Privately Owned Public Space",
+    "description": "8th + Olive is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza amenities. Built in 1981. Previously known as Marsh & McLennan Building.",
+    "location": {
+      "address": "(47.6142306, -122.33476)",
+      "coordinates": {
+        "lat": 47.6142306,
+        "lng": -122.33476
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza"
+    ],
+    "notes": "Built: 1981. Near: 8th & Olive. Previous names: Marsh & McLennan Building",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/e0689240-23cd-430c-a6c1-ba6877d6d740"
+    ]
+  },
+  {
+    "id": "pops-plaza-600",
+    "name": "Plaza 600",
+    "type": "Privately Owned Public Space",
+    "description": "Plaza 600 is a privately-owned public space in Seattle's Downtown neighborhood, providing setbacks, arcade amenities. Built in 1969.",
+    "location": {
+      "address": "(47.614032, -122.33719)",
+      "coordinates": {
+        "lat": 47.614032,
+        "lng": -122.33719
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "setbacks, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Setbacks, Arcade"
+    ],
+    "notes": "Built: 1969. Near: 6th & Stewart",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/6975198c-8805-4cf3-b254-562ed163b896"
+    ]
+  },
+  {
+    "id": "pops-us-bank-centre",
+    "name": "US Bank Centre",
+    "type": "Privately Owned Public Space",
+    "description": "US Bank Centre is a privately-owned public space in Seattle's Downtown neighborhood, providing public atrium, shopping corridor, shopping atrium amenities. Built in 1986. Previously known as Pacific First Center, City Centre.",
+    "location": {
+      "address": "(47.6105424, -122.33468)",
+      "coordinates": {
+        "lat": 47.6105424,
+        "lng": -122.33468
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "public atrium, shopping corridor, shopping atrium",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Public Atrium, Shopping Corridor, Shopping Atrium"
+    ],
+    "notes": "Built: 1986. Near: 5th & Pike. Previous names: Pacific First Center, City Centre",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/d77f51dd-94ec-4d2d-922d-9c7f98296e73"
+    ]
+  },
+  {
+    "id": "pops-century-square",
+    "name": "Century Square",
+    "type": "Privately Owned Public Space",
+    "description": "Century Square is a privately-owned public space in Seattle's Downtown neighborhood, providing shopping arcade amenities. Built in 1983.",
+    "location": {
+      "address": "(47.6104009, -122.3381)",
+      "coordinates": {
+        "lat": 47.6104009,
+        "lng": -122.3381
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "shopping arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Shopping Arcade"
+    ],
+    "notes": "Built: 1983. Near: 4th & Pike",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/a5960838-7315-4446-9479-88d8616208d8"
+    ]
+  },
+  {
+    "id": "pops-benaroya-hall",
+    "name": "Benaroya Hall",
+    "type": "Privately Owned Public Space",
+    "description": "Benaroya Hall is a privately-owned public space in Seattle's Downtown neighborhood, providing hillside terrace, transit access, street-level garden amenities. Built in 1995.",
+    "location": {
+      "address": "(47.6075664, -122.33698)",
+      "coordinates": {
+        "lat": 47.6075664,
+        "lng": -122.33698
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "hillside terrace, transit access, street-level garden",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Hillside Terrace, Transit Access, Street-Level Garden"
+    ],
+    "notes": "Built: 1995. Near: 2nd & University",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/360c2f51-b835-4e60-8755-79bb80682505"
+    ]
+  },
+  {
+    "id": "pops-seattle-art-museum",
+    "name": "Seattle Art Museum",
+    "type": "Privately Owned Public Space",
+    "description": "Seattle Art Museum is a privately-owned public space in Seattle's Downtown neighborhood, providing hillside terrace amenities. Built in 1991.",
+    "location": {
+      "address": "(47.6072142, -122.33767)",
+      "coordinates": {
+        "lat": 47.6072142,
+        "lng": -122.33767
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "hillside terrace",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Hillside Terrace"
+    ],
+    "notes": "Built: 1991. Near: 1st & University",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/a128e2e4-13e4-4c89-9f3e-e3de746b396c"
+    ]
+  },
+  {
+    "id": "pops-four-seasons-hotel",
+    "name": "Four Seasons Hotel",
+    "type": "Privately Owned Public Space",
+    "description": "Four Seasons Hotel is a privately-owned public space in Seattle's Downtown neighborhood, providing hillclimb assist, retail amenities. Built in 2005.",
+    "location": {
+      "address": "(47.6073756, -122.33917)",
+      "coordinates": {
+        "lat": 47.6073756,
+        "lng": -122.33917
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "hillclimb assist, retail",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Hillclimb Assist, Retail"
+    ],
+    "notes": "Built: 2005. Near: 1st & Union",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/27e6fb1e-0c3e-4432-b0fe-2b9f007d5617"
+    ]
+  },
+  {
+    "id": "pops-1201-3rd-ave",
+    "name": "1201 3rd Ave",
+    "type": "Privately Owned Public Space",
+    "description": "1201 3rd Ave is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, public atrium, hillclimb assist, transit access, rooftop garden amenities. Built in 1990. Previously known as WAMU Tower, Block Five.",
+    "location": {
+      "address": "(47.6071864, -122.33619)",
+      "coordinates": {
+        "lat": 47.6071864,
+        "lng": -122.33619
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, public atrium, hillclimb assist, transit access, rooftop garden",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Public Atrium, Hillclimb Assist, Transit Access, Rooftop Garden"
+    ],
+    "notes": "Built: 1990. Near: 2nd & Seneca. Previous names: WAMU Tower, Block Five",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/eeabde44-4cdb-41a4-bf7a-7fa56b6eb03d"
+    ]
+  },
+  {
+    "id": "pops-fourth-blanchard-building",
+    "name": "Fourth & Blanchard Building",
+    "type": "Privately Owned Public Space",
+    "description": "Fourth & Blanchard Building is a privately-owned public space in Seattle's Belltown neighborhood, providing plaza, green street setbacks amenities. Built in 1977. Previously known as Sedgwick James Building, \"Darth Vader\" Building.",
+    "location": {
+      "address": "(47.6137881, -122.34185)",
+      "coordinates": {
+        "lat": 47.6137881,
+        "lng": -122.34185
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, green street setbacks",
+      "belltown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Belltown",
+    "features": [
+      "Plaza, Green Street Setbacks"
+    ],
+    "notes": "Built: 1977. Near: 4th & Lenora. Previous names: Sedgwick James Building, \"Darth Vader\" Building",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/5a0780d0-73dc-4c5c-bab5-7c831e154f14"
+    ]
+  },
+  {
+    "id": "pops-sixth-lenora-building",
+    "name": "Sixth & Lenora Building",
+    "type": "Privately Owned Public Space",
+    "description": "Sixth & Lenora Building is a privately-owned public space in Seattle's Downtown neighborhood, providing plaza, setbacks, arcade amenities. Built in 1963. Previously known as United Airlines Bldg.",
+    "location": {
+      "address": "(47.6147682, -122.33935)",
+      "coordinates": {
+        "lat": 47.6147682,
+        "lng": -122.33935
+      }
+    },
+    "contact": {
+      "website": "http://www.seattle.gov/sdci/resources/privately-owned-public-spaces"
+    },
+    "organization": "Seattle Department of Construction and Inspections",
+    "tags": [
+      "public space",
+      "privately owned",
+      "plaza, setbacks, arcade",
+      "downtown"
+    ],
+    "accessibility": "Public access during business hours",
+    "neighborhood": "Downtown",
+    "features": [
+      "Plaza, Setbacks, Arcade"
+    ],
+    "notes": "Built: 1963. Near: 6th & Lenora. Previous names: United Airlines Bldg",
+    "links": [
+      "https://cos-data.seattle.gov/views/ajvs-k55z/files/edcbf667-3eee-46ee-b893-a35eac970290"
+    ]
+  }
+]

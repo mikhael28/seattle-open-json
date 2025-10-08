@@ -1,0 +1,1149 @@
+[
+  {
+    "id": "community-center-hutchinson-community-center-755",
+    "name": "Hutchinson Community Center",
+    "type": "Community Center",
+    "description": "Hutchinson Community Center is a community center in Seattle's  neighborhood.",
+    "location": "3801 S Pilgrim St",
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      ""
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "",
+    "notes": "Park District: SE PMD2"
+  },
+  {
+    "id": "community-center-langston-hughes-cultural-arts-center-756",
+    "name": "Langston Hughes Cultural Arts Center",
+    "type": "Community Center",
+    "description": "Langston Hughes Cultural Arts Center is a community center in Seattle's C neighborhood.",
+    "location": "104  17th Ave S",
+    "contact": {
+      "phone": "684-4757"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "c"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "C",
+    "notes": "Status: Closed. Park District: CE PMD3"
+  },
+  {
+    "id": "community-center-bitter-lake-community-center-757",
+    "name": "Bitter Lake Community Center",
+    "type": "Community Center",
+    "description": "Bitter Lake Community Center is a community center in Seattle's NW neighborhood.",
+    "location": "13035 Linden Ave N",
+    "contact": {
+      "phone": "684-7524"
+    },
+    "schedule": [
+      {
+        "day": "Sunday",
+        "hours": "10am-5pm"
+      },
+      {
+        "day": "Monday",
+        "hours": "8am-9pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8am-9pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8am-9pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8am-9pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "8am-7pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "8am-7pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "nw"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "NW",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NW PMD6. Total weekly hours: 81"
+  },
+  {
+    "id": "community-center-lake-city-community-center-758",
+    "name": "Lake City Community Center",
+    "type": "Community Center",
+    "description": "Lake City Community Center is a community center in Seattle's NE neighborhood. CLOSED",
+    "location": "12531 28th Ave NE",
+    "contact": {
+      "phone": "(206) 256-5645"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ne"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "NE",
+    "notes": "Status: Closed. Operational Status: Closed. Park District: NE PMD4/5"
+  },
+  {
+    "id": "community-center-meadowbrook-community-center-759",
+    "name": "Meadowbrook Community Center",
+    "type": "Community Center",
+    "description": "Meadowbrook Community Center is a community center in Seattle's N neighborhood.",
+    "location": "10517 35th Ave NE",
+    "contact": {
+      "phone": "684-7522"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "8:30am-8:30pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30am-8:30pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30am-8:30pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30am-8:30pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30am-8:30pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "n"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "N",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NE PMD4/5. Total weekly hours: 53"
+  },
+  {
+    "id": "community-center-magnuson-community-center-760",
+    "name": "Magnuson Community Center",
+    "type": "Community Center",
+    "description": "Magnuson Community Center is a community center in Seattle's NE neighborhood.",
+    "location": "7110 62nd Ave NE",
+    "contact": {
+      "phone": "684-7026"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "2-9pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "2-9pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "2-9pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ne"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "NE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NE PMD4/5. Total weekly hours: 53"
+  },
+  {
+    "id": "community-center-ravenna-eckstein-community-center-761",
+    "name": "Ravenna-Eckstein Community Center",
+    "type": "Community Center",
+    "description": "Ravenna-Eckstein Community Center is a community center in Seattle's NE neighborhood.",
+    "location": "6535 Ravenna Ave NE",
+    "contact": {
+      "phone": "684-7534"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "12:30-8pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "12:30-8pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "12:30-8pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "12:30-8pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "12:30-7:30pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ne"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "NE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NE PMD4/5. Total weekly hours: 45"
+  },
+  {
+    "id": "community-center-laurelhurst-community-center-762",
+    "name": "Laurelhurst Community Center",
+    "type": "Community Center",
+    "description": "Laurelhurst Community Center is a community center in Seattle's NE neighborhood.",
+    "location": "4554 NE 41st St",
+    "contact": {
+      "phone": "684-7529"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "2-7pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9am-2pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "2-7pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9am-2pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "2-7pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ne"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "NE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NE PMD4/5. Total weekly hours: 25"
+  },
+  {
+    "id": "community-center-green-lake-community-center-763",
+    "name": "Green Lake Community Center",
+    "type": "Community Center",
+    "description": "Green Lake Community Center is a community center in Seattle's NW neighborhood.",
+    "location": "7201 E Green Lake Dr N",
+    "contact": {
+      "phone": "684-0780"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "10am-9pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10am-9pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10am-9pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10am-9pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "10am-9pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "8:30am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "nw"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "NW",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NW PMD6. Total weekly hours: 63.5"
+  },
+  {
+    "id": "community-center-loyal-heights-community-center-764",
+    "name": "Loyal Heights Community Center",
+    "type": "Community Center",
+    "description": "Loyal Heights Community Center is a community center in Seattle's B neighborhood.",
+    "location": "2101 NW 77th St",
+    "contact": {
+      "phone": "684-4052"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "9am-9pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9am-7:30pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9am-9pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9am-7:30pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "9am-9pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "b"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "B",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NW PMD6. Total weekly hours: 57"
+  },
+  {
+    "id": "community-center-ballard-community-center-765",
+    "name": "Ballard Community Center",
+    "type": "Community Center",
+    "description": "Ballard Community Center is a community center in Seattle's B neighborhood.",
+    "location": "6020 - 28th Ave NW",
+    "contact": {
+      "phone": "684-4093"
+    },
+    "schedule": [
+      {
+        "day": "Sunday",
+        "hours": "9am-2pm"
+      },
+      {
+        "day": "Monday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "b"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "B",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NW PMD6. Total weekly hours: 68"
+  },
+  {
+    "id": "community-center-alki-community-center-766",
+    "name": "Alki Community Center",
+    "type": "Community Center",
+    "description": "Alki Community Center is a community center in Seattle's SW neighborhood. Closed - Childcare Only",
+    "location": "5817 SW Stevens St",
+    "contact": {
+      "phone": "206-684-4730"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "sw"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SW",
+    "notes": "Status: Closed. Operational Status: Closed. Park District: SW PMD1"
+  },
+  {
+    "id": "community-center-south-park-community-center-767",
+    "name": "South Park Community Center",
+    "type": "Community Center",
+    "description": "South Park Community Center is a community center in Seattle's SW neighborhood. Closed for Capital Improvement Project",
+    "location": "8319  8th Ave S",
+    "contact": {
+      "phone": "206-684-7451"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "sw"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SW",
+    "notes": "Status: Closed. Operational Status: Closed. Park District: SW PMD1"
+  },
+  {
+    "id": "community-center-hiawatha-community-center-768",
+    "name": "Hiawatha Community Center",
+    "type": "Community Center",
+    "description": "Hiawatha Community Center is a community center in Seattle's SW neighborhood. Closed for Capital Improvement Project",
+    "location": "2700 California Ave SW",
+    "contact": {
+      "phone": "206-684-7441"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "sw"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SW",
+    "notes": "Status: Closed. Operational Status: Closed. Park District: SW PMD1"
+  },
+  {
+    "id": "community-center-delridge-community-center-769",
+    "name": "Delridge Community Center",
+    "type": "Community Center",
+    "description": "Delridge Community Center is a community center in Seattle's SW neighborhood. Free Shower Site",
+    "location": "4501 Delridge Way SW",
+    "contact": {
+      "phone": "206-684-7423"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "8:30 AM - 8:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM - 8:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM - 8:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM - 8:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM - 8:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:30 AM - 6:00 PM"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "sw"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SW",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: SW PMD1. Total weekly hours: 66"
+  },
+  {
+    "id": "community-center-high-point-community-center-770",
+    "name": "High Point Community Center",
+    "type": "Community Center",
+    "description": "High Point Community Center is a community center in Seattle's SW neighborhood.",
+    "location": "6920  34th Ave SW",
+    "contact": {
+      "phone": "206-684-7422"
+    },
+    "schedule": [
+      {
+        "day": "Sunday",
+        "hours": "12:00 PM - 7:00 PM"
+      },
+      {
+        "day": "Monday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:00 AM - 5:00 PM"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "sw"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SW",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: SW PMD1. Total weekly hours: 70"
+  },
+  {
+    "id": "community-center-rainier-beach-community-center-771",
+    "name": "Rainier Beach Community Center",
+    "type": "Community Center",
+    "description": "Rainier Beach Community Center is a community center in Seattle's SE neighborhood. Late Night Site",
+    "location": "8825 Rainier Ave S",
+    "contact": {
+      "phone": "206-386-1925"
+    },
+    "schedule": [
+      {
+        "day": "Sunday",
+        "hours": "9:00 AM - 7:00 PM"
+      },
+      {
+        "day": "Monday",
+        "hours": "8:30 AM - 9:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8:30 AM - 9:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8:30 AM - 9:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8:30 AM - 9:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "8:30 AM - 7:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "8:30 AM 7:00 PM"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "se"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: SE PMD2. Total weekly hours: 81"
+  },
+  {
+    "id": "community-center-van-asselt-community-center-772",
+    "name": "Van Asselt Community Center",
+    "type": "Community Center",
+    "description": "Van Asselt Community Center is a community center in Seattle's SE neighborhood. Late Night Site",
+    "location": "2820 S Myrtle St",
+    "contact": {
+      "phone": "206-386-1921"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "12:00 PM - 8:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "11:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "12:00 PM - 8:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "11:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "12:00 PM - 7:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:00 AM - 5:00 PM"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "se"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: SC PMD2. Total weekly hours: 49"
+  },
+  {
+    "id": "community-center-rainier-community-center-773",
+    "name": "Rainier Community Center",
+    "type": "Community Center",
+    "description": "Rainier Community Center is a community center in Seattle's SE neighborhood. Late Night Site and Free Shower Site",
+    "location": "4600 38th Ave S",
+    "contact": {
+      "phone": "206-386-1919"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9:00 AM - 8:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 7:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:00 AM - 6:00 PM"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "se"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: SE PMD2. Total weekly hours: 63"
+  },
+  {
+    "id": "community-center-jefferson-park-community-center-774",
+    "name": "Jefferson Park Community Center",
+    "type": "Community Center",
+    "description": "Jefferson Park Community Center is a community center in Seattle's SE neighborhood.",
+    "location": "3801 Beacon Ave S",
+    "contact": {
+      "phone": "206-684-7481"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "9:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "9:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:00 AM - 5:00 PM"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "se"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "SE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: SC PMD2. Total weekly hours: 68"
+  },
+  {
+    "id": "community-center-queen-anne-community-center-775",
+    "name": "Queen Anne Community Center",
+    "type": "Community Center",
+    "description": "Queen Anne Community Center is a community center in Seattle's QAM neighborhood.",
+    "location": "1901 1st Ave W",
+    "contact": {
+      "phone": "386-4240"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "8am-7pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8am-7pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8am-7pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8am-7pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "8am-6pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "8am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "qam"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "QAM",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: CW PMD7. Total weekly hours: 63"
+  },
+  {
+    "id": "community-center-miller-community-center-776",
+    "name": "Miller Community Center",
+    "type": "Community Center",
+    "description": "Miller Community Center is a community center in Seattle's CH neighborhood. City Public Shower Site",
+    "location": "330 19th Ave E",
+    "contact": {
+      "phone": "684-4753"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "10am-830pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10am-830pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "10am-830pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10am-830pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "10am-800pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ch"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "CH",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: CE PMD3. Total weekly hours: 52"
+  },
+  {
+    "id": "community-center-yesler-community-center-777",
+    "name": "Yesler Community Center",
+    "type": "Community Center",
+    "description": "Yesler Community Center is a community center in Seattle's CH neighborhood.",
+    "location": "917  E Yesler Way",
+    "contact": {
+      "phone": "386-1245"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "715am-645pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "715am-645pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "715am-645pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "715am-645pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "715am-645pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "830am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ch"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "CH",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: CE PMD3. Total weekly hours: 66"
+  },
+  {
+    "id": "community-center-garfield-community-center-778",
+    "name": "Garfield Community Center",
+    "type": "Community Center",
+    "description": "Garfield Community Center is a community center in Seattle's C neighborhood.",
+    "location": "2323 E Cherry St",
+    "contact": {
+      "phone": "684-4788"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Saturday",
+        "hours": "10am-5pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "c"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "C",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: CE PMD3. Total weekly hours: 62"
+  },
+  {
+    "id": "community-center-southwest-community-center-779",
+    "name": "Southwest Community Center",
+    "type": "Community Center",
+    "description": "Southwest Community Center is a community center in Seattle's  neighborhood.",
+    "location": "2801 SW Thistle St",
+    "contact": {},
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      ""
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "",
+    "notes": "Park District: SW PMD1"
+  },
+  {
+    "id": "community-center-international-district-community-center-780",
+    "name": "International District Community Center",
+    "type": "Community Center",
+    "description": "International District Community Center is a community center in Seattle's Central neighborhood.",
+    "location": "718 8th Ave S",
+    "contact": {
+      "phone": "206-233-0042"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "11:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "10:30 AM - 7:00 PM"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "11:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Thursday",
+        "hours": "10:30 AM - 7:00 PM"
+      },
+      {
+        "day": "Friday",
+        "hours": "11:00 AM - 9:00 PM"
+      },
+      {
+        "day": "Saturday",
+        "hours": "9:00 AM - 5:00 PM"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "central"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "Central",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: DT PMD7. Total weekly hours: 55"
+  },
+  {
+    "id": "community-center-montlake-community-center-781",
+    "name": "Montlake Community Center",
+    "type": "Community Center",
+    "description": "Montlake Community Center is a community center in Seattle's CH neighborhood.",
+    "location": "1618 E Calhoun St",
+    "contact": {
+      "phone": "684-4736"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "8am-430pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "8am-430pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "8am-430pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "8am-430pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "8am-4pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ch"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "CH",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: CE PMD3. Total weekly hours: 42"
+  },
+  {
+    "id": "community-center-northgate-community-center-782",
+    "name": "Northgate Community Center",
+    "type": "Community Center",
+    "description": "Northgate Community Center is a community center in Seattle's NE neighborhood.",
+    "location": "10510 5th Ave NE",
+    "contact": {
+      "phone": "684-7068"
+    },
+    "schedule": [
+      {
+        "day": "Monday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Tuesday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Wednesday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Thursday",
+        "hours": "9am-8pm"
+      },
+      {
+        "day": "Friday",
+        "hours": "9am-8pm"
+      }
+    ],
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "ne"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "NE",
+    "notes": "Status: Year-round. Operational Status: Open Regular Hours. Park District: NE PMD4/5. Total weekly hours: 55"
+  },
+  {
+    "id": "community-center-magnolia-community-center-783",
+    "name": "Magnolia Community Center",
+    "type": "Community Center",
+    "description": "Magnolia Community Center is a community center in Seattle's QAM neighborhood. Closed for Construction until approx. Fall 2025",
+    "location": "2550  34th Ave W",
+    "contact": {
+      "phone": "386-4235"
+    },
+    "organization": "Seattle Parks and Recreation",
+    "tags": [
+      "community center",
+      "recreation",
+      "programs",
+      "qam"
+    ],
+    "accessibility": "Contact center for accessibility information",
+    "features": [],
+    "neighborhood": "QAM",
+    "notes": "Status: Year-round. Operational Status: Closed. Park District: CW PMD7. Total weekly hours: 63"
+  }
+]
