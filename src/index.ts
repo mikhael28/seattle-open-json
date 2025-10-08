@@ -28,6 +28,13 @@ export type { YouthProgram } from "./data/youth-programs";
 export type { EmeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
 export type { ParksCatalog } from "./data/parks-catalog";
 
+// Export permit data interfaces
+export type {
+  BuildingPermit,
+  PlanComment,
+  PlanReview,
+} from "./permit-data/permit-types";
+
 // Export Seattle Civic Standard migration functions
 export {
   migrateAllSeattleData,
@@ -56,6 +63,11 @@ import { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces
 import { youth_programs } from "./data/youth-programs";
 import { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
 
+// Import permit data objects
+import { buildingPermits } from "./data/building-permits";
+import { planComments } from "./data/plan-comments";
+import { planReview } from "./data/plan-review";
+
 // Export individual data collections
 export { communityCenters } from "./data/community-centers";
 export { farmersMarkets } from "./data/farmers-markets";
@@ -66,6 +78,11 @@ export { picnicSites } from "./data/picnic-sites";
 export { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces";
 export { youth_programs } from "./data/youth-programs";
 export { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
+
+// Export permit data collections
+export { buildingPermits } from "./data/building-permits";
+export { planComments } from "./data/plan-comments";
+export { planReview } from "./data/plan-review";
 
 // Combined dataset with all opportunities
 export const allSeattleData = {
@@ -78,6 +95,9 @@ export const allSeattleData = {
   privatelyOwnedPublicSpaces,
   youth_programs,
   emeraldCityResourceGuide,
+  buildingPermits,
+  planComments,
+  planReview,
 };
 
 // Quick access arrays for different categories
@@ -116,6 +136,9 @@ export const packageMetadata = {
     privatelyOwnedPublicSpaces: privatelyOwnedPublicSpaces.length,
     youth_programs: youth_programs.length,
     emeraldCityResourceGuide: emeraldCityResourceGuide.length,
+    buildingPermits: buildingPermits.length,
+    planComments: planComments.length,
+    planReview: planReview.length,
     total: allOpportunities.length,
   },
   categories: [
@@ -129,12 +152,18 @@ export const packageMetadata = {
     "Public Spaces",
     "Youth Programs",
     "Community Resources",
+    "Building Permits",
+    "Plan Comments",
+    "Plan Review",
   ],
   lastUpdated: new Date().toISOString(),
 };
 
 // Seattle Civic Standard (SCS) pre-migrated data - NEW in v1.2.0
-import { migrateAllSeattleData, getAllMigratedEntities } from "./migrations/index";
+import {
+  migrateAllSeattleData,
+  getAllMigratedEntities,
+} from "./migrations/index";
 
 const _scsDataCache = migrateAllSeattleData();
 const _allEntitiesCache = getAllMigratedEntities();

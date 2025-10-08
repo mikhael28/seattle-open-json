@@ -1,6 +1,6 @@
 # Seattle Open JSON
 
-🏙️ A community-driven, hopefully one-day comprehensive collection of JSON data about youth initiatives, community resources, and recreational opportunities in the Seattle area.
+🏙️ A community-driven, open-source collection of information about the government officies and services provided by the City of Seattle, and other government entities & civil society organization in the Puget Sound region.
 
 ## 📋 Overview
 
@@ -16,19 +16,22 @@ npm install seattle-open-json
 
 ## 📊 Data Collections
 
-This package contains **9 datasets** with detailed information about Seattle's community resources, originally taken from the City of Seattle, the Emerald City Resource Guide, and scraped data from City of Seattle websites:
+This package contains **12 datasets** with detailed information about Seattle's community resources and permit data, originally taken from the City of Seattle, the Emerald City Resource Guide, and scraped data from City of Seattle websites:
 
-| Dataset                | Records | Description                                                                              |
-| ---------------------- | ------- | ---------------------------------------------------------------------------------------- |
-| **Community Centers**  | 27+     | Seattle Parks & Recreation community centers with schedules, amenities, and contact info |
-| **Farmers Markets**    | 20+     | Local farmers markets with locations, schedules, and vendor information                  |
-| **Parks Catalog**      | 2,200+  | Complete catalog of Seattle parks with facilities and amenities                          |
-| **Mobile Recreation**  | 150+    | Mobile recreation programming across Seattle neighborhoods                               |
-| **P-Patch Gardens**    | 90+     | Community gardens with plot information and contact details                              |
-| **Picnic Sites**       | 50+     | Reservable picnic areas with capacity and amenities                                      |
-| **Public Spaces**      | 40+     | Privately-owned public spaces available for community use                                |
-| **Youth Programs**     | 60+     | Comprehensive youth programs, activities, and opportunities                              |
-| **Emerald City Guide** | 480+    | Community resources and services directory                                               |
+| Dataset                | Records  | Description                                                                              |
+| ---------------------- | -------- | ---------------------------------------------------------------------------------------- |
+| **Community Centers**  | 27+      | Seattle Parks & Recreation community centers with schedules, amenities, and contact info |
+| **Farmers Markets**    | 20+      | Local farmers markets with locations, schedules, and vendor information                  |
+| **Parks Catalog**      | 2,200+   | Complete catalog of Seattle parks with facilities and amenities                          |
+| **Mobile Recreation**  | 150+     | Mobile recreation programming across Seattle neighborhoods                               |
+| **P-Patch Gardens**    | 90+      | Community gardens with plot information and contact details                              |
+| **Picnic Sites**       | 50+      | Reservable picnic areas with capacity and amenities                                      |
+| **Public Spaces**      | 40+      | Privately-owned public spaces available for community use                                |
+| **Youth Programs**     | 60+      | Comprehensive youth programs, activities, and opportunities                              |
+| **Emerald City Guide** | 480+     | Community resources and services directory                                               |
+| **Building Permits**   | 1,000+   | Building permit applications with project details, costs, and review timelines           |
+| **Plan Comments**      | 100,000+ | Plan review comments and corrections from permit review process                          |
+| **Plan Review**        | 800,000+ | Detailed plan review records with reviewer assignments and completion status             |
 
 ## 🌟 Seattle Civic Standard (SCS) - NEW in v1.2.0
 
@@ -64,12 +67,13 @@ import { scsData } from "seattle-open-json";
 const allEntities = scsData.getAllEntities();
 
 // Easy filtering - works the same way for ALL entity types
-const freePrograms = allEntities.filter(entity =>
+const freePrograms = allEntities.filter((entity) =>
   entity.cost?.toLowerCase().includes("free")
 );
 
-const teenActivities = allEntities.filter(entity =>
-  entity.ageRange?.includes("13") || entity.ageRange?.includes("teen")
+const teenActivities = allEntities.filter(
+  (entity) =>
+    entity.ageRange?.includes("13") || entity.ageRange?.includes("teen")
 );
 ```
 
@@ -199,6 +203,28 @@ const foodResources = emeraldCityResourceGuide.filter((resource) =>
 );
 ```
 
+### Analyzing Building Permits
+
+```typescript
+import { buildingPermits, planComments } from "seattle-open-json";
+
+// Find high-value residential projects
+const highValueResidential = buildingPermits.filter(
+  (permit) =>
+    permit.PermitClassMapped === "Residential" && permit.EstProjectCost > 500000
+);
+
+// Find permits with many review cycles (complex projects)
+const complexProjects = buildingPermits.filter(
+  (permit) => permit.NumberReviewCycles > 3
+);
+
+// Get all comments for a specific permit
+const permitComments = planComments.filter(
+  (comment) => comment.PermitNum === "6974203-CN"
+);
+```
+
 ## 🗂️ Available Exports
 
 ### Seattle Civic Standard (SCS) Data ⭐
@@ -228,6 +254,9 @@ Access the raw data in its original format:
 - `privatelyOwnedPublicSpaces` - Public spaces (POPS)
 - `youth_programs` - Youth programs and activities
 - `emeraldCityResourceGuide` - Community resources directory
+- `buildingPermits` - Building permit applications with project details
+- `planComments` - Plan review comments and corrections
+- `planReview` - Detailed plan review records
 
 ### Aggregated Collections
 
@@ -241,10 +270,13 @@ All interfaces are exported for type-safe development:
 
 ```typescript
 import type {
-  CivicEntity,           // SCS standard interface
+  CivicEntity, // SCS standard interface
   YouthProgram,
   CommunityCenter,
   FarmersMarket,
+  BuildingPermit, // Building permit data
+  PlanComment, // Plan review comments
+  PlanReview, // Plan review records
   // ... all other types
 } from "seattle-open-json";
 ```
@@ -265,6 +297,7 @@ console.log(packageMetadata.totalRecords);
 For developers working with the raw data formats, here are the original TypeScript interfaces:
 
 ### Youth Programs
+
 ```typescript
 interface YouthProgram {
   id: string;
@@ -284,6 +317,7 @@ interface YouthProgram {
 ```
 
 ### Community Centers
+
 ```typescript
 interface CommunityCenter {
   OBJECTID: number;
@@ -298,6 +332,7 @@ interface CommunityCenter {
 ```
 
 ### Farmers Markets
+
 ```typescript
 interface FarmersMarket {
   OBJECTID: number;
@@ -309,12 +344,13 @@ interface FarmersMarket {
   HOURS: string;
   WEBSITE: string;
   PHONE: string;
-  x: number;  // State Plane coordinates
-  y: number;  // State Plane coordinates
+  x: number; // State Plane coordinates
+  y: number; // State Plane coordinates
 }
 ```
 
 ### Emerald City Resource Guide
+
 ```typescript
 interface EmeraldCityResourceGuide {
   name: string;
