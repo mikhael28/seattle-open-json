@@ -13,11 +13,121 @@ interface ChatAssistantProps {
   context?: string; // Optional context about current module/task
 }
 
+type ToolCall = {
+  id: string;
+  function: {
+    name: string;
+    arguments: string;
+  };
+};
+
+type ConversationMessage = {
+  role: 'user' | 'assistant' | 'tool';
+  content: string;
+  name?: string;
+  tool_call_id?: string;
+  tool_calls?: ToolCall[];
+};
+
 const OPENAI_API_KEY_STORAGE = 'openai_api_key';
 const CHAT_HISTORY_STORAGE = 'chat_history';
+const MCP_SERVER_BASE_URL = 'http://localhost:3100';
+
+const toolDefinitions = [
+  {
+    type: 'function',
+    function: {
+      name: 'searchCivicEntities',
+      description:
+        'Search Seattle Civic Standard entities using keywords, entity types, tags, and neighborhoods.',
+      parameters: {
+        type: 'object',
+        properties: {
+          search: {
+            type: 'string',
+            description: 'Optional keyword term to match across entity data.',
+          },
+          type: {
+            type: ['string', 'array'],
+            items: { type: 'string' },
+            description:
+              'Entity type or list of types (e.g. Park, CommunityCenter).',
+          },
+          tags: {
+            type: ['string', 'array'],
+            items: { type: 'string' },
+            description: 'Single tag or list of tags to filter results.',
+          },
+          neighborhood: {
+            type: 'string',
+            description: 'Optional Seattle neighborhood name.',
+          },
+          limit: {
+            type: 'integer',
+            minimum: 1,
+            maximum: 100,
+            description: 'Maximum number of results to return (default 25).',
+          },
+        },
+      },
+    },
+  },
+  {
+    type: 'function',
+    function: {
+      name: 'searchActivities',
+      description:
+        'Find recreation activities, mobile programs, and youth opportunities by keyword.',
+      parameters: {
+        type: 'object',
+        properties: {
+          keyword: {
+            type: 'string',
+            description: 'Required search term (e.g. pottery, soccer).',
+          },
+          sources: {
+            type: 'array',
+            items: {
+              type: 'string',
+              enum: ['parksCatalog', 'mobileRecreationProgramming', 'youthPrograms'],
+            },
+            description:
+              'Optional list of sources to search (defaults to all sources).',
+          },
+          limit: {
+            type: 'integer',
+            minimum: 1,
+            maximum: 50,
+            description: 'Maximum number of activities to return (default 10).',
+          },
+        },
+        required: ['keyword'],
+      },
+    },
+  },
+  {
+    type: 'function',
+    function: {
+      name: 'getPermitDetails',
+      description:
+        'Fetch building permit records along with plan comments and review cycles by permit number.',
+      parameters: {
+        type: 'object',
+        properties: {
+          permitNumber: {
+            type: 'string',
+            description: 'Permit number identifier (e.g. 7019574-CN).',
+          },
+        },
+        required: ['permitNumber'],
+      },
+    },
+  },
+] as const;
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
   const [messages, setMessages] = useState<Message[]>([]);
+  const [conversation, setConversation] = useState<ConversationMessage[]>([]);
   const [input, setInput] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const [apiKey, setApiKey] = useState('');
@@ -38,9 +148,14 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
     if (savedHistory) {
       try {
         const parsed = JSON.parse(savedHistory);
-        setMessages(parsed.map((msg: any) => ({
+        const restoredMessages: Message[] = parsed.map((msg: any) => ({
           ...msg,
           timestamp: new Date(msg.timestamp)
+        }));
+        setMessages(restoredMessages);
+        setConversation(restoredMessages.map((msg) => ({
+          role: msg.role,
+          content: msg.content
         })));
       } catch (e) {
         console.error('Failed to parse chat history:', e);
@@ -77,6 +192,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
   const handleClearHistory = () => {
     if (window.confirm('Clear all chat history?')) {
       setMessages([]);
+      setConversation([]);
       localStorage.removeItem(CHAT_HISTORY_STORAGE);
     }
   };
@@ -97,16 +213,32 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
       timestamp: new Date()
     };
 
+    const trimmedInput = userMessage.content;
+
     setMessages(prev => [...prev, userMessage]);
+    const updatedHistory = [...conversation, { role: 'user', content: trimmedInput } as ConversationMessage];
+    setConversation(updatedHistory);
     setInput('');
     setIsLoading(true);
 
-    try {
-      const systemPrompt = `You are a helpful assistant specializing in Seattle ADU (Accessory Dwelling Unit) planning and permitting. 
+    const systemPrompt = `You are a helpful assistant specializing in Seattle ADU (Accessory Dwelling Unit) planning and permitting. 
 You help users navigate the complex process of planning, designing, and permitting ADUs in Seattle.
 ${context ? `Current context: ${context}` : ''}
 
+You can call provided functions to look up Seattle Civic Standard data, recreation activities, and permit records. Use them whenever the user requests data you can retrieve via these tools.
 Provide clear, actionable advice. Reference Seattle SDCI regulations when relevant. Be encouraging and supportive.`;
+
+    const callOpenAI = async (chatMessages: ConversationMessage[]) => {
+      const payloadMessages = [
+        { role: 'system', content: systemPrompt },
+        ...chatMessages.map((msg) => ({
+          role: msg.role,
+          content: msg.content,
+          name: msg.name,
+          tool_call_id: msg.tool_call_id,
+          tool_calls: msg.tool_calls
+        }))
+      ];
 
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
         method: 'POST',
@@ -116,82 +248,150 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
         },
         body: JSON.stringify({
           model: 'gpt-4o-mini',
-          messages: [
-            { role: 'system', content: systemPrompt },
-            ...messages.map(msg => ({
-              role: msg.role,
-              content: msg.content
-            })),
-            { role: 'user', content: userMessage.content }
-          ],
-          stream: true,
+          messages: payloadMessages,
           temperature: 0.7,
-          max_tokens: 1000
+          max_tokens: 1000,
+          tools: toolDefinitions,
+          tool_choice: 'auto'
         })
       });
 
       if (!response.ok) {
-        const error = await response.json();
-        throw new Error(error.error?.message || 'Failed to get response from OpenAI');
+        const errorText = await response.text();
+        throw new Error(errorText || 'Failed to get response from OpenAI');
       }
 
-      const reader = response.body?.getReader();
-      const decoder = new TextDecoder();
+      return response.json();
+    };
 
-      if (!reader) {
-        throw new Error('No response body');
+    try {
+      let workingConversation = [...updatedHistory];
+      const initialResponse = await callOpenAI(workingConversation);
+      const initialChoice = initialResponse?.choices?.[0];
+
+      if (!initialChoice?.message) {
+        throw new Error('OpenAI returned an empty response.');
       }
 
-      let assistantMessage: Message = {
-        id: (Date.now() + 1).toString(),
-        role: 'assistant',
-        content: '',
-        timestamp: new Date()
-      };
+      const initialMessage = initialChoice.message;
 
-      setMessages(prev => [...prev, assistantMessage]);
-
-      let done = false;
-      while (!done) {
-        const { value, done: doneReading } = await reader.read();
-        done = doneReading;
-
-        if (value) {
-          const chunk = decoder.decode(value);
-          const lines = chunk.split('\n').filter(line => line.trim() !== '');
-
-          for (const line of lines) {
-            if (line.startsWith('data: ')) {
-              const data = line.slice(6);
-              if (data === '[DONE]') {
-                done = true;
-                break;
-              }
-
-              try {
-                const parsed = JSON.parse(data);
-                const content = parsed.choices[0]?.delta?.content;
-                if (content) {
-                  assistantMessage.content += content;
-                  setMessages(prev => {
-                    const newMessages = [...prev];
-                    newMessages[newMessages.length - 1] = { ...assistantMessage };
-                    return newMessages;
-                  });
-                }
-              } catch (e) {
-                // Skip invalid JSON
-              }
+      if (initialMessage.tool_calls && initialMessage.tool_calls.length > 0) {
+        const assistantWithToolCalls: ConversationMessage = {
+          role: 'assistant',
+          content: initialMessage.content ?? '',
+          tool_calls: initialMessage.tool_calls.map((call: ToolCall) => ({
+            id: call.id,
+            function: {
+              name: call.function.name,
+              arguments: call.function.arguments
             }
-          }
+          }))
+        };
+
+        if (assistantWithToolCalls.content.trim().length > 0) {
+          const acknowledgement: Message = {
+            id: `${Date.now()}-ack`,
+            role: 'assistant',
+            content: assistantWithToolCalls.content,
+            timestamp: new Date()
+          };
+          setMessages(prev => [...prev, acknowledgement]);
         }
+
+        workingConversation = [...workingConversation, assistantWithToolCalls];
+
+        for (const toolCall of initialMessage.tool_calls) {
+          const parsedArgs = (() => {
+            try {
+              return toolCall.function.arguments
+                ? JSON.parse(toolCall.function.arguments)
+                : {};
+            } catch (err) {
+              throw new Error(`Failed to parse arguments for ${toolCall.function.name}`);
+            }
+          })();
+
+          const toolResponse = await fetch(`${MCP_SERVER_BASE_URL}/mcp/tools/${toolCall.function.name}`, {
+            method: 'POST',
+            headers: {
+              'Content-Type': 'application/json'
+            },
+            body: JSON.stringify(parsedArgs ?? {})
+          });
+
+          if (!toolResponse.ok) {
+            const errorPayload = await toolResponse.text();
+            throw new Error(`Tool ${toolCall.function.name} failed: ${errorPayload}`);
+          }
+
+          const toolPayload = await toolResponse.json();
+          const formattedToolContent = JSON.stringify(toolPayload.data ?? toolPayload, null, 2);
+
+          const toolMessage: ConversationMessage = {
+            role: 'tool',
+            content: formattedToolContent,
+            name: toolCall.function.name,
+            tool_call_id: toolCall.id
+          };
+
+          workingConversation = [...workingConversation, toolMessage];
+
+          const toolDisplay: Message = {
+            id: `${Date.now()}-${toolCall.id}`,
+            role: 'assistant',
+            content: `Tool result (${toolCall.function.name}):\n${formattedToolContent}`,
+            timestamp: new Date()
+          };
+          setMessages(prev => [...prev, toolDisplay]);
+        }
+
+        const finalResponse = await callOpenAI(workingConversation);
+        const finalChoice = finalResponse?.choices?.[0];
+
+        if (!finalChoice?.message?.content) {
+          throw new Error('OpenAI failed to produce a final response after tool calls.');
+        }
+
+        const finalAssistant: Message = {
+          id: `${Date.now()}-final`,
+          role: 'assistant',
+          content: finalChoice.message.content,
+          timestamp: new Date()
+        };
+
+        setMessages(prev => [...prev, finalAssistant]);
+        workingConversation = [...workingConversation, {
+          role: 'assistant',
+          content: finalChoice.message.content
+        }];
+      } else {
+        const finalContent = (initialMessage.content ?? '').trim();
+
+        if (finalContent.length === 0) {
+          throw new Error('Assistant returned an empty response.');
+        }
+
+        const assistantReply: Message = {
+          id: `${Date.now()}-final`,
+          role: 'assistant',
+          content: finalContent,
+          timestamp: new Date()
+        };
+
+        setMessages(prev => [...prev, assistantReply]);
+        workingConversation = [...workingConversation, {
+          role: 'assistant',
+          content: finalContent
+        }];
       }
+
+      setConversation(workingConversation);
     } catch (error) {
-      console.error('Error calling OpenAI:', error);
+      console.error('Error handling chat flow:', error);
       const errorMessage: Message = {
         id: (Date.now() + 1).toString(),
         role: 'assistant',
-        content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : 'Unknown error'}. Please check your API key and try again.`,
+        content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : 'Unknown error'}. Please check your API key and local MCP server.`,
         timestamp: new Date()
       };
       setMessages(prev => [...prev, errorMessage]);
