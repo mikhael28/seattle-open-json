@@ -7,6 +7,10 @@ interface Message {
   role: 'user' | 'assistant';
   content: string;
   timestamp: Date;
+  kind?: 'text' | 'toolResult';
+  toolName?: string;
+  toolData?: unknown;
+  rawToolOutput?: string;
 }
 
 interface ChatAssistantProps {
@@ -15,6 +19,7 @@ interface ChatAssistantProps {
 
 type ToolCall = {
   id: string;
+  type: 'function';
   function: {
     name: string;
     arguments: string;
@@ -155,7 +160,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
         setMessages(restoredMessages);
         setConversation(restoredMessages.map((msg) => ({
           role: msg.role,
-          content: msg.content
+          content: msg.rawToolOutput ?? msg.content
         })));
       } catch (e) {
         console.error('Failed to parse chat history:', e);
@@ -210,7 +215,8 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
       id: Date.now().toString(),
       role: 'user',
       content: input.trim(),
-      timestamp: new Date()
+      timestamp: new Date(),
+      kind: 'text'
     };
 
     const trimmedInput = userMessage.content;
@@ -231,13 +237,33 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
     const callOpenAI = async (chatMessages: ConversationMessage[]) => {
       const payloadMessages = [
         { role: 'system', content: systemPrompt },
-        ...chatMessages.map((msg) => ({
-          role: msg.role,
-          content: msg.content,
-          name: msg.name,
-          tool_call_id: msg.tool_call_id,
-          tool_calls: msg.tool_calls
-        }))
+        ...chatMessages.map((msg) => {
+          const payload: Record<string, unknown> = {
+            role: msg.role,
+            content: msg.content
+          };
+
+          if (msg.name) {
+            payload.name = msg.name;
+          }
+
+          if (msg.tool_call_id) {
+            payload.tool_call_id = msg.tool_call_id;
+          }
+
+          if (msg.tool_calls) {
+            payload.tool_calls = msg.tool_calls.map((call) => ({
+              id: call.id,
+              type: call.type,
+              function: {
+                name: call.function.name,
+                arguments: call.function.arguments
+              }
+            }));
+          }
+
+          return payload;
+        })
       ];
 
       const response = await fetch('https://api.openai.com/v1/chat/completions', {
@@ -279,8 +305,9 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
         const assistantWithToolCalls: ConversationMessage = {
           role: 'assistant',
           content: initialMessage.content ?? '',
-          tool_calls: initialMessage.tool_calls.map((call: ToolCall) => ({
+          tool_calls: initialMessage.tool_calls.map((call: any) => ({
             id: call.id,
+            type: (call.type ?? 'function') as 'function',
             function: {
               name: call.function.name,
               arguments: call.function.arguments
@@ -293,7 +320,8 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
             id: `${Date.now()}-ack`,
             role: 'assistant',
             content: assistantWithToolCalls.content,
-            timestamp: new Date()
+            timestamp: new Date(),
+            kind: 'text'
           };
           setMessages(prev => [...prev, acknowledgement]);
         }
@@ -339,8 +367,12 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
           const toolDisplay: Message = {
             id: `${Date.now()}-${toolCall.id}`,
             role: 'assistant',
-            content: `Tool result (${toolCall.function.name}):\n${formattedToolContent}`,
-            timestamp: new Date()
+            content: `Tool result (${toolCall.function.name})`,
+            timestamp: new Date(),
+            kind: 'toolResult',
+            toolName: toolCall.function.name,
+            toolData: toolPayload.data ?? toolPayload,
+            rawToolOutput: formattedToolContent
           };
           setMessages(prev => [...prev, toolDisplay]);
         }
@@ -356,7 +388,8 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
           id: `${Date.now()}-final`,
           role: 'assistant',
           content: finalChoice.message.content,
-          timestamp: new Date()
+          timestamp: new Date(),
+          kind: 'text'
         };
 
         setMessages(prev => [...prev, finalAssistant]);
@@ -375,7 +408,8 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
           id: `${Date.now()}-final`,
           role: 'assistant',
           content: finalContent,
-          timestamp: new Date()
+          timestamp: new Date(),
+          kind: 'text'
         };
 
         setMessages(prev => [...prev, assistantReply]);
@@ -392,7 +426,8 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
         id: (Date.now() + 1).toString(),
         role: 'assistant',
         content: `Sorry, I encountered an error: ${error instanceof Error ? error.message : 'Unknown error'}. Please check your API key and local MCP server.`,
-        timestamp: new Date()
+        timestamp: new Date(),
+        kind: 'text'
       };
       setMessages(prev => [...prev, errorMessage]);
     } finally {
@@ -480,7 +515,11 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
           </div>
         )}
 
-        {messages.map((message) => (
+        {messages.map((message) => {
+          const isToolResult = message.kind === 'toolResult';
+          const messageTimestamp = message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
+
+          return (
           <div
             key={message.id}
             className={`flex gap-3 ${message.role === 'user' ? 'flex-row-reverse' : 'flex-row'}`}
@@ -497,19 +536,42 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
               )}
             </div>
             <div className={`flex-1 ${message.role === 'user' ? 'text-right' : 'text-left'}`}>
-              <div className={`inline-block max-w-[85%] px-4 py-2 rounded-2xl ${
-                message.role === 'user'
-                  ? 'bg-blue-600 text-white'
-                  : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
-              }`}>
-                <p className="text-sm whitespace-pre-wrap break-words">{message.content}</p>
-              </div>
+              {isToolResult ? (
+                <div className="inline-block max-w-[85%] text-left">
+                  <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm overflow-hidden">
+                    <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex items-center justify-between">
+                      <div className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">
+                        Tool Result
+                      </div>
+                      {message.toolName && (
+                        <span className="text-xs text-gray-500 dark:text-gray-400">
+                          {message.toolName}
+                        </span>
+                      )}
+                    </div>
+                    <div className="px-4 py-3 text-left">
+                      <pre className="text-xs text-gray-700 dark:text-gray-200 whitespace-pre-wrap break-words max-h-60 overflow-y-auto">
+                        {message.rawToolOutput ?? JSON.stringify(message.toolData, null, 2)}
+                      </pre>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className={`inline-block max-w-[85%] px-4 py-2 rounded-2xl ${
+                  message.role === 'user'
+                    ? 'bg-blue-600 text-white'
+                    : 'bg-gray-100 dark:bg-gray-800 text-gray-900 dark:text-gray-100'
+                }`}>
+                  <p className="text-sm whitespace-pre-wrap break-words">{message.content}</p>
+                </div>
+              )}
               <p className="text-xs text-gray-400 dark:text-gray-500 mt-1 px-1">
-                {message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' })}
+                {messageTimestamp}
               </p>
             </div>
           </div>
-        ))}
+        );
+        })}
 
         {isLoading && (
           <div className="flex gap-3">
