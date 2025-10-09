@@ -1,6 +1,25 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Settings, X, Loader2, Bot, User } from 'lucide-react';
+import { Send, Settings, Loader2, Bot, User, Maximize2, Minimize2 } from 'lucide-react';
 import { Button } from './ui/button';
+import type { CivicEntity, BuildingPermit, PlanComment, PlanReview } from 'seattle-open-json';
+
+interface ActivityResult {
+  source: 'parksCatalog' | 'mobileRecreationProgramming' | 'youthPrograms';
+  title: string;
+  summary?: string;
+  location?: string;
+  schedule?: string;
+  cost?: string;
+  url?: string;
+  metadata?: Record<string, unknown>;
+}
+
+interface PermitDetails {
+  permitNumber: string;
+  buildingPermit?: BuildingPermit;
+  planComments: PlanComment[];
+  planReviews: PlanReview[];
+}
 
 interface Message {
   id: string;
@@ -11,6 +30,7 @@ interface Message {
   toolName?: string;
   toolData?: unknown;
   rawToolOutput?: string;
+  toolMeta?: unknown;
 }
 
 interface ChatAssistantProps {
@@ -138,6 +158,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
   const [apiKey, setApiKey] = useState('');
   const [showSettings, setShowSettings] = useState(false);
   const [tempApiKey, setTempApiKey] = useState('');
+  const [isFullscreen, setIsFullscreen] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const textareaRef = useRef<HTMLTextAreaElement>(null);
 
@@ -167,6 +188,20 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
       }
     }
   }, []);
+
+  useEffect(() => {
+    if (!isFullscreen) {
+      document.body.style.overflow = '';
+      return;
+    }
+
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousOverflow;
+    };
+  }, [isFullscreen]);
 
   // Save chat history to localStorage
   useEffect(() => {
@@ -372,6 +407,7 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
             kind: 'toolResult',
             toolName: toolCall.function.name,
             toolData: toolPayload.data ?? toolPayload,
+            toolMeta: toolPayload.meta,
             rawToolOutput: formattedToolContent
           };
           setMessages(prev => [...prev, toolDisplay]);
@@ -442,8 +478,374 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
     }
   };
 
+  const renderCivicEntityCard = (entity: CivicEntity) => {
+    const location = typeof entity.location === 'string' ? entity.location : entity.location?.address;
+    const coordinates =
+      typeof entity.location === 'object' && entity.location?.coordinates
+        ? `${entity.location.coordinates.lat.toFixed(4)}, ${entity.location.coordinates.lng.toFixed(4)}`
+        : undefined;
+    const contactSegments = [entity.contact?.phone ?? '--', entity.contact?.email ?? '--', entity.contact?.website ?? '--'].filter(Boolean);
+
+    console.log(entity);
+
+    return (
+      <div
+        key={entity.id}
+        className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm"
+      >
+        <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex flex-wrap items-start justify-between gap-3">
+          <div>
+            <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">{entity.name}</p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">{entity.type}</p>
+          </div>
+          {entity.neighborhood && (
+            <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-200">
+              {entity.neighborhood}
+            </span>
+          )}
+        </div>
+        <div className="px-4 py-3 space-y-2 text-left text-sm text-gray-700 dark:text-gray-200">
+          {entity.description && (
+            <p className="text-sm leading-relaxed max-h-24 overflow-y-auto pr-1">{entity.description}</p>
+          )}
+          {(location || coordinates) && (
+            <div className="text-xs">
+              <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Location</p>
+              {location && <p className="mt-0.5 text-gray-700 dark:text-gray-200">{location}</p>}
+              {coordinates && <p className="text-gray-500 dark:text-gray-400">{coordinates}</p>}
+            </div>
+          )}
+          {contactSegments.length > 0 && (
+            <div className="text-xs">
+              <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Contact</p>
+              <p className="mt-0.5 text-gray-700 dark:text-gray-200 break-words">{contactSegments.join(' • ')}</p>
+            </div>
+          )}
+          {entity.tags?.length ? (
+            <div className="flex flex-wrap gap-1">
+              {entity.tags.slice(0, 6).map((tag) => (
+                <span
+                  key={tag}
+                  className="inline-flex items-center rounded-full bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200 px-2 py-0.5 text-[10px] font-medium"
+                >
+                  {tag}
+                </span>
+              ))}
+              {entity.tags.length > 6 && (
+                <span className="text-[10px] text-gray-500 dark:text-gray-400 px-2 py-0.5">
+                  +{entity.tags.length - 6} more
+                </span>
+              )}
+            </div>
+          ) : null}
+          {entity.cost && (
+            <div className="text-xs text-gray-600 dark:text-gray-300">
+              <span className="font-medium uppercase tracking-wide">Cost:</span> {entity.cost}
+            </div>
+          )}
+          {entity.ageRange && (
+            <div className="text-xs text-gray-600 dark:text-gray-300">
+              <span className="font-medium uppercase tracking-wide">Age Range:</span> {entity.ageRange}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  const renderActivityCard = (activity: ActivityResult, index: number) => {
+    const getSourceColor = (source: string) => {
+      switch (source) {
+        case 'parksCatalog':
+          return 'bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-200';
+        case 'mobileRecreationProgramming':
+          return 'bg-orange-100 text-orange-700 dark:bg-orange-900/40 dark:text-orange-200';
+        case 'youthPrograms':
+          return 'bg-purple-100 text-purple-700 dark:bg-purple-900/40 dark:text-purple-200';
+        default:
+          return 'bg-gray-100 text-gray-700 dark:bg-gray-900/40 dark:text-gray-200';
+      }
+    };
+
+    const getSourceLabel = (source: string) => {
+      switch (source) {
+        case 'parksCatalog':
+          return 'Parks Catalog';
+        case 'mobileRecreationProgramming':
+          return 'Mobile Recreation';
+        case 'youthPrograms':
+          return 'Youth Programs';
+        default:
+          return source;
+      }
+    };
+
+    return (
+      <div
+        key={`${activity.source}-${index}`}
+        className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm"
+      >
+        <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex flex-wrap items-start justify-between gap-3">
+          <div className="flex-1 min-w-0">
+            <p className="text-sm font-semibold text-gray-900 dark:text-gray-100 truncate">{activity.title}</p>
+            <span className={`text-xs px-2 py-1 rounded-full ${getSourceColor(activity.source)}`}>
+              {getSourceLabel(activity.source)}
+            </span>
+          </div>
+        </div>
+        <div className="px-4 py-3 space-y-2 text-left text-sm text-gray-700 dark:text-gray-200">
+          {activity.summary && (
+            <p className="text-sm leading-relaxed max-h-24 overflow-y-auto pr-1">{activity.summary}</p>
+          )}
+          {activity.location && (
+            <div className="text-xs">
+              <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Location</p>
+              <p className="mt-0.5 text-gray-700 dark:text-gray-200">{activity.location}</p>
+            </div>
+          )}
+          {activity.schedule && (
+            <div className="text-xs">
+              <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Schedule</p>
+              <p className="mt-0.5 text-gray-700 dark:text-gray-200">{activity.schedule}</p>
+            </div>
+          )}
+          {activity.cost && (
+            <div className="text-xs text-gray-600 dark:text-gray-300">
+              <span className="font-medium uppercase tracking-wide">Cost:</span> {activity.cost}
+            </div>
+          )}
+          {activity.url && (
+            <div className="text-xs">
+              <a
+                href={activity.url}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-blue-600 dark:text-blue-400 hover:underline"
+              >
+                Learn More →
+              </a>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  const renderPermitCard = (permitDetails: PermitDetails) => {
+    const { permitNumber, buildingPermit, planComments, planReviews } = permitDetails;
+
+    return (
+      <div className="rounded-xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm">
+        <div className="px-4 py-3 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60">
+          <div className="flex items-center justify-between">
+            <h3 className="text-sm font-semibold text-gray-900 dark:text-gray-100">Permit #{permitNumber}</h3>
+            <span className="text-xs px-2 py-1 rounded-full bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-200">
+              Building Permit
+            </span>
+          </div>
+        </div>
+        
+        <div className="px-4 py-3 space-y-4 text-left text-sm text-gray-700 dark:text-gray-200">
+          {buildingPermit ? (
+            <div className="space-y-2">
+              <div className="text-xs">
+                <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Status</p>
+                <p className="mt-0.5 text-gray-700 dark:text-gray-200">{buildingPermit.StatusCurrent || 'Unknown'}</p>
+              </div>
+              {buildingPermit.OriginalAddress1 && (
+                <div className="text-xs">
+                  <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Address</p>
+                  <p className="mt-0.5 text-gray-700 dark:text-gray-200">
+                    {buildingPermit.OriginalAddress1}
+                    {buildingPermit.OriginalCity && `, ${buildingPermit.OriginalCity}`}
+                  </p>
+                </div>
+              )}
+              {buildingPermit.IssuedDate && (
+                <div className="text-xs">
+                  <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Issued Date</p>
+                  <p className="mt-0.5 text-gray-700 dark:text-gray-200">{buildingPermit.IssuedDate}</p>
+                </div>
+              )}
+              {buildingPermit.CompletedDate && (
+                <div className="text-xs">
+                  <p className="font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">Completed Date</p>
+                  <p className="mt-0.5 text-gray-700 dark:text-gray-200">{buildingPermit.CompletedDate}</p>
+                </div>
+              )}
+            </div>
+          ) : (
+            <p className="text-xs text-gray-500 dark:text-gray-400">No building permit details found</p>
+          )}
+
+          {planComments.length > 0 && (
+            <div className="border-t border-gray-200 dark:border-gray-700 pt-3">
+              <p className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide mb-2">
+                Plan Comments ({planComments.length})
+              </p>
+              <div className="space-y-2 max-h-32 overflow-y-auto">
+                {planComments.slice(0, 3).map((comment, index) => (
+                  <div key={index} className="text-xs bg-gray-50 dark:bg-gray-900/50 p-2 rounded">
+                    <p className="font-medium text-gray-700 dark:text-gray-200">{comment.ReviewType || 'Comment'}</p>
+                    {comment.Comment && (
+                      <p className="mt-1 text-gray-600 dark:text-gray-300 line-clamp-2">{comment.Comment}</p>
+                    )}
+                  </div>
+                ))}
+                {planComments.length > 3 && (
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    +{planComments.length - 3} more comments
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
+
+          {planReviews.length > 0 && (
+            <div className="border-t border-gray-200 dark:border-gray-700 pt-3">
+              <p className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide mb-2">
+                Plan Reviews ({planReviews.length})
+              </p>
+              <div className="space-y-2 max-h-32 overflow-y-auto">
+                {planReviews.slice(0, 3).map((review, index) => (
+                  <div key={index} className="text-xs bg-gray-50 dark:bg-gray-900/50 p-2 rounded">
+                    <p className="font-medium text-gray-700 dark:text-gray-200">{review.ReviewType || 'Review'}</p>
+                    {review.ReviewResultDesc && (
+                      <p className="mt-1 text-gray-600 dark:text-gray-300">Result: {review.ReviewResultDesc}</p>
+                    )}
+                  </div>
+                ))}
+                {planReviews.length > 3 && (
+                  <p className="text-xs text-gray-500 dark:text-gray-400">
+                    +{planReviews.length - 3} more reviews
+                  </p>
+                )}
+              </div>
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  const renderToolResult = (message: Message) => {
+    // Render Civic Entities
+    if (message.toolName === 'searchCivicEntities') {
+      const entities = Array.isArray(message.toolData) ? (message.toolData as CivicEntity[]) : [];
+
+      return (
+        <div className="inline-block w-[85%] max-w-full text-left">
+          <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm overflow-hidden">
+            <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex items-center justify-between">
+              <div className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">
+                Civic Entities
+              </div>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {entities.length} result{entities.length === 1 ? '' : 's'}
+              </span>
+            </div>
+            <div className="px-4 py-3 space-y-3 max-h-64 overflow-y-auto">
+              {entities.length > 0 ? (
+                entities.map(renderCivicEntityCard)
+              ) : (
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  No civic entities found for the given filters.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Render Activities
+    if (message.toolName === 'searchActivities') {
+      const activities = Array.isArray(message.toolData) ? (message.toolData as ActivityResult[]) : [];
+
+      return (
+        <div className="inline-block w-[85%] max-w-full text-left">
+          <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm overflow-hidden">
+            <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex items-center justify-between">
+              <div className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">
+                Activities
+              </div>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {activities.length} result{activities.length === 1 ? '' : 's'}
+              </span>
+            </div>
+            <div className="px-4 py-3 space-y-3 max-h-64 overflow-y-auto">
+              {activities.length > 0 ? (
+                activities.map((activity, index) => renderActivityCard(activity, index))
+              ) : (
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  No activities found for the given keyword.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Render Permit Details
+    if (message.toolName === 'getPermitDetails') {
+      const permitDetails = message.toolData as PermitDetails;
+
+      return (
+        <div className="inline-block w-[85%] max-w-full text-left">
+          <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm overflow-hidden">
+            <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex items-center justify-between">
+              <div className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">
+                Permit Details
+              </div>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {permitDetails.permitNumber}
+              </span>
+            </div>
+            <div className="px-4 py-3 max-h-64 overflow-y-auto">
+              {permitDetails ? (
+                renderPermitCard(permitDetails)
+              ) : (
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  No permit details found.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Default fallback for other tool results
+    return (
+      <div className="inline-block w-[85%] max-w-full text-left">
+        <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm overflow-hidden">
+          <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex items-center justify-between">
+            <div className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">
+              Tool Result
+            </div>
+            {message.toolName && (
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {message.toolName}
+              </span>
+            )}
+          </div>
+          <div className="px-4 py-3 text-left">
+            <pre className="text-xs text-gray-700 dark:text-gray-200 whitespace-pre-wrap break-words max-h-60 overflow-y-auto">
+              {message.rawToolOutput ?? JSON.stringify(message.toolData, null, 2)}
+            </pre>
+          </div>
+        </div>
+      </div>
+    );
+  };
+
   return (
-    <div className="flex flex-col h-full bg-white dark:bg-gray-900 border-l border-gray-200 dark:border-gray-700">
+    <div
+      className={`flex flex-col bg-white dark:bg-gray-900 border-l border-gray-200 dark:border-gray-700 ${
+        isFullscreen ? 'fixed inset-0 z-50 h-full w-full' : 'h-full'
+      }`}
+    >
       {/* Header */}
       <div className="flex-shrink-0 px-4 py-3 border-b border-gray-200 dark:border-gray-700 bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20">
         <div className="flex items-center justify-between">
@@ -452,6 +854,17 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
             <h2 className="font-semibold text-gray-900 dark:text-gray-100">ADU Planning Assistant</h2>
           </div>
           <div className="flex items-center gap-2">
+            <button
+              onClick={() => setIsFullscreen((prev) => !prev)}
+              className="p-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+              title={isFullscreen ? 'Exit full screen' : 'Enter full screen'}
+            >
+              {isFullscreen ? (
+                <Minimize2 className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+              ) : (
+                <Maximize2 className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+              )}
+            </button>
             <button
               onClick={() => setShowSettings(!showSettings)}
               className="p-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
@@ -518,7 +931,6 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
         {messages.map((message) => {
           const isToolResult = message.kind === 'toolResult';
           const messageTimestamp = message.timestamp.toLocaleTimeString([], { hour: '2-digit', minute: '2-digit' });
-
           return (
           <div
             key={message.id}
@@ -537,25 +949,7 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
             </div>
             <div className={`flex-1 ${message.role === 'user' ? 'text-right' : 'text-left'}`}>
               {isToolResult ? (
-                <div className="inline-block max-w-[85%] text-left">
-                  <div className="rounded-2xl border border-gray-200 dark:border-gray-700 bg-white dark:bg-gray-800 shadow-sm overflow-hidden">
-                    <div className="px-4 py-2 border-b border-gray-200 dark:border-gray-700 bg-gray-50 dark:bg-gray-900/60 flex items-center justify-between">
-                      <div className="text-xs font-medium text-gray-600 dark:text-gray-300 uppercase tracking-wide">
-                        Tool Result
-                      </div>
-                      {message.toolName && (
-                        <span className="text-xs text-gray-500 dark:text-gray-400">
-                          {message.toolName}
-                        </span>
-                      )}
-                    </div>
-                    <div className="px-4 py-3 text-left">
-                      <pre className="text-xs text-gray-700 dark:text-gray-200 whitespace-pre-wrap break-words max-h-60 overflow-y-auto">
-                        {message.rawToolOutput ?? JSON.stringify(message.toolData, null, 2)}
-                      </pre>
-                    </div>
-                  </div>
-                </div>
+                renderToolResult(message)
               ) : (
                 <div className={`inline-block max-w-[85%] px-4 py-2 rounded-2xl ${
                   message.role === 'user'

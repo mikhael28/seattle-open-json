@@ -613,31 +613,7 @@ const Permitting = () => {
             {/* Left Column - Modules */}
             <div className="flex-1 overflow-auto">
               <div className="mx-auto p-6">
-                {/* Welcome Message */}
-                <div className="bg-gradient-to-r from-blue-50 to-purple-50 dark:from-blue-950/20 dark:to-purple-950/20 rounded-xl p-6 mb-6 border border-blue-200 dark:border-blue-800">
-                  <h2 className="text-2xl font-bold text-foreground mb-2">
-                    Welcome to Your ADU Planning Journey! 🏡
-                  </h2>
-                  <p className="text-muted-foreground mb-4">
-                    This interactive checklist will guide you through every step of planning and building your
-                    Accessory Dwelling Unit in Seattle. We'll help you avoid common pitfalls and minimize review
-                    cycles with the City of Seattle.
-                  </p>
-                  <div className="flex items-center gap-4 text-sm">
-                    <div className="flex items-center gap-2">
-                      <TrendingUp className="h-4 w-4 text-green-600" />
-                      <span className="text-foreground">
-                        <strong>{planningSession.progressPercentage}%</strong> Complete
-                      </span>
-                    </div>
-                    <div className="flex items-center gap-2">
-                      <ListTodo className="h-4 w-4 text-blue-600" />
-                      <span className="text-foreground">
-                        <strong>{planningSession.modules.length}</strong> Modules
-                      </span>
-                    </div>
-                  </div>
-                </div>
+              
 
                 {/* Modules */}
                 <div className="space-y-6">
