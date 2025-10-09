@@ -15,6 +15,7 @@ const SCSDashboard = () => {
   const [showWithLocationOnly, setShowWithLocationOnly] = useState(false);
   const [isDrawerOpen, setIsDrawerOpen] = useState(false);
   const [currentPage, setCurrentPage] = useState(1);
+  const [showMapOnMobile, setShowMapOnMobile] = useState(false);
 
   // Get all SCS entities
   const allEntities = useMemo(() => scsData.getAllEntities(), []);
@@ -148,8 +149,8 @@ const SCSDashboard = () => {
           />
 
           {/* Drawer */}
-          <div className="fixed right-0 top-0 h-full w-[500px] bg-white shadow-2xl z-50 overflow-y-auto">
-            <div className="p-8">
+          <div className="fixed right-0 top-0 h-full w-full sm:w-[500px] md:w-[600px] bg-white shadow-2xl z-50 overflow-y-auto">
+            <div className="p-4 sm:p-6 md:p-8">
               {/* Close Button */}
               <button
                 onClick={() => setIsDrawerOpen(false)}
@@ -159,14 +160,14 @@ const SCSDashboard = () => {
               </button>
 
               {/* About SCS Content */}
-              <div className="mb-8">
-                <div className="inline-flex items-center justify-center w-16 h-16 rounded-full bg-blue-100 mb-6">
-                  <Database className="w-8 h-8 text-blue-600" />
+              <div className="mb-6 sm:mb-8">
+                <div className="inline-flex items-center justify-center w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-blue-100 mb-4 sm:mb-6">
+                  <Database className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
                 </div>
-                <h2 className="text-3xl font-bold text-gray-900 mb-4">
+                <h2 className="text-2xl sm:text-3xl font-bold text-gray-900 mb-3 sm:mb-4">
                   Seattle Civic Standard (SCS)
                 </h2>
-                <p className="text-lg text-gray-600">
+                <p className="text-base sm:text-lg text-gray-600">
                   A unified, interoperable data standard designed to make civic information
                   accessible, consistent, and easy to use across all municipal systems.
                 </p>
@@ -433,19 +434,19 @@ const SCSDashboard = () => {
       {/* Normal View */}
       {!isFullscreen && (
         <div className="h-full overflow-auto">
-          <div className="max-w-[1800px] mx-auto px-6 py-8">
+          <div className="max-w-[1800px] mx-auto px-4 sm:px-6 py-6 sm:py-8">
             {/* Header */}
-            <div className="mb-8">
-              <div className="flex items-center justify-between">
+            <div className="mb-6 sm:mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                 <div className="flex items-center gap-3">
-                  <div className="p-3 bg-blue-100 rounded-lg">
-                    <MapPinned className="w-8 h-8 text-blue-600" />
+                  <div className="p-2 sm:p-3 bg-blue-100 rounded-lg">
+                    <MapPinned className="w-6 h-6 sm:w-8 sm:h-8 text-blue-600" />
                   </div>
                   <div>
-                    <h1 className="text-3xl font-bold text-gray-900">
+                    <h1 className="text-2xl sm:text-3xl font-bold text-gray-900">
                       Seattle Civic Standard Dashboard
                     </h1>
-                    <p className="text-gray-600">
+                    <p className="text-sm sm:text-base text-gray-600">
                       Unified view of all Seattle civic entities
                     </p>
                   </div>
@@ -453,7 +454,7 @@ const SCSDashboard = () => {
                 <Button
                   onClick={() => setIsDrawerOpen(true)}
                   variant="outline"
-                  className="gap-2"
+                  className="gap-2 w-full sm:w-auto"
                 >
                   <Info className="w-4 h-4" />
                   About SCS
@@ -464,11 +465,11 @@ const SCSDashboard = () => {
          
 
             {/* Filters and Search */}
-            <div className="bg-white rounded-lg p-6 shadow-sm border border-gray-200 mb-8">
-              <div className="flex items-center justify-between mb-4">
-                <div className="flex items-center align-middle">
+            <div className="bg-white rounded-lg p-4 sm:p-6 shadow-sm border border-gray-200 mb-6 sm:mb-8">
+              <div className="flex flex-col sm:flex-row sm:items-center justify-between mb-4 gap-3">
+                <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                   <h3 className="text-lg font-semibold text-gray-900">Filters & Search</h3> 
-                  <div className="ml-2 text-sm text-gray-600">
+                  <div className="text-sm text-gray-600">
                     Showing <span className="font-semibold text-gray-900">{filteredAllEntities.length.toLocaleString()}</span> of {allEntities.length.toLocaleString()} entities
                   </div>
                 </div>
@@ -476,15 +477,16 @@ const SCSDashboard = () => {
                   onClick={() => setIsFilterFullscreen(true)}
                   variant="outline"
                   size="sm"
-                  className="gap-2"
+                  className="gap-2 w-full sm:w-auto"
                 >
                   <Maximize2 className="w-4 h-4" />
-                  Expand Filters
+                  <span className="hidden sm:inline">Expand Filters</span>
+                  <span className="sm:hidden">Advanced Filters</span>
                 </Button>
               </div>
-              <div className="flex align-middle gap-4">
+              <div className="flex flex-col lg:flex-row gap-4">
                 {/* Search Bar */}
-                <div className="w-1/2">
+                <div className="w-full lg:w-1/2 relative">
                   <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400 h-5 w-5" />
                   <input
                     type="text"
@@ -496,10 +498,9 @@ const SCSDashboard = () => {
                 </div>
 
                 {/* Filters Row */}
-                <div className="w-1/2 flex flex-col md:flex-row gap-4">
+                <div className="w-full lg:w-1/2 flex flex-col sm:flex-row gap-4">
                   {/* Type Dropdown Filter */}
                   <div className="flex-1">
-                 
                     <select
                       value={selectedTypes.length === 0 ? "all" : selectedTypes.length === 1 ? selectedTypes[0] : "multiple"}
                       onChange={(e) => {
@@ -509,7 +510,7 @@ const SCSDashboard = () => {
                           setSelectedTypes([e.target.value]);
                         }
                       }}
-                      className="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
+                      className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent"
                     >
                       <option value="all">All Types ({typeStats.length})</option>
                       {typeStats.map(({ type, count }) => (
@@ -520,7 +521,6 @@ const SCSDashboard = () => {
                     </select>
                   </div>
 
-                 
                   {/* Clear Button */}
                   {(selectedTypes.length > 0 || searchTerm || showFreeOnly || showWithLocationOnly) && (
                     <div className="flex items-end">
@@ -528,7 +528,7 @@ const SCSDashboard = () => {
                         onClick={clearFilters}
                         variant="ghost"
                         size="sm"
-                        className="text-gray-600 hover:text-gray-900"
+                        className="text-gray-600 hover:text-gray-900 w-full sm:w-auto"
                       >
                         <X className="w-4 h-4 mr-1" />
                         Clear All
@@ -536,55 +536,48 @@ const SCSDashboard = () => {
                     </div>
                   )}
                 </div>
-
-                {/* Quick Type Buttons */}
-                {/* {selectedTypes.length === 0 && (
-                  <div className="mt-4">
-                    <p className="text-xs text-gray-500 mb-2">Quick filters:</p>
-                    <div className="flex flex-wrap gap-2">
-                      {typeStats.slice(0, 6).map(({ type, count }) => (
-                        <button
-                          key={type}
-                          onClick={() => setSelectedTypes([type])}
-                          className="px-3 py-1.5 rounded-lg border text-xs font-medium bg-gray-50 border-gray-200 text-gray-700 hover:bg-blue-50 hover:border-blue-300 hover:text-blue-800 transition-all"
-                        >
-                          {type} ({count})
-                        </button>
-                      ))}
-                    </div>
-                  </div>
-                )} */}
-
-               
               </div>
             </div>
 
-            {/* 50/50 Split: Map on Left, Entities on Right */}
-            <div className="flex gap-6 h-[800px]">
-              {/* Map - Left 50% */}
-              <div className="w-1/2 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-                <div className="p-6 border-b border-gray-200 flex-shrink-0">
+            {/* Mobile Toggle Button - Only visible on mobile */}
+            <div className="lg:hidden mb-4">
+              <Button
+                onClick={() => setShowMapOnMobile(!showMapOnMobile)}
+                variant="outline"
+                className="w-full gap-2"
+              >
+                <MapPinned className="w-4 h-4" />
+                {showMapOnMobile ? 'Hide Map' : 'Show Map'} ({filteredEntities.length} entities)
+              </Button>
+            </div>
+
+            {/* Responsive Layout: Stack on mobile, side-by-side on desktop */}
+            <div className="flex flex-col lg:flex-row gap-6 h-[800px]">
+              {/* Map - Hidden on mobile by default, full width on desktop */}
+              <div className={`${showMapOnMobile ? 'block' : 'hidden'} lg:block lg:w-1/2 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col`}>
+                <div className="p-4 sm:p-6 border-b border-gray-200 flex-shrink-0">
                   <div className="flex items-center justify-between">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900">
                         Geographic Distribution
                       </h3>
-                      <p className="text-gray-600 mt-1">
+                      <p className="text-gray-600 mt-1 text-sm sm:text-base">
                         {filteredEntities.length} entities mapped
                       </p>
                     </div>
                     <Button
                       onClick={() => setIsFullscreen(true)}
                       variant="outline"
+                      size="sm"
                       className="gap-2"
                     >
                       <Maximize2 className="w-4 h-4" />
-                      Fullscreen
+                      <span className="hidden sm:inline">Fullscreen</span>
                     </Button>
                   </div>
                 </div>
 
-                <div className="flex-1 p-6 bg-gray-50 overflow-hidden">
+                <div className="flex-1 p-4 sm:p-6 bg-gray-50 overflow-hidden">
                   <div className="rounded-lg overflow-hidden bg-white h-full">
                     <SCSMap
                       entities={filteredEntities}
@@ -595,13 +588,13 @@ const SCSDashboard = () => {
                 </div>
               </div>
 
-              {/* Entity List - Right 50% */}
-              <div className="w-1/2 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col">
-                <div className="p-6 border-b border-gray-200 flex-shrink-0">
-                  <div className="flex items-center justify-between">
+              {/* Entity List - Full width on mobile, half width on desktop */}
+              <div className="w-full lg:w-1/2 bg-white rounded-lg shadow-sm border border-gray-200 overflow-hidden flex flex-col">
+                <div className="p-4 sm:p-6 border-b border-gray-200 flex-shrink-0">
+                  <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-4">
                     <div>
-                      <h3 className="text-xl font-semibold text-gray-900">Entity List</h3>
-                      <p className="text-gray-600 mt-1">
+                      <h3 className="text-lg sm:text-xl font-semibold text-gray-900">Entity List</h3>
+                      <p className="text-gray-600 mt-1 text-sm sm:text-base">
                         Page {currentPage} of {totalPages} ({filteredAllEntities.length.toLocaleString()} total)
                       </p>
                     </div>
@@ -616,7 +609,7 @@ const SCSDashboard = () => {
                         className="gap-1"
                       >
                         <ChevronLeft className="w-4 h-4" />
-                        Previous
+                        <span className="hidden sm:inline">Previous</span>
                       </Button>
                       <Button
                         onClick={goToNextPage}
@@ -625,19 +618,19 @@ const SCSDashboard = () => {
                         size="sm"
                         className="gap-1"
                       >
-                        Next
+                        <span className="hidden sm:inline">Next</span>
                         <ChevronRight className="w-4 h-4" />
                       </Button>
                     </div>
                   </div>
                 </div>
 
-                <div className="flex-1 overflow-y-auto p-6">
-                  <div className="space-y-4">
+                <div className="flex-1 overflow-y-auto p-4 sm:p-6">
+                  <div className="space-y-3 sm:space-y-4">
                     {paginatedEntities.map((entity, index) => (
                       <div
                         key={`${entity.id}-${index}`}
-                        className="bg-gray-50 rounded-lg border border-gray-200 p-4 hover:shadow-md transition-shadow"
+                        className="bg-gray-50 rounded-lg border border-gray-200 p-3 sm:p-4 hover:shadow-md transition-shadow"
                       >
                         {/* Header */}
                         <div className="mb-3">
@@ -723,11 +716,11 @@ const SCSDashboard = () => {
 
                 {/* Bottom Pagination */}
                 {filteredAllEntities.length > 0 && (
-                  <div className="p-4 border-t border-gray-200 flex items-center justify-between flex-shrink-0 bg-gray-50">
-                    <div className="text-sm text-gray-600">
+                  <div className="p-3 sm:p-4 border-t border-gray-200 flex flex-col sm:flex-row sm:items-center justify-between gap-3 flex-shrink-0 bg-gray-50">
+                    <div className="text-xs sm:text-sm text-gray-600 text-center sm:text-left">
                       Showing {((currentPage - 1) * ITEMS_PER_PAGE) + 1} to {Math.min(currentPage * ITEMS_PER_PAGE, filteredAllEntities.length)} of {filteredAllEntities.length.toLocaleString()}
                     </div>
-                    <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-center gap-2">
                       <Button
                         onClick={goToPrevPage}
                         disabled={currentPage === 1}
@@ -736,9 +729,9 @@ const SCSDashboard = () => {
                         className="gap-1"
                       >
                         <ChevronLeft className="w-4 h-4" />
-                        Previous
+                        <span className="hidden sm:inline">Previous</span>
                       </Button>
-                      <span className="text-sm text-gray-600 px-2">
+                      <span className="text-xs sm:text-sm text-gray-600 px-2">
                         Page {currentPage} of {totalPages}
                       </span>
                       <Button
@@ -748,7 +741,7 @@ const SCSDashboard = () => {
                         size="sm"
                         className="gap-1"
                       >
-                        Next
+                        <span className="hidden sm:inline">Next</span>
                         <ChevronRight className="w-4 h-4" />
                       </Button>
                     </div>
