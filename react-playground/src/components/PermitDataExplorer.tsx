@@ -1,4 +1,4 @@
-import React, { useState, useMemo } from 'react';
+import React, { useState, useMemo, useEffect } from 'react';
 import {
   Search,
   Filter,
@@ -15,7 +15,9 @@ import {
   ChevronUp,
   X,
   Copy,
-  Check
+  Check,
+  Star,
+  StarOff
 } from 'lucide-react';
 import { Button } from './ui/button';
 import { 
@@ -27,7 +29,17 @@ import {
   type PlanReview
 } from 'seattle-open-json';
 
-type DataType = 'permits' | 'comments' | 'reviews' | 'report';
+type DataType = 'permits' | 'comments' | 'reviews' | 'report' | 'favorites';
+
+interface FavoriteReport {
+  permitNumber: string;
+  savedAt: string;
+  permit: BuildingPermit | null;
+  comments: PlanComment[];
+  reviews: PlanReview[];
+}
+
+const FAVORITES_STORAGE_KEY = 'permit_report_favorites';
 
 interface FilterState {
   searchTerm: string;
@@ -49,6 +61,7 @@ const PermitDataExplorer: React.FC = () => {
   const [modalTab, setModalTab] = useState<'pretty' | 'json'>('pretty');
   const [copied, setCopied] = useState(false);
   const [reportCopied, setReportCopied] = useState(false);
+  const [favorites, setFavorites] = useState<Record<string, FavoriteReport>>({});
   const [filters, setFilters] = useState<FilterState>({
     searchTerm: '',
     permitClass: '',
@@ -62,6 +75,28 @@ const PermitDataExplorer: React.FC = () => {
     reviewResult: ''
   });
   const [showFilters, setShowFilters] = useState(false);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      const stored = localStorage.getItem(FAVORITES_STORAGE_KEY);
+      if (stored) {
+        const parsed = JSON.parse(stored) as Record<string, FavoriteReport>;
+        setFavorites(parsed);
+      }
+    } catch (error) {
+      console.error('Failed to load permit favorites', error);
+    }
+  }, []);
+
+  useEffect(() => {
+    if (typeof window === 'undefined') return;
+    try {
+      localStorage.setItem(FAVORITES_STORAGE_KEY, JSON.stringify(favorites));
+    } catch (error) {
+      console.error('Failed to persist permit favorites', error);
+    }
+  }, [favorites]);
 
   // Get unique values for filter dropdowns
   const uniqueValues = useMemo(() => {
@@ -87,6 +122,10 @@ const PermitDataExplorer: React.FC = () => {
         break;
       case 'reviews':
         data = planReview;
+        break;
+      case 'favorites':
+      case 'report':
+        data = [];
         break;
     }
 
@@ -139,6 +178,150 @@ const PermitDataExplorer: React.FC = () => {
     };
   }, [reportPermitNum]);
 
+  const favoriteList = useMemo(() => {
+    return Object.values(favorites).sort((a, b) => {
+      return new Date(b.savedAt).getTime() - new Date(a.savedAt).getTime();
+    });
+  }, [favorites]);
+
+  const isFavorite = reportPermitNum ? Boolean(favorites[reportPermitNum]) : false;
+
+  const handleToggleFavorite = () => {
+    if (!reportPermitNum || !reportData) return;
+
+    setFavorites(prev => {
+      if (prev[reportPermitNum]) {
+        const updated = { ...prev };
+        delete updated[reportPermitNum];
+        return updated;
+      }
+
+      return {
+        ...prev,
+        [reportPermitNum]: {
+          permitNumber: reportPermitNum,
+          savedAt: new Date().toISOString(),
+          permit: reportData.permit ?? null,
+          comments: reportData.comments,
+          reviews: reportData.reviews
+        }
+      };
+    });
+  };
+
+  const handleRemoveFavorite = (permitNumber: string) => {
+    setFavorites(prev => {
+      if (!prev[permitNumber]) return prev;
+      const updated = { ...prev };
+      delete updated[permitNumber];
+      return updated;
+    });
+  };
+
+  const renderFavorites = () => {
+    if (favoriteList.length === 0) {
+      return (
+        <div className="text-center py-12">
+          <p className="text-gray-600 dark:text-gray-300">
+            You haven't saved any permit reports yet. View a permit report and add it to favorites to see it here.
+          </p>
+        </div>
+      );
+    }
+
+    return (
+      <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-4">
+        {favoriteList.map(favorite => {
+          const permit = favorite.permit;
+          const savedDate = new Date(favorite.savedAt).toLocaleString();
+
+          return (
+            <div
+              key={favorite.permitNumber}
+              className="bg-white dark:bg-gray-800 rounded-lg border border-gray-200 dark:border-gray-700 p-5 flex flex-col gap-4"
+            >
+              <div className="flex items-start justify-between gap-3">
+                <div>
+                  <div className="flex items-center gap-2">
+                    <Building className="h-5 w-5 text-blue-600" />
+                    <h3 className="text-lg font-semibold text-gray-900 dark:text-white">
+                      {favorite.permitNumber}
+                    </h3>
+                  </div>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 mt-1">
+                    Saved {savedDate}
+                  </p>
+                </div>
+                <Button
+                  variant="ghost"
+                  size="icon"
+                  onClick={() => handleRemoveFavorite(favorite.permitNumber)}
+                  aria-label={`Remove ${favorite.permitNumber} from favorites`}
+                >
+                  <StarOff className="h-5 w-5 text-gray-500" />
+                </Button>
+              </div>
+
+              {permit ? (
+                <div className="space-y-3 text-sm text-gray-700 dark:text-gray-300">
+                  <p className="font-medium text-gray-900 dark:text-white">
+                    {permit.Description || 'No description available.'}
+                  </p>
+                  <div className="grid grid-cols-2 gap-3">
+                    <div className="flex items-center gap-2">
+                      <MapPin className="h-4 w-4 text-gray-400" />
+                      <span className="truncate">{permit.OriginalAddress1 || 'No address on file'}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <DollarSign className="h-4 w-4 text-gray-400" />
+                      <span>{formatCurrency(permit.EstProjectCost)}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Calendar className="h-4 w-4 text-gray-400" />
+                      <span>{formatDate(permit.AppliedDate)}</span>
+                    </div>
+                    <div className="flex items-center gap-2">
+                      <Clock className="h-4 w-4 text-gray-400" />
+                      <span>{permit.NumberReviewCycles ?? 'N/A'} cycles</span>
+                    </div>
+                  </div>
+                </div>
+              ) : (
+                <div className="text-sm text-gray-600 dark:text-gray-300">
+                  <p className="font-medium text-gray-900 dark:text-white mb-2">Permit data unavailable</p>
+                  <p>
+                    This favorite includes {favorite.comments.length} comments and {favorite.reviews.length} reviews.
+                  </p>
+                </div>
+              )}
+
+              <div className="flex flex-wrap gap-2 mt-auto">
+                <Button
+                  onClick={() => {
+                    setReportPermitNum(favorite.permitNumber);
+                    setActiveTab('report');
+                  }}
+                  className="flex items-center gap-2"
+                >
+                  <Search className="h-4 w-4" />
+                  View Report
+                </Button>
+                <Button
+                  variant="outline"
+                  onClick={() => handleRemoveFavorite(favorite.permitNumber)}
+                  className="flex items-center gap-2"
+                >
+                  <StarOff className="h-4 w-4" />
+                  Remove
+                </Button>
+              </div>
+            </div>
+          );
+        })}
+      </div>
+    );
+  };
+
   const handlePermitNumClick = (permitNum: string) => {
     setReportPermitNum(permitNum);
     setActiveTab('report');
@@ -182,7 +365,10 @@ const PermitDataExplorer: React.FC = () => {
     });
   };
 
-  const formatCurrency = (amount: number) => {
+  const formatCurrency = (amount: number | null | undefined) => {
+    if (typeof amount !== 'number' || Number.isNaN(amount)) {
+      return 'N/A';
+    }
     return new Intl.NumberFormat('en-US', {
       style: 'currency',
       currency: 'USD',
@@ -400,8 +586,26 @@ const PermitDataExplorer: React.FC = () => {
 
     return (
       <div className="space-y-6">
-        {/* Copy Report Button */}
-        <div className="flex justify-end">
+        {/* Actions */}
+        <div className="flex justify-between flex-wrap gap-2">
+          <Button
+            variant={isFavorite ? 'default' : 'outline'}
+            onClick={handleToggleFavorite}
+            disabled={!reportData.permit && reportData.comments.length === 0 && reportData.reviews.length === 0}
+            className="flex items-center gap-2"
+          >
+            {isFavorite ? (
+              <>
+                <StarOff className="h-4 w-4" />
+                Remove from Favorites
+              </>
+            ) : (
+              <>
+                <Star className="h-4 w-4" />
+                Add to Favorites
+              </>
+            )}
+          </Button>
           <Button
             variant="outline"
             onClick={handleCopyReport}
@@ -1058,7 +1262,7 @@ const PermitDataExplorer: React.FC = () => {
               Explore building permits, plan comments, and review data from the City of Seattle
             </p>
           </div>
-          {activeTab !== 'report' && (
+          {!['report', 'favorites'].includes(activeTab) && (
             <div className="flex items-center gap-2">
               <Button
                 variant="outline"
@@ -1107,6 +1311,14 @@ const PermitDataExplorer: React.FC = () => {
             <Search className="h-4 w-4" />
             Permit Report
           </Button>
+          <Button
+            variant={activeTab === 'favorites' ? 'default' : 'outline'}
+            onClick={() => setActiveTab('favorites')}
+            className="flex items-center gap-2"
+          >
+            <Star className="h-4 w-4" />
+            Favorites ({favoriteList.length})
+          </Button>
         </div>
 
         {/* Search and Filters */}
@@ -1131,7 +1343,7 @@ const PermitDataExplorer: React.FC = () => {
                 Clear
               </Button>
             </div>
-          ) : (
+          ) : !['favorites'].includes(activeTab) ? (
             <div className="flex gap-4">
               <div className="flex-1 relative">
                 <Search className="absolute left-3 top-1/2 transform -translate-y-1/2 h-4 w-4 text-gray-400" />
@@ -1151,10 +1363,10 @@ const PermitDataExplorer: React.FC = () => {
                 Clear Filters
               </Button>
             </div>
-          )}
+          ) : null}
 
           {/* Filter Panel */}
-          {showFilters && activeTab !== 'report' && (
+          {showFilters && !['report', 'favorites'].includes(activeTab) && (
             <div className="mt-4 p-4 bg-gray-50 dark:bg-gray-700 rounded-lg">
               <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-5 gap-4">
                 {activeTab === 'permits' && (
@@ -1272,38 +1484,40 @@ const PermitDataExplorer: React.FC = () => {
 
       {/* Results */}
       <div className="flex-1 overflow-auto p-4">
-        {activeTab === 'report' ? (
-          renderPermitReport()
-        ) : (
-          <>
-            <div className="mb-4">
-              <p className="text-sm text-gray-600 dark:text-gray-300">
-                Showing {filteredData.length.toLocaleString()} of {
-                  activeTab === 'permits' ? buildingPermits.length.toLocaleString() :
-                  activeTab === 'comments' ? planComments.length.toLocaleString() :
-                  planReview.length.toLocaleString()
-                } records
-              </p>
-            </div>
+        {activeTab === 'report'
+          ? renderPermitReport()
+          : activeTab === 'favorites'
+            ? renderFavorites()
+            : (
+              <>
+                <div className="mb-4">
+                  <p className="text-sm text-gray-600 dark:text-gray-300">
+                    Showing {filteredData.length.toLocaleString()} of {
+                      activeTab === 'permits' ? buildingPermits.length.toLocaleString() :
+                      activeTab === 'comments' ? planComments.length.toLocaleString() :
+                      planReview.length.toLocaleString()
+                    } records
+                  </p>
+                </div>
 
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-              {filteredData.slice(0, 100).map((item, idx) => {
-                if (activeTab === 'permits') return renderPermitCard(item as BuildingPermit, idx);
-                if (activeTab === 'comments') return renderCommentCard(item as PlanComment, idx);
-                if (activeTab === 'reviews') return renderReviewCard(item as PlanReview, idx);
-                return null;
-              })}
-            </div>
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                  {filteredData.slice(0, 100).map((item, idx) => {
+                    if (activeTab === 'permits') return renderPermitCard(item as BuildingPermit, idx);
+                    if (activeTab === 'comments') return renderCommentCard(item as PlanComment, idx);
+                    if (activeTab === 'reviews') return renderReviewCard(item as PlanReview, idx);
+                    return null;
+                  })}
+                </div>
 
-            {filteredData.length > 100 && (
-              <div className="mt-8 text-center">
-                <p className="text-gray-600 dark:text-gray-300">
-                  Showing first 100 results. Use filters to narrow down your search.
-                </p>
-              </div>
+                {filteredData.length > 100 && (
+                  <div className="mt-8 text-center">
+                    <p className="text-gray-600 dark:text-gray-300">
+                      Showing first 100 results. Use filters to narrow down your search.
+                    </p>
+                  </div>
+                )}
+              </>
             )}
-          </>
-        )}
       </div>
 
       {/* Detail Modal */}

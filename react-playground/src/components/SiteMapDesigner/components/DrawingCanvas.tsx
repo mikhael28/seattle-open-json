@@ -2,7 +2,7 @@
 // DRAWING CANVAS COMPONENT
 // ============================================================================
 
-import React from 'react';
+import React, { useEffect, useState, useRef } from 'react';
 import { DrawingElement, Point, PropertyConfig, DrawingTool } from '../types';
 import { calculateDistance, pixelsToFeet } from '../geometry';
 
@@ -18,11 +18,20 @@ interface DrawingCanvasProps {
   isDrawing: boolean;
   currentPoints: Point[];
   isDragging: boolean;
+  backgroundImage?: string | null;
   onMouseDown: (e: React.MouseEvent<SVGSVGElement>) => void;
   onMouseMove: (e: React.MouseEvent<SVGSVGElement>) => void;
   onMouseUp: () => void;
   onElementClick: (id: string) => void;
   streetWidth: number;
+  zoom: number;
+  panX: number;
+  panY: number;
+  rotation: number;
+  onZoomChange: (zoom: number) => void;
+  onPanChange: (panX: number, panY: number) => void;
+  containerWidth: number;
+  containerHeight: number;
 }
 
 export const DrawingCanvas: React.FC<DrawingCanvasProps> = ({
@@ -37,21 +46,33 @@ export const DrawingCanvas: React.FC<DrawingCanvasProps> = ({
   isDrawing,
   currentPoints,
   isDragging,
+  backgroundImage,
   onMouseDown,
   onMouseMove,
   onMouseUp,
   onElementClick,
   streetWidth,
+  zoom,
+  panX,
+  panY,
+  rotation,
+  onZoomChange,
+  onPanChange,
+  containerWidth,
+  containerHeight,
 }) => {
   const canvasWidth = propertyConfig.width * propertyConfig.scale;
   const canvasHeight = propertyConfig.depth * propertyConfig.scale;
   const gridSize = 5 * propertyConfig.scale;
   const totalWidth = canvasWidth + streetWidth * 2;
   const totalHeight = canvasHeight + streetWidth * 2;
+  const hasBackgroundImage = Boolean(backgroundImage);
+  const [isPanning, setIsPanning] = useState(false);
+  const [panStartPos, setPanStartPos] = useState<Point>({ x: 0, y: 0 });
 
   // Render grid
   const renderGrid = () => {
-    if (!showGrid) return null;
+    if (!showGrid || hasBackgroundImage) return null;
 
     const lines = [];
 
@@ -130,7 +151,7 @@ export const DrawingCanvas: React.FC<DrawingCanvasProps> = ({
           width={canvasWidth}
           height={canvasHeight}
           stroke="#000000"
-          strokeWidth={3}
+          strokeWidth={hasBackgroundImage ? 2 : 3}
           fill="transparent"
         />
 
@@ -169,6 +190,8 @@ export const DrawingCanvas: React.FC<DrawingCanvasProps> = ({
 
   // Render streets
   const renderStreets = () => {
+    if (hasBackgroundImage) return null;
+
     const streetSide = propertyConfig.streetSide;
 
     return (
@@ -281,6 +304,8 @@ export const DrawingCanvas: React.FC<DrawingCanvasProps> = ({
 
   // Render north arrow
   const renderNorthArrow = () => {
+    if (hasBackgroundImage) return null;
+
     const arrowX = canvasWidth + streetWidth + 40;
     const arrowY = streetWidth + 40;
     const arrowSize = 30;
@@ -594,35 +619,115 @@ export const DrawingCanvas: React.FC<DrawingCanvasProps> = ({
     return null;
   };
 
+  // Handle wheel zoom
+  const handleWheel = (e: React.WheelEvent<SVGSVGElement>) => {
+    e.preventDefault();
+    const delta = e.deltaY > 0 ? -0.1 : 0.1;
+    const newZoom = Math.max(0.1, Math.min(5, zoom + delta));
+    onZoomChange(newZoom);
+  };
+
+  // Handle mouse down for panning or drawing
+  const handleMouseDownPan = (e: React.MouseEvent<SVGSVGElement>) => {
+    // Middle mouse button or Space+Click always pans
+    if (e.button === 1 || (e.button === 0 && e.shiftKey)) {
+      e.preventDefault();
+      setIsPanning(true);
+      setPanStartPos({ x: e.clientX - panX, y: e.clientY - panY });
+      return;
+    }
+
+    // Left click in select mode: check if clicking on background (not an element)
+    if (e.button === 0 && selectedTool === 'select') {
+      const target = e.target as SVGElement;
+      // If clicking on the SVG background (not an element), enable panning
+      if (target.tagName === 'svg' || target.classList.contains('grid') ||
+          target.tagName === 'line' && target.parentElement?.classList.contains('grid')) {
+        e.preventDefault();
+        setIsPanning(true);
+        setPanStartPos({ x: e.clientX - panX, y: e.clientY - panY });
+        return;
+      }
+    }
+
+    // Otherwise, handle normal drawing/selection
+    onMouseDown(e);
+  };
+
+  const handleMouseMovePan = (e: React.MouseEvent<SVGSVGElement>) => {
+    if (isPanning) {
+      const newPanX = e.clientX - panStartPos.x;
+      const newPanY = e.clientY - panStartPos.y;
+      onPanChange(newPanX, newPanY);
+    } else {
+      onMouseMove(e);
+    }
+  };
+
+  const handleMouseUpPan = () => {
+    if (isPanning) {
+      setIsPanning(false);
+    } else {
+      onMouseUp();
+    }
+  };
+
+  // Calculate viewBox to fit content with zoom and pan
+  const viewBoxWidth = totalWidth / zoom;
+  const viewBoxHeight = totalHeight / zoom;
+  const viewBoxX = -panX / zoom;
+  const viewBoxY = -panY / zoom;
+
+  // Calculate center point for rotation
+  const centerX = totalWidth / 2;
+  const centerY = totalHeight / 2;
+
   return (
     <svg
       ref={svgRef}
-      width={totalWidth + 100}
-      height={totalHeight + 100}
+      width={containerWidth || totalWidth + 100}
+      height={containerHeight || totalHeight + 100}
+      viewBox={`${viewBoxX} ${viewBoxY} ${viewBoxWidth} ${viewBoxHeight}`}
       className="border border-gray-300 shadow-lg"
-      onMouseDown={onMouseDown}
-      onMouseMove={onMouseMove}
-      onMouseUp={onMouseUp}
+      onMouseDown={handleMouseDownPan}
+      onMouseMove={handleMouseMovePan}
+      onMouseUp={handleMouseUpPan}
+      onWheel={handleWheel}
       style={{
-        cursor: isDragging
+        cursor: isPanning
+          ? 'grabbing'
+          : isDragging
           ? 'grabbing'
           : selectedTool === 'select'
-          ? (selectedElementId ? 'grab' : 'default')
+          ? 'grab'
           : 'crosshair'
       }}
     >
-      {renderGrid()}
-      {renderStreets()}
-      {renderPropertyBoundary()}
-      {renderNorthArrow()}
+      <g transform={`rotate(${rotation} ${centerX} ${centerY})`}>
+        {renderGrid()}
+        {hasBackgroundImage && backgroundImage && (
+          <image
+            x={streetWidth}
+            y={streetWidth}
+            width={canvasWidth}
+            height={canvasHeight}
+            href={backgroundImage}
+            preserveAspectRatio="none"
+            style={{ pointerEvents: "none" }}
+          />
+        )}
+        {renderStreets()}
+        {renderPropertyBoundary()}
+        {renderNorthArrow()}
 
-      {/* Render all visible elements */}
-      <g className="elements">
-        {elements.map(element => renderElement(element))}
+        {/* Render all visible elements */}
+        <g className="elements">
+          {elements.map(element => renderElement(element))}
+        </g>
+
+        {/* Render current drawing */}
+        {renderCurrentDrawing()}
       </g>
-
-      {/* Render current drawing */}
-      {renderCurrentDrawing()}
     </svg>
   );
 };

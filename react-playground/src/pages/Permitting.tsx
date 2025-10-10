@@ -20,7 +20,6 @@ import ModuleCard from "../components/ADUPlanning/ModuleCard";
 import { ApplicationQuestionnaire } from "../components/ADUPlanning/ApplicationQuestionnaire";
 import PropertyAssessmentDisplay from "../components/ADUPlanning/PropertyAssessmentDisplay";
 import { exampleProperty } from "../components/ADUPlanning/PropertyData";
-import ChatAssistant from "../components/ChatAssistant";
 import { ADUPlanningSession, Module, TaskStatus, QuestionnaireAnswers } from "../types/adu-planning";
 import { 
   createNewSession, 
@@ -609,56 +608,48 @@ const Permitting = () => {
         )}
 
         {activeTab === 'planner' && planningSession && (
-          <div className="h-full flex">
-            {/* Left Column - Modules */}
-            <div className="flex-1 overflow-auto">
-              <div className="mx-auto p-6">
-              
+          <div className="h-full overflow-auto">
+            <div className="mx-auto p-6">
 
-                {/* Modules */}
-                <div className="space-y-6">
-                  {planningSession.modules.map((module) => (
-                    <ModuleCard
-                      key={module.id}
-                      module={module}
-                      onTaskStatusChange={handleTaskStatusChange}
-                      onSubTaskStatusChange={handleSubTaskStatusChange}
-                      onTaskNotesChange={handleTaskNotesChange}
-                      onSubTaskNotesChange={handleSubTaskNotesChange}
-                      onResourceClick={handleTaskResourceClick}
-                    />
-                  ))}
-                </div>
 
-                {/* Completion Message */}
-                {planningSession.progressPercentage === 100 && (
-                  <div className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-xl p-6 border border-green-200 dark:border-green-800 text-center">
-                    <h2 className="text-2xl font-bold text-foreground mb-2">
-                      🎉 Congratulations!
-                    </h2>
-                    <p className="text-muted-foreground mb-4">
-                      You've completed all the planning steps for your ADU. You're now ready to submit your
-                      permit application to the City of Seattle with confidence!
-                    </p>
-                    <Button asChild size="lg">
-                      <a
-                        href="https://www.seattle.gov/sdci/permits/common-projects/accessory-dwelling-units"
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="flex items-center gap-2"
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                        Submit Your Permit Application
-                      </a>
-                    </Button>
-                  </div>
-                )}
+              {/* Modules */}
+              <div className="space-y-6">
+                {planningSession.modules.map((module) => (
+                  <ModuleCard
+                    key={module.id}
+                    module={module}
+                    onTaskStatusChange={handleTaskStatusChange}
+                    onSubTaskStatusChange={handleSubTaskStatusChange}
+                    onTaskNotesChange={handleTaskNotesChange}
+                    onSubTaskNotesChange={handleSubTaskNotesChange}
+                    onResourceClick={handleTaskResourceClick}
+                  />
+                ))}
               </div>
-            </div>
 
-            {/* Right Column - Chat Assistant */}
-            <div className="w-96 flex-shrink-0">
-              <ChatAssistant context="User is currently going through ADU planning modules in Seattle" />
+              {/* Completion Message */}
+              {planningSession.progressPercentage === 100 && (
+                <div className="mt-8 bg-gradient-to-r from-green-50 to-emerald-50 dark:from-green-950/20 dark:to-emerald-950/20 rounded-xl p-6 border border-green-200 dark:border-green-800 text-center">
+                  <h2 className="text-2xl font-bold text-foreground mb-2">
+                    🎉 Congratulations!
+                  </h2>
+                  <p className="text-muted-foreground mb-4">
+                    You've completed all the planning steps for your ADU. You're now ready to submit your
+                    permit application to the City of Seattle with confidence!
+                  </p>
+                  <Button asChild size="lg">
+                    <a
+                      href="https://www.seattle.gov/sdci/permits/common-projects/accessory-dwelling-units"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="flex items-center gap-2"
+                    >
+                      <ExternalLink className="h-4 w-4" />
+                      Submit Your Permit Application
+                    </a>
+                  </Button>
+                </div>
+              )}
             </div>
           </div>
         )}

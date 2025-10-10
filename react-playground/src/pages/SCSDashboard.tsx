@@ -1,6 +1,6 @@
 import { useState, useMemo } from "react";
 import { scsData } from "seattle-open-json";
-import { MapPin, Maximize2, Minimize2, Database, TrendingUp, MapPinned, Filter, X, Search, Globe, DollarSign, Users, Info, Zap, Phone, ChevronLeft, ChevronRight } from "lucide-react";
+import { MapPin, Maximize2, Minimize2, Database, MapPinned, Filter, X, Search, Globe, DollarSign, Users, Info, Zap, Phone, ChevronLeft, ChevronRight } from "lucide-react";
 import { Button } from "../components/ui/button";
 import SCSMap from "../components/SCSMap";
 

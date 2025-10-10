@@ -9,6 +9,7 @@ dist/
 *.tsbuildinfo
 
 # Environment files
+keys.ts
 .env
 .env.local
 .env.development.local

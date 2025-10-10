@@ -1,5 +1,5 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Send, Settings, Loader2, Bot, User, Maximize2, Minimize2 } from 'lucide-react';
+import { Send, Settings, Loader2, Bot, User, Maximize2, Minimize2, X } from 'lucide-react';
 import { Button } from './ui/button';
 import type { CivicEntity, BuildingPermit, PlanComment, PlanReview } from 'seattle-open-json';
 
@@ -34,7 +34,8 @@ interface Message {
 }
 
 interface ChatAssistantProps {
-  context?: string; // Optional context about current module/task
+  context?: string;
+  onClose?: () => void;
 }
 
 type ToolCall = {
@@ -150,7 +151,7 @@ const toolDefinitions = [
   },
 ] as const;
 
-export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context }) => {
+export const ChatAssistant: React.FC<ChatAssistantProps> = ({ context, onClose }) => {
   const [messages, setMessages] = useState<Message[]>([]);
   const [conversation, setConversation] = useState<ConversationMessage[]>([]);
   const [input, setInput] = useState('');
@@ -267,7 +268,7 @@ You help users navigate the complex process of planning, designing, and permitti
 ${context ? `Current context: ${context}` : ''}
 
 You can call provided functions to look up Seattle Civic Standard data, recreation activities, and permit records. Use them whenever the user requests data you can retrieve via these tools.
-Provide clear, actionable advice. Reference Seattle SDCI regulations when relevant. Be encouraging and supportive.`;
+Provide clear, actionable advice. Reference Seattle SDCI regulations when relevant. Be encouraging and supportive. Please don't return responses in Markdown format.`;
 
     const callOpenAI = async (chatMessages: ConversationMessage[]) => {
       const payloadMessages = [
@@ -854,6 +855,15 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
             <h2 className="font-semibold text-gray-900 dark:text-gray-100">ADU Planning Assistant</h2>
           </div>
           <div className="flex items-center gap-2">
+            {onClose && (
+              <button
+                onClick={onClose}
+                className="p-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
+                title="Close assistant"
+              >
+                <X className="h-4 w-4 text-gray-600 dark:text-gray-300" />
+              </button>
+            )}
             <button
               onClick={() => setIsFullscreen((prev) => !prev)}
               className="p-1.5 rounded-lg hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors"
