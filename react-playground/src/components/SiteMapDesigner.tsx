@@ -65,6 +65,7 @@ type SiteMapEvaluationStatus = 'ready_for_review' | 'needs_attention';
 type SiteMapFindingStatus = 'met' | 'missing' | 'unclear';
 
 interface SiteMapEvaluationFinding {
+  requirementId?: number;
   requirement: string;
   status: SiteMapFindingStatus;
   notes?: string;
@@ -1047,6 +1048,7 @@ export const SiteMapDesigner: React.FC = () => {
         evaluation={siteMapEvaluation}
         error={evaluationError}
         imageName={siteMapImageName}
+        requirements={currentRequirements}
         onClose={() => setShowEvaluationModal(false)}
       />
 

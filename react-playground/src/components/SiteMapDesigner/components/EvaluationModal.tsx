@@ -3,11 +3,13 @@
 // ============================================================================
 
 import React from 'react';
+import { type SiteMapRequirement } from '../../../data/site-map-requirements';
 
 type SiteMapEvaluationStatus = 'ready_for_review' | 'needs_attention';
 type SiteMapFindingStatus = 'met' | 'missing' | 'unclear';
 
 interface SiteMapEvaluationFinding {
+  requirementId?: number;
   requirement: string;
   status: SiteMapFindingStatus;
   notes?: string;
@@ -27,6 +29,7 @@ interface EvaluationModalProps {
   evaluation: SiteMapEvaluation | null;
   error: string | null;
   imageName: string;
+  requirements?: SiteMapRequirement[];
   onClose: () => void;
 }
 
@@ -47,9 +50,31 @@ export const EvaluationModal: React.FC<EvaluationModalProps> = ({
   evaluation,
   error,
   imageName,
+  requirements = [],
   onClose,
 }) => {
   const [currentMessageIndex, setCurrentMessageIndex] = React.useState(0);
+
+  // Calculate next steps based on missing/unclear requirements
+  const nextSteps = React.useMemo(() => {
+    if (!evaluation || !requirements.length) return [];
+
+    const missingOrUnclear = evaluation.findings
+      .filter(f => f.status === 'missing' || f.status === 'unclear')
+      .map(finding => {
+        const matchedReq = finding.requirementId
+          ? requirements.find(r => r.id === finding.requirementId)
+          : null;
+
+        return {
+          finding,
+          requirement: matchedReq,
+        };
+      })
+      .filter(item => item.requirement && item.requirement.required); // Only show required items
+
+    return missingOrUnclear;
+  }, [evaluation, requirements]);
 
   React.useEffect(() => {
     if (!isLoading) return;
@@ -182,32 +207,97 @@ export const EvaluationModal: React.FC<EvaluationModalProps> = ({
                   Detailed Findings ({evaluation.findings.length})
                 </h4>
                 <div className="space-y-3">
-                  {evaluation.findings.map((finding, index) => (
-                    <div
-                      key={`${finding.requirement}-${index}`}
-                      className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
-                    >
-                      <div className="flex items-start gap-3">
-                        <span className={`rounded-full px-3 py-1 text-xs font-semibold flex-shrink-0 ${
-                          finding.status === 'met'
-                            ? 'bg-emerald-100 text-emerald-800'
-                            : finding.status === 'missing'
-                            ? 'bg-red-100 text-red-800'
-                            : 'bg-yellow-100 text-yellow-800'
-                        }`}>
-                          {finding.status === 'met' ? '✓ Met' : finding.status === 'missing' ? '✗ Missing' : '? Unclear'}
-                        </span>
-                        <div className="flex-1 min-w-0">
-                          <p className="font-semibold text-gray-900 mb-1">{finding.requirement}</p>
-                          {finding.notes && (
-                            <p className="text-sm text-gray-600">{finding.notes}</p>
-                          )}
+                  {evaluation.findings.map((finding, index) => {
+                    const matchedReq = finding.requirementId
+                      ? requirements.find(r => r.id === finding.requirementId)
+                      : null;
+
+                    return (
+                      <div
+                        key={`${finding.requirement}-${index}`}
+                        className="bg-white border border-gray-200 rounded-lg p-4 hover:shadow-md transition-shadow"
+                      >
+                        <div className="flex items-start gap-3">
+                          <span className={`rounded-full px-3 py-1 text-xs font-semibold flex-shrink-0 ${
+                            finding.status === 'met'
+                              ? 'bg-emerald-100 text-emerald-800'
+                              : finding.status === 'missing'
+                              ? 'bg-red-100 text-red-800'
+                              : 'bg-yellow-100 text-yellow-800'
+                          }`}>
+                            {finding.status === 'met' ? '✓ Met' : finding.status === 'missing' ? '✗ Missing' : '? Unclear'}
+                          </span>
+                          <div className="flex-1 min-w-0">
+                            <div className="flex items-start justify-between gap-2">
+                              <p className="font-semibold text-gray-900 mb-1">{finding.requirement}</p>
+                              {matchedReq && (
+                                <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-mono flex-shrink-0">
+                                  #{matchedReq.id}
+                                </span>
+                              )}
+                            </div>
+                            {matchedReq && (
+                              <p className="text-xs text-blue-600 mb-1">
+                                [{matchedReq.category}]
+                              </p>
+                            )}
+                            {finding.notes && (
+                              <p className="text-sm text-gray-600">{finding.notes}</p>
+                            )}
+                          </div>
                         </div>
                       </div>
-                    </div>
-                  ))}
+                    );
+                  })}
                 </div>
               </div>
+
+              {/* Next Steps */}
+              {nextSteps.length > 0 && (
+                <div className="bg-gradient-to-r from-orange-50 to-amber-50 border border-orange-200 rounded-lg p-6">
+                  <h4 className="text-lg font-semibold text-orange-900 mb-4 flex items-center gap-2">
+                    <svg className="w-5 h-5 text-orange-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
+                    </svg>
+                    Required Next Steps ({nextSteps.length})
+                  </h4>
+                  <p className="text-sm text-orange-800 mb-4">
+                    The following required items need attention to meet the checklist criteria:
+                  </p>
+                  <div className="space-y-3">
+                    {nextSteps.map((step, index) => (
+                      <div
+                        key={`next-step-${index}`}
+                        className="bg-white border border-orange-300 rounded-lg p-4"
+                      >
+                        <div className="flex items-start gap-3">
+                          <span className="bg-orange-100 text-orange-800 rounded-full px-3 py-1 text-xs font-semibold flex-shrink-0">
+                            {index + 1}
+                          </span>
+                          <div className="flex-1">
+                            <div className="flex items-start justify-between gap-2">
+                              <p className="font-semibold text-gray-900">
+                                {step.requirement?.description}
+                              </p>
+                              <span className="text-xs bg-blue-100 text-blue-800 px-2 py-1 rounded font-mono flex-shrink-0">
+                                #{step.requirement?.id}
+                              </span>
+                            </div>
+                            <p className="text-xs text-blue-600 mt-1">
+                              [{step.requirement?.category}]
+                            </p>
+                            {step.finding.notes && (
+                              <p className="text-sm text-gray-600 mt-2 italic">
+                                💡 {step.finding.notes}
+                              </p>
+                            )}
+                          </div>
+                        </div>
+                      </div>
+                    ))}
+                  </div>
+                </div>
+              )}
 
               {/* Timestamp */}
               {evaluation.timestamp && (

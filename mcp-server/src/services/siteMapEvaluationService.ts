@@ -6,6 +6,7 @@ const evaluationResultSchema = z.object({
   summary: z.string(),
   findings: z.array(
     z.object({
+      requirementId: z.number().optional(), // ID from the checklist
       requirement: z.string(),
       status: z.enum(["met", "missing", "unclear"]),
       notes: z.string().optional(),
@@ -67,8 +68,8 @@ function buildRequirementsPrompt(
   requirements: SiteMapRequirementSummary[]
 ): string {
   return requirements
-    .map((requirement, index) => {
-      const label = `${index + 1}. [${requirement.category}] ${
+    .map((requirement) => {
+      const label = `ID ${requirement.id}: [${requirement.category}] ${
         requirement.description
       }`;
       return requirement.required
@@ -125,67 +126,49 @@ export async function evaluateSiteMapImage(
     `Evaluate the provided architectural site map image against the ${payload.requirementType} checklist for Seattle permitting.`,
     propertyContext ? `Project context:\n${propertyContext}` : undefined,
     `Checklist items:\n${requirementsPrompt}`,
-    'Provide concise, actionable findings for each requirement, noting whether the plan appears to meet it, is missing information, or is unclear. If everything appears to meet the requirements, mark the overall status as ready_for_review. Respond only with JSON matching this shape: {"overallStatus": "ready_for_review"|"needs_attention", "summary": string, "findings": [{"requirement": string, "status": "met"|"missing"|"unclear", "notes"?: string}] }.',
+    'Provide concise, actionable findings for each requirement, noting whether the plan appears to meet it, is missing information, or is unclear. IMPORTANT: Include the requirement ID number in each finding so it can be matched to the checklist. If everything appears to meet the requirements, mark the overall status as ready_for_review. Respond only with JSON matching this shape: {"overallStatus": "ready_for_review"|"needs_attention", "summary": string, "findings": [{"requirementId": number, "requirement": string, "status": "met"|"missing"|"unclear", "notes"?: string}] }.',
   ]
     .filter(Boolean)
     .join("\n\n");
 
-  const response = await client.responses.create({
-    model: "gpt-4.1-mini",
-    input: [
+  const response = await client.chat.completions.create({
+    model: "gpt-4o-mini",
+    max_tokens: 4000, // Increased token limit to handle complex evaluations with many requirements
+    temperature: 0.3,
+    response_format: { type: "json_object" },
+    messages: [
       {
         role: "system",
-        content: [
-          {
-            type: "input_text",
-            text: "You are an experienced Seattle permitting reviewer specializing in architectural site plans. Respond in structured JSON and keep findings brief but actionable.",
-          },
-        ],
+        content: "You are an experienced Seattle permitting reviewer specializing in architectural site plans. Respond in structured JSON and keep findings brief but actionable.",
       },
       {
         role: "user",
         content: [
           {
-            type: "input_text",
+            type: "text",
             text: promptText,
           },
           {
-            type: "input_image",
-            detail: "high",
-            image_url: imageUrl,
+            type: "image_url",
+            image_url: {
+              url: imageUrl,
+              detail: "high",
+            },
           },
         ],
       },
     ],
   });
-  for (const item of response.output ?? []) {
-    if (
-      "content" in item &&
-      Array.isArray((item as { content?: unknown }).content)
-    ) {
-      for (const part of (
-        item as { content: Array<{ type: string; text?: string }> }
-      ).content) {
-        if (part.type === "output_text" && part.text) {
-          try {
-            const parsed = JSON.parse(part.text);
-            return evaluationResultSchema.parse(parsed);
-          } catch (error) {
-            throw new Error("Failed to parse evaluation response as JSON");
-          }
-        }
-      }
-    }
+
+  const content = response.choices[0]?.message?.content;
+  if (!content) {
+    throw new Error("Model returned an empty response");
   }
 
-  if (response.output_text) {
-    try {
-      const parsed = JSON.parse(response.output_text);
-      return evaluationResultSchema.parse(parsed);
-    } catch (error) {
-      throw new Error("Failed to parse evaluation response as JSON");
-    }
+  try {
+    const parsed = JSON.parse(content);
+    return evaluationResultSchema.parse(parsed);
+  } catch (error) {
+    throw new Error("Failed to parse evaluation response as JSON");
   }
-
-  throw new Error("Model returned an empty response");
 }
