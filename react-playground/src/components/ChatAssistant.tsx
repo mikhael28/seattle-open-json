@@ -57,7 +57,7 @@ type ConversationMessage = {
 
 const OPENAI_API_KEY_STORAGE = 'openai_api_key';
 const CHAT_HISTORY_STORAGE = 'chat_history';
-const MCP_SERVER_BASE_URL = 'http://localhost:3100';
+const MCP_SERVER_BASE_URL = process.env.NODE_ENV === 'production' ? 'https://seattle-open-json-production.up.railway.app' :'http://localhost:3100';
 
 const toolDefinitions = [
   {

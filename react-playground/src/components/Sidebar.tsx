@@ -2,7 +2,7 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/button";
-import { LayoutDashboard, X, BookOpen, FileText, PenTool, Database, Info } from "lucide-react";
+import { LayoutDashboard, X, BookOpen, FileText, PenTool, Database, Info, Presentation } from "lucide-react";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -17,6 +17,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       name: "Dashboard",
       href: "/",
       icon: LayoutDashboard,
+    },
+    {
+      name: "Civic Entities",
+      href: "/civic-entities",
+      icon: Database,
     },
     {
       name: "About SCS",
@@ -49,6 +54,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       name: "Site Map Designer",
       href: "/site-map-designer",
       icon: PenTool,
+    },
+    {
+      name: "Presentation Mode",
+      href: "/presentation",
+      icon: Presentation,
     },
   ];
 

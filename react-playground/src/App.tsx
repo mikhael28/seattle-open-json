@@ -9,13 +9,15 @@ import SCSDataExplorer from "./pages/SCSDataExplorer";
 import AboutSCS from "./pages/AboutSCS";
 import SCSDashboard from "./pages/SCSDashboard";
 import PermitDataExplorerPage from "./pages/PermitDataExplorerPage";
+import PresentationMode from "./pages/PresentationMode";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<SCSDashboard /> } />
+          <Route index element={<SiteMapDesignerPage /> } />
+          <Route path="civic-entities" element={<SCSDashboard />} />
           <Route path="resource-guide" element={<ResourceGuide />} />
           {/* <Route path="scs-dashboard" element={<SCSDashboard />} /> */}
           <Route path="about-scs" element={<AboutSCS />} />
@@ -23,6 +25,7 @@ function App() {
           <Route path="permitting" element={<Permitting />} />
           <Route path="permit-data-explorer" element={<PermitDataExplorerPage />} />
           <Route path="site-map-designer" element={<SiteMapDesignerPage />} />
+          <Route path="presentation" element={<PresentationMode />} />
         </Route>
       </Routes>
     </Router>

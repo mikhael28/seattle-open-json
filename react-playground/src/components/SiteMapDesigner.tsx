@@ -58,8 +58,8 @@ import { EvaluationModal } from './SiteMapDesigner/components/EvaluationModal';
 import { EvaluationHistoryPanel } from './SiteMapDesigner/components/EvaluationHistoryPanel';
 import { saveEvaluation, type SiteMapEvaluation as StoredEvaluation } from '../utils/evaluationHistory';
 
-const MCP_SERVER_BASE_URL = 'http://localhost:3100';
-
+const MCP_SERVER_BASE_URL = process.env.NODE_ENV === 'production' ? 'https://seattle-open-json-production.up.railway.app' :'http://localhost:3100';
+console.log('MCP_SERVER_BASE_URL', MCP_SERVER_BASE_URL);
 type SiteMapEvaluationStatus = 'ready_for_review' | 'needs_attention';
 
 type SiteMapFindingStatus = 'met' | 'missing' | 'unclear';

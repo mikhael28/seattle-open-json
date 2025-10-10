@@ -1,5 +1,5 @@
 import { PlanReview } from "../permit-data/permit-types.js";
-import planReviewData from "../permit-data/plan-review-2025-raw.json" with { type: "json" };
+import planReviewData from "../permit-data/plan-review-2025-raw.json";
 
 export type { PlanReview } from "../permit-data/permit-types.js";
 
