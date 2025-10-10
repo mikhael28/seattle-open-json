@@ -15,25 +15,25 @@ export type {
   DateRange,
   CivicEntityCollection,
   CivicEntityQuery,
-} from "./scs-model";
+} from "./scs-model.js";
 
 // Export data-specific interfaces
-export type { CommunityCenter } from "./data/community-centers";
-export type { FarmersMarket } from "./data/farmers-markets";
-export type { MobileRecreationProgramming } from "./data/mobile-recreation-programming";
-export type { PPatch } from "./data/p-patch";
-export type { PicnicSite } from "./data/picnic-sites";
-export type { PrivatelyOwnedPublicSpace } from "./data/privately-owned-public-spaces";
-export type { YouthProgram } from "./data/youth-programs";
-export type { EmeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
-export type { ParksCatalog } from "./data/parks-catalog";
+export type { CommunityCenter } from "./data/community-centers.js";
+export type { FarmersMarket } from "./data/farmers-markets.js";
+export type { MobileRecreationProgramming } from "./data/mobile-recreation-programming.js";
+export type { PPatch } from "./data/p-patch.js";
+export type { PicnicSite } from "./data/picnic-sites.js";
+export type { PrivatelyOwnedPublicSpace } from "./data/privately-owned-public-spaces.js";
+export type { YouthProgram } from "./data/youth-programs.js";
+export type { EmeraldCityResourceGuide } from "./data/emerald-city-resource-guide.js";
+export type { ParksCatalog } from "./data/parks-catalog.js";
 
 // Export permit data interfaces
 export type {
   BuildingPermit,
   PlanComment,
   PlanReview,
-} from "./permit-data/permit-types";
+} from "./permit-data/permit-types.js";
 
 // Export Seattle Civic Standard migration functions
 export {
@@ -48,41 +48,41 @@ export {
   migrateAllMobileRecreationPrograms,
   migrateAllYouthPrograms,
   migrateAllResourceGuides,
-} from "./migrations/index";
+} from "./migrations/index.js";
 
 // Export data loading utilities
 
 // Import all data objects from various src files
-import { communityCenters } from "./data/community-centers";
-import { farmersMarkets } from "./data/farmers-markets";
-import { parksCatalog } from "./data/parks-catalog";
-import { mobileRecreationProgramming } from "./data/mobile-recreation-programming";
-import { pPatch } from "./data/p-patch";
-import { picnicSites } from "./data/picnic-sites";
-import { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces";
-import { youth_programs } from "./data/youth-programs";
-import { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
+import { communityCenters } from "./data/community-centers.js";
+import { farmersMarkets } from "./data/farmers-markets.js";
+import { parksCatalog } from "./data/parks-catalog.js";
+import { mobileRecreationProgramming } from "./data/mobile-recreation-programming.js";
+import { pPatch } from "./data/p-patch.js";
+import { picnicSites } from "./data/picnic-sites.js";
+import { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces.js";
+import { youth_programs } from "./data/youth-programs.js";
+import { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide.js";
 
 // Import permit data objects
-import { buildingPermits } from "./data/building-permits";
-import { planComments } from "./data/plan-comments";
-import { planReview } from "./data/plan-review";
+import { buildingPermits } from "./data/building-permits.js";
+import { planComments } from "./data/plan-comments.js";
+import { planReview } from "./data/plan-review.js";
 
 // Export individual data collections
-export { communityCenters } from "./data/community-centers";
-export { farmersMarkets } from "./data/farmers-markets";
-export { parksCatalog } from "./data/parks-catalog";
-export { mobileRecreationProgramming } from "./data/mobile-recreation-programming";
-export { pPatch } from "./data/p-patch";
-export { picnicSites } from "./data/picnic-sites";
-export { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces";
-export { youth_programs } from "./data/youth-programs";
-export { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide";
+export { communityCenters } from "./data/community-centers.js";
+export { farmersMarkets } from "./data/farmers-markets.js";
+export { parksCatalog } from "./data/parks-catalog.js";
+export { mobileRecreationProgramming } from "./data/mobile-recreation-programming.js";
+export { pPatch } from "./data/p-patch.js";
+export { picnicSites } from "./data/picnic-sites.js";
+export { privatelyOwnedPublicSpaces } from "./data/privately-owned-public-spaces.js";
+export { youth_programs } from "./data/youth-programs.js";
+export { emeraldCityResourceGuide } from "./data/emerald-city-resource-guide.js";
 
 // Export permit data collections
-export { buildingPermits } from "./data/building-permits";
-export { planComments } from "./data/plan-comments";
-export { planReview } from "./data/plan-review";
+export { buildingPermits } from "./data/building-permits.js";
+export { planComments } from "./data/plan-comments.js";
+export { planReview } from "./data/plan-review.js";
 
 // Combined dataset with all opportunities
 export const allSeattleData = {
@@ -163,7 +163,7 @@ export const packageMetadata = {
 import {
   migrateAllSeattleData,
   getAllMigratedEntities,
-} from "./migrations/index";
+} from "./migrations/index.js";
 
 const _scsDataCache = migrateAllSeattleData();
 const _allEntitiesCache = getAllMigratedEntities();

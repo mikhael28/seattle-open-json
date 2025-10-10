@@ -27,69 +27,69 @@
 export {
   migrateFarmersMarket,
   migrateAllFarmersMarkets,
-} from './migrate-farmers-markets';
+} from './migrate-farmers-markets.js';
 
 export {
   migratePPatch,
   migrateAllPPatches,
-} from './migrate-p-patch';
+} from './migrate-p-patch.js';
 
 export {
   migrateCommunityCenter,
   migrateAllCommunityCenters,
-} from './migrate-community-centers';
+} from './migrate-community-centers.js';
 
 export {
   migrateParksCatalogActivity,
   migrateAllParksCatalog,
-} from './migrate-parks-catalog';
+} from './migrate-parks-catalog.js';
 
 export {
   migratePicnicSite,
   migrateAllPicnicSites,
-} from './migrate-picnic-sites';
+} from './migrate-picnic-sites.js';
 
 export {
   migratePrivatelyOwnedPublicSpace,
   migrateAllPrivatelyOwnedPublicSpaces,
-} from './migrate-privately-owned-public-spaces';
+} from './migrate-privately-owned-public-spaces.js';
 
 export {
   migrateMobileRecreationProgram,
   migrateAllMobileRecreationPrograms,
-} from './migrate-mobile-recreation-programming';
+} from './migrate-mobile-recreation-programming.js';
 
 export {
   migrateYouthProgram,
   migrateAllYouthPrograms,
-} from './migrate-youth-programs';
+} from './migrate-youth-programs.js';
 
 export {
   migrateResourceGuide,
   migrateAllResourceGuides,
-} from './migrate-emerald-city-resource-guide';
+} from './migrate-emerald-city-resource-guide.js';
 
 // Convenience function to migrate all data at once
-import type { CivicEntity } from '../scs-model';
-import { migrateAllFarmersMarkets } from './migrate-farmers-markets';
-import { migrateAllPPatches } from './migrate-p-patch';
-import { migrateAllCommunityCenters } from './migrate-community-centers';
-import { migrateAllParksCatalog } from './migrate-parks-catalog';
-import { migrateAllPicnicSites } from './migrate-picnic-sites';
-import { migrateAllPrivatelyOwnedPublicSpaces } from './migrate-privately-owned-public-spaces';
-import { migrateAllMobileRecreationPrograms } from './migrate-mobile-recreation-programming';
-import { migrateAllYouthPrograms } from './migrate-youth-programs';
-import { migrateAllResourceGuides } from './migrate-emerald-city-resource-guide';
+import type { CivicEntity } from '../scs-model.js';
+import { migrateAllFarmersMarkets } from './migrate-farmers-markets.js';
+import { migrateAllPPatches } from './migrate-p-patch.js';
+import { migrateAllCommunityCenters } from './migrate-community-centers.js';
+import { migrateAllParksCatalog } from './migrate-parks-catalog.js';
+import { migrateAllPicnicSites } from './migrate-picnic-sites.js';
+import { migrateAllPrivatelyOwnedPublicSpaces } from './migrate-privately-owned-public-spaces.js';
+import { migrateAllMobileRecreationPrograms } from './migrate-mobile-recreation-programming.js';
+import { migrateAllYouthPrograms } from './migrate-youth-programs.js';
+import { migrateAllResourceGuides } from './migrate-emerald-city-resource-guide.js';
 
-import { farmersMarkets } from '../data/farmers-markets';
-import { pPatch } from '../data/p-patch';
-import { communityCenters } from '../data/community-centers';
-import { parksCatalog } from '../data/parks-catalog';
-import { picnicSites } from '../data/picnic-sites';
-import { privatelyOwnedPublicSpaces } from '../data/privately-owned-public-spaces';
-import { mobileRecreationProgramming } from '../data/mobile-recreation-programming';
-import { youth_programs } from '../data/youth-programs';
-import { emeraldCityResourceGuide } from '../data/emerald-city-resource-guide';
+import { farmersMarkets } from '../data/farmers-markets.js';
+import { pPatch } from '../data/p-patch.js';
+import { communityCenters } from '../data/community-centers.js';
+import { parksCatalog } from '../data/parks-catalog.js';
+import { picnicSites } from '../data/picnic-sites.js';
+import { privatelyOwnedPublicSpaces } from '../data/privately-owned-public-spaces.js';
+import { mobileRecreationProgramming } from '../data/mobile-recreation-programming.js';
+import { youth_programs } from '../data/youth-programs.js';
+import { emeraldCityResourceGuide } from '../data/emerald-city-resource-guide.js';
 
 /**
  * Migrates all Seattle data to SCS-compliant CivicEntity format
