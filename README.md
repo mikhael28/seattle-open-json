@@ -1,15 +1,17 @@
 # Seattle Open JSON
 
-🏙️ A community-driven, open-source collection of information about the government officies and services provided by the City of Seattle, and other government entities & civil society organization in the Puget Sound region.
+🏙️ An open-source npm package & MCP server collecting information about government offices and services provided by the City of Seattle and other organizations in the Puget Sound region.
+
+> **🤖 MCP Server Available**: See [`/mcp-server`](/mcp-server) for a ready-to-use Model Context Protocol server that exposes civic entity search, activity lookup, and permit data APIs for AI agents and applications.
 
 ## 📋 Overview
 
-Seattle Open JSON provides structured, machine-readable information about youth initiatives, community resources, and recreational opportunities in the Seattle area. This package includes both raw data and TypeScript interfaces for type-safe development. If you fork this repository, you will notice a 'react-playground' directory; by running `npm install` and `npm run dev`, you can open visual playground to help explore the data we have collected thus far. It is incomplete, and not adequately cleaned up yet, but it is a starting point. I hope that the City of Seattle can take some inspiration towards forking this, or simply looking at it, and putting together their own npm module to enable developers to build on top of their data. In particular, creating a tree view of the structure of government, and it's available resources and programs, would allow developers to adequately present those resources to make them more discoverable to the general public.
+Seattle Open JSON provides structured, machine-readable information about youth initiatives, community resources, and recreational opportunities in the Seattle area. The package includes both raw data and TypeScript interfaces for type-safe development.
 
 ![Seattle Open JSON Dashboard](open-data-1.png)
 ![Seattle Open JSON Permit Explorer](open-data-2.png)
 
-## 🚀 NPM Package Installation
+## 🚀 Installation
 
 ```bash
 npm install seattle-open-json
@@ -17,7 +19,7 @@ npm install seattle-open-json
 
 ## 📊 Data Collections
 
-This package contains **12 datasets** with detailed information about Seattle's community resources and permit data, originally taken from the City of Seattle, the Emerald City Resource Guide, and scraped data from City of Seattle websites:
+**12 datasets** with detailed information about Seattle's community resources and permit data:
 
 | Dataset                | Records  | Description                                                                              |
 | ---------------------- | -------- | ---------------------------------------------------------------------------------------- |
@@ -34,68 +36,48 @@ This package contains **12 datasets** with detailed information about Seattle's 
 | **Plan Comments**      | 100,000+ | Plan review comments and corrections from permit review process                          |
 | **Plan Review**        | 800,000+ | Detailed plan review records with reviewer assignments and completion status             |
 
-## 🌟 Seattle Civic Standard (SCS) - NEW in v1.2.0
+## 🌟 Seattle Civic Standard (SCS)
 
-This package now includes **all datasets migrated to the Seattle Civic Standard (SCS)** - a unified, simple format designed for civic data interoperability.
-
-### What is SCS?
-
-The Seattle Civic Standard provides a consistent interface for all civic entities with just **6 core fields**:
+All datasets are available in the **Seattle Civic Standard** format - a unified interface for civic data with 6 core fields:
 
 1. **id** - Unique identifier
-2. **name** - What it's called
-3. **type** - What kind of thing it is
-4. **description** - What it is in plain English
-5. **location** - Where it is (address and/or coordinates)
-6. **contact** - How to get more information
+2. **name** - Entity name
+3. **type** - Entity category
+4. **description** - Plain language description
+5. **location** - Address and/or coordinates
+6. **contact** - Contact information
 
 Plus optional fields like `schedule`, `dates`, `cost`, `ageRange`, `accessibility`, and more.
 
-### Why SCS?
-
-- ✅ **Single interface** works across all Seattle civic data sources
-- ✅ **Easy to use** - consistent structure, easy to filter and search
-- ✅ **Map-ready** - coordinates included where available
-- ✅ **Calendar-ready** - schedules standardized
-- ✅ **TypeScript-first** - full type safety included
-
-### Quick Start with SCS
+### Quick Start
 
 ```typescript
 import { scsData } from "seattle-open-json";
 
-// Access all 3,176 civic entities in a unified format
+// Access all 3,176+ civic entities in unified format
 const allEntities = scsData.getAllEntities();
 
-// Easy filtering - works the same way for ALL entity types
+// Filter by cost
 const freePrograms = allEntities.filter((entity) =>
   entity.cost?.toLowerCase().includes("free")
 );
 
+// Filter by age
 const teenActivities = allEntities.filter(
   (entity) =>
     entity.ageRange?.includes("13") || entity.ageRange?.includes("teen")
 );
 ```
 
-**All 3,176 entities** across 9 datasets are now available in SCS format, making it easy to search, filter, and use civic data consistently.
-
-## 🔧 Usage
+## 🔧 Usage Examples
 
 ### Basic Import
 
 ```typescript
 import seattleData from "seattle-open-json";
 
-// Access all data
-console.log(seattleData.data);
-
-// Access specific collections
 console.log(seattleData.data.communityCenters);
 console.log(seattleData.data.youthPrograms);
-
-// Access metadata
-console.log(seattleData.metadata);
 ```
 
 ### Named Imports
@@ -105,37 +87,12 @@ import {
   communityCenters,
   farmersMarkets,
   youthPrograms,
-  packageMetadata,
 } from "seattle-open-json";
 
-// Use individual collections
 const activeCenters = communityCenters.filter(
   (center) => center["Open Status"] === "Open"
 );
-
-const weekendMarkets = farmersMarkets.filter(
-  (market) =>
-    market.ACTIVEDAY.includes("Saturday") || market.ACTIVEDAY.includes("Sunday")
-);
 ```
-
-### Categorized Access
-
-```typescript
-import { recreationOpportunities, communityResources } from "seattle-open-json";
-
-// Recreation-focused data (community centers, parks, mobile programming)
-const recreationData = recreationOpportunities;
-
-// Community resources (farmers markets, P-patches, youth programs, etc.)
-const communityData = communityResources;
-```
-
-## 📝 TypeScript Support
-
-All data includes full TypeScript type definitions for type-safe development. Import the `CivicEntity` interface for SCS data, or use the original type definitions for raw data.
-
-## 🎯 Common Use Cases
 
 ### Finding Youth Programs by Age
 
@@ -144,141 +101,48 @@ import { youth_programs } from "seattle-open-json";
 
 const teenPrograms = youth_programs.filter(
   (program) =>
-    program.ageRange.includes("13") ||
-    program.ageRange.includes("teen") ||
-    program.ageRange.includes("14-18")
-);
-```
-
-### Finding Open Community Centers
-
-```typescript
-import { communityCenters } from "seattle-open-json";
-
-const openCenters = communityCenters.filter(
-  (center) => center["Open Status"] === "Open"
-);
-
-const centersWithGyms = communityCenters.filter(
-  (center) => center["Gym"] === "Yes"
-);
-```
-
-### Finding Weekend Activities
-
-```typescript
-import { farmersMarkets, mobileRecreationProgramming } from "seattle-open-json";
-
-const weekendMarkets = farmersMarkets.filter(
-  (market) =>
-    market.ACTIVEDAY.toLowerCase().includes("saturday") ||
-    market.ACTIVEDAY.toLowerCase().includes("sunday")
-);
-
-const weekendRecreation = mobileRecreationProgramming.filter(
-  (program) =>
-    program["Day of Week"].includes("Saturday") ||
-    program["Day of Week"].includes("Sunday")
-);
-```
-
-### Searching Community Resources
-
-```typescript
-import { emeraldCityResourceGuide } from "seattle-open-json";
-
-const mentalHealthResources = emeraldCityResourceGuide.filter((resource) =>
-  resource.categories.some(
-    (category) =>
-      category.toLowerCase().includes("mental health") ||
-      category.toLowerCase().includes("counseling")
-  )
-);
-
-const foodResources = emeraldCityResourceGuide.filter((resource) =>
-  resource.categories.some(
-    (category) =>
-      category.toLowerCase().includes("food") ||
-      category.toLowerCase().includes("nutrition")
-  )
+    program.ageRange.includes("13") || program.ageRange.includes("teen")
 );
 ```
 
 ### Analyzing Building Permits
 
 ```typescript
-import { buildingPermits, planComments } from "seattle-open-json";
+import { buildingPermits } from "seattle-open-json";
 
-// Find high-value residential projects
 const highValueResidential = buildingPermits.filter(
   (permit) =>
     permit.PermitClassMapped === "Residential" && permit.EstProjectCost > 500000
-);
-
-// Find permits with many review cycles (complex projects)
-const complexProjects = buildingPermits.filter(
-  (permit) => permit.NumberReviewCycles > 3
-);
-
-// Get all comments for a specific permit
-const permitComments = planComments.filter(
-  (comment) => comment.PermitNum === "6974203-CN"
 );
 ```
 
 ## 🗂️ Available Exports
 
-### Seattle Civic Standard (SCS) Data ⭐
+### SCS Data Collections
 
 ```typescript
 import { scsData } from "seattle-open-json";
 
-// Get all 3,176 entities in unified format
 const allEntities = scsData.getAllEntities();
-
-// Or access individual collections
 const markets = scsData.farmersMarkets;
 const centers = scsData.communityCenters;
-const programs = scsData.youthPrograms;
 ```
 
 ### Original Data Collections
 
-Access the raw data in its original format:
-
-- `communityCenters` - Community centers with schedules and amenities
-- `farmersMarkets` - Farmers markets with locations and schedules
-- `parksCatalog` - Parks and recreation activities
-- `mobileRecreationProgramming` - Mobile recreation programs
-- `pPatch` - P-Patch community gardens
-- `picnicSites` - Reservable picnic sites
-- `privatelyOwnedPublicSpaces` - Public spaces (POPS)
-- `youth_programs` - Youth programs and activities
-- `emeraldCityResourceGuide` - Community resources directory
-- `buildingPermits` - Building permit applications with project details
-- `planComments` - Plan review comments and corrections
-- `planReview` - Detailed plan review records
-
-### Aggregated Collections
-
-- `allSeattleData` - All datasets combined
-- `recreationOpportunities` - Recreation-focused data
-- `communityResources` - Community service data
+- `communityCenters`, `farmersMarkets`, `parksCatalog`, `mobileRecreationProgramming`
+- `pPatch`, `picnicSites`, `privatelyOwnedPublicSpaces`, `youth_programs`
+- `emeraldCityResourceGuide`, `buildingPermits`, `planComments`, `planReview`
 
 ### TypeScript Types
 
-All interfaces are exported for type-safe development:
-
 ```typescript
 import type {
-  CivicEntity, // SCS standard interface
+  CivicEntity,
   YouthProgram,
   CommunityCenter,
-  FarmersMarket,
-  BuildingPermit, // Building permit data
-  PlanComment, // Plan review comments
-  PlanReview, // Plan review records
-  // ... all other types
+  BuildingPermit,
+  PlanComment,
 } from "seattle-open-json";
 ```
 
@@ -286,96 +150,22 @@ import type {
 
 ```typescript
 import { packageMetadata } from "seattle-open-json";
-
 console.log(packageMetadata.totalRecords);
-// Total entities across all datasets
 ```
 
----
+## 🤖 MCP Server
 
-## 📚 Original Data Model Reference
+The `/mcp-server` directory contains an Express + TypeScript implementation that exposes three MCP tools for AI agents:
 
-For developers working with the raw data formats, here are the original TypeScript interfaces:
+- **`searchCivicEntities`** - Query civic entities by type, tag, neighborhood, or keyword
+- **`searchActivities`** - Search activities across parks, mobile recreation, and youth programs
+- **`getPermitDetails`** - Fetch permit records with plan comments and review cycles
 
-### Youth Programs
-
-```typescript
-interface YouthProgram {
-  id: string;
-  organizationName: string;
-  programDescription: string;
-  activityName: string;
-  activityDescription: string;
-  location: string;
-  ageRange: string;
-  dates: string;
-  day: string;
-  times: string;
-  cost: string;
-  url: string;
-  lastUpdated: string;
-}
-```
-
-### Community Centers
-
-```typescript
-interface CommunityCenter {
-  OBJECTID: number;
-  name: string;
-  Address: string;
-  "Short Name": string;
-  "CC Phone Number": string;
-  "Open Status": string;
-  "Scheduling Season": string;
-  // ... additional schedule and amenity fields
-}
-```
-
-### Farmers Markets
-
-```typescript
-interface FarmersMarket {
-  OBJECTID: number;
-  NAME: string;
-  LOCATION: string;
-  ORGANIZATI: string;
-  ACTIVEDAY: string;
-  MONTHS: string;
-  HOURS: string;
-  WEBSITE: string;
-  PHONE: string;
-  x: number; // State Plane coordinates
-  y: number; // State Plane coordinates
-}
-```
-
-### Emerald City Resource Guide
-
-```typescript
-interface EmeraldCityResourceGuide {
-  name: string;
-  website?: string;
-  phone?: string;
-  address?: string;
-  hours?: string;
-  description: string;
-  categories: string[];
-}
-```
-
-> **Note:** For new applications, we recommend using the **Seattle Civic Standard (SCS)** format which provides a unified interface across all datasets.
-
----
+See the [MCP Server README](/mcp-server/README.md) for setup and API documentation.
 
 ## 🤝 Contributing
 
-This is a community-driven project! We welcome contributions to:
-
-- Add new data sources
-- Improve data quality
-- Enhance TypeScript definitions
-- Add utility functions
+This is a community-driven project! We welcome contributions to add new data sources, improve data quality, and enhance TypeScript definitions.
 
 ## 📄 License
 
