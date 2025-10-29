@@ -1,6 +1,14 @@
-Testing
-• npm run build
-• npm run dev will open localhost:3100
+# MCP Server Instructions
+
+This is a separate, standalone module within the `seattle-open-json` package that is not intended for consumption in the same way the open JSON objects are. This is meant to be run by a developer, locally on their machine, against the data in `seattle-open-json` as a simple proof of concept. Here are some instructions to get it running on your local machine; be aware that you will need an OpenAI platform API key to run things locally, as well as in production at https://seattle.expatriaonline.com
+
+1. From /home/mikhael/Workspace/seattle-youth-data/mcp-server, run `npm install`, then `npm run build`, and `npm start`.
+2. In another shell, hit GET http://localhost:3100/health to confirm the server is up.
+3. Query sample endpoints, e.g.:
+   • GET http://localhost:3100/activities?keyword=pottery
+   • GET http://localhost:3100/scs/entities?search=park&type=Park
+   • GET http://localhost:3100/permits/7019574-CN
+4. (Optional) POST JSON payloads to http://localhost:3100/mcp/tools/<toolName> matching the documented input shapes to ensure AI integrations receive results.
 
 API Overview
 • GET /health — readiness probe
@@ -14,13 +22,3 @@ MCP Tools
 • searchCivicEntities — filters Seattle Civic Standard entities (payload matches /scs/entities query parameters)
 • searchActivities — keyword search over activities (payload mirrors /activities parameters)
 • getPermitDetails — looks up a permit by permitNumber
-
-Manual Verification
-
-1. From /home/mikhael/Workspace/seattle-youth-data/mcp-server, run npm install, then npm run build, and npm start.
-2. In another shell, hit GET http://localhost:3100/health to confirm the server is up.
-3. Query sample endpoints, e.g.:
-   • GET http://localhost:3100/activities?keyword=pottery
-   • GET http://localhost:3100/scs/entities?search=park&type=Park
-   • GET http://localhost:3100/permits/7019574-CN
-4. (Optional) POST JSON payloads to http://localhost:3100/mcp/tools/<toolName> matching the documented input shapes to ensure AI integrations receive results.

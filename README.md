@@ -11,11 +11,13 @@ Seattle Open JSON provides structured, machine-readable information about youth 
 ![Seattle Open JSON Dashboard](open-data-1.png)
 ![Seattle Open JSON Permit Explorer](open-data-2.png)
 
-## 🚀 Installation
+## 🚀 Installation in front-end
 
 ```bash
 npm install seattle-open-json
 ```
+
+For instructions about the MCP server, please refer to the README in the `mcp-server` folder.
 
 ## 📊 Data Collections
 
