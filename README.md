@@ -8,6 +8,69 @@
 
 Seattle Open JSON provides structured, machine-readable information about youth initiatives, community resources, and recreational opportunities in the Seattle area. The package includes both raw data and TypeScript interfaces for type-safe development.
 
+## 🎫 NEW: Seattle 311 / Customer Support Tickets
+
+**7,100+ live service requests** from Seattle's Find It Fix It app and 311 system, now available in the **Seattle Civic Standard (SCS) CivicTicket format**. This represents a new pattern in civic data - dynamic work items with lifecycle tracking rather than static resources.
+
+### Features
+- ✅ **Full SCS Compliance**: Every ticket includes all 6 core CivicEntity fields plus ticket-specific metadata
+- 📍 **Geocoded Locations**: Precise coordinates for mapping service requests across Seattle
+- 🏢 **Department Information**: Routing and contact details for responsible city departments
+- 🏘️ **Neighborhood Context**: Community reporting areas, council districts, and police precincts
+- 🔖 **Rich Tagging**: Automatic tag generation for request types, status, method, and location
+
+### Quick Start
+
+```typescript
+import { scsData } from 'seattle-open-json';
+
+// Access all 7,100+ civic tickets in SCS format
+const tickets = scsData.customerSupportTickets;
+
+// Filter by status
+const openTickets = tickets.filter(t => t.ticketStatus === 'Open');
+
+// Filter by neighborhood
+const fremontIssues = tickets.filter(t => t.neighborhood === 'FREMONT');
+
+// Filter by department
+const sdotRequests = tickets.filter(t => 
+  t.assignedDepartment === 'SDOT-Seattle Department of Transportation'
+);
+```
+
+### Data Structure
+
+Each `CivicTicket` includes:
+- **Core CivicEntity fields**: `id`, `name`, `type`, `description`, `location` (with coordinates), `contact`
+- **Ticket-specific fields**: `ticketNumber`, `ticketStatus`, `createdDate`, `requestType`
+- **Optional metadata**: `methodReceived`, `assignedDepartment`, `source`, `precinct`, `councilDistrict`
+- **Categorization**: `tags`, `organization`, `neighborhood`, `notes`
+
+### Top Service Request Types
+1. Unauthorized Encampment (1,854 tickets)
+2. Abandoned Vehicle/72hr Parking Ordinance (1,427)
+3. Graffiti (666)
+4. Illegal Dumping / Needles (614)
+5. General Inquiry - Customer Service Bureau (457)
+
+### Import Options
+
+```typescript
+// Import migrated SCS tickets
+import { scsData } from 'seattle-open-json';
+const civicTickets = scsData.customerSupportTickets;
+
+// Import raw camelCase data
+import { customerSupport } from 'seattle-open-json/customer-support';
+
+// Import types
+import type { CustomerSupportTicket, CivicTicket } from 'seattle-open-json';
+
+// Import migration function
+import { migrateCustomerSupportTicket } from 'seattle-open-json/migrations/customer-support';
+```
+
 ![Seattle Open JSON Dashboard](open-data-1.png)
 ![Seattle Open JSON Permit Explorer](open-data-2.png)
 
@@ -21,7 +84,7 @@ For instructions about the MCP server, please refer to the README in the `mcp-se
 
 ## 📊 Data Collections
 
-**12 datasets** with detailed information about Seattle's community resources and permit data:
+**13 datasets** with detailed information about Seattle's community resources, permit data, and service requests:
 
 | Dataset                | Records  | Description                                                                              |
 | ---------------------- | -------- | ---------------------------------------------------------------------------------------- |
@@ -37,6 +100,7 @@ For instructions about the MCP server, please refer to the README in the `mcp-se
 | **Building Permits**   | 1,000+   | Building permit applications with project details, costs, and review timelines           |
 | **Plan Comments**      | 100,000+ | Plan review comments and corrections from permit review process                          |
 | **Plan Review**        | 800,000+ | Detailed plan review records with reviewer assignments and completion status             |
+| **Civic Tickets**      | 7,100+   | Seattle 311/Find It Fix It service requests with status tracking and location data       |
 
 ## 🌟 Seattle Civic Standard (SCS)
 
@@ -118,6 +182,28 @@ const highValueResidential = buildingPermits.filter(
 );
 ```
 
+### Tracking 311 Service Requests
+
+```typescript
+import { scsData } from "seattle-open-json";
+
+// Get all civic tickets in SCS format
+const tickets = scsData.customerSupportTickets;
+
+// Find all open graffiti reports in a specific neighborhood
+const graffitiReports = tickets.filter(
+  (ticket) =>
+    ticket.requestType === "Graffiti" &&
+    ticket.ticketStatus === "Open" &&
+    ticket.neighborhood === "CAPITOL HILL"
+);
+
+// Map all service requests with coordinates
+const mappableTickets = tickets.filter(
+  (ticket) => typeof ticket.location === "object" && ticket.location.coordinates
+);
+```
+
 ## 🗂️ Available Exports
 
 ### SCS Data Collections
@@ -135,16 +221,19 @@ const centers = scsData.communityCenters;
 - `communityCenters`, `farmersMarkets`, `parksCatalog`, `mobileRecreationProgramming`
 - `pPatch`, `picnicSites`, `privatelyOwnedPublicSpaces`, `youth_programs`
 - `emeraldCityResourceGuide`, `buildingPermits`, `planComments`, `planReview`
+- `customerSupport` - Raw customer support tickets in camelCase format
 
 ### TypeScript Types
 
 ```typescript
 import type {
   CivicEntity,
+  CivicTicket,
   YouthProgram,
   CommunityCenter,
   BuildingPermit,
   PlanComment,
+  CustomerSupportTicket,
 } from "seattle-open-json";
 ```
 

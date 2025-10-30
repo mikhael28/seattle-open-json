@@ -58,6 +58,7 @@ function main() {
   writeJsonFile('mobile-recreation-programs.json', migratedData.mobileRecreationPrograms);
   writeJsonFile('youth-programs.json', migratedData.youthPrograms);
   writeJsonFile('resource-guides.json', migratedData.resourceGuides);
+  writeJsonFile('customer-support-tickets.json', migratedData.customerSupportTickets);
 
   // Create a combined collection
   console.log('\n📦 Generating combined collection...');
@@ -90,6 +91,7 @@ function main() {
   console.log(`   Mobile Recreation: ${migratedData.mobileRecreationPrograms.length}`);
   console.log(`   Youth Programs: ${migratedData.youthPrograms.length}`);
   console.log(`   Resource Guides: ${migratedData.resourceGuides.length}`);
+  console.log(`   Customer Support Tickets: ${migratedData.customerSupportTickets.length}`);
 
   // Create a metadata summary file
   const summary = {
@@ -104,7 +106,8 @@ function main() {
       privatelyOwnedPublicSpaces: migratedData.privatelyOwnedPublicSpaces.length,
       mobileRecreationPrograms: migratedData.mobileRecreationPrograms.length,
       youthPrograms: migratedData.youthPrograms.length,
-      resourceGuides: migratedData.resourceGuides.length
+      resourceGuides: migratedData.resourceGuides.length,
+      customerSupportTickets: migratedData.customerSupportTickets.length
     },
     scsVersion: '1.0.0',
     compliance: {

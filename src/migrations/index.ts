@@ -69,6 +69,11 @@ export {
   migrateAllResourceGuides,
 } from './migrate-emerald-city-resource-guide.js';
 
+export {
+  migrateCustomerSupportTicket,
+  migrateAllCustomerSupportTickets,
+} from './migrate-customer-support.js';
+
 // Convenience function to migrate all data at once
 import type { CivicEntity } from '../scs-model.js';
 import { migrateAllFarmersMarkets } from './migrate-farmers-markets.js';
@@ -80,6 +85,7 @@ import { migrateAllPrivatelyOwnedPublicSpaces } from './migrate-privately-owned-
 import { migrateAllMobileRecreationPrograms } from './migrate-mobile-recreation-programming.js';
 import { migrateAllYouthPrograms } from './migrate-youth-programs.js';
 import { migrateAllResourceGuides } from './migrate-emerald-city-resource-guide.js';
+import { migrateAllCustomerSupportTickets } from './migrate-customer-support.js';
 
 import { farmersMarkets } from '../data/farmers-markets.js';
 import { pPatch } from '../data/p-patch.js';
@@ -90,6 +96,7 @@ import { privatelyOwnedPublicSpaces } from '../data/privately-owned-public-space
 import { mobileRecreationProgramming } from '../data/mobile-recreation-programming.js';
 import { youth_programs } from '../data/youth-programs.js';
 import { emeraldCityResourceGuide } from '../data/emerald-city-resource-guide.js';
+import { customerSupport } from '../data/customer-support.js';
 
 /**
  * Migrates all Seattle data to SCS-compliant CivicEntity format
@@ -107,6 +114,7 @@ export function migrateAllSeattleData() {
     mobileRecreationPrograms: migrateAllMobileRecreationPrograms(mobileRecreationProgramming),
     youthPrograms: migrateAllYouthPrograms(youth_programs),
     resourceGuides: migrateAllResourceGuides(emeraldCityResourceGuide),
+    customerSupportTickets: migrateAllCustomerSupportTickets(customerSupport),
   };
 }
 
@@ -128,5 +136,6 @@ export function getAllMigratedEntities(): CivicEntity[] {
     ...allData.mobileRecreationPrograms,
     ...allData.youthPrograms,
     ...allData.resourceGuides,
+    ...allData.customerSupportTickets,
   ];
 }

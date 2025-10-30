@@ -8,6 +8,7 @@
 // Export Seattle Civic Standard Model interfaces
 export type {
   CivicEntity,
+  CivicTicket,
   Coordinates,
   LocationInfo,
   ContactInfo,
@@ -27,6 +28,7 @@ export type { PrivatelyOwnedPublicSpace } from "./data/privately-owned-public-sp
 export type { YouthProgram } from "./data/youth-programs.js";
 export type { EmeraldCityResourceGuide } from "./data/emerald-city-resource-guide.js";
 export type { ParksCatalog } from "./data/parks-catalog.js";
+export type { CustomerSupportTicket } from "./data/customer-support-types.js";
 
 // Export permit data interfaces
 export type {
@@ -48,6 +50,8 @@ export {
   migrateAllMobileRecreationPrograms,
   migrateAllYouthPrograms,
   migrateAllResourceGuides,
+  migrateAllCustomerSupportTickets,
+  migrateCustomerSupportTicket,
 } from "./migrations/index.js";
 
 // Export data loading utilities
@@ -68,6 +72,9 @@ import { buildingPermits } from "./data/building-permits.js";
 import { planComments } from "./data/plan-comments.js";
 import { planReview } from "./data/plan-review.js";
 
+// Import customer support data
+import { customerSupport } from "./data/customer-support.js";
+
 // Export individual data collections
 export { communityCenters } from "./data/community-centers.js";
 export { farmersMarkets } from "./data/farmers-markets.js";
@@ -84,6 +91,9 @@ export { buildingPermits } from "./data/building-permits.js";
 export { planComments } from "./data/plan-comments.js";
 export { planReview } from "./data/plan-review.js";
 
+// Export customer support data collection
+export { customerSupport } from "./data/customer-support.js";
+
 // Combined dataset with all opportunities
 export const allSeattleData = {
   communityCenters,
@@ -98,6 +108,7 @@ export const allSeattleData = {
   buildingPermits,
   planComments,
   planReview,
+  customerSupport,
 };
 
 // Quick access arrays for different categories
@@ -139,6 +150,7 @@ export const packageMetadata = {
     buildingPermits: buildingPermits.length,
     planComments: planComments.length,
     planReview: planReview.length,
+    customerSupport: customerSupport.length,
     total: allOpportunities.length,
   },
   categories: [
@@ -155,6 +167,7 @@ export const packageMetadata = {
     "Building Permits",
     "Plan Comments",
     "Plan Review",
+    "Customer Support Tickets",
   ],
   lastUpdated: new Date().toISOString(),
 };
@@ -173,7 +186,7 @@ const _allEntitiesCache = getAllMigratedEntities();
  * All datasets converted to the unified CivicEntity format
  */
 export const scsData = {
-  /** All SCS entities as a flat array (3,176+ entities) */
+  /** All SCS entities as a flat array (3,176+ entities, plus customer support tickets) */
   getAllEntities: () => _allEntitiesCache,
 
   /** Farmers Markets in SCS format (17 entities) */
@@ -202,6 +215,9 @@ export const scsData = {
 
   /** Community Resource Guides in SCS format (484 entities) */
   resourceGuides: _scsDataCache.resourceGuides,
+
+  /** Customer Support Tickets in SCS CivicTicket format (100,000+ tickets) */
+  customerSupportTickets: _scsDataCache.customerSupportTickets,
 };
 
 // Default export

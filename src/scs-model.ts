@@ -192,6 +192,87 @@ export interface CivicEntityCollection {
   };
 }
 
+// ===== CIVIC TICKET EXTENSION =====
+
+/**
+ * CivicTicket - A specialized SCS interface for tracking work requests and tickets
+ * 
+ * This extends CivicEntity to represent tickets, service requests, or work items
+ * that can be used across various government agencies (311, permits, case management, etc.)
+ * 
+ * Unlike entities like community centers or programs (which are static resources),
+ * CivicTickets represent dynamic work items with lifecycle status tracking.
+ */
+export interface CivicTicket extends CivicEntity {
+  // ===== TICKET-SPECIFIC REQUIRED FIELDS =====
+  
+  /** Ticket/request number or unique identifier (also stored in id) */
+  ticketNumber: string;
+  
+  /** Current status of the ticket (e.g., "Open", "Closed", "In Progress", "Pending") */
+  ticketStatus: string;
+  
+  /** Date/time when the ticket was created */
+  createdDate: string;
+  
+  /** Type of request or ticket category (also stored in type) */
+  requestType: string;
+  
+  // ===== TICKET-SPECIFIC OPTIONAL FIELDS =====
+  
+  /** Method through which the ticket was received (e.g., "Web", "Phone", "App", "In-Person") */
+  methodReceived?: string;
+  
+  /** Date/time when the ticket was last updated */
+  updatedDate?: string;
+  
+  /** Date/time when the ticket was closed/resolved */
+  closedDate?: string;
+  
+  /** Department or agency assigned to handle this ticket */
+  assignedDepartment?: string;
+  
+  /** Individual or team assigned to this ticket */
+  assignedTo?: string;
+  
+  /** Priority level (e.g., "High", "Medium", "Low", "Emergency") */
+  priority?: string;
+  
+  /** Channel or source system (e.g., "Find It Fix It", "311", "Internal") */
+  source?: string;
+  
+  /** Resolution notes or outcome */
+  resolution?: string;
+  
+  /** Reporter or submitter name (when available/public) */
+  reportedBy?: string;
+  
+  /** Related ticket numbers or IDs */
+  relatedTickets?: string[];
+  
+  /** Timeline or history of status changes */
+  statusHistory?: Array<{
+    status: string;
+    date: string;
+    notes?: string;
+  }>;
+  
+  /** Service level agreement deadline */
+  slaDeadline?: string;
+  
+  /** Estimated time to resolve */
+  estimatedResolution?: string;
+  
+  /** Actual time spent on ticket (in hours or descriptive string) */
+  timeSpent?: string | number;
+  
+  /** Geographic precinct or service area */
+  precinct?: string;
+  
+  /** Council district number */
+  councilDistrict?: number | string;
+}
+
 // ===== HELPER TYPES =====
 
 /**

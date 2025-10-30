@@ -9,6 +9,41 @@
             "import": "./dist/index.js",
             "require": "./dist/index.js",
             "types": "./dist/index.d.ts"
+        },
+        "./building-permits": {
+            "import": "./dist/data/building-permits.js",
+            "require": "./dist/data/building-permits.js",
+            "types": "./dist/data/building-permits.d.ts"
+        },
+        "./plan-comments": {
+            "import": "./dist/data/plan-comments.js",
+            "require": "./dist/data/plan-comments.js",
+            "types": "./dist/data/plan-comments.d.ts"
+        },
+        "./plan-review": {
+            "import": "./dist/data/plan-review.js",
+            "require": "./dist/data/plan-review.js",
+            "types": "./dist/data/plan-review.d.ts"
+        },
+        "./customer-support": {
+            "import": "./dist/data/customer-support.js",
+            "require": "./dist/data/customer-support.js",
+            "types": "./dist/data/customer-support.d.ts"
+        },
+        "./customer-support-types": {
+            "import": "./dist/data/customer-support-types.js",
+            "require": "./dist/data/customer-support-types.js",
+            "types": "./dist/data/customer-support-types.d.ts"
+        },
+        "./migrations": {
+            "import": "./dist/migrations/index.js",
+            "require": "./dist/migrations/index.js",
+            "types": "./dist/migrations/index.d.ts"
+        },
+        "./migrations/customer-support": {
+            "import": "./dist/migrations/migrate-customer-support.js",
+            "require": "./dist/migrations/migrate-customer-support.js",
+            "types": "./dist/migrations/migrate-customer-support.d.ts"
         }
     },
     "files": [
