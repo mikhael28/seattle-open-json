@@ -74,11 +74,69 @@ import { migrateCustomerSupportTicket } from 'seattle-open-json/migrations/custo
 ![Seattle Open JSON Dashboard](open-data-1.png)
 ![Seattle Open JSON Permit Explorer](open-data-2.png)
 
-## 🚀 Installation in front-end
+## 🚀 Installation
 
 ```bash
 npm install seattle-open-json
 ```
+
+### 🌲 Tree-Shaking Support (v1.4.0+)
+
+The package now supports tree-shaking for optimal bundle sizes. Import only the data you need:
+
+```typescript
+// ✅ RECOMMENDED: Import specific datasets (tree-shakeable)
+import { communityCenters } from 'seattle-open-json/community-centers';
+import { youthPrograms } from 'seattle-open-json/youth-programs';
+
+// ✅ RECOMMENDED: Lazy-load SCS data when needed
+import { loadScsData } from 'seattle-open-json/scs';
+const scsData = await loadScsData();
+
+// ⚠️ AVOID: Importing from main entry loads all data
+import seattleData from 'seattle-open-json'; // Loads 40MB+ of data!
+```
+
+### Available Submodule Imports
+
+| Import Path | Description | Size |
+|-------------|-------------|------|
+| `seattle-open-json/types` | TypeScript types only | ~0KB |
+| `seattle-open-json/community-centers` | Community centers data | ~81KB |
+| `seattle-open-json/farmers-markets` | Farmers markets | ~7KB |
+| `seattle-open-json/parks-catalog` | Parks catalog | ~3.6MB |
+| `seattle-open-json/youth-programs` | Youth programs | ~51KB |
+| `seattle-open-json/customer-support` | Customer support tickets | ~4.4MB |
+| `seattle-open-json/scs` | Lazy-loaded SCS data | On-demand |
+
+### 🌲 Tree-Shaking Support (v1.4.0+)
+
+The package now supports tree-shaking for optimal bundle sizes. Import only the data you need:
+
+```typescript
+// ✅ RECOMMENDED: Import specific datasets (tree-shakeable)
+import { communityCenters } from 'seattle-open-json/community-centers';
+import { youthPrograms } from 'seattle-open-json/youth-programs';
+
+// ✅ RECOMMENDED: Lazy-load SCS data when needed
+import { loadScsData } from 'seattle-open-json/scs';
+const scsData = await loadScsData();
+
+// ⚠️ AVOID: Importing from main entry loads all data
+import seattleData from 'seattle-open-json'; // Loads 40MB+ of data!
+```
+
+### Available Submodule Imports
+
+| Import Path | Description | Size |
+|-------------|-------------|------|
+| `seattle-open-json/types` | TypeScript types only | ~0KB |
+| `seattle-open-json/community-centers` | Community centers data | ~81KB |
+| `seattle-open-json/farmers-markets` | Farmers markets | ~7KB |
+| `seattle-open-json/parks-catalog` | Parks catalog | ~3.6MB |
+| `seattle-open-json/youth-programs` | Youth programs | ~51KB |
+| `seattle-open-json/customer-support` | Customer support tickets | ~4.4MB |
+| `seattle-open-json/scs` | Lazy-loaded SCS data | On-demand |
 
 For instructions about the MCP server, please refer to the README in the `mcp-server` folder.
 
@@ -137,33 +195,41 @@ const teenActivities = allEntities.filter(
 
 ## 🔧 Usage Examples
 
-### Basic Import
+### Tree-Shakeable Imports (Recommended)
 
 ```typescript
-import seattleData from "seattle-open-json";
-
-console.log(seattleData.data.communityCenters);
-console.log(seattleData.data.youthPrograms);
-```
-
-### Named Imports
-
-```typescript
-import {
-  communityCenters,
-  farmersMarkets,
-  youthPrograms,
-} from "seattle-open-json";
+// Import only the datasets you need - optimal bundle size
+import { communityCenters } from "seattle-open-json/community-centers";
+import { farmersMarkets } from "seattle-open-json/farmers-markets";
+import { youthPrograms } from "seattle-open-json/youth-programs";
 
 const activeCenters = communityCenters.filter(
   (center) => center["Open Status"] === "Open"
 );
 ```
 
+### Lazy-Loading SCS Data
+
+```typescript
+import { loadScsData } from "seattle-open-json/scs";
+
+// Load data only when needed
+const scsData = await loadScsData();
+const freePrograms = scsData.getAllEntities()
+  .filter(entity => entity.cost?.toLowerCase().includes("free"));
+```
+
+### Legacy Import (Not Recommended)
+
+```typescript
+// ⚠️ This imports ALL data (40MB+) - avoid in production
+import seattleData from "seattle-open-json";
+```
+
 ### Finding Youth Programs by Age
 
 ```typescript
-import { youth_programs } from "seattle-open-json";
+import { youth_programs } from "seattle-open-json/youth-programs";
 
 const teenPrograms = youth_programs.filter(
   (program) =>
@@ -174,7 +240,7 @@ const teenPrograms = youth_programs.filter(
 ### Analyzing Building Permits
 
 ```typescript
-import { buildingPermits } from "seattle-open-json";
+import { buildingPermits } from "seattle-open-json/building-permits";
 
 const highValueResidential = buildingPermits.filter(
   (permit) =>

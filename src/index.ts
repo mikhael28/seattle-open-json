@@ -3,6 +3,12 @@
  *
  * A community-driven collection of JSON data about youth initiatives,
  * events, and opportunities in the Seattle area.
+ * 
+ * ⚠️ IMPORTANT: For optimal bundle sizes, import data from specific submodules:
+ * ```typescript
+ * import { communityCenters } from 'seattle-open-json/community-centers';
+ * import { loadScsData } from 'seattle-open-json/scs';
+ * ```
  */
 
 // Export Seattle Civic Standard Model interfaces

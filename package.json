@@ -1,14 +1,65 @@
 {
     "name": "seattle-open-json",
-    "version": "1.3.6",
+    "version": "1.4.0",
     "description": "An open collection of JSON data about the branches of government and services provided by the City of Seattle, and other government entities and civil society organizations in the Puget Sound Region.",
     "main": "./dist/index.js",
     "types": "./dist/index.d.ts",
+    "sideEffects": false,
     "exports": {
         ".": {
             "import": "./dist/index.js",
             "require": "./dist/index.js",
             "types": "./dist/index.d.ts"
+        },
+        "./types": {
+            "import": "./dist/scs-model.js",
+            "require": "./dist/scs-model.js",
+            "types": "./dist/scs-model.d.ts"
+        },
+        "./community-centers": {
+            "import": "./dist/data/community-centers.js",
+            "require": "./dist/data/community-centers.js",
+            "types": "./dist/data/community-centers.d.ts"
+        },
+        "./farmers-markets": {
+            "import": "./dist/data/farmers-markets.js",
+            "require": "./dist/data/farmers-markets.js",
+            "types": "./dist/data/farmers-markets.d.ts"
+        },
+        "./parks-catalog": {
+            "import": "./dist/data/parks-catalog.js",
+            "require": "./dist/data/parks-catalog.js",
+            "types": "./dist/data/parks-catalog.d.ts"
+        },
+        "./mobile-recreation": {
+            "import": "./dist/data/mobile-recreation-programming.js",
+            "require": "./dist/data/mobile-recreation-programming.js",
+            "types": "./dist/data/mobile-recreation-programming.d.ts"
+        },
+        "./p-patch": {
+            "import": "./dist/data/p-patch.js",
+            "require": "./dist/data/p-patch.js",
+            "types": "./dist/data/p-patch.d.ts"
+        },
+        "./picnic-sites": {
+            "import": "./dist/data/picnic-sites.js",
+            "require": "./dist/data/picnic-sites.js",
+            "types": "./dist/data/picnic-sites.d.ts"
+        },
+        "./public-spaces": {
+            "import": "./dist/data/privately-owned-public-spaces.js",
+            "require": "./dist/data/privately-owned-public-spaces.js",
+            "types": "./dist/data/privately-owned-public-spaces.d.ts"
+        },
+        "./youth-programs": {
+            "import": "./dist/data/youth-programs.js",
+            "require": "./dist/data/youth-programs.js",
+            "types": "./dist/data/youth-programs.d.ts"
+        },
+        "./resource-guide": {
+            "import": "./dist/data/emerald-city-resource-guide.js",
+            "require": "./dist/data/emerald-city-resource-guide.js",
+            "types": "./dist/data/emerald-city-resource-guide.d.ts"
         },
         "./building-permits": {
             "import": "./dist/data/building-permits.js",
@@ -40,10 +91,15 @@
             "require": "./dist/migrations/index.js",
             "types": "./dist/migrations/index.d.ts"
         },
-        "./migrations/customer-support": {
-            "import": "./dist/migrations/migrate-customer-support.js",
-            "require": "./dist/migrations/migrate-customer-support.js",
-            "types": "./dist/migrations/migrate-customer-support.d.ts"
+        "./migrations/*": {
+            "import": "./dist/migrations/*.js",
+            "require": "./dist/migrations/*.js",
+            "types": "./dist/migrations/*.d.ts"
+        },
+        "./scs": {
+            "import": "./dist/scs-loader.js",
+            "require": "./dist/scs-loader.js",
+            "types": "./dist/scs-loader.d.ts"
         }
     },
     "files": [
