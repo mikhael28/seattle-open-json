@@ -1,9 +1,5 @@
-import type {
-  CivicEntity,
-  CivicEntityQuery,
-  LocationInfo,
-} from "seattle-open-json";
-import { scsData } from "seattle-open-json";
+import type { CivicEntity, CivicEntityQuery, LocationInfo } from "seattle-open-json";
+import { loadScsData } from "seattle-open-json/scs";
 
 export interface CivicSearchFilters {
   search?: string;
@@ -14,6 +10,15 @@ export interface CivicSearchFilters {
 }
 
 const MAX_LIMIT = 100;
+
+let cachedScsData: Awaited<ReturnType<typeof loadScsData>> | null = null;
+
+async function getScsData() {
+  if (!cachedScsData) {
+    cachedScsData = await loadScsData();
+  }
+  return cachedScsData;
+}
 
 function normalizeArray(value?: string | string[]): string[] | undefined {
   if (!value) return undefined;
@@ -49,9 +54,10 @@ function formatLocation(location: LocationInfo): string {
   return [location.address ?? "", coordinates].filter(Boolean).join(" ");
 }
 
-export function searchCivicEntities(
+export async function searchCivicEntities(
   filters: CivicSearchFilters
-): CivicEntity[] {
+): Promise<CivicEntity[]> {
+  const scsData = await getScsData();
   const allEntities = scsData.getAllEntities();
   const normalizedTypes = normalizeArray(filters.type);
   const normalizedTags = normalizeArray(filters.tags);

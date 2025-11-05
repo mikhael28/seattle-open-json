@@ -1,13 +1,7 @@
-import type {
-  BuildingPermit,
-  PlanComment,
-  PlanReview,
-} from "seattle-open-json";
-import {
-  buildingPermits,
-  planComments,
-  planReview,
-} from "seattle-open-json";
+import type { BuildingPermit, PlanComment, PlanReview } from "seattle-open-json";
+import { buildingPermits } from "seattle-open-json/building-permits";
+import { planComments } from "seattle-open-json/plan-comments";
+import { planReview } from "seattle-open-json/plan-review";
 
 export interface PermitDetails {
   permitNumber: string;

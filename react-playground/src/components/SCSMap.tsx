@@ -1,7 +1,7 @@
 import { useEffect, useRef, useState, useMemo, useCallback } from 'react';
 import { select } from 'd3-selection';
 import { geoAlbers, geoPath, geoContains } from 'd3-geo';
-import type { CivicEntity } from 'seattle-open-json';
+import type { CivicEntity } from 'seattle-open-json/types';
 
 interface SCSMapProps {
   entities: CivicEntity[];

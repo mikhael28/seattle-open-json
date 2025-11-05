@@ -2,7 +2,18 @@ import React from "react";
 import { Link, useLocation } from "react-router-dom";
 import { cn } from "../lib/utils";
 import { Button } from "./ui/button";
-import { LayoutDashboard, X, BookOpen, FileText, PenTool, Database, Info, Presentation } from "lucide-react";
+import {
+  LayoutDashboard,
+  X,
+  BookOpen,
+  FileText,
+  PenTool,
+  Database,
+  Info,
+  Presentation,
+  Ticket,
+  Code2,
+} from "lucide-react";
 
 interface SidebarProps {
   isOpen: boolean;
@@ -19,6 +30,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       icon: LayoutDashboard,
     },
     {
+      name: "Customer Support",
+      href: "/customer-support",
+      icon: Ticket,
+    },
+    {
       name: "Civic Entities",
       href: "/civic-entities",
       icon: Database,
@@ -33,7 +49,7 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       href: "/resource-guide",
       icon: BookOpen,
     },
-    
+
     // {
     //   name: "SCS Data Explorer",
     //   href: "/scs-explorer",
@@ -44,12 +60,18 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       href: "/permit-data-explorer",
       icon: Database,
     },
+
+    {
+      name: "Type Playground",
+      href: "/type-playground",
+      icon: Code2,
+    },
     {
       name: "Permitting Guide",
       href: "/permitting",
       icon: FileText,
     },
-    
+
     {
       name: "Site Map Designer",
       href: "/site-map-designer",
@@ -124,12 +146,13 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
           {/* Footer */}
           <div className="border-t p-4">
             <Button variant="ghost" className="w-full justify-start" asChild>
-              <a href="https://github.com/mikhael28/seattle-open-json" target="_blank">
-                
+              <a
+                href="https://github.com/mikhael28/seattle-open-json"
+                target="_blank"
+              >
                 Find us on GitHub
               </a>
             </Button>
-           
           </div>
         </div>
       </div>

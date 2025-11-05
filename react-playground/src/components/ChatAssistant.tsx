@@ -10,8 +10,8 @@ import {
   X,
 } from "lucide-react";
 import { Button } from "./ui/button";
+import type { CivicEntity, CivicTicket } from "seattle-open-json/types";
 import type {
-  CivicEntity,
   BuildingPermit,
   PlanComment,
   PlanReview,
@@ -33,6 +33,15 @@ interface PermitDetails {
   buildingPermit?: BuildingPermit;
   planComments: PlanComment[];
   planReviews: PlanReview[];
+}
+
+interface TicketStatistics {
+  totalTickets: number;
+  byStatus: Record<string, number>;
+  byDepartment: Record<string, number>;
+  byRequestType: Record<string, number>;
+  topRequestTypes: { type: string; count: number }[];
+  topDepartments: { department: string; count: number }[];
 }
 
 interface Message {
@@ -170,6 +179,74 @@ const toolDefinitions = [
       },
     },
   },
+  {
+    type: "function",
+    function: {
+      name: "searchCustomerTickets",
+      description:
+        "Search Seattle 311/Find It Fix It customer support tickets with filters for status, department, request type, location, and date range.",
+      parameters: {
+        type: "object",
+        properties: {
+          search: {
+            type: "string",
+            description: "Optional keyword search across all ticket fields.",
+          },
+          status: {
+            type: ["string", "array"],
+            items: { type: "string" },
+            description: "Filter by ticket status (e.g. Open, Closed, Reported).",
+          },
+          department: {
+            type: "string",
+            description: "Filter by assigned department (e.g. SPD-Seattle Police Department).",
+          },
+          requestType: {
+            type: "string",
+            description: "Filter by request type (e.g. Pothole, Graffiti, Unauthorized Encampment).",
+          },
+          neighborhood: {
+            type: "string",
+            description: "Filter by neighborhood name.",
+          },
+          precinct: {
+            type: "string",
+            description: "Filter by police precinct.",
+          },
+          councilDistrict: {
+            type: ["string", "number"],
+            description: "Filter by council district number.",
+          },
+          fromDate: {
+            type: "string",
+            description: "Filter tickets created after this date (ISO format).",
+          },
+          toDate: {
+            type: "string",
+            description: "Filter tickets created before this date (ISO format).",
+          },
+          limit: {
+            type: "integer",
+            minimum: 1,
+            maximum: 100,
+            description: "Maximum number of tickets to return (default 50).",
+          },
+        },
+      },
+    },
+  },
+  {
+    type: "function",
+    function: {
+      name: "getTicketStatistics",
+      description:
+        "Get aggregate statistics about Seattle 311 customer support tickets including totals by status, department, and request type.",
+      parameters: {
+        type: "object",
+        properties: {},
+      },
+    },
+  },
 ] as const;
 
 export const ChatAssistant: React.FC<ChatAssistantProps> = ({
@@ -288,6 +365,8 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
         "searchCivicEntities",
         "searchActivities",
         "getPermitDetails",
+        "searchCustomerTickets",
+        "getTicketStatistics",
       ];
 
       if (validTools.includes(toolName)) {
@@ -396,7 +475,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
             id: `${Date.now()}-help`,
             role: "assistant",
             content:
-              'You can try other MCP commands:\n• searchCivicEntities search=park\n• searchActivities keyword=soccer\n• getPermitDetails permitNumber=7019574-CN\n\nOr use JSON format:\n• searchCivicEntities {"search": "community center", "limit": 5}',
+              'You can try other MCP commands:\n• searchCivicEntities search=park\n• searchActivities keyword=soccer\n• getPermitDetails permitNumber=7019574-CN\n• searchCustomerTickets requestType=Pothole\n• getTicketStatistics\n\nOr use JSON format:\n• searchCustomerTickets {"search": "graffiti", "limit": 10}',
             timestamp: new Date(),
             kind: "text",
           };
@@ -420,7 +499,7 @@ export const ChatAssistant: React.FC<ChatAssistantProps> = ({
           id: `${Date.now()}-info`,
           role: "assistant",
           content:
-            'To use natural language queries, please set your OpenAI API key in settings.\n\nOr try direct MCP commands:\n• searchCivicEntities search=park\n• searchActivities keyword=soccer\n• getPermitDetails permitNumber=7019574-CN\n\nJSON format also works:\n• searchCivicEntities {"search": "community center", "limit": 5}',
+            'To use natural language queries, please set your OpenAI API key in settings.\n\nOr try direct MCP commands:\n• searchCivicEntities search=park\n• searchActivities keyword=soccer\n• getPermitDetails permitNumber=7019574-CN\n• searchCustomerTickets requestType=Pothole\n• getTicketStatistics\n\nJSON format also works:\n• searchCustomerTickets {"search": "graffiti", "limit": 10}',
           timestamp: new Date(),
           kind: "text",
         };
@@ -873,6 +952,240 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
     );
   };
 
+  const renderTicketCard = (ticket: CivicTicket) => {
+    const location =
+      typeof ticket.location === "string"
+        ? ticket.location
+        : ticket.location?.address;
+    const coordinates =
+      typeof ticket.location === "object" && ticket.location?.coordinates
+        ? `${ticket.location.coordinates.lat.toFixed(
+            4
+          )}, ${ticket.location.coordinates.lng.toFixed(4)}`
+        : undefined;
+
+    const getStatusColor = (status: string) => {
+      switch (status.toLowerCase()) {
+        case "open":
+          return "bg-green-100 text-green-700 dark:bg-green-900/40 dark:text-green-200";
+        case "closed":
+          return "bg-gray-100 text-gray-700 dark:bg-gray-900/40 dark:text-gray-200";
+        case "in progress":
+        case "reported":
+          return "bg-blue-100 text-blue-700 dark:bg-blue-900/40 dark:text-blue-200";
+        case "pending":
+          return "bg-yellow-100 text-yellow-700 dark:bg-yellow-900/40 dark:text-yellow-200";
+        default:
+          return "bg-gray-100 text-gray-700 dark:bg-gray-900/40 dark:text-gray-200";
+      }
+    };
+
+    return (
+      <div
+        key={ticket.id}
+        className="rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800"
+      >
+        <div className="flex flex-wrap items-start justify-between gap-3 border-b border-gray-200 bg-gray-50 px-4 py-3 dark:border-gray-700 dark:bg-gray-900/60">
+          <div className="min-w-0 flex-1">
+            <p className="text-sm font-semibold text-gray-900 dark:text-gray-100">
+              {ticket.name}
+            </p>
+            <p className="text-xs text-gray-500 dark:text-gray-400">
+              #{ticket.ticketNumber}
+            </p>
+          </div>
+          <span
+            className={`rounded-full px-2 py-1 text-xs ${getStatusColor(
+              ticket.ticketStatus
+            )}`}
+          >
+            {ticket.ticketStatus}
+          </span>
+        </div>
+        <div className="space-y-2 px-4 py-3 text-left text-sm text-gray-700 dark:text-gray-200">
+          {ticket.description && (
+            <p className="max-h-24 overflow-y-auto pr-1 text-sm leading-relaxed">
+              {ticket.description}
+            </p>
+          )}
+          {ticket.requestType && (
+            <div className="text-xs">
+              <p className="font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                Request Type
+              </p>
+              <p className="mt-0.5 text-gray-700 dark:text-gray-200">
+                {ticket.requestType}
+              </p>
+            </div>
+          )}
+          {ticket.assignedDepartment && (
+            <div className="text-xs">
+              <p className="font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                Department
+              </p>
+              <p className="mt-0.5 text-gray-700 dark:text-gray-200">
+                {ticket.assignedDepartment}
+              </p>
+            </div>
+          )}
+          {ticket.createdDate && (
+            <div className="text-xs text-gray-600 dark:text-gray-300">
+              <span className="font-medium uppercase tracking-wide">
+                Created:
+              </span>{" "}
+              {ticket.createdDate}
+            </div>
+          )}
+          {(location || coordinates) && (
+            <div className="text-xs">
+              <p className="font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                Location
+              </p>
+              {location && (
+                <p className="mt-0.5 text-gray-700 dark:text-gray-200">
+                  {location}
+                </p>
+              )}
+              {coordinates && (
+                <p className="text-gray-500 dark:text-gray-400">
+                  {coordinates}
+                </p>
+              )}
+            </div>
+          )}
+          {(ticket.neighborhood || ticket.precinct || ticket.councilDistrict) && (
+            <div className="flex flex-wrap gap-1">
+              {ticket.neighborhood && (
+                <span className="inline-flex items-center rounded-full bg-purple-100 px-2 py-0.5 text-[10px] font-medium text-purple-700 dark:bg-purple-900/40 dark:text-purple-200">
+                  {ticket.neighborhood}
+                </span>
+              )}
+              {ticket.precinct && (
+                <span className="inline-flex items-center rounded-full bg-blue-100 px-2 py-0.5 text-[10px] font-medium text-blue-700 dark:bg-blue-900/40 dark:text-blue-200">
+                  {ticket.precinct}
+                </span>
+              )}
+              {ticket.councilDistrict && (
+                <span className="inline-flex items-center rounded-full bg-indigo-100 px-2 py-0.5 text-[10px] font-medium text-indigo-700 dark:bg-indigo-900/40 dark:text-indigo-200">
+                  District {ticket.councilDistrict}
+                </span>
+              )}
+            </div>
+          )}
+        </div>
+      </div>
+    );
+  };
+
+  const renderTicketStatistics = (stats: TicketStatistics) => {
+    return (
+      <div className="space-y-4">
+        {/* Total Tickets */}
+        <div className="rounded-xl border border-gray-200 bg-white p-4 shadow-sm dark:border-gray-700 dark:bg-gray-800">
+          <div className="text-center">
+            <p className="text-3xl font-bold text-blue-600 dark:text-blue-400">
+              {stats.totalTickets.toLocaleString()}
+            </p>
+            <p className="text-sm text-gray-600 dark:text-gray-300">
+              Total Tickets
+            </p>
+          </div>
+        </div>
+
+        {/* Top Request Types */}
+        {stats.topRequestTypes.length > 0 && (
+          <div className="rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="border-b border-gray-200 bg-gray-50 px-4 py-2 dark:border-gray-700 dark:bg-gray-900/60">
+              <p className="text-xs font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                Top Request Types
+              </p>
+            </div>
+            <div className="space-y-2 px-4 py-3">
+              {stats.topRequestTypes.slice(0, 5).map((item, index) => (
+                <div
+                  key={item.type}
+                  className="flex items-center justify-between text-xs"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-blue-100 text-[10px] font-medium text-blue-700 dark:bg-blue-900/40 dark:text-blue-200">
+                      {index + 1}
+                    </span>
+                    <span className="text-gray-700 dark:text-gray-200">
+                      {item.type}
+                    </span>
+                  </div>
+                  <span className="font-medium text-gray-900 dark:text-gray-100">
+                    {item.count.toLocaleString()}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Top Departments */}
+        {stats.topDepartments.length > 0 && (
+          <div className="rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="border-b border-gray-200 bg-gray-50 px-4 py-2 dark:border-gray-700 dark:bg-gray-900/60">
+              <p className="text-xs font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                Top Departments
+              </p>
+            </div>
+            <div className="space-y-2 px-4 py-3">
+              {stats.topDepartments.slice(0, 5).map((item, index) => (
+                <div
+                  key={item.department}
+                  className="flex items-center justify-between text-xs"
+                >
+                  <div className="flex items-center gap-2">
+                    <span className="flex h-5 w-5 items-center justify-center rounded-full bg-purple-100 text-[10px] font-medium text-purple-700 dark:bg-purple-900/40 dark:text-purple-200">
+                      {index + 1}
+                    </span>
+                    <span className="text-gray-700 dark:text-gray-200">
+                      {item.department}
+                    </span>
+                  </div>
+                  <span className="font-medium text-gray-900 dark:text-gray-100">
+                    {item.count.toLocaleString()}
+                  </span>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {/* Status Breakdown */}
+        {Object.keys(stats.byStatus).length > 0 && (
+          <div className="rounded-xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="border-b border-gray-200 bg-gray-50 px-4 py-2 dark:border-gray-700 dark:bg-gray-900/60">
+              <p className="text-xs font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                By Status
+              </p>
+            </div>
+            <div className="space-y-2 px-4 py-3">
+              {Object.entries(stats.byStatus)
+                .sort(([, a], [, b]) => b - a)
+                .slice(0, 5)
+                .map(([status, count]) => (
+                  <div
+                    key={status}
+                    className="flex items-center justify-between text-xs"
+                  >
+                    <span className="text-gray-700 dark:text-gray-200">
+                      {status}
+                    </span>
+                    <span className="font-medium text-gray-900 dark:text-gray-100">
+                      {count.toLocaleString()}
+                    </span>
+                  </div>
+                ))}
+            </div>
+          </div>
+        )}
+      </div>
+    );
+  };
+
   const renderPermitCard = (permitDetails: PermitDetails) => {
     const { permitNumber, buildingPermit, planComments, planReviews } =
       permitDetails;
@@ -1098,6 +1411,63 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
       );
     }
 
+    // Render Customer Support Tickets
+    if (message.toolName === "searchCustomerTickets") {
+      const tickets = Array.isArray(message.toolData)
+        ? (message.toolData as CivicTicket[])
+        : [];
+
+      return (
+        <div className="inline-block w-[85%] max-w-full text-left">
+          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-2 dark:border-gray-700 dark:bg-gray-900/60">
+              <div className="text-xs font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                Customer Support Tickets
+              </div>
+              <span className="text-xs text-gray-500 dark:text-gray-400">
+                {tickets.length} result{tickets.length === 1 ? "" : "s"}
+              </span>
+            </div>
+            <div className="max-h-96 space-y-3 overflow-y-auto px-4 py-3">
+              {tickets.length > 0 ? (
+                tickets.map(renderTicketCard)
+              ) : (
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  No customer support tickets found for the given filters.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
+    // Render Ticket Statistics
+    if (message.toolName === "getTicketStatistics") {
+      const stats = message.toolData as TicketStatistics;
+
+      return (
+        <div className="inline-block w-[85%] max-w-full text-left">
+          <div className="overflow-hidden rounded-2xl border border-gray-200 bg-white shadow-sm dark:border-gray-700 dark:bg-gray-800">
+            <div className="flex items-center justify-between border-b border-gray-200 bg-gray-50 px-4 py-2 dark:border-gray-700 dark:bg-gray-900/60">
+              <div className="text-xs font-medium uppercase tracking-wide text-gray-600 dark:text-gray-300">
+                Ticket Statistics
+              </div>
+            </div>
+            <div className="max-h-96 overflow-y-auto px-4 py-3">
+              {stats ? (
+                renderTicketStatistics(stats)
+              ) : (
+                <p className="text-xs text-gray-500 dark:text-gray-400">
+                  No statistics available.
+                </p>
+              )}
+            </div>
+          </div>
+        </div>
+      );
+    }
+
     // Default fallback for other tool results
     return (
       <div className="inline-block w-[85%] max-w-full text-left">
@@ -1236,7 +1606,8 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
                 <div className="space-y-1 text-xs text-gray-400 dark:text-gray-500">
                   <p>• searchCivicEntities search=park</p>
                   <p>• searchActivities keyword=soccer</p>
-                  <p>• getPermitDetails permitNumber=7019574-CN</p>
+                  <p>• searchCustomerTickets requestType=Pothole</p>
+                  <p>• getTicketStatistics</p>
                   <p className="mt-2">
                     Or set your OpenAI key for AI-powered chat
                   </p>
@@ -1324,8 +1695,8 @@ Provide clear, actionable advice. Reference Seattle SDCI regulations when releva
             onKeyDown={handleKeyDown}
             placeholder={
               apiKey
-                ? "Ask about ADU planning..."
-                : "Try: searchCivicEntities search=park"
+                ? "Ask about ADU planning, civic entities, or support tickets..."
+                : "Try: searchCustomerTickets requestType=Pothole"
             }
             disabled={isLoading}
             rows={1}

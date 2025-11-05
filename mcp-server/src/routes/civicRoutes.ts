@@ -6,7 +6,7 @@ import {
 
 const civicRouter = Router();
 
-civicRouter.get("/entities", (req, res) => {
+civicRouter.get("/entities", async (req, res) => {
   const { search, type, tags, neighborhood, limit } = req.query;
 
   const filters = {
@@ -20,15 +20,24 @@ civicRouter.get("/entities", (req, res) => {
         : undefined,
   } satisfies Parameters<typeof searchCivicEntities>[0];
 
-  const data = searchCivicEntities(filters);
+  try {
+    const data = await searchCivicEntities(filters);
 
-  res.json({
-    data,
-    meta: {
-      total: data.length,
-      query: buildCivicQueryFromFilters(filters),
-    },
-  });
+    res.json({
+      data,
+      meta: {
+        total: data.length,
+        query: buildCivicQueryFromFilters(filters),
+      },
+    });
+  } catch (error) {
+    console.error("Error searching civic entities:", error);
+    if (error instanceof Error) {
+      res.status(400).json({ error: error.message });
+    } else {
+      res.status(500).json({ error: "Failed to search civic entities" });
+    }
+  }
 });
 
 export default civicRouter;

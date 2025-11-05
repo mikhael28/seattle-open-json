@@ -12,6 +12,7 @@ import civicRouter from "./routes/civicRoutes.js";
 import mcpRouter from "./routes/mcpRoutes.js";
 import permitRouter from "./routes/permitRoutes.js";
 import siteMapRouter from "./routes/siteMapRoutes.js";
+import ticketRouter from "./routes/ticketRoutes.js";
 
 const app = express();
 
@@ -25,6 +26,7 @@ app.get("/health", (_req, res) => {
 app.use("/scs", civicRouter);
 app.use("/activities", activityRouter);
 app.use("/permits", permitRouter);
+app.use("/tickets", ticketRouter);
 app.use("/mcp", mcpRouter);
 app.use("/site-map", siteMapRouter);
 

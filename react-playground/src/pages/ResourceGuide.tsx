@@ -1,5 +1,5 @@
-import { emeraldCityResourceGuide } from "seattle-open-json";
-import { EmeraldCityResourceGuide } from "seattle-open-json";
+import { emeraldCityResourceGuide } from "seattle-open-json/resource-guide";
+import type { EmeraldCityResourceGuide } from "seattle-open-json";
 import React, { useState, useMemo } from "react";
 import { Search, ExternalLink, MapPin, Phone, Mail, Globe } from "lucide-react";
 import { Button } from "../components/ui/button";

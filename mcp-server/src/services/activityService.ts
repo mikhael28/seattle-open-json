@@ -1,8 +1,6 @@
-import {
-  parksCatalog,
-  mobileRecreationProgramming,
-  youth_programs,
-} from "seattle-open-json";
+import { parksCatalog } from "seattle-open-json/parks-catalog";
+import { mobileRecreationProgramming } from "seattle-open-json/mobile-recreation";
+import { youth_programs } from "seattle-open-json/youth-programs";
 
 export type ActivitySource =
   | "parksCatalog"

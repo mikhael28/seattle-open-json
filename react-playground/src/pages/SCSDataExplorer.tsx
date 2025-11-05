@@ -1,5 +1,6 @@
-import { useState, useMemo } from "react";
-import { scsData } from "seattle-open-json";
+import { useState, useMemo, useEffect } from "react";
+import { loadScsData } from "seattle-open-json/scs";
+import type { CivicEntity } from "seattle-open-json/types";
 import { Search, MapPin, Phone, Mail, Globe, Calendar, DollarSign, Users, Tag, ExternalLink } from "lucide-react";
 import { Button } from "../components/ui/button";
 
@@ -8,9 +9,16 @@ const SCSDataExplorer = () => {
   const [selectedType, setSelectedType] = useState("all");
   const [showFreeOnly, setShowFreeOnly] = useState(false);
   const [showWithLocationOnly, setShowWithLocationOnly] = useState(false);
+  const [allEntities, setAllEntities] = useState<CivicEntity[]>([]);
+  const [loading, setLoading] = useState(true);
 
-  // Get all entities
-  const allEntities = useMemo(() => scsData.getAllEntities(), []);
+  // Load SCS data on mount
+  useEffect(() => {
+    loadScsData().then((data) => {
+      setAllEntities(data.getAllEntities());
+      setLoading(false);
+    });
+  }, []);
 
   // Get all unique types
   const types = useMemo(() => {
@@ -94,6 +102,17 @@ const SCSDataExplorer = () => {
       </div>
     );
   };
+
+  if (loading) {
+    return (
+      <div className="h-full bg-gray-50 flex items-center justify-center">
+        <div className="text-center">
+          <div className="animate-spin rounded-full h-12 w-12 border-b-2 border-blue-600 mx-auto mb-4"></div>
+          <p className="text-gray-600">Loading Seattle Civic Standard data...</p>
+        </div>
+      </div>
+    );
+  }
 
   return (
     <div className="h-full bg-gray-50 flex flex-col">

@@ -20,13 +20,13 @@ import {
   StarOff
 } from 'lucide-react';
 import { Button } from './ui/button';
-import { 
-  buildingPermits, 
-  planComments, 
-  planReview,
-  type BuildingPermit,
-  type PlanComment,
-  type PlanReview
+import { buildingPermits } from 'seattle-open-json/building-permits';
+import { planComments } from 'seattle-open-json/plan-comments';
+import { planReview } from 'seattle-open-json/plan-review';
+import type {
+  BuildingPermit,
+  PlanComment,
+  PlanReview
 } from 'seattle-open-json';
 
 type DataType = 'permits' | 'comments' | 'reviews' | 'report' | 'favorites';

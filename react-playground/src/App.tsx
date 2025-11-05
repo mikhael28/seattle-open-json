@@ -9,13 +9,15 @@ import AboutSCS from "./pages/AboutSCS";
 import SCSDashboard from "./pages/SCSDashboard";
 import PermitDataExplorerPage from "./pages/PermitDataExplorerPage";
 import PresentationMode from "./pages/PresentationMode";
+import CustomerSupportExplorer from "./pages/CustomerSupportExplorer";
+import TypePlayground from "./pages/TypePlayground";
 
 function App() {
   return (
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<SCSDashboard />} />
+          <Route index element={<TypePlayground />} />
           <Route path="civic-entities" element={<SCSDashboard />} />
           <Route path="resource-guide" element={<ResourceGuide />} />
           <Route path="about-scs" element={<AboutSCS />} />
@@ -25,6 +27,11 @@ function App() {
             path="permit-data-explorer"
             element={<PermitDataExplorerPage />}
           />
+          <Route
+            path="customer-support"
+            element={<CustomerSupportExplorer />}
+          />
+          <Route path="type-playground" element={<TypePlayground />} />
           <Route path="site-map-designer" element={<SiteMapDesignerPage />} />
           <Route path="presentation" element={<PresentationMode />} />
         </Route>

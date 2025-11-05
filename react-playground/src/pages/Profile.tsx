@@ -50,26 +50,28 @@ import {
 import SeattleMap from '../components/SeattleMap';
 import ResourceGuide from './ResourceGuide';
 
-// Import all data from seattle-open-json
-import {
-  communityCenters,
-  farmersMarkets,
-  mobileRecreationProgramming,
-  pPatch,
-  picnicSites,
-  privatelyOwnedPublicSpaces,
-  youth_programs,
-  packageMetadata,
-  emeraldCityResourceGuide,
-  type CommunityCenter,
-  type FarmersMarket,
-  type MobileRecreationProgramming,
-  type PPatch,
-  type PicnicSite,
-  type PrivatelyOwnedPublicSpace,
-  type YouthProgram,
+// Import data using tree-shakeable submodules
+import { communityCenters } from "seattle-open-json/community-centers";
+import { farmersMarkets } from "seattle-open-json/farmers-markets";
+import { mobileRecreationProgramming } from "seattle-open-json/mobile-recreation";
+import { pPatch } from "seattle-open-json/p-patch";
+import { picnicSites } from "seattle-open-json/picnic-sites";
+import { privatelyOwnedPublicSpaces } from "seattle-open-json/public-spaces";
+import { youth_programs } from "seattle-open-json/youth-programs";
+import { emeraldCityResourceGuide } from "seattle-open-json/resource-guide";
+import type {
+  CommunityCenter,
+  FarmersMarket,
+  MobileRecreationProgramming,
+  PPatch,
+  PicnicSite,
+  PrivatelyOwnedPublicSpace,
+  YouthProgram,
   EmeraldCityResourceGuide
 } from "seattle-open-json";
+
+// Import package metadata from main entry (small enough)
+import { packageMetadata } from "seattle-open-json";
 
 // Define missing types for organizationData
 interface OrganizationData {
