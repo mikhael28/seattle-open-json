@@ -13,6 +13,7 @@ import {
   Presentation,
   Ticket,
   Code2,
+  Mic,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -28,6 +29,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       name: "Dashboard",
       href: "/",
       icon: LayoutDashboard,
+    },
+    {
+      name: "My Tickets",
+      href: "/my-tickets",
+      icon: Mic,
     },
     {
       name: "Customer Support",

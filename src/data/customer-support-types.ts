@@ -14,7 +14,30 @@ export interface CustomerSupportTicket {
   /** Unique service request identifier (e.g., "25-00274957") */
   serviceRequestNumber: string;
 
-  /** Type of service request (e.g., "Unauthorized Encampment", "Parking Enforcement") */
+  /**
+   * Type of service request
+   *
+   * Common types in the dataset include:
+   * - "Pothole"
+   * - "Graffiti"
+   * - "Illegal Dumping / Needles"
+   * - "Abandoned Vehicle/72hr Parking Ordinance"
+   * - "Streetlight Maintenance"
+   * - "Street Sign Maintenance"
+   * - "Unauthorized Encampment"
+   * - "Parks and Recreation Maintenance"
+   * - "Overgrown Vegetation"
+   * - "Bicycle Facility Maintenance"
+   * - "Scooter or Bike Share Issue"
+   * - "Dead Animal"
+   * - "Animal Noise"
+   * - "Nuisance dogs in a park"
+   * - "General Inquiry - Customer Service Bureau"
+   * - "General Inquiry - Transportation"
+   * - "General Inquiry - Public Utilities"
+   * - "General Inquiry - Police Department"
+   * - "General Inquiry - Animal Shelter"
+   */
   serviceRequestType: string;
 
   /** City department responsible for handling the request */

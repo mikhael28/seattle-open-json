@@ -1,6 +1,6 @@
 import { useState, useMemo, useEffect } from "react";
 import { loadScsData } from "seattle-open-json/scs";
-import type { CivicTicket } from "seattle-open-json/types";
+import type { CustomerSupportTicket } from "../../../src/data/customer-support-types";
 import { Search, MapPin, Calendar, Tag, AlertCircle, Building, User, Filter, X } from "lucide-react";
 import { Button } from "../components/ui/button";
 
@@ -9,7 +9,7 @@ const CustomerSupportExplorer = () => {
   const [selectedStatus, setSelectedStatus] = useState("all");
   const [selectedRequestType, setSelectedRequestType] = useState("all");
   const [selectedDepartment, setSelectedDepartment] = useState("all");
-  const [allTickets, setAllTickets] = useState<CivicTicket[]>([]);
+  const [allTickets, setAllTickets] = useState<CustomerSupportTicket[]>([]);
   const [loading, setLoading] = useState(true);
 
   // Load customer support tickets on mount
@@ -24,7 +24,7 @@ const CustomerSupportExplorer = () => {
   const statuses = useMemo(() => {
     const statusSet = new Set<string>();
     allTickets.forEach(ticket => {
-      if (ticket.ticketStatus) statusSet.add(ticket.ticketStatus);
+      if (ticket.status) statusSet.add(ticket.status);
     });
     return Array.from(statusSet).sort();
   }, [allTickets]);
@@ -32,7 +32,7 @@ const CustomerSupportExplorer = () => {
   const requestTypes = useMemo(() => {
     const typeSet = new Set<string>();
     allTickets.forEach(ticket => {
-      if (ticket.requestType) typeSet.add(ticket.requestType);
+      if (ticket.serviceRequestType) typeSet.add(ticket.serviceRequestType);
     });
     return Array.from(typeSet).sort();
   }, [allTickets]);
@@ -40,7 +40,7 @@ const CustomerSupportExplorer = () => {
   const departments = useMemo(() => {
     const deptSet = new Set<string>();
     allTickets.forEach(ticket => {
-      if (ticket.assignedDepartment) deptSet.add(ticket.assignedDepartment);
+      if (ticket.cityDepartment) deptSet.add(ticket.cityDepartment);
     });
     return Array.from(deptSet).sort();
   }, [allTickets]);
@@ -50,50 +50,30 @@ const CustomerSupportExplorer = () => {
     return allTickets.filter((ticket) => {
       // Search filter
       const matchesSearch =
-        ticket.name?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        ticket.description?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        ticket.ticketNumber?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        ticket.requestType?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        ticket.neighborhood?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        ticket.assignedDepartment?.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        (typeof ticket.location === 'string' && ticket.location.toLowerCase().includes(searchTerm.toLowerCase()));
+        ticket.serviceRequestNumber?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        ticket.serviceRequestType?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        ticket.cityDepartment?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        ticket.communityReportingArea?.toLowerCase().includes(searchTerm.toLowerCase()) ||
+        ticket.location?.toLowerCase().includes(searchTerm.toLowerCase());
 
       // Status filter
-      const matchesStatus = selectedStatus === "all" || ticket.ticketStatus === selectedStatus;
+      const matchesStatus = selectedStatus === "all" || ticket.status === selectedStatus;
 
       // Request Type filter
-      const matchesRequestType = selectedRequestType === "all" || ticket.requestType === selectedRequestType;
+      const matchesRequestType = selectedRequestType === "all" || ticket.serviceRequestType === selectedRequestType;
 
       // Department filter
-      const matchesDepartment = selectedDepartment === "all" || ticket.assignedDepartment === selectedDepartment;
+      const matchesDepartment = selectedDepartment === "all" || ticket.cityDepartment === selectedDepartment;
 
       return matchesSearch && matchesStatus && matchesRequestType && matchesDepartment;
     });
   }, [allTickets, searchTerm, selectedStatus, selectedRequestType, selectedDepartment]);
 
-  const renderLocation = (location: string | { address?: string; coordinates?: { lat: number; lng: number } }) => {
-    if (typeof location === 'string') {
-      return (
-        <div className="flex items-start gap-2 text-sm text-gray-600">
-          <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-          <span>{location}</span>
-        </div>
-      );
-    }
-
+  const renderLocation = (location: string) => {
     return (
-      <div className="space-y-1">
-        {location.address && (
-          <div className="flex items-start gap-2 text-sm text-gray-600">
-            <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
-            <span>{location.address}</span>
-          </div>
-        )}
-        {location.coordinates && (
-          <div className="text-xs text-gray-400 ml-6">
-            {location.coordinates.lat.toFixed(4)}, {location.coordinates.lng.toFixed(4)}
-          </div>
-        )}
+      <div className="flex items-start gap-2 text-sm text-gray-600">
+        <MapPin className="h-4 w-4 mt-0.5 flex-shrink-0" />
+        <span>{location}</span>
       </div>
     );
   };
@@ -242,7 +222,7 @@ const CustomerSupportExplorer = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-3 gap-4">
           {filteredTickets.map((ticket, index) => (
             <div
-              key={`${ticket.id}-${index}`}
+              key={`${ticket.serviceRequestNumber}-${index}`}
               className="bg-white rounded-lg shadow-sm border border-gray-200 p-5 hover:shadow-md transition-shadow"
             >
               {/* Header */}
@@ -252,23 +232,17 @@ const CustomerSupportExplorer = () => {
                     <div className="flex items-center gap-2 mb-1">
                       <AlertCircle className="h-4 w-4 text-blue-600" />
                       <span className="text-sm font-mono text-gray-600">
-                        {ticket.ticketNumber}
+                        {ticket.serviceRequestNumber}
                       </span>
                     </div>
                     <h3 className="text-base font-semibold text-gray-900">
-                      {ticket.name}
+                      {ticket.serviceRequestType}
                     </h3>
                   </div>
-                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium flex-shrink-0 ${getStatusColor(ticket.ticketStatus)}`}>
-                    {ticket.ticketStatus}
+                  <span className={`inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium flex-shrink-0 ${getStatusColor(ticket.status)}`}>
+                    {ticket.status}
                   </span>
                 </div>
-
-                {ticket.description && (
-                  <p className="text-gray-600 text-sm leading-relaxed line-clamp-2">
-                    {ticket.description}
-                  </p>
-                )}
               </div>
 
               {/* Details Grid */}
@@ -276,14 +250,14 @@ const CustomerSupportExplorer = () => {
                 {/* Request Type */}
                 <div className="flex items-center gap-2 text-gray-700">
                   <Filter className="h-4 w-4 flex-shrink-0" />
-                  <span className="font-medium">{ticket.requestType}</span>
+                  <span className="font-medium">{ticket.serviceRequestType}</span>
                 </div>
 
                 {/* Department */}
-                {ticket.assignedDepartment && (
+                {ticket.cityDepartment && (
                   <div className="flex items-center gap-2 text-gray-600">
                     <Building className="h-4 w-4 flex-shrink-0" />
-                    <span className="text-xs">{ticket.assignedDepartment}</span>
+                    <span className="text-xs">{ticket.cityDepartment}</span>
                   </div>
                 )}
 
@@ -308,18 +282,23 @@ const CustomerSupportExplorer = () => {
                   </div>
                 )}
 
-                {/* Neighborhood & Additional Info */}
-                {(ticket.neighborhood || ticket.precinct || ticket.councilDistrict) && (
-                  <div className="pt-2 border-t border-gray-100 flex flex-wrap gap-1.5">
-                    {ticket.neighborhood && (
+                {/* Coordinates & Additional Info */}
+                <div className="pt-2 border-t border-gray-100 space-y-1">
+                  {(ticket.latitude && ticket.longitude) && (
+                    <div className="text-xs text-gray-400">
+                      Coordinates: {typeof ticket.latitude === 'number' ? ticket.latitude.toFixed(4) : ticket.latitude}, {typeof ticket.longitude === 'number' ? ticket.longitude.toFixed(4) : ticket.longitude}
+                    </div>
+                  )}
+                  <div className="flex flex-wrap gap-1.5">
+                    {ticket.communityReportingArea && (
                       <span className="inline-flex items-center px-2 py-0.5 rounded text-xs bg-gray-100 text-gray-700">
                         <Tag className="h-3 w-3 mr-1" />
-                        {ticket.neighborhood}
+                        {ticket.communityReportingArea}
                       </span>
                     )}
-                    {ticket.precinct && (
+                    {ticket.policePrecinct && (
                       <span className="inline-flex items-center px-2 py-0.5 rounded text-xs bg-blue-50 text-blue-700">
-                        {ticket.precinct}
+                        {ticket.policePrecinct}
                       </span>
                     )}
                     {ticket.councilDistrict && (
@@ -327,8 +306,13 @@ const CustomerSupportExplorer = () => {
                         District {ticket.councilDistrict}
                       </span>
                     )}
+                    {ticket.zipCode && (
+                      <span className="inline-flex items-center px-2 py-0.5 rounded text-xs bg-green-50 text-green-700">
+                        ZIP {ticket.zipCode}
+                      </span>
+                    )}
                   </div>
-                )}
+                </div>
               </div>
             </div>
           ))}

@@ -11,6 +11,7 @@ import PermitDataExplorerPage from "./pages/PermitDataExplorerPage";
 import PresentationMode from "./pages/PresentationMode";
 import CustomerSupportExplorer from "./pages/CustomerSupportExplorer";
 import TypePlayground from "./pages/TypePlayground";
+import MyTickets from "./pages/MyTickets";
 
 function App() {
   return (
@@ -31,6 +32,7 @@ function App() {
             path="customer-support"
             element={<CustomerSupportExplorer />}
           />
+          <Route path="my-tickets" element={<MyTickets />} />
           <Route path="type-playground" element={<TypePlayground />} />
           <Route path="site-map-designer" element={<SiteMapDesignerPage />} />
           <Route path="presentation" element={<PresentationMode />} />
