@@ -1,5 +1,6 @@
 import React, { useState, useRef } from "react";
 import { Printer, RotateCcw, Eye, EyeOff, ChevronDown, ChevronUp } from "lucide-react";
+import QRCode from "react-qr-code";
 
 // ─── Types ───────────────────────────────────────────────────────────────────
 
@@ -84,36 +85,140 @@ const FONT_STYLES: Record<FontStyle, { label: string; family: string; weight: st
 
 // ─── Bloomquist Info Content ──────────────────────────────────────────────────
 
-const BLOOMQUIST_PRIORITIES = [
+const BLOOMQUIST_BIO =
+  "Chris Bloomquist is a 20-year technology industry veteran, two-time startup founder, coach, musician, and the son of a Chilean immigrant. He studied at Iowa State University (Class of 2001), where he later served as Alumni Association President (2004–2014). Recognized on the Inc. 500 Fastest Growing Companies list in 2014, Chris built a career in talent acquisition and clean-energy recruiting before founding PNW Climate Week's inaugural career fair — connecting workers to the green economy. He serves on the KD Hall Foundation advisory board and has spent decades building community in LD32. Now he's running for WA State House to fight for schools, civil rights, and economic opportunity for every family.";
+
+const ENDORSEMENTS = [
+  { name: "Jesse Salomon", title: "WA State Senator, LD32" },
+  { name: "Javier Valdez", title: "WA State Senator, LD46" },
+  { name: "Lauren Davis", title: "WA State Rep., LD32" },
+  { name: "Alicia Rule", title: "WA State Rep., LD42" },
+  { name: "Jack Malek", title: "Shoreline Community Member" },
+  { name: "KD Hall", title: "President & Founder, KD Hall Foundation*" },
+  { name: "George Hurst", title: "Lynnwood Mayor-Elect" },
+  { name: "Jason Huff", title: "Seattle Director, PNW Climate Week*" },
+  { name: "David Parshall", title: "Lynnwood Councilmember" },
+  { name: "Susan Chang", title: "Former Shoreline City Councilmember" },
+];
+
+const ENDORSEMENT_DISCLAIMER =
+  "* Titles and organizations are included for identification purposes only and do not imply organizational endorsement.";
+
+const DONATION_URL = "https://secure.actblue.com/donate/chris-bloomquist-1?amount=10";
+const LINKEDIN_URL = "https://www.linkedin.com/in/cbloomquist/";
+const FACEBOOK_URL = "https://www.facebook.com/chris.bloomquist/";
+
+const QR_CODES = [
+  { label: "Donate", url: DONATION_URL },
+  { label: "Get Involved", url: DONATION_URL },   // placeholder — update URL later
+  { label: "Learn More", url: DONATION_URL },      // placeholder — update URL later
+];
+
+const GET_INVOLVED = [
   {
-    icon: "🏠",
-    title: "Housing Affordability",
-    body: "Fighting for more affordable housing options across LD32 — from zoning reform to tenant protections — so every family can afford to live in the community they love.",
+    icon: "🚪",
+    action: "Canvass Your Neighborhood",
+    detail: "Door-knocking is the single most effective form of political persuasion. Sign up for a canvass shift at buildwithbloomquist.com — no experience needed, just a pair of comfortable shoes.",
   },
   {
-    icon: "🌱",
-    title: "Climate & Clean Energy",
-    body: "Growing Washington's green economy with clean energy jobs. Chris founded PNW Climate Week's inaugural career fair, connecting workers to the jobs of tomorrow.",
+    icon: "💛",
+    action: "Make a Humble Donation",
+    detail: "Even $5 or $10 makes a real difference — it funds yard signs, mailers, and field organizers. Every dollar stays local. Donate securely at the ActBlue link below.",
+  },
+  {
+    icon: "🌟",
+    action: "Be Involved as a Community Leader",
+    detail: "Run for a local committee seat, attend city council or school board meetings, or organize your block. Real change starts at the neighborhood level — and it starts with you.",
+  },
+  {
+    icon: "🤲",
+    action: "Volunteer at Local Nonprofits",
+    detail: "Organizations like the KD Hall Foundation, Hopelink, and local food banks need your time year-round — not just during election season. Civic strength is built between elections.",
+  },
+];
+
+const BLOOMQUIST_PRIORITIES = [
+  {
+    icon: "🛡️",
+    title: "Protect Civil Rights & Defend Against ICE",
+    body: "Chris will defend civil liberties and stand with immigrant, BIPOC, and LGBTQ+ communities. He supports bills like SB 5855 that prohibit face masks on ICE agents and demand transparency and accountability. No one is above the law.",
+  },
+  {
+    icon: "🏠",
+    title: "Tackle Homelessness & Public Health",
+    body: "Chris supports sustainable, long-term solutions to homelessness — listening to social workers and first responders. He will promote zoning for community-led tiny homes and remove barriers to homeownership for our emerging workforce.",
   },
   {
     icon: "📚",
-    title: "Education & Schools",
-    body: "As a parent, Chris understands the urgency of fully funding our public schools — from class sizes to teacher pay — so every child gets the education they deserve.",
+    title: "Fully Fund Our Public Schools",
+    body: "WA has a $500M+ school funding gap due to flawed population models. Chris will make public school funding his #1 commitment, including SB 5849 requiring financial literacy education to graduate.",
   },
   {
-    icon: "🤝",
-    title: "Immigration & Equity",
-    body: "As the son of a Chilean immigrant, Chris is committed to humane, family-first immigration policies and equity across all communities in District 32.",
+    icon: "⚖️",
+    title: "Progressive Tax Reform",
+    body: "Washington has the 2nd most regressive tax system in the country — hurting school funding, public safety, and infrastructure. Chris will vote to increase taxes on the top 5% to balance the budget and invest in our communities.",
   },
   {
-    icon: "💼",
-    title: "Small Business & Workforce",
-    body: "Supporting local small businesses and investing in workforce development so working people in LD32 have real opportunity — not just the lucky few.",
+    icon: "⚡",
+    title: "Affordability Through Clean Energy",
+    body: "As an environmental recruiter, Chris knows how to power our green economy while lowering energy costs. He will support bills like SB 5116 focused on clean energy, environmental justice, and job creation for Washingtonians.",
   },
   {
-    icon: "🚌",
-    title: "Transportation",
-    body: "Investing in safe streets, reliable transit, and accessible infrastructure so everyone in District 32 can get where they need to go.",
+    icon: "🤖",
+    title: "Responsible Guardrails for AI",
+    body: "As a former software engineer and concerned parent, Chris will bring common-sense oversight to AI — protecting children, citizens, and the environment from AI overreach while still encouraging innovation.",
+  },
+];
+
+// ─── Protest Info Content (Right Back Sheet) ─────────────────────────────────
+
+const YOUR_RIGHTS = [
+  "The 1st Amendment guarantees your right to peacefully assemble and petition the government — in public spaces like sidewalks, parks, and plazas.",
+  "You may NOT be arrested solely for chanting, sign-holding, or peaceful marching.",
+  "You have the right to film police officers performing their duties in public.",
+  "If police say disperse, ask clearly: \"Am I free to go?\" If yes, leave calmly. If detained, say: \"I am invoking my right to remain silent. I want a lawyer.\"",
+  "In Washington State, you must identify yourself (name only) if police have reasonable suspicion of a crime.",
+  "Wear comfortable shoes, bring water, and know your emergency contact by memory.",
+];
+
+const NO_KINGS_HISTORY = [
+  { year: "2025 — Spring", event: "\"No Kings\" emerges as a rallying cry at \"Hands Off!\" protests nationwide, echoing the Declaration of Independence's rejection of monarchy and tyranny." },
+  { year: "2025 — April 5", event: "Tens of thousands rally across all 50 states under the Hands Off banner. Seattle's protest draws thousands to Cal Anderson Park and downtown streets." },
+  { year: "Historical roots", event: "The phrase echoes Thomas Paine's \"Common Sense\" (1776): \"In America, the law is king.\" Americans have always resisted the concentration of unchecked power." },
+  { year: "Why it resonates", event: "\"No Kings\" speaks to fears of democratic backsliding, executive overreach, and erosion of checks and balances — concerns shared across the political spectrum." },
+];
+
+const PROTEST_FACTS = [
+  { stat: "3.5%", desc: "No government has ever fallen when 3.5% of its population engaged in sustained nonviolent resistance. (Chenoweth, Harvard)" },
+  { stat: "2×", desc: "Nonviolent campaigns succeed roughly twice as often as violent ones. Peaceful protest is not weakness — it is the most effective strategy." },
+  { stat: "1,000+", desc: "Over 1,000 successful nonviolent campaigns documented in the past century — suffrage, civil rights, labor, environment." },
+  { stat: "Jan 2017", desc: "The Women's March — 3–5 million participants — was the largest single-day protest in U.S. history and sparked years of civic engagement." },
+];
+
+const FOLLOWUP_TIPS = [
+  {
+    action: "Call Your Representatives",
+    detail: "Look up your WA State legislators at app.leg.wa.gov. Call the office directly — calls outweigh emails 10:1. Say your name, city, and one specific ask. Staffers tally every call.",
+  },
+  {
+    action: "Write or Email",
+    detail: "Send a brief personal message to your State Rep and Senator at leg.wa.gov/legislature/pages/contactleg.aspx. Personalized letters beat form emails. Mention how the issue affects you specifically.",
+  },
+  {
+    action: "Attend a Town Hall",
+    detail: "Find your rep's upcoming town halls at their legislative website. Show up with neighbors. Public testimony at committee hearings (in-person or remote) is one of the most direct ways to shape a bill.",
+  },
+  {
+    action: "Canvass Your Neighborhood",
+    detail: "Door-knocking is the highest-ROI form of political persuasion. Join a campaign's phonebank or canvass day — buildwithbloomquist.com has upcoming volunteer events.",
+  },
+  {
+    action: "Register & Vote",
+    detail: "WA offers same-day voter registration. Check or update your registration at myvote.wa.gov. Bring a neighbor who isn't registered. Every local election turns on a few hundred votes.",
+  },
+  {
+    action: "Stay Organized",
+    detail: "Join a local group: Indivisible Seattle, WA Dems LD32, or a local mutual aid network. Sustained pressure over months beats one big rally. Follow up with the people you met today.",
   },
 ];
 
@@ -220,135 +325,253 @@ const FrontSheet: React.FC<FrontSheetProps> = ({ text, subtext, colors, fontFami
   );
 };
 
-interface BackSheetProps {
-  side: "left" | "right";
-}
+// ─── Back Sheet: Left (Bloomquist Campaign Info) ─────────────────────────────
 
-const BackSheet: React.FC<BackSheetProps> = ({ side }) => {
-  const leftPriorities = BLOOMQUIST_PRIORITIES.slice(0, 3);
-  const rightPriorities = BLOOMQUIST_PRIORITIES.slice(3, 6);
-  const priorities = side === "left" ? leftPriorities : rightPriorities;
+const BackSheetLeft: React.FC = () => {
+  // Shared style tokens
+  const navy = "#1a3a6e";
+  const gold = "#c8a400";
+  const bodyColor = "#333";
+
+  const sectionLabel: React.CSSProperties = {
+    fontSize: "0.54rem", fontWeight: 700, textTransform: "uppercase",
+    letterSpacing: "0.13em", color: navy, marginBottom: "0.05in", marginTop: "0.09in",
+    borderBottom: `2px solid ${gold}`, paddingBottom: "0.03in", display: "block",
+  };
 
   return (
     <div
       className="poster-sheet back-sheet"
       style={{
-        width: "8.5in",
-        height: "11in",
-        backgroundColor: "#FFFFFF",
-        color: "#1a1a2e",
-        display: "flex",
-        flexDirection: "column",
-        padding: "0.45in",
-        boxSizing: "border-box",
-        fontFamily: "'Georgia', serif",
-        border: "2px solid #1a3a6e",
-        position: "relative",
+        width: "8.5in", height: "11in",
+        backgroundColor: "#FFFFFF", color: "#1a1a2e",
+        display: "flex", flexDirection: "column",
+        padding: "0.28in", boxSizing: "border-box",
+        fontFamily: "'Arial', 'Helvetica', sans-serif",
+        border: `2px solid ${navy}`, position: "relative",
       }}
     >
-      {/* Header */}
-      <div
-        style={{
-          backgroundColor: "#1a3a6e",
-          color: "#FFFFFF",
-          padding: "0.18in 0.25in",
-          marginBottom: "0.2in",
-          borderRadius: "4px",
-        }}
-      >
-        <div style={{ fontSize: "0.75rem", letterSpacing: "0.15em", textTransform: "uppercase", opacity: 0.8, marginBottom: "0.05in" }}>
-          {side === "left" ? "Meet Your Candidate →" : "← Elect Chris"}
-        </div>
-        <div style={{ fontSize: "1.6rem", fontWeight: "700", lineHeight: 1.1 }}>
-          Chris Bloomquist
-        </div>
-        <div style={{ fontSize: "0.85rem", marginTop: "0.04in", opacity: 0.9 }}>
+      {/* ── Header ── */}
+      <div style={{
+        backgroundColor: navy, color: "#FFFFFF",
+        padding: "0.1in 0.18in", marginBottom: "0.09in", borderRadius: "4px",
+      }}>
+        <div style={{ fontSize: "0.54rem", letterSpacing: "0.13em", textTransform: "uppercase", opacity: 0.75 }}>
           WA State House · Legislative District 32
+        </div>
+        <div style={{ fontSize: "1.25rem", fontWeight: 700, lineHeight: 1.1 }}>Chris Bloomquist</div>
+        <div style={{ fontSize: "0.57rem", marginTop: "0.025in", opacity: 0.9, display: "flex", gap: "0.15in", flexWrap: "wrap" }}>
+          <span>🌐 buildwithbloomquist.com</span>
+          <span>💼 linkedin.com/in/cbloomquist</span>
+          <span>📘 facebook.com/chris.bloomquist</span>
         </div>
       </div>
 
-      {/* Left sheet: bio + first 3 priorities */}
-      {side === "left" && (
-        <>
-          <div style={{ fontSize: "0.78rem", lineHeight: 1.55, marginBottom: "0.2in", color: "#333" }}>
-            <strong>Chris Bloomquist</strong> is a community leader, engineer, coach, and musician
-            — and the son of a Chilean immigrant. He founded PNW Climate Week's inaugural career
-            fair and has spent years building connections between workers and the clean energy
-            economy. Chris is running for Washington State House District 32 to fight for
-            housing, climate action, and opportunity for every family in our community.
-          </div>
+      {/* ── Bio ── */}
+      <div style={{ fontSize: "0.59rem", lineHeight: 1.48, color: bodyColor }}>
+        {BLOOMQUIST_BIO}
+      </div>
 
-          <div style={{ fontSize: "0.72rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", color: "#1a3a6e", marginBottom: "0.1in" }}>
-            His Priorities
-          </div>
-        </>
-      )}
+      {/* ── Two-column body: Priorities left, Endorsements + Get Involved right ── */}
+      <div style={{ display: "flex", gap: "0.18in", flex: 1, marginTop: "0.01in", minHeight: 0 }}>
 
-      {/* Right sheet: remaining priorities + CTA */}
-      {side === "right" && (
-        <div style={{ fontSize: "0.72rem", fontWeight: "700", textTransform: "uppercase", letterSpacing: "0.1em", color: "#1a3a6e", marginBottom: "0.1in" }}>
-          More Priorities
+        {/* LEFT COLUMN — Priorities */}
+        <div style={{ flex: "0 0 55%", display: "flex", flexDirection: "column" }}>
+          <span style={sectionLabel}>His Top Priorities</span>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.065in" }}>
+            {BLOOMQUIST_PRIORITIES.map((p) => (
+              <div key={p.title} style={{ borderLeft: `3px solid ${gold}`, paddingLeft: "0.09in", paddingTop: "0.03in", paddingBottom: "0.03in" }}>
+                <div style={{ fontSize: "0.61rem", fontWeight: 700, color: "#1a1a2e", marginBottom: "0.02in", lineHeight: 1.25 }}>
+                  {p.icon} {p.title}
+                </div>
+                <div style={{ fontSize: "0.55rem", lineHeight: 1.42, color: bodyColor }}>
+                  {p.body}
+                </div>
+              </div>
+            ))}
+          </div>
         </div>
-      )}
 
-      {/* Priority cards */}
-      <div style={{ flex: 1, display: "flex", flexDirection: "column", gap: "0.12in" }}>
-        {priorities.map((p) => (
-          <div
-            key={p.title}
-            style={{
-              borderLeft: "4px solid #c8a400",
-              paddingLeft: "0.15in",
-              paddingTop: "0.05in",
-              paddingBottom: "0.05in",
-            }}
-          >
-            <div style={{ fontSize: "0.82rem", fontWeight: "700", marginBottom: "0.03in", color: "#1a1a2e" }}>
-              {p.icon} {p.title}
-            </div>
-            <div style={{ fontSize: "0.7rem", lineHeight: 1.5, color: "#444" }}>
-              {p.body}
+        {/* RIGHT COLUMN — Endorsements + Get Involved */}
+        <div style={{ flex: 1, display: "flex", flexDirection: "column" }}>
+
+          {/* Endorsements */}
+          <span style={sectionLabel}>Endorsements</span>
+          <div style={{ fontSize: "0.52rem", fontStyle: "italic", color: "#888", marginBottom: "0.05in", lineHeight: 1.3 }}>
+            We are strongly supporting Chris Bloomquist for WA State House LD32.
+          </div>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.042in" }}>
+            {ENDORSEMENTS.map((e) => (
+              <div key={e.name} style={{ borderLeft: `2px solid ${gold}`, paddingLeft: "0.07in" }}>
+                <div style={{ fontSize: "0.6rem", fontWeight: 700, color: "#1a1a2e", lineHeight: 1.2 }}>{e.name}</div>
+                <div style={{ fontSize: "0.52rem", color: "#555", lineHeight: 1.25 }}>{e.title}</div>
+              </div>
+            ))}
+          </div>
+          <div style={{ fontSize: "0.46rem", color: "#999", marginTop: "0.05in", lineHeight: 1.3, fontStyle: "italic" }}>
+            {ENDORSEMENT_DISCLAIMER}
+          </div>
+
+          {/* Get Involved */}
+          <span style={{ ...sectionLabel, marginTop: "0.1in" }}>How to Get Involved</span>
+          <div style={{ display: "flex", flexDirection: "column", gap: "0.055in" }}>
+            {GET_INVOLVED.map((g) => (
+              <div key={g.action} style={{ borderLeft: `2px solid ${navy}`, paddingLeft: "0.07in", paddingTop: "0.02in", paddingBottom: "0.02in" }}>
+                <div style={{ fontSize: "0.59rem", fontWeight: 700, color: "#1a1a2e", lineHeight: 1.2 }}>
+                  {g.icon} {g.action}
+                </div>
+                <div style={{ fontSize: "0.52rem", lineHeight: 1.38, color: bodyColor }}>
+                  {g.detail}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+
+      {/* ── QR Codes ── */}
+      <div style={{
+        display: "flex", flexDirection: "row", justifyContent: "space-around", alignItems: "center",
+        marginTop: "0.09in", paddingTop: "0.08in", borderTop: "1px solid #dde3ef", gap: "0.08in",
+      }}>
+        {QR_CODES.map((qr) => (
+          <div key={qr.label} style={{ display: "flex", flexDirection: "column", alignItems: "center", gap: "0.04in" }}>
+            <div style={{ fontSize: "0.57rem", fontWeight: 700, color: navy, textAlign: "center" }}>{qr.label}</div>
+            <QRCode value={qr.url} size={72} style={{ height: "auto", maxWidth: "100%", width: "0.88in" }} viewBox="0 0 256 256" />
+            <div style={{ fontSize: "0.46rem", color: "#888", textAlign: "center", maxWidth: "1.3in" }}>
+              {qr.url.replace("https://", "")}
             </div>
           </div>
         ))}
       </div>
 
-      {/* Footer CTA */}
-      <div
-        style={{
-          marginTop: "0.2in",
-          backgroundColor: "#c8a400",
-          color: "#1a1a2e",
-          padding: "0.15in 0.2in",
-          borderRadius: "4px",
-          textAlign: "center",
-        }}
-      >
-        <div style={{ fontSize: "0.95rem", fontWeight: "700" }}>
-          {side === "left" ? "Learn More & Get Involved" : "Vote Chris Bloomquist · LD32"}
-        </div>
-        <div style={{ fontSize: "0.75rem", marginTop: "0.04in" }}>
-          buildwithbloomquist.com
-          {side === "right" && (
-            <span style={{ marginLeft: "0.15in" }}>
-              · Paid for by Chris Bloomquist for WA State House
-            </span>
-          )}
+      {/* ── Footer ── */}
+      <div style={{
+        marginTop: "0.08in", backgroundColor: gold, color: "#1a1a2e",
+        padding: "0.08in 0.15in", borderRadius: "4px",
+        display: "flex", justifyContent: "space-between", alignItems: "center",
+      }}>
+        <div style={{ fontSize: "0.72rem", fontWeight: 700 }}>Vote Chris Bloomquist · WA State House LD32</div>
+        <div style={{ fontSize: "0.53rem", textAlign: "right", lineHeight: 1.35 }}>
+          Paid for by Chris Bloomquist for WA State House
         </div>
       </div>
 
-      {/* Sheet label (no-print) */}
-      <div
-        className="no-print"
-        style={{
-          position: "absolute",
-          bottom: 4,
-          right: 8,
-          fontSize: "0.65rem",
-          opacity: 0.3,
-        }}
-      >
-        {side === "left" ? "BACK LEFT" : "BACK RIGHT"}
+      <div className="no-print" style={{ position: "absolute", bottom: 4, right: 8, fontSize: "0.6rem", opacity: 0.25 }}>
+        BACK LEFT
+      </div>
+    </div>
+  );
+};
+
+// ─── Back Sheet: Right (Civic Education / Protest Info) ──────────────────────
+
+const BackSheetRight: React.FC = () => {
+  const S = {
+    sheet: {
+      width: "8.5in", height: "11in",
+      backgroundColor: "#FFFFFF", color: "#1a1a2e",
+      display: "flex", flexDirection: "column" as const,
+      padding: "0.35in", boxSizing: "border-box" as const,
+      fontFamily: "'Arial', 'Helvetica', sans-serif",
+      border: "2px solid #1a3a6e", position: "relative" as const,
+    },
+    header: {
+      backgroundColor: "#1a3a6e", color: "#FFFFFF",
+      padding: "0.14in 0.2in", marginBottom: "0.14in", borderRadius: "4px",
+    },
+    headerTitle: { fontSize: "1.2rem", fontWeight: "900" as const, textTransform: "uppercase" as const, letterSpacing: "0.02em" },
+    headerSub: { fontSize: "0.63rem", opacity: 0.85, marginTop: "0.03in" },
+    sectionLabel: {
+      fontSize: "0.58rem", fontWeight: "700" as const,
+      textTransform: "uppercase" as const, letterSpacing: "0.13em",
+      color: "#1a3a6e", marginBottom: "0.06in", marginTop: "0.12in",
+      borderBottom: "2px solid #c8a400", paddingBottom: "0.04in",
+      display: "block" as const,
+    },
+    // Rights
+    rightsWrap: { display: "flex", flexDirection: "column" as const, gap: "0.045in" },
+    rightItem: { display: "flex", gap: "0.07in", fontSize: "0.6rem", lineHeight: 1.42, color: "#222" },
+    bullet: { color: "#1a3a6e", fontWeight: "700" as const, flexShrink: 0 },
+    // No Kings timeline
+    timelineWrap: { display: "flex", flexDirection: "column" as const, gap: "0.06in" },
+    timelineItem: { display: "flex", gap: "0.09in" },
+    timelineYear: { fontSize: "0.57rem", fontWeight: "700" as const, color: "#1a3a6e", minWidth: "0.9in", paddingTop: "0.01in", flexShrink: 0 },
+    timelineText: { fontSize: "0.59rem", lineHeight: 1.42, color: "#333" },
+    // Facts
+    factsGrid: { display: "grid", gridTemplateColumns: "1fr 1fr", gap: "0.06in" },
+    factCard: { backgroundColor: "#f5f7fa", border: "1px solid #dde3ef", borderRadius: "3px", padding: "0.07in 0.09in" },
+    factStat: { fontSize: "0.95rem", fontWeight: "900" as const, color: "#1a3a6e" },
+    factDesc: { fontSize: "0.57rem", lineHeight: 1.38, color: "#444", marginTop: "0.02in" },
+    // Follow-up tips
+    tipsWrap: { display: "flex", flexDirection: "column" as const, gap: "0.065in" },
+    tipItem: { borderLeft: "3px solid #c8a400", paddingLeft: "0.1in", paddingTop: "0.03in", paddingBottom: "0.03in" },
+    tipTitle: { fontSize: "0.65rem", fontWeight: "700" as const, color: "#1a1a2e", marginBottom: "0.02in" },
+    tipBody: { fontSize: "0.58rem", lineHeight: 1.42, color: "#444" },
+    // Footer
+    footer: {
+      marginTop: "auto", paddingTop: "0.09in",
+      borderTop: "1px solid #dde3ef", fontSize: "0.55rem", color: "#888", textAlign: "center" as const,
+    },
+  };
+
+  return (
+    <div className="poster-sheet back-sheet" style={S.sheet}>
+      <div style={S.header}>
+        <div style={S.headerTitle}>Know Before You Go</div>
+        <div style={S.headerSub}>Your rights · The "No Kings" movement · Why protest works · What to do next</div>
+      </div>
+
+      {/* Rights */}
+      <span style={S.sectionLabel}>Your Constitutional Rights as a Protester</span>
+      <div style={S.rightsWrap}>
+        {YOUR_RIGHTS.map((r, i) => (
+          <div key={i} style={S.rightItem}>
+            <span style={S.bullet}>▸</span>
+            <span>{r}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* No Kings */}
+      <span style={S.sectionLabel}>The "No Kings" Movement</span>
+      <div style={S.timelineWrap}>
+        {NO_KINGS_HISTORY.map((item) => (
+          <div key={item.year} style={S.timelineItem}>
+            <span style={S.timelineYear}>{item.year}</span>
+            <span style={S.timelineText}>{item.event}</span>
+          </div>
+        ))}
+      </div>
+
+      {/* Facts */}
+      <span style={S.sectionLabel}>Protest Works — The Numbers</span>
+      <div style={S.factsGrid}>
+        {PROTEST_FACTS.map((f) => (
+          <div key={f.stat} style={S.factCard}>
+            <div style={S.factStat}>{f.stat}</div>
+            <div style={S.factDesc}>{f.desc}</div>
+          </div>
+        ))}
+      </div>
+
+      {/* Follow-up tips */}
+      <span style={S.sectionLabel}>After the March — Keep the Pressure On</span>
+      <div style={S.tipsWrap}>
+        {FOLLOWUP_TIPS.map((t) => (
+          <div key={t.action} style={S.tipItem}>
+            <div style={S.tipTitle}>{t.action}</div>
+            <div style={S.tipBody}>{t.detail}</div>
+          </div>
+        ))}
+      </div>
+
+      <div style={S.footer}>
+        Sources: ACLU · Erica Chenoweth, Harvard · aclu-wa.org · app.leg.wa.gov · myvote.wa.gov · buildwithbloomquist.com
+      </div>
+
+      <div className="no-print" style={{ position: "absolute", bottom: 4, right: 8, fontSize: "0.6rem", opacity: 0.25 }}>
+        BACK RIGHT
       </div>
     </div>
   );
@@ -362,7 +585,7 @@ const ProtestPoster: React.FC = () => {
     leftText: "BUILD",
     rightText: "TOGETHER",
     subtext: "LD32 · District 32 for All",
-    colorScheme: "black-yellow",
+    colorScheme: "black-white",
     fontStyle: "bold-impact",
   });
   const [controlsOpen, setControlsOpen] = useState(true);
@@ -555,7 +778,7 @@ const ProtestPoster: React.FC = () => {
                         leftText: "BUILD",
                         rightText: "TOGETHER",
                         subtext: "LD32 · District 32 for All",
-                        colorScheme: "black-yellow",
+                        colorScheme: "black-white",
                         fontStyle: "bold-impact",
                       })
                     }
@@ -577,8 +800,9 @@ const ProtestPoster: React.FC = () => {
                 </span>
               ) : (
                 <span>
-                  <strong>Step 2:</strong> This side faces the sign holder — visible only from behind.
-                  It contains info about Chris Bloomquist running for WA State House LD32.
+                  <strong>Step 2:</strong> This side faces the sign holder only.{" "}
+                  <strong>Left sheet:</strong> Chris Bloomquist's campaign priorities.{" "}
+                  <strong>Right sheet:</strong> Your protest rights, the No Kings movement, and why protest works.
                 </span>
               )}
             </div>
@@ -616,8 +840,8 @@ const ProtestPoster: React.FC = () => {
                 </>
               ) : (
                 <>
-                  <BackSheet side="left" />
-                  <BackSheet side="right" />
+                  <BackSheetLeft />
+                  <BackSheetRight />
                 </>
               )}
             </div>
