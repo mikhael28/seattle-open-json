@@ -13,6 +13,7 @@ import {
   Presentation,
   Ticket,
   Code2,
+  Megaphone,
 } from "lucide-react";
 
 interface SidebarProps {
@@ -81,6 +82,11 @@ const Sidebar: React.FC<SidebarProps> = ({ isOpen, onToggle }) => {
       name: "Presentation Mode",
       href: "/presentation",
       icon: Presentation,
+    },
+    {
+      name: "Protest Poster",
+      href: "/protest-poster",
+      icon: Megaphone,
     },
   ];
 

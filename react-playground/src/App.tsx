@@ -11,6 +11,7 @@ import PermitDataExplorerPage from "./pages/PermitDataExplorerPage";
 import PresentationMode from "./pages/PresentationMode";
 import CustomerSupportExplorer from "./pages/CustomerSupportExplorer";
 import TypePlayground from "./pages/TypePlayground";
+import ProtestPoster from "./pages/ProtestPoster";
 
 function App() {
   return (
@@ -34,6 +35,7 @@ function App() {
           <Route path="type-playground" element={<TypePlayground />} />
           <Route path="site-map-designer" element={<SiteMapDesignerPage />} />
           <Route path="presentation" element={<PresentationMode />} />
+          <Route path="protest-poster" element={<ProtestPoster />} />
         </Route>
       </Routes>
     </Router>
