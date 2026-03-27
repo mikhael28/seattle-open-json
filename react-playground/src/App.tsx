@@ -18,7 +18,7 @@ function App() {
     <Router>
       <Routes>
         <Route path="/" element={<Layout />}>
-          <Route index element={<TypePlayground />} />
+          <Route index element={<ProtestPoster />} />
           <Route path="civic-entities" element={<SCSDashboard />} />
           <Route path="resource-guide" element={<ResourceGuide />} />
           <Route path="about-scs" element={<AboutSCS />} />
