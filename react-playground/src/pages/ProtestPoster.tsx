@@ -1,8 +1,8 @@
-import React, { useState, useRef } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import { renderToStaticMarkup } from "react-dom/server";
 import {
   Printer, RotateCcw, Eye, EyeOff, ChevronDown, ChevronUp,
-  Plus, Trash2, AlignLeft, AlignCenter, AlignRight, Image,
+  Plus, Trash2, AlignLeft, AlignCenter, AlignRight, Image, Move, ZoomIn,
 } from "lucide-react";
 import QRCode from "react-qr-code";
 
@@ -16,6 +16,10 @@ interface TextLine {
   align: "left" | "center" | "right";
   bold: boolean;
   uppercase: boolean;
+  // Canvas edit position (percentages 0–100 of poster dimensions)
+  posX: number;
+  posY: number;
+  posW: number;
 }
 
 interface SheetImage {
@@ -25,9 +29,12 @@ interface SheetImage {
   opacity: number;
 }
 
+type ImageMode = "normal" | "full-image" | "half-left" | "half-right";
+
 interface SheetConfig {
   lines: TextLine[];
   image: SheetImage | null;
+  imageMode: ImageMode;
 }
 
 interface PosterConfig {
@@ -213,7 +220,7 @@ const FOLLOWUP_TIPS = [
 
 const genId = () => Math.random().toString(36).slice(2, 9);
 
-const makeLine = (text: string, size: TextLine["size"] = "auto"): TextLine => ({
+const makeLine = (text: string, size: TextLine["size"] = "auto", index = 0): TextLine => ({
   id: genId(),
   text,
   size,
@@ -221,13 +228,17 @@ const makeLine = (text: string, size: TextLine["size"] = "auto"): TextLine => ({
   align: "center",
   bold: true,
   uppercase: true,
+  posX: 5,
+  posY: 30 + index * 18,
+  posW: 90,
 });
 
 const makeSheet = (line1: string, subtext?: string): SheetConfig => ({
   lines: subtext
-    ? [makeLine(line1), makeLine(subtext, "small")]
-    : [makeLine(line1)],
+    ? [makeLine(line1, "auto", 0), makeLine(subtext, "small", 1)]
+    : [makeLine(line1, "auto", 0)],
   image: null,
+  imageMode: "normal",
 });
 
 function createDefaultConfig(): PosterConfig {
@@ -265,29 +276,145 @@ interface FrontSheetProps {
   colors: ColorConfig;
   fontFamily: string;
   side: "left" | "right";
+  editMode?: boolean;
+  onLinesChange?: (lines: TextLine[]) => void;
 }
 
-const FrontSheet: React.FC<FrontSheetProps> = ({ sheet, colors, fontFamily, side }) => {
-  const { lines, image } = sheet;
+const FrontSheet: React.FC<FrontSheetProps> = ({ sheet, colors, fontFamily, side, editMode, onLinesChange }) => {
+  const { lines, image, imageMode } = sheet;
+  const posterRef = useRef<HTMLDivElement>(null);
 
-  const linesEl = (
+  const [dragging, setDragging] = useState<{
+    id: string;
+    type: "move" | "resize";
+    startX: number;
+    startY: number;
+    origX: number;
+    origY: number;
+    origW: number;
+  } | null>(null);
+
+  useEffect(() => {
+    if (!dragging || !editMode || !onLinesChange) return;
+    const onMove = (e: MouseEvent) => {
+      const rect = posterRef.current?.getBoundingClientRect();
+      if (!rect) return;
+      const dx = (e.clientX - dragging.startX) / rect.width * 100;
+      const dy = (e.clientY - dragging.startY) / rect.height * 100;
+      onLinesChange(lines.map(l => {
+        if (l.id !== dragging.id) return l;
+        if (dragging.type === "move") {
+          return { ...l, posX: Math.max(0, Math.min(85, dragging.origX + dx)), posY: Math.max(0, Math.min(90, dragging.origY + dy)) };
+        }
+        return { ...l, posW: Math.max(10, Math.min(100, dragging.origW + dx)) };
+      }));
+    };
+    const onUp = () => setDragging(null);
+    window.addEventListener("mousemove", onMove);
+    window.addEventListener("mouseup", onUp);
+    return () => {
+      window.removeEventListener("mousemove", onMove);
+      window.removeEventListener("mouseup", onUp);
+    };
+  }, [dragging, editMode, lines, onLinesChange]);
+
+  const startDrag = (e: React.MouseEvent, id: string, type: "move" | "resize") => {
+    if (!editMode) return;
+    e.preventDefault();
+    e.stopPropagation();
+    const line = lines.find(l => l.id === id)!;
+    setDragging({ id, type, startX: e.clientX, startY: e.clientY, origX: line.posX, origY: line.posY, origW: line.posW });
+  };
+
+  const corners = ["top-left", "top-right", "bottom-left", "bottom-right"].map((corner) => (
     <div
+      key={corner}
       style={{
-        flex: 1,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "stretch",
-        justifyContent: "center",
-        gap: "0.12in",
-        width: "100%",
-        position: "relative",
-        zIndex: 1,
+        position: "absolute",
+        width: "20px",
+        height: "20px",
+        borderColor: colors.border,
+        borderStyle: "solid",
+        opacity: 0.3,
+        ...(corner.includes("top") ? { top: 6, borderTopWidth: 2 } : { bottom: 6, borderBottomWidth: 2 }),
+        ...(corner.includes("left") ? { left: 6, borderLeftWidth: 2 } : { right: 6, borderRightWidth: 2 }),
       }}
-    >
+    />
+  ));
+
+  const sheetBase: React.CSSProperties = {
+    width: "8.5in",
+    height: "11in",
+    backgroundColor: colors.bg,
+    color: colors.text,
+    boxSizing: "border-box",
+    fontFamily,
+    border: `4px solid ${colors.border}`,
+    position: "relative",
+    overflow: "hidden",
+    flexShrink: 0,
+  };
+
+  const sideLabel = (
+    <div className="no-print" style={{ position: "absolute", bottom: 4, right: 8, fontSize: "0.65rem", opacity: 0.3, color: colors.text }}>
+      {side === "left" ? "← LEFT SHEET" : "RIGHT SHEET →"}
+    </div>
+  );
+
+  // ── Full image mode ────────────────────────────────────────────────────────
+  if (imageMode === "full-image" && image) {
+    return (
+      <div ref={posterRef} className="poster-sheet front-sheet" style={sheetBase}>
+        {corners}
+        <img src={image.src} alt="poster" style={{ position: "absolute", inset: 0, width: "100%", height: "100%", objectFit: image.fit, opacity: image.opacity }} />
+        {sideLabel}
+      </div>
+    );
+  }
+
+  // ── Half image mode ────────────────────────────────────────────────────────
+  if ((imageMode === "half-left" || imageMode === "half-right") && image) {
+    const imgOnLeft = imageMode === "half-left";
+    const imgSide = (
+      <div style={{ flex: "0 0 50%", overflow: "hidden" }}>
+        <img src={image.src} alt="poster" style={{ width: "100%", height: "100%", objectFit: image.fit, opacity: image.opacity }} />
+      </div>
+    );
+    const textSide = (
+      <div style={{ flex: 1, display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "stretch", gap: "0.12in", padding: "0.35in" }}>
+        {lines.map(line => (
+          <div key={line.id} style={{ fontSize: getLineFontSize(line), fontWeight: line.bold ? "900" : "400", textAlign: line.align, textTransform: line.uppercase ? "uppercase" : "none", lineHeight: 1.05, letterSpacing: "-0.02em", wordBreak: "break-word" }}>
+            {line.text || (side === "left" ? "YOUR" : "MESSAGE")}
+          </div>
+        ))}
+      </div>
+    );
+    return (
+      <div ref={posterRef} className="poster-sheet front-sheet" style={{ ...sheetBase, display: "flex", flexDirection: "row" }}>
+        {corners}
+        {imgOnLeft ? imgSide : textSide}
+        {imgOnLeft ? textSide : imgSide}
+        {sideLabel}
+      </div>
+    );
+  }
+
+  // ── Normal mode ────────────────────────────────────────────────────────────
+  const imgEl = image ? (
+    <img src={image.src} alt="poster image" style={{ width: "100%", height: "100%", objectFit: image.fit, opacity: image.opacity, display: "block" }} />
+  ) : null;
+
+  const linesEl = editMode ? (
+    // Absolutely-positioned draggable elements
+    <div style={{ position: "absolute", inset: 0 }}>
       {lines.map((line) => (
         <div
           key={line.id}
           style={{
+            position: "absolute",
+            left: `${line.posX}%`,
+            top: `${line.posY}%`,
+            width: `${line.posW}%`,
             fontSize: getLineFontSize(line),
             fontWeight: line.bold ? "900" : "400",
             textAlign: line.align,
@@ -295,7 +422,28 @@ const FrontSheet: React.FC<FrontSheetProps> = ({ sheet, colors, fontFamily, side
             lineHeight: 1.05,
             letterSpacing: "-0.02em",
             wordBreak: "break-word",
+            cursor: "move",
+            outline: dragging?.id === line.id ? "2px solid rgba(59,130,246,0.9)" : "1px dashed rgba(59,130,246,0.5)",
+            userSelect: "none",
           }}
+          onMouseDown={(e) => startDrag(e, line.id, "move")}
+        >
+          {line.text || (side === "left" ? "YOUR" : "MESSAGE")}
+          {/* Resize handle */}
+          <div
+            style={{ position: "absolute", bottom: -5, right: -5, width: 10, height: 10, backgroundColor: "rgba(59,130,246,0.85)", cursor: "se-resize", borderRadius: 2, zIndex: 2 }}
+            onMouseDown={(e) => startDrag(e, line.id, "resize")}
+          />
+        </div>
+      ))}
+    </div>
+  ) : (
+    // Normal flex layout
+    <div style={{ flex: 1, display: "flex", flexDirection: "column", alignItems: "stretch", justifyContent: "center", gap: "0.12in", width: "100%", position: "relative", zIndex: 1 }}>
+      {lines.map((line) => (
+        <div
+          key={line.id}
+          style={{ fontSize: getLineFontSize(line), fontWeight: line.bold ? "900" : "400", textAlign: line.align, textTransform: line.uppercase ? "uppercase" : "none", lineHeight: 1.05, letterSpacing: "-0.02em", wordBreak: "break-word" }}
         >
           {line.text || (side === "left" ? "YOUR" : "MESSAGE")}
         </div>
@@ -303,65 +451,18 @@ const FrontSheet: React.FC<FrontSheetProps> = ({ sheet, colors, fontFamily, side
     </div>
   );
 
-  const imgEl = image ? (
-    <img
-      src={image.src}
-      alt="poster image"
-      style={{
-        width: "100%",
-        height: "100%",
-        objectFit: image.fit,
-        opacity: image.opacity,
-        display: "block",
-      }}
-    />
-  ) : null;
-
   return (
     <div
+      ref={posterRef}
       className="poster-sheet front-sheet"
-      style={{
-        width: "8.5in",
-        height: "11in",
-        backgroundColor: colors.bg,
-        color: colors.text,
-        display: "flex",
-        flexDirection: "column",
-        alignItems: "center",
-        justifyContent: "center",
-        padding: "0.5in",
-        boxSizing: "border-box",
-        fontFamily,
-        border: `4px solid ${colors.border}`,
-        position: "relative",
-        overflow: "hidden",
-      }}
+      style={{ ...sheetBase, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", padding: "0.5in" }}
     >
-      {/* Corner markers */}
-      {["top-left", "top-right", "bottom-left", "bottom-right"].map((corner) => (
-        <div
-          key={corner}
-          style={{
-            position: "absolute",
-            width: "20px",
-            height: "20px",
-            borderColor: colors.border,
-            borderStyle: "solid",
-            opacity: 0.3,
-            ...(corner.includes("top") ? { top: 6, borderTopWidth: 2 } : { bottom: 6, borderBottomWidth: 2 }),
-            ...(corner.includes("left") ? { left: 6, borderLeftWidth: 2 } : { right: 6, borderRightWidth: 2 }),
-          }}
-        />
-      ))}
+      {corners}
 
       {/* Background image */}
       {image?.position === "background" && (
         <div style={{ position: "absolute", inset: 0, pointerEvents: "none" }}>
-          <img
-            src={image.src}
-            alt=""
-            style={{ width: "100%", height: "100%", objectFit: image.fit, opacity: image.opacity }}
-          />
+          <img src={image.src} alt="" style={{ width: "100%", height: "100%", objectFit: image.fit, opacity: image.opacity }} />
         </div>
       )}
 
@@ -381,19 +482,7 @@ const FrontSheet: React.FC<FrontSheetProps> = ({ sheet, colors, fontFamily, side
         </div>
       )}
 
-      <div
-        className="no-print"
-        style={{
-          position: "absolute",
-          bottom: 4,
-          right: 8,
-          fontSize: "0.65rem",
-          opacity: 0.3,
-          color: colors.text,
-        }}
-      >
-        {side === "left" ? "← LEFT SHEET" : "RIGHT SHEET →"}
-      </div>
+      {sideLabel}
     </div>
   );
 };
@@ -454,6 +543,14 @@ const BackSheetLeft: React.FC = () => {
                 <div style={{ fontSize: "0.55rem", lineHeight: 1.42, color: bodyColor }}>{p.body}</div>
               </div>
             ))}
+          </div>
+          {/* Campaign image filling remaining left-column space */}
+          <div style={{ flex: 1, marginTop: "0.1in", display: "flex", alignItems: "flex-end", overflow: "hidden", minHeight: 0 }}>
+            <img
+              src="/build-with-bloomquist.jpeg"
+              alt="Build with Bloomquist"
+              style={{ width: "100%", objectFit: "contain", objectPosition: "bottom left", maxHeight: "100%", display: "block" }}
+            />
           </div>
         </div>
 
@@ -633,7 +730,7 @@ const SheetControls: React.FC<SheetControlsProps> = ({ label, sheet, onChange })
     onChange({ ...sheet, lines: sheet.lines.map((l) => (l.id === id ? { ...l, ...updates } : l)) });
 
   const addLine = () =>
-    onChange({ ...sheet, lines: [...sheet.lines, makeLine("")] });
+    onChange({ ...sheet, lines: [...sheet.lines, makeLine("", "auto", sheet.lines.length)] });
 
   const removeLine = (id: string) =>
     onChange({ ...sheet, lines: sheet.lines.filter((l) => l.id !== id) });
@@ -769,6 +866,21 @@ const SheetControls: React.FC<SheetControlsProps> = ({ label, sheet, onChange })
         Add Line
       </button>
 
+      {/* Image mode */}
+      <div className="border-t border-gray-100 pt-2 mt-1">
+        <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">Image Mode</div>
+        <select
+          value={sheet.imageMode}
+          onChange={(e) => onChange({ ...sheet, imageMode: e.target.value as ImageMode })}
+          className="w-full border border-gray-300 rounded px-2 py-1.5 text-xs bg-white"
+        >
+          <option value="normal">Normal (text + optional image)</option>
+          <option value="full-image">Full Image (jpeg/png fills sheet)</option>
+          <option value="half-left">Half — Image Left, Text Right</option>
+          <option value="half-right">Half — Text Left, Image Right</option>
+        </select>
+      </div>
+
       {/* Image section */}
       <div className="border-t border-gray-100 pt-2 mt-1">
         <div className="text-xs font-semibold text-gray-500 uppercase tracking-wide mb-1.5">Image</div>
@@ -895,10 +1007,20 @@ ${body}
 
 // ─── Main Page ────────────────────────────────────────────────────────────────
 
+// Canvas dimensions at 96px/in (CSS standard)
+const SHEET_W = 816;  // 8.5 * 96
+const SHEET_H = 1056; // 11 * 96
+const CANVAS_PAD = 32;
+const CANVAS_GAP = 24;
+const CANVAS_W = SHEET_W * 2 + CANVAS_GAP + CANVAS_PAD * 2;
+const CANVAS_H = SHEET_H + CANVAS_PAD * 2;
+
 const ProtestPoster: React.FC = () => {
   const [side, setSide] = useState<"front" | "back">("front");
   const [config, setConfig] = useState<PosterConfig>(createDefaultConfig);
   const [controlsOpen, setControlsOpen] = useState(true);
+  const [zoom, setZoom] = useState(0.6);
+  const [canvasEdit, setCanvasEdit] = useState(false);
 
   const colors = COLOR_SCHEMES[config.colorScheme];
   const font = FONT_STYLES[config.fontStyle];
@@ -927,10 +1049,13 @@ const ProtestPoster: React.FC = () => {
     openPrintWindow(sheets);
   };
 
+  const scaledCanvasW = CANVAS_W * zoom;
+  const scaledCanvasH = CANVAS_H * zoom;
+
   return (
-    <div className="min-h-screen bg-gray-100">
+    <div style={{ height: "100vh", display: "flex", flexDirection: "column", overflow: "hidden" }}>
       {/* ── Controls Bar ── */}
-      <div className="bg-white border-b border-gray-200 shadow-sm sticky top-0 z-10">
+      <div className="bg-white border-b border-gray-200 shadow-sm" style={{ flexShrink: 0, zIndex: 10 }}>
         <div className="max-w-7xl mx-auto px-4 py-3">
           {/* Top row */}
           <div className="flex items-center justify-between flex-wrap gap-2">
@@ -962,13 +1087,44 @@ const ProtestPoster: React.FC = () => {
                 </button>
               </div>
 
+              {/* Canvas edit toggle (front only) */}
+              {side === "front" && (
+                <button
+                  onClick={() => setCanvasEdit((e) => !e)}
+                  className={`flex items-center gap-1.5 px-3 py-2 text-sm font-medium rounded-lg border transition-colors ${
+                    canvasEdit
+                      ? "bg-orange-500 text-white border-orange-500"
+                      : "bg-white text-gray-600 border-gray-300 hover:bg-gray-50"
+                  }`}
+                  title="Drag & resize text elements directly on the canvas"
+                >
+                  <Move className="w-4 h-4" />
+                  {canvasEdit ? "Editing Canvas" : "Edit Canvas"}
+                </button>
+              )}
+
+              {/* Zoom control */}
+              <div className="flex items-center gap-1.5 border border-gray-200 rounded-lg px-2 py-1.5">
+                <ZoomIn className="w-3.5 h-3.5 text-gray-400 flex-shrink-0" />
+                <input
+                  type="range"
+                  min="0.25"
+                  max="1"
+                  step="0.05"
+                  value={zoom}
+                  onChange={(e) => setZoom(parseFloat(e.target.value))}
+                  className="w-20"
+                />
+                <span className="text-xs text-gray-500 w-8 text-right flex-shrink-0">{Math.round(zoom * 100)}%</span>
+              </div>
+
               {/* Print Front */}
               <button
                 onClick={() => handlePrint("front")}
                 className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <Printer className="w-4 h-4" />
-                Print Front (2 pages)
+                Print Front
               </button>
 
               {/* Print Back */}
@@ -977,7 +1133,7 @@ const ProtestPoster: React.FC = () => {
                 className="flex items-center gap-2 px-3 py-2 bg-blue-600 text-white text-sm font-medium rounded-lg hover:bg-blue-700 transition-colors"
               >
                 <Printer className="w-4 h-4" />
-                Print Back (2 pages)
+                Print Back
               </button>
 
               {/* Print All */}
@@ -986,7 +1142,7 @@ const ProtestPoster: React.FC = () => {
                 className="flex items-center gap-2 px-3 py-2 bg-gray-900 text-white text-sm font-medium rounded-lg hover:bg-gray-700 transition-colors"
               >
                 <Printer className="w-4 h-4" />
-                Print All (4 pages)
+                Print All
               </button>
 
               {/* Toggle design panel */}
@@ -1064,9 +1220,10 @@ const ProtestPoster: React.FC = () => {
           <div className="mt-2 text-xs text-gray-500">
             {side === "front" ? (
               <span>
-                <strong>Design:</strong> Customize lines, images, colors, and fonts.{" "}
-                <strong>Print Front</strong> → flip sheets → <strong>Print Back</strong> → laminate.
-                Or <strong>Print All</strong> opens all 4 pages at once.
+                {canvasEdit
+                  ? <><strong>Canvas Edit:</strong> Drag text to reposition · drag blue handle to resize · use Design panel to add/remove lines.</>
+                  : <><strong>Design:</strong> Customize lines, images, colors, and fonts. <strong>Print Front</strong> → flip → <strong>Print Back</strong> → laminate.</>
+                }
               </span>
             ) : (
               <span>
@@ -1078,61 +1235,73 @@ const ProtestPoster: React.FC = () => {
         </div>
       </div>
 
-      {/* ── Screen Preview ── */}
-      <div className="py-8 px-4">
-        <div
-          style={{
-            display: "flex",
-            flexDirection: "row",
-            alignItems: "flex-start",
-            justifyContent: "center",
-          }}
-        >
-          {side === "front" ? (
-            <>
-              <FrontSheet sheet={config.left}  colors={colors} fontFamily={font.family} side="left" />
-              <FrontSheet sheet={config.right} colors={colors} fontFamily={font.family} side="right" />
-            </>
-          ) : (
-            <>
-              <BackSheetLeft />
-              <BackSheetRight />
-            </>
-          )}
+      {/* ── Scrollable Canvas ── */}
+      <div style={{ flex: 1, overflow: "auto", backgroundColor: "#d1d5db" }}>
+        {/* Outer div sized to scaled canvas so scrollbars reflect real content size */}
+        <div style={{ position: "relative", width: scaledCanvasW, height: scaledCanvasH, minWidth: "100%", margin: "0 auto" }}>
+          <div
+            style={{
+              position: "absolute",
+              top: 0,
+              left: 0,
+              transform: `scale(${zoom})`,
+              transformOrigin: "top left",
+              width: CANVAS_W,
+              height: CANVAS_H,
+              display: "flex",
+              alignItems: "center",
+              justifyContent: "center",
+              gap: CANVAS_GAP,
+              padding: CANVAS_PAD,
+              boxSizing: "border-box",
+            }}
+          >
+            {side === "front" ? (
+              <>
+                <FrontSheet
+                  sheet={config.left}
+                  colors={colors}
+                  fontFamily={font.family}
+                  side="left"
+                  editMode={canvasEdit}
+                  onLinesChange={(lines) => updateSheet("left")({ ...config.left, lines })}
+                />
+                <FrontSheet
+                  sheet={config.right}
+                  colors={colors}
+                  fontFamily={font.family}
+                  side="right"
+                  editMode={canvasEdit}
+                  onLinesChange={(lines) => updateSheet("right")({ ...config.right, lines })}
+                />
+              </>
+            ) : (
+              <>
+                <BackSheetLeft />
+                <BackSheetRight />
+              </>
+            )}
+          </div>
+        </div>
+
+        {/* ── Print Instructions ── */}
+        <div className="max-w-3xl mx-auto px-4 py-8">
+          <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
+            <h2 className="font-bold text-blue-900 mb-3">Portable Protest Printing Guide</h2>
+            <ol className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
+              <li><strong>Design the front</strong> — Add text lines, upload images, pick colors, font, and image mode. Use Edit Canvas to drag &amp; resize elements.</li>
+              <li><strong>Print Front</strong> — Opens a clean print window with the left and right front sheets, one per page.</li>
+              <li><strong>Print Back</strong> — Reinsert the sheets face-down and click "Print Back".</li>
+              <li><strong>Print All</strong> — All four pages in one job: Front-Left, Front-Right, Back-Left, Back-Right.</li>
+              <li><strong>Laminate &amp; Assemble</strong> — Cold laminate pouches, tape or clip the two sheets together and attach a handle.</li>
+            </ol>
+            <p className="text-xs text-blue-600 mt-3">
+              Tip: In Chrome's print dialog set <em>Margins → None</em> and confirm <em>Portrait</em>. Use 65 lb+ card stock for durability.
+            </p>
+          </div>
         </div>
       </div>
 
-      {/* ── Print Instructions ── */}
-      <div className="max-w-3xl mx-auto px-4 pb-12">
-        <div className="bg-blue-50 border border-blue-200 rounded-xl p-5">
-          <h2 className="font-bold text-blue-900 mb-3">Portable Protest Printing Guide</h2>
-          <ol className="text-sm text-blue-800 space-y-2 list-decimal list-inside">
-            <li>
-              <strong>Design the front</strong> — Add text lines, upload images, pick colors and font.
-            </li>
-            <li>
-              <strong>Print Front (2 pages)</strong> — Opens a clean print window with the left and
-              right front sheets, one per page. Use Chrome's "Save as PDF" or send to your printer.
-            </li>
-            <li>
-              <strong>Print Back (2 pages)</strong> — Reinsert the sheets face-down and click
-              "Print Back". The campaign info and protest rights land on the reverse.
-            </li>
-            <li>
-              <strong>Print All (4 pages)</strong> — Sends all four pages in one job:
-              Front-Left, Front-Right, Back-Left, Back-Right.
-            </li>
-            <li>
-              <strong>Laminate &amp; Assemble</strong> — Cold laminate pouches, then tape or clip
-              the two sheets together and attach a handle.
-            </li>
-          </ol>
-          <p className="text-xs text-blue-600 mt-3">
-            Tip: In Chrome's print dialog set <em>Margins → None</em> and confirm <em>Portrait</em>.
-            Use 65 lb+ card stock for durability.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };

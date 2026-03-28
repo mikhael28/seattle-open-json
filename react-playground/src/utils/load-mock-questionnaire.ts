@@ -37,7 +37,7 @@ export function loadMockQuestionnaire(
  * Check if running in development mode
  */
 export function isDevelopmentMode(): boolean {
-  return process.env.NODE_ENV === "development";
+  return import.meta.env.DEV;
 }
 
 /**
